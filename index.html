@@ -1,23 +1,23 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>amoseui</title>
-    <style type="text/css">
-        a:link {text-decoration: none; color: #333333;}
-        a:visited {text-decoration: none; color: #333333;}
-        a:active {text-decoration: none; color: #333333;}
-        a:hover {text-decoration: none; color: #cccccc;}
-    </style>
-  </head>
-  <body>
-    <center style='margin-top:350px'>
-      <p>
-        amoseui
-      </p>
-      <a href="http://github.com/amoseui">github</a>
-      <a href="http://amoseui.github.io/blog">blog</a>
-      <a href="http://amoseui.github.io/wiki">wiki</a>
-    </center>
-  </body>
-</html>
+---
+layout: default
+---
+
+<div class="home">
+
+  <h1 class="page-heading">Posts</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>
