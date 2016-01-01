@@ -5,6 +5,7 @@ locale: en_US
 description: Blog to connect the dots
 logo: site-logo.png
 search: true
+#url: http://127.0.0.1:4000
 url: http://amoseui.github.io/blog
 
 # Jekyll configuration
