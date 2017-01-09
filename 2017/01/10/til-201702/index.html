@@ -1,0 +1,26 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> Weekly TIL 201702 · connectin' the dots</title><meta name="description" content="Weekly TIL 201702 - amoseui"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="http://fonts.useso.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/amoseui" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">Weekly TIL 201702</h1><div class="post-info">Jan 10, 2017</div><div class="post-content"><p>Weekly TIL #201702 <em>(20170102 - 20170109 : 2 TILs)</em></p>
+<hr>
+<h2 id="Merge-two-repositories"><a href="#Merge-two-repositories" class="headerlink" title="Merge two repositories"></a>Merge two repositories</h2><blockquote>
+<p>20170107 git</p>
+<p>개인 프로젝트에 안드로이드 기본 프로젝트 history 를 merge하여 통합.<br>merge commit이 안 생겼으면 좋겠는데 해결할 방법을 찾지 못 했다.</p>
+</blockquote>
+<p>e.g.) Merge Android Music repository to my project.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">clone</span> git@github.com:amoseui/android-music-renewal.git</div><div class="line">$ git remote add Music https://android.googlesource.com/platform/packages/apps/Music</div><div class="line">$ git fetch Music</div><div class="line">$ git merge --allow-unrelated-histories Music/master</div><div class="line">$ git remote remove Music</div><div class="line">$ git <span class="built_in">log</span> --oneline</div><div class="line">5c0ac48 Merge https://android.googlesource.com/platform/packages/apps/Music</div><div class="line">51bfd7f Initial commit</div><div class="line">ef3044c Import translations. DO NOT MERGE</div><div class="line">291eb7c Import translations. DO NOT MERGE am:</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="Apply-global-gitignore"><a href="#Apply-global-gitignore" class="headerlink" title="Apply global .gitignore"></a>Apply global .gitignore</h2><blockquote>
+<p>20170109 git</p>
+<p>*.swp 파일이나 .DS_Store 등 모든 프로젝트에서 기본으로 제외될 파일들을 global .gitignore로 적용.</p>
+</blockquote>
+<p>Apply global .gitignore to exclude files on all projects</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git config --global core.excludesfile <span class="string">'~/.gitignore'</span></div></pre></td></tr></table></figure>
+<p>It’s added in ~/.gitconfig<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[core]</div><div class="line">    excludesfile = ~/.gitignore</div></pre></td></tr></table></figure></p>
+<hr>
+</div></article></div></section><footer><div class="paginator"><a href="/2017/01/03/til-201701/" class="next">NEXT</a></div><div id="disqus_thread"></div><script>var disqus_shortname = 'blogamoseuicom';
+var disqus_identifier = '2017/01/10/til-201702/';
+var disqus_title = 'Weekly TIL 201702';
+var disqus_url = 'http://blog.amoseui.com/2017/01/10/til-201702/';
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//blogamoseuicom.disqus.com/count.js" async></script><div class="copyright"><p>© 2016 - 2017 <a href="http://blog.amoseui.com">amoseui</a></p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-MML-AM_CHTML"></script></body></html>
