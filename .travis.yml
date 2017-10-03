@@ -14,12 +14,14 @@ before_script:
 - export TZ=Asia/Seoul
 - git config --global user.name 'amoseui'
 - git config --global user.email 'amoseui@gmail.com'
-- git clone https://${GH_TOKEN}@github.com/amoseui/blog.git -b gh-pages --single-branch .deploy_git
-- sed -i'' "s~git@github.com:amoseui/blog.git~https://${GH_TOKEN}:x-oauth-basic@github.com/amoseui/blog.git~" _config.yml
+- git clone https://${GH_TOKEN}@github.com/amoseui/blog.git -b gh-pages --single-branch
+  .deploy_git
+- sed -i'' "s~git@github.com:amoseui/blog.git~https://${GH_TOKEN}:x-oauth-basic@github.com/amoseui/blog.git~"
+  _config.yml
 script:
 - npm run generate
 after_success:
 - '[ "${TRAVIS_PULL_REQUEST}" = "false" ] && npm run deploy'
 env:
   global:
-  - secure: h6O0QHDtLAeqawnZSOp83Oq3GuZQOVONtHcazRwiMxktDI1mfAQTQ0WWwNw4+eMYLbNHpyNKlllaoUC2Y7hLLbYGK+bA6S8mjhkFc00pwDOUwepQdQpTB4DyNgVtiP210Hp9aUpokLHI3vMddne6WO65l7Vom0qiUTPdUHDGfuXYG/nGkI/FQhmhqJ+2lDu11L95WnkvUbZXSZO84YfyzwCCR9QhjDhpg+vMP4197Nxe7ohjzTEN0C2F8+pxTKFyiqKC2nJaQRi+9uAMzrgpS9ff00YI642Tm1FfUsVHO2oaVcxML0xSkLIhuq6JDACzheU/NalC2gxqgr7iWctWDmc/ciA2fLeQRinDMh35uwYeXsycpmw2uCOynL+xyTDYxeUGmLkI2MMgVkI36FmxauiLI/VK9JmQFg2wMDzXuEthKaN7DiDlXqlBV/OQPwqvFYXgGZy8que60nRBbjjBF6tJQ3tsAlXG0LZMBKs5M7i3/sbfcnTI/duhl08fJogDRvpFa8ol7exD5+drM1t4TWgRUo6sqInJ0Jdw2dHTG5ZwlIAtuxWBHhM/5yc3H1EqIhiG+DbJdE05fZa+WiHnVHuNpE57z56EeQWjhIfyMHmv3gVE4BXcDLtEB4tWL/um9JXe3kfDMH2xpuWseQ0NNXDV3IrPESweWzkTdOATB6M=
+  - secure: qE0gRUNbONw59sybz+gdUi7HdmLK/H7JnH7PrVM4Xmvag7PaKwawRRF+jIns5s9+VRuuDDhpblG5qcObbcuFsNKnUdU2PGtQfgsTli0Cs/LVoJPzZfQ6vnrsriZskKEdntUA7Go7GQdnYo95PiCpkisHHskDC6NusSznR4CDrUJun3ZVXkClqDbkUYMgcGKKq1oX2xMLEozwZP++5tcKq21quSJTlrwJ9mDPbJC5NHemf6tr/WaKULgeOsCazx0YM8RbxDW0Djz1t4D/FQ3b2p5/jahfg24/ZagYWd+N2rBNkvbshURmYuKYNisDsKOXJh7UQhZvWhslRcYDjdxjdzQ/xG6Yg59rD6AA/QTwDtRHuuQ/kzsF7Bp/AJNc+j/FYyoo8aL99Z4B7zO39DUqANj3Ik1tnLnk32rjOSxyDVngt6jPlmJF1ylUxEiw5cxKlN6tTNV2QZBSKbXnVa0+bKS7tG7pvPbSeQVeYdLt3w9NbohpQeQZJl97cbgpRO4Ym3DizdHZrIGVQOmWxJaocGjEobiFHaLu0V8irelWFK1a9a5sxZ3bviShFNZlv3HQqRgUVq1gwM2T5MK0pVrRQ6HAD4X2jOeOCiFkJU2vf7M3SZptOSqGuGqt7Ypcc9Hrp5/R1C8qgMEQ/3H2TnRkYyrl+kyna+XmATmO+aWu4v0=
