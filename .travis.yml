@@ -22,6 +22,3 @@ script:
 - npm run generate
 after_success:
 - '[ "${TRAVIS_PULL_REQUEST}" = "false" ] && npm run deploy'
-env:
-  global:
-  - secure: qE0gRUNbONw59sybz+gdUi7HdmLK/H7JnH7PrVM4Xmvag7PaKwawRRF+jIns5s9+VRuuDDhpblG5qcObbcuFsNKnUdU2PGtQfgsTli0Cs/LVoJPzZfQ6vnrsriZskKEdntUA7Go7GQdnYo95PiCpkisHHskDC6NusSznR4CDrUJun3ZVXkClqDbkUYMgcGKKq1oX2xMLEozwZP++5tcKq21quSJTlrwJ9mDPbJC5NHemf6tr/WaKULgeOsCazx0YM8RbxDW0Djz1t4D/FQ3b2p5/jahfg24/ZagYWd+N2rBNkvbshURmYuKYNisDsKOXJh7UQhZvWhslRcYDjdxjdzQ/xG6Yg59rD6AA/QTwDtRHuuQ/kzsF7Bp/AJNc+j/FYyoo8aL99Z4B7zO39DUqANj3Ik1tnLnk32rjOSxyDVngt6jPlmJF1ylUxEiw5cxKlN6tTNV2QZBSKbXnVa0+bKS7tG7pvPbSeQVeYdLt3w9NbohpQeQZJl97cbgpRO4Ym3DizdHZrIGVQOmWxJaocGjEobiFHaLu0V8irelWFK1a9a5sxZ3bviShFNZlv3HQqRgUVq1gwM2T5MK0pVrRQ6HAD4X2jOeOCiFkJU2vf7M3SZptOSqGuGqt7Ypcc9Hrp5/R1C8qgMEQ/3H2TnRkYyrl+kyna+XmATmO+aWu4v0=
