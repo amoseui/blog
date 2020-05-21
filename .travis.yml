@@ -16,7 +16,7 @@ before_script:
 - git config --global user.email 'amoseui@gmail.com'
 - git clone https://${GH_TOKEN}@github.com/amoseui/blog.git -b gh-pages --single-branch
   .deploy_git
-- sed -i'' "s~git@github.com:amoseui/blog.git~https://${GH_TOKEN}:x-oauth-basic@github.com/amoseui/blog.git~"
+- sed -i'' "s~git@github.com:amoseui/blog.git~https://${GH_TOKEN}@github.com/amoseui/blog.git~"
   _config.yml
 script:
 - npm run generate
