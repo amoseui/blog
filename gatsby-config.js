@@ -7,6 +7,7 @@ module.exports = {
   pathPrefix: siteConfig.pathPrefix,
   siteMetadata: {
     url: siteConfig.url,
+    siteUrl: siteConfig.url,
     title: siteConfig.title,
     subtitle: siteConfig.subtitle,
     copyright: siteConfig.copyright,
@@ -204,5 +205,6 @@ module.exports = {
     },
     'gatsby-plugin-flow',
     'gatsby-plugin-optimize-svgs',
+    'gatsby-plugin-cname',
   ]
 };
