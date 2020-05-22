@@ -98,8 +98,8 @@ workflows:
             - coverage
       - deploy:
           requires:
-            - install
-          #filters:
-              #branches:
-                #only:
-                  #- master
+            - test
+          filters:
+            branches:
+              only:
+                - master
