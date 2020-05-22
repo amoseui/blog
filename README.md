@@ -1,7 +1,7 @@
 # blog
 
 [![Build Status](https://travis-ci.org/amoseui/blog.svg?branch=master)](https://travis-ci.org/amoseui/blog)
-
+[![codecov](https://codecov.io/gh/amoseui/blog/branch/master/graph/badge.svg)](https://codecov.io/gh/amoseui/blog)
 
 **Update posts**
 ```bash

@@ -1,49 +1,41 @@
 'use strict';
 
 module.exports = {
-  url: 'https://lumen.netlify.com',
+  url: 'https://blog.amoseui.com',
   pathPrefix: '/',
-  title: 'Blog by John Doe',
-  subtitle: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+  title: "connectin' the dots",
+  subtitle: 'blog to connect the dots',
   copyright: '© All rights reserved.',
   disqusShortname: '',
-  postsPerPage: 4,
-  googleAnalyticsId: 'UA-73379983-2',
+  postsPerPage: 5,
+  googleAnalyticsId: 'UA-71786246-2',
   useKatex: false,
   menu: [
     {
       label: 'Articles',
       path: '/'
     },
-    {
-      label: 'About me',
-      path: '/pages/about'
-    },
-    {
-      label: 'Contact me',
-      path: '/pages/contacts'
-    }
   ],
   author: {
-    name: 'John Doe',
+    name: 'amoseui',
     photo: '/photo.jpg',
-    bio: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+    bio: "connectin' the dots",
     contacts: {
-      email: '',
-      facebook: '#',
-      telegram: '#',
-      twitter: '#',
-      github: '#',
+      email: 'amoseui@gmail.com',
+      facebook: '',
+      telegram: '',
+      twitter: '',
+      github: 'amoseui',
       rss: '',
       vkontakte: '',
-      linkedin: '#',
-      instagram: '#',
+      linkedin: '',
+      instagram: '',
       line: '',
       gitlab: '',
       weibo: '',
       codepen: '',
       youtube: '',
-      soundcloud: '',
+      soundcloud: 'unofficialamose',
     }
   }
 };
