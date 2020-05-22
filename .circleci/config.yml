@@ -84,30 +84,36 @@ workflows:
   test:
     jobs:
       - install:
-          ignore:
-            - gh-pages
+          branches:
+            ignore:
+              - gh-pages
       - lint:
           requires:
             - install
-          ignore:
-            - gh-pages
+          branches:
+            ignore:
+              - gh-pages
       - test:
           requires:
             - install
-          ignore:
-            - gh-pages
+          branches:
+            ignore:
+              - gh-pages
       - coverage:
           requires:
             - install
-          ignore:
-            - gh-pages
+          branches:
+            ignore:
+              - gh-pages
       - codecov:
           requires:
             - coverage
-          ignore:
-            - gh-pages
+          branches:
+            ignore:
+              - gh-pages
       - deploy:
           requires:
             - install
-          #only:
-          #  - master
+          #branches:
+              #only:
+              #- master
