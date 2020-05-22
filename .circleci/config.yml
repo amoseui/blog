@@ -63,6 +63,15 @@ jobs:
       - run: yarn global add codecov
       - run: yarn codecov
 
+  deploy:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - dependencies-{{ checksum "yarn.lock" }}
+      - run: npm run deploy
+
 workflows:
   version: 2
   test:
@@ -80,3 +89,6 @@ workflows:
       - codecov:
           requires:
             - coverage
+      - deploy:
+          requires:
+            - install
