@@ -5,14 +5,14 @@ module.exports = {
   pathPrefix: '/',
   title: 'connectin\' the dots',
   subtitle: 'blog to connect the dots',
-  copyright: '© All rights reserved.',
+  copyright: '© 2016-2020 All Rights Reserved.',
   disqusShortname: '',
   postsPerPage: 5,
   googleAnalyticsId: 'UA-71786246-2',
   useKatex: false,
   menu: [
     {
-      label: 'Articles',
+      label: 'Home',
       path: '/'
     },
   ],
