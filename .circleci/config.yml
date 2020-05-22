@@ -66,17 +66,13 @@ jobs:
   deploy:
     <<: *defaults
     steps:
-      - add_ssh_keys:
-          fingerprints:
-            - ${SSH_FINGERPRINTS}
+      - add_ssh_keys
       - checkout
       - restore_cache:
           keys:
             - dependencies-{{ checksum "yarn.lock" }}
       - run:
           command: |
-            ls -al ~/.ssh/
-            cat ~/.ssh/config
             git config user.email "amoseui@gmail.com"
             git config user.name "Amos Lim"
             npm run deploy
