@@ -14,6 +14,8 @@ jobs:
           keys:
             - dependencies-{{ checksum "yarn.lock" }}
       - run: yarn install --frozen-lockfile
+      - run: TZ=KST-9 date +'%Y-%m-%d %H:%M:%S'
+      - run: TZ=UTC-9 date +'%Y-%m-%d %H:%M:%S'
       - save_cache:
           paths:
             - node_modules
