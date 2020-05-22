@@ -26,7 +26,7 @@ module.exports = {
       telegram: '',
       twitter: '',
       github: 'amoseui',
-      rss: '',
+      rss: 'rss.xml',
       vkontakte: '',
       linkedin: '',
       instagram: '',
