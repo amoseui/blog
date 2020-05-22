@@ -9,7 +9,7 @@ $ git checkout master
 $ git checkout -b ${new_branch}
 
 $ hexo new draft ${title}
-# source/_drafts/${title}.md 
+# source/_drafts/${title}.md
 # source/_drafts/${title}/ 폴더 생성 (_config.yml : post_asset_folder: true 인 경우)
 # source/_drafts/${title}/ 에 이미지 파일 추가
 # ![](image.png) 로 접근 가능
@@ -27,3 +27,4 @@ $ git add .
 $ git commit
 $ git push origin ${new_branch}
 ```
+
