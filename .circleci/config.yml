@@ -81,39 +81,45 @@ jobs:
 
 workflows:
   version: 2
-  test:
+  build:
     jobs:
       - install:
-          branches:
-            ignore:
-              - gh-pages
+          filters:
+            branches:
+              ignore:
+                - gh-pages
       - lint:
           requires:
             - install
-          branches:
-            ignore:
-              - gh-pages
+          filters:
+            branches:
+              ignore:
+                - gh-pages
       - test:
           requires:
             - install
-          branches:
-            ignore:
-              - gh-pages
+          filters:
+            branches:
+              ignore:
+                - gh-pages
       - coverage:
           requires:
             - install
-          branches:
-            ignore:
-              - gh-pages
+          filters:
+            branches:
+              ignore:
+                - gh-pages
       - codecov:
           requires:
             - coverage
-          branches:
-            ignore:
-              - gh-pages
+          filters:
+            branches:
+              ignore:
+                - gh-pages
       - deploy:
           requires:
             - install
-          #branches:
-              #only:
-              #- master
+          #filters:
+              #branches:
+                #only:
+                  #- master
