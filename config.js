@@ -3,7 +3,7 @@
 module.exports = {
   url: 'https://blog.amoseui.com',
   pathPrefix: '/',
-  title: "connectin' the dots",
+  title: 'connectin\' the dots',
   subtitle: 'blog to connect the dots',
   copyright: '© All rights reserved.',
   disqusShortname: '',
@@ -19,7 +19,7 @@ module.exports = {
   author: {
     name: 'amoseui',
     photo: '/photo.jpg',
-    bio: "connectin' the dots",
+    bio: 'connectin\' the dots',
     contacts: {
       email: 'amoseui@gmail.com',
       facebook: '',
