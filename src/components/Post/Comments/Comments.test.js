@@ -16,13 +16,8 @@ describe('Comments', () => {
     );
   });
 
-  const props = {
-    postTitle: 'test',
-    postSlug: '/test'
-  };
-
   it('renders correctly', () => {
-    const tree = renderer.create(<Comments {...props} />).toJSON();
+    const tree = renderer.create(<Comments />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

@@ -6,14 +6,13 @@ module.exports = {
   title: 'connectin\' the dots',
   subtitle: 'blog to connect the dots',
   copyright: '© 2016-2020 All Rights Reserved.',
-  disqusShortname: '',
   postsPerPage: 5,
   googleAnalyticsId: 'UA-71786246-2',
   useKatex: false,
   menu: [
     {
       label: 'Home',
-      path: '/'
+      path: '/',
     },
   ],
   author: {
@@ -35,7 +34,13 @@ module.exports = {
       weibo: '',
       codepen: '',
       youtube: '',
-      soundcloud: 'unofficialamose',
+      soundcloud: 'unofficialamos',
     }
-  }
+  },
+  utterances: {
+    repo: 'amoseui/blog',
+    issueTerm: 'title',
+    label: 'comments',
+    theme: 'github-light',
+  },
 };
