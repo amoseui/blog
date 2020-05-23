@@ -98,7 +98,9 @@ exports[`PostTemplate renders correctly 1`] = `
     </div>
     <div
       className="post__comments"
-    />
+    >
+      <div />
+    </div>
   </div>
 </div>
 `;

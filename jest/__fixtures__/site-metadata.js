@@ -7,7 +7,6 @@ module.exports = {
       title: 'Test title',
       subtitle: 'Test subtitle',
       copyright: 'Test copyright',
-      disqusShortname: '',
       postsPerPage: 4,
       menu: [
         {
@@ -35,7 +34,13 @@ module.exports = {
           rss: '#',
           vkontakte: '#'
         }
-      }
+      },
+      utterances: {
+        repo: 'author/repo',
+        issueTerm: 'title',
+        label: 'Test label',
+        theme: 'github-light',
+      },
     }
   }
 };
