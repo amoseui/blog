@@ -2,7 +2,7 @@ version: 2
 
 defaults: &defaults
   docker:
-    - image: circleci/node:14.15.0
+    - image: circleci/node:14.20.0
   working_directory: ~/blog
 
 jobs:
