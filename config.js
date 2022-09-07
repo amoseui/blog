@@ -7,7 +7,7 @@ module.exports = {
   subtitle: 'blog to connect the dots',
   copyright: '© 2016-2022 All Rights Reserved.',
   postsPerPage: 5,
-  googleAnalyticsId: 'UA-71786246-2',
+  googleAnalyticsId: 'G-7DNZ80VV7M',
   useKatex: false,
   menu: [
     {
