@@ -128,18 +128,6 @@
   Link: </component---src-templates-post-template-js-27883a6c7447e80b1eed.js>; rel=preload; as=script
   Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
   Link: </page-data/posts/droidknights-2017/page-data.json>; rel=preload; as=fetch; crossorigin
-/posts/code-coverage
-  Link: </webpack-runtime-90d8afa1c31239532e8e.js>; rel=preload; as=script
-  Link: </styles-bad75b3672de5a2c433d.js>; rel=preload; as=script
-  Link: </framework-cbc06b0256ad2024a673.js>; rel=preload; as=script
-  Link: </532a2f07-14c027d40ef467fa4195.js>; rel=preload; as=script
-  Link: </app-1fa5c90d9f8fc7109775.js>; rel=preload; as=script
-  Link: </styles-bad75b3672de5a2c433d.js>; rel=preload; as=script
-  Link: </b40c11bee3846ca70ab17cd1bc776b2e57af83cb-8cb533c887b1077c539c.js>; rel=preload; as=script
-  Link: </643651a62fb35a9bb4f20061cb1f214a352d7976-be67ef330008ffe47566.js>; rel=preload; as=script
-  Link: </component---src-templates-post-template-js-27883a6c7447e80b1eed.js>; rel=preload; as=script
-  Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
-  Link: </page-data/posts/code-coverage/page-data.json>; rel=preload; as=fetch; crossorigin
 /posts/hacktoberfest-2018
   Link: </webpack-runtime-90d8afa1c31239532e8e.js>; rel=preload; as=script
   Link: </styles-bad75b3672de5a2c433d.js>; rel=preload; as=script
@@ -152,6 +140,18 @@
   Link: </component---src-templates-post-template-js-27883a6c7447e80b1eed.js>; rel=preload; as=script
   Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
   Link: </page-data/posts/hacktoberfest-2018/page-data.json>; rel=preload; as=fetch; crossorigin
+/posts/code-coverage
+  Link: </webpack-runtime-90d8afa1c31239532e8e.js>; rel=preload; as=script
+  Link: </styles-bad75b3672de5a2c433d.js>; rel=preload; as=script
+  Link: </framework-cbc06b0256ad2024a673.js>; rel=preload; as=script
+  Link: </532a2f07-14c027d40ef467fa4195.js>; rel=preload; as=script
+  Link: </app-1fa5c90d9f8fc7109775.js>; rel=preload; as=script
+  Link: </styles-bad75b3672de5a2c433d.js>; rel=preload; as=script
+  Link: </b40c11bee3846ca70ab17cd1bc776b2e57af83cb-8cb533c887b1077c539c.js>; rel=preload; as=script
+  Link: </643651a62fb35a9bb4f20061cb1f214a352d7976-be67ef330008ffe47566.js>; rel=preload; as=script
+  Link: </component---src-templates-post-template-js-27883a6c7447e80b1eed.js>; rel=preload; as=script
+  Link: </page-data/app-data.json>; rel=preload; as=fetch; crossorigin
+  Link: </page-data/posts/code-coverage/page-data.json>; rel=preload; as=fetch; crossorigin
 /posts/pycon-2016
   Link: </webpack-runtime-90d8afa1c31239532e8e.js>; rel=preload; as=script
   Link: </styles-bad75b3672de5a2c433d.js>; rel=preload; as=script
