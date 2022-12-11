@@ -4,7 +4,7 @@ module.exports = {
   url: 'https://blog.amoseui.com',
   pathPrefix: '/',
   title: 'Everything in its Right Place',
-  subtitle: 'There are two colours in my head.'
+  subtitle: 'There are two colours in my head.',
   copyright: '© 2016-2022 All Rights Reserved.',
   postsPerPage: 5,
   googleAnalyticsId: 'G-7DNZ80VV7M',
