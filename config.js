@@ -3,8 +3,8 @@
 module.exports = {
   url: 'https://blog.amoseui.com',
   pathPrefix: '/',
-  title: 'connectin\' the dots',
-  subtitle: 'blog to connect the dots',
+  title: 'Everything in its Right Place',
+  subtitle: 'There are two colours in my head.'
   copyright: '© 2016-2022 All Rights Reserved.',
   postsPerPage: 5,
   googleAnalyticsId: 'G-7DNZ80VV7M',
@@ -27,14 +27,14 @@ module.exports = {
       github: 'amoseui',
       rss: 'rss.xml',
       vkontakte: '',
-      linkedin: '',
+      linkedin: 'amoseui',
       instagram: '',
       line: '',
       gitlab: '',
       weibo: '',
       codepen: '',
       youtube: '',
-      soundcloud: 'unofficialamos',
+      soundcloud: 'amoseui',
     }
   },
   utterances: {
