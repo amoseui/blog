@@ -1,6 +1,6 @@
 ---
 title: 2022년 회고
-date: 2020-12-31 16:00:00
+date: 2022-12-31 09:00:00
 template: post
 draft: false
 slug: "2022-retrospective"
