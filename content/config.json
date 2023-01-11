@@ -1,47 +1,39 @@
 {
-  "title": "Blog by John Doe",
-  "url": "https://lumen.alxshelepenok.com",
-  "subtitle": "Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.",
+  "title": "Everything in its Right Place",
+  "url": "https://blog.amoseui.com",
+  "subtitle": "There are two colours in my head.",
   "copyright": "© All rights reserved.",
-  "googleAnalyticsId": "UA-73379983-2",
+  "googleAnalyticsId": "G-7DNZ80VV7M",
   "disqusShortname": "",
-  "postsLimit": 4,
+  "postsLimit": 5,
   "pathPrefix": "/",
   "menu": [
     {
-      "label": "Articles",
+      "label": "Home",
       "path": "/"
-    },
-    {
-      "label": "About me",
-      "path": "/pages/about"
-    },
-    {
-      "label": "Contact me",
-      "path": "/pages/contacts"
     }
   ],
   "author": {
     "name": "John Doe",
     "photo": "/photo.jpg",
-    "bio": "Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.",
+    "bio": "Everythin in its Right Place",
     "contacts": {
-      "rss": "",
-      "email": "",
-      "github": "#",
-      "facebook": "#",
-      "telegram": "#",
-      "twitter": "#",
-      "linkedin": "#",
-      "instagram": "#",
-      "mastodon": "#",
+      "rss": "rss.xml",
+      "email": "amoseui@gmail.com",
+      "github": "amoseui",
+      "facebook": "",
+      "telegram": "",
+      "twitter": "amoseui",
+      "linkedin": "amoseui",
+      "instagram": "",
+      "mastodon": "",
       "line": "",
       "weibo": "",
       "gitlab": "",
-      "medium": "",
+      "medium": "amoseui",
       "youtube": "",
       "codepen": "",
-      "soundcloud": ""
+      "soundcloud": "amoseui"
     }
   }
 }

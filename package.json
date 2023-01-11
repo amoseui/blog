@@ -1,7 +1,8 @@
 {
-  "name": "gatsby-starter-lumen",
-  "version": "1.4.171",
-  "description": "A constantly evolving and thoughtful architecture for creating static blogs with Gatsby",
+  "private": true,
+  "name": "blog",
+  "version": "3.0.0",
+  "description": "Everything in its Right Place",
   "keywords": [
     "gatsby",
     "graphql",
@@ -10,10 +11,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/alxshelepenok/gatsby-starter-lumen.git"
+    "url": "https://github.com/amoseui/blog.git"
   },
   "license": "MIT",
-  "author": "Alexander Shelepenok <alxshelepenok@gmail.com>",
+  "author": "Amos Lim <amoseui@gmail.com>",
   "scripts": {
     "build": "npm run clean && gatsby build",
     "clean": "rimraf .cache public",
