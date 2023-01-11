@@ -2,8 +2,9 @@ version: 2
 
 defaults: &defaults
   docker:
-    - image: circleci/node:10.20.1
-  working_directory: ~/blog
+    - image: cimg/node:18.12.1
+  resource_class: large
+  working_directory: ~/gatsby-starter-lumen
 
 jobs:
   install:
@@ -12,12 +13,12 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - dependencies-{{ checksum "yarn.lock" }}
-      - run: yarn install --frozen-lockfile
+            - dependencies-{{ checksum "package-lock.json" }}
+      - run: npm ci
       - save_cache:
           paths:
             - node_modules
-          key: dependencies-{{ checksum "yarn.lock" }}
+          key: dependencies-{{ checksum "package-lock.json" }}
 
   lint:
     <<: *defaults
@@ -25,8 +26,8 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - dependencies-{{ checksum "yarn.lock" }}
-      - run: yarn lint
+            - dependencies-{{ checksum "package-lock.json" }}
+      - run: npm run lint
 
   test:
     <<: *defaults
@@ -34,8 +35,8 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - dependencies-{{ checksum "yarn.lock" }}
-      - run: yarn test --runInBand --no-cache
+            - dependencies-{{ checksum "package-lock.json" }}
+      - run: npm run test --runInBand --no-cache
 
   coverage:
     <<: *defaults
@@ -43,8 +44,8 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - dependencies-{{ checksum "yarn.lock" }}
-      - run: yarn test:coverage --runInBand --no-cache
+            - dependencies-{{ checksum "package-lock.json" }}
+      - run: npm run test:coverage --runInBand --no-cache
       - save_cache:
           key: coverage-{{ .Environment.CIRCLE_SHA1 }}
           paths:
@@ -56,32 +57,15 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - dependencies-{{ checksum "yarn.lock" }}
+            - dependencies-{{ checksum "package-lock.json" }}
       - restore_cache:
           keys:
             - coverage-{{ .Environment.CIRCLE_SHA1 }}
-      - run: yarn global add codecov
-      - run: yarn codecov
-
-  deploy:
-    <<: *defaults
-    steps:
-      - add_ssh_keys:
-          fingerprints:
-            - "52:ed:f7:66:cb:9e:58:db:37:13:f3:6f:c4:0a:9f:42"
-      - checkout
-      - restore_cache:
-          keys:
-            - dependencies-{{ checksum "yarn.lock" }}
-      - run:
-          command: |
-            git config user.email "amoseui@gmail.com"
-            git config user.name "Amos Lim"
-            npm run deploy
+      - run: npx codecov
 
 workflows:
   version: 2
-  build:
+  test:
     jobs:
       - install
       - lint:
@@ -96,10 +80,3 @@ workflows:
       - codecov:
           requires:
             - coverage
-      - deploy:
-          requires:
-            - test
-          filters:
-            branches:
-              only:
-                - master
