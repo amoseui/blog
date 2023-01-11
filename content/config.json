@@ -1,0 +1,44 @@
+{
+  "title": "Everything in its Right Place",
+  "url": "https://blog.amoseui.com",
+  "subtitle": "There are two colours in my head.",
+  "copyright": "© 2016-2023 All rights reserved.",
+  "googleAnalyticsId": "G-7DNZ80VV7M",
+  "postsLimit": 5,
+  "pathPrefix": "/",
+  "menu": [
+    {
+      "label": "Home",
+      "path": "/"
+    }
+  ],
+  "author": {
+    "name": "amoseui",
+    "photo": "/photo.jpg",
+    "bio": "Everythin in its Right Place",
+    "contacts": {
+      "rss": "rss.xml",
+      "email": "amoseui@gmail.com",
+      "github": "amoseui",
+      "facebook": "",
+      "telegram": "",
+      "twitter": "amoseui",
+      "linkedin": "amoseui",
+      "instagram": "",
+      "mastodon": "",
+      "line": "",
+      "weibo": "",
+      "gitlab": "",
+      "medium": "amoseui",
+      "youtube": "",
+      "codepen": "",
+      "soundcloud": "amoseui"
+    }
+  },
+  "utterances": {
+    "repo": "amoseui/blog",
+    "issueTerm": "title",
+    "label": "comments",
+    "theme": "github-light"
+  }
+}
