@@ -4,7 +4,7 @@ defaults: &defaults
   docker:
     - image: cimg/node:18.12.1
   resource_class: large
-  working_directory: ~/gatsby-starter-lumen
+  working_directory: ~/blog
 
 jobs:
   install:
