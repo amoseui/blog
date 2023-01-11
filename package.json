@@ -17,8 +17,8 @@
   "author": "Amos Lim <amoseui@gmail.com>",
   "scripts": {
     "build": "npm run clean && gatsby build",
-    "deploy": "npm run clean && gatsby build --prefix-paths && gh-pages -d public -m \"[skip ci] Updates: `TZ=UTC-9 date +'%Y-%m-%d %H:%M:%S'`\"",
     "clean": "rimraf .cache public",
+    "deploy": "npm run clean && gatsby build --prefix-paths && gh-pages -d public -m \"[skip ci] Updates: `TZ=UTC-9 date +'%Y-%m-%d %H:%M:%S'`\"",
     "format": "npm run format:ts && npm run format:scss",
     "format:scss": "stylelint \"src/**/*.scss\" --fix",
     "format:ts": "eslint \"src\" --ext .tsx,.ts --fix && prettier --write .",

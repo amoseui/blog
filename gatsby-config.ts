@@ -133,11 +133,13 @@ export default {
       options: {
         host: "https://blog.amoseui.com",
         sitemap: "https://blog.amoseui.com/sitemap.xml",
-        policy: [{
-          userAgent: '*',
-          allow: '/'
-        }]
-      }
+        policy: [
+          {
+            userAgent: "*",
+            allow: "/",
+          },
+        ],
+      },
     },
     {
       resolve: "gatsby-plugin-manifest",
