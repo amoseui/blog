@@ -79,7 +79,6 @@ jobs:
             git config user.name "Amos Lim"
             npm run deploy
 
-
 workflows:
   version: 2
   build:
@@ -97,7 +96,7 @@ workflows:
       - codecov:
           requires:
             - coverage
-     - deploy:
+      - deploy:
           requires:
             - test
           filters:
