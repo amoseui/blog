@@ -17,6 +17,7 @@
   "author": "Amos Lim <amoseui@gmail.com>",
   "scripts": {
     "build": "npm run clean && gatsby build",
+    "deploy": "npm run clean && gatsby build --prefix-paths && gh-pages -d public -m \"[skip ci] Updates: `TZ=UTC-9 date +'%Y-%m-%d %H:%M:%S'`\"",
     "clean": "rimraf .cache public",
     "format": "npm run format:ts && npm run format:scss",
     "format:scss": "stylelint \"src/**/*.scss\" --fix",
@@ -78,6 +79,7 @@
     "gatsby-source-filesystem": "^4.25.0",
     "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^4.25.0",
+    "gh-pages": "^4.0.0",
     "prismjs": "^1.29.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"

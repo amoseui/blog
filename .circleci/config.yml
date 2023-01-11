@@ -63,6 +63,23 @@ jobs:
             - coverage-{{ .Environment.CIRCLE_SHA1 }}
       - run: npx codecov
 
+  deploy:
+    <<: *defaults
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "52:ed:f7:66:cb:9e:58:db:37:13:f3:6f:c4:0a:9f:42"
+      - checkout
+      - restore_cache:
+          keys:
+            - dependencies-{{ checksum "package-lock.json" }}
+      - run:
+          command: |
+            git config user.email "amoseui@gmail.com"
+            git config user.name "Amos Lim"
+            npm run deploy
+
+
 workflows:
   version: 2
   build:
@@ -80,3 +97,10 @@ workflows:
       - codecov:
           requires:
             - coverage
+     - deploy:
+          requires:
+            - test
+          filters:
+            branches:
+              only:
+                - master
