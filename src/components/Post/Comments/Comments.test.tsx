@@ -19,14 +19,7 @@ describe("Comments", () => {
   });
 
   test("renders correctly", () => {
-    const props = {
-      postTitle: mocks.markdownRemark.frontmatter.title,
-      postSlug: mocks.markdownRemark.fields.slug,
-    };
-
-    const tree = testUtils
-      .createSnapshotsRenderer(<Comments {...props} />)
-      .toJSON();
+    const tree = testUtils.createSnapshotsRenderer(<Comments />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

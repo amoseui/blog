@@ -4,7 +4,6 @@
   "subtitle": "There are two colours in my head.",
   "copyright": "© 2016-2023 All rights reserved.",
   "googleAnalyticsId": "G-7DNZ80VV7M",
-  "disqusShortname": "",
   "postsLimit": 5,
   "pathPrefix": "/",
   "menu": [
@@ -35,5 +34,11 @@
       "codepen": "",
       "soundcloud": "amoseui"
     }
+  },
+  "utterances": {
+    "repo": "amoseui/blog",
+    "issueTerm": "title",
+    "label": "comments",
+    "theme": "github-light"
   }
 }

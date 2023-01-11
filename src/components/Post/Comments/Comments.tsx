@@ -4,28 +4,16 @@ import { DiscussionEmbed } from "disqus-react";
 
 import { useSiteMetadata } from "@/hooks";
 
-interface Props {
-  postTitle: string;
-  postSlug: string;
-}
+import { Utterances } from "./Utterances";
 
-const Comments: React.FC<Props> = ({ postTitle, postSlug }: Props) => {
-  const { url, disqusShortname } = useSiteMetadata();
+const Comments: React.FC = () => {
+  const { utterances } = useSiteMetadata();
 
-  if (!disqusShortname) {
+  if (!utterances) {
     return null;
   }
 
-  return (
-    <DiscussionEmbed
-      shortname={disqusShortname}
-      config={{
-        url: url + postSlug,
-        identifier: postTitle,
-        title: postTitle,
-      }}
-    />
-  );
+  return <Utterances utterances={utterances} />;
 };
 
 export default Comments;

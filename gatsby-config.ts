@@ -14,7 +14,7 @@ export default {
     subtitle: config.subtitle,
     copyright: config.copyright,
     postsLimit: config.postsLimit,
-    disqusShortname: config.disqusShortname,
+    utterances: config.utterances,
   },
   plugins: [
     {
