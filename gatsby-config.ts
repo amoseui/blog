@@ -129,27 +129,15 @@ export default {
       },
     },
     {
-      resolve: "gatsby-plugin-sitemap",
+      resolve: "gatsby-plugin-robots-txt",
       options: {
-        query: `
-          {
-            site {
-              siteMetadata {
-                siteUrl: url
-              }
-            }
-            allSitePage(
-              filter: {
-                path: { regex: "/^(?!/404/|/404.html|/dev-404-page/)/" }
-              }
-            ) {
-              nodes {
-                path
-              }
-            }
-          }
-        `,
-      },
+        host: "https://blog.amoseui.com",
+        sitemap: "https://blog.amoseui.com/sitemap.xml",
+        policy: [{
+          userAgent: '*',
+          allow: '/'
+        }]
+      }
     },
     {
       resolve: "gatsby-plugin-manifest",
@@ -200,6 +188,7 @@ export default {
     "gatsby-plugin-catch-links",
     "gatsby-plugin-optimize-svgs",
     "gatsby-plugin-sass",
+    "gatsby-plugin-advanced-sitemap",
     "gatsby-plugin-cname",
   ],
 };
