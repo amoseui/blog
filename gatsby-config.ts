@@ -33,6 +33,7 @@ export default {
               siteMetadata {
                 title
                 description
+                url
                 siteUrl
                 site_url: siteUrl
               }
