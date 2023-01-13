@@ -92,6 +92,7 @@ export default {
               }
             `,
             output: "/rss.xml",
+            title: config.title,
           },
         ],
       },
