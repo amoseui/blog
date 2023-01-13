@@ -31,7 +31,10 @@ export default {
           {
             site {
               siteMetadata {
-                url
+                title
+                description
+                siteUrl
+                site_url: siteUrl
               }
             }
           }
@@ -89,7 +92,6 @@ export default {
               }
             `,
             output: "/rss.xml",
-            title: config.title,
           },
         ],
       },
