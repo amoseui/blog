@@ -3,7 +3,7 @@ title: Droid Knights 2017 후기
 date: 2017-10-03 13:08:05
 template: post
 draft: false
-slug: "droidknights-2017"
+slug: "/droidknights-2017"
 category: "conference"
 tags:
   - 컨퍼런스

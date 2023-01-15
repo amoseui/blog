@@ -3,7 +3,7 @@ title: PyCon APAC 2016 후기
 date: 2016-08-16 23:50:02
 template: post
 draft: false
-slug: "pycon-2016"
+slug: "/pycon-2016"
 category: "conference"
 tags:
   - 컨퍼런스

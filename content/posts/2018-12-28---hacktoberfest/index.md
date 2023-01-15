@@ -3,7 +3,7 @@ title: Hacktoberfest 2018 후기
 date: 2018-12-28 22:00:00
 template: post
 draft: false
-slug: "hacktoberfest-2018"
+slug: "/hacktoberfest-2018"
 category: "event"
 tags:
   - Hacktoberfest
