@@ -3,7 +3,7 @@ title: DEVIEW 2016 DAY 2 후기
 date: 2016-10-26 00:36:10
 template: post
 draft: false
-slug: "deview-2016"
+slug: "/deview-2016"
 category: "conference"
 tags:
   - 컨퍼런스

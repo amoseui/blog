@@ -3,7 +3,7 @@ title: Code Coverage Best Practices
 date: 2020-12-09 22:00:00
 template: post
 draft: false
-slug: "code-coverage"
+slug: "/code-coverage"
 category: "review"
 tags:
   - testing
