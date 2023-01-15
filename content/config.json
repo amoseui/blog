@@ -1,6 +1,6 @@
 {
   "title": "Everything in its Right Place",
-  "url": "https://blog.amoseui.com",
+  "url": "https://blog.amoseui.com/",
   "subtitle": "There are two colours in my head.",
   "copyright": "© 2016-2023 All rights reserved.",
   "googleAnalyticsId": "G-7DNZ80VV7M",
@@ -15,7 +15,7 @@
   "author": {
     "name": "amoseui",
     "photo": "/photo.jpg",
-    "bio": "Everythin in its Right Place",
+    "bio": "Everything in its Right Place",
     "contacts": {
       "rss": "rss.xml",
       "email": "amoseui@gmail.com",
