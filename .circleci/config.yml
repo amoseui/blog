@@ -20,6 +20,15 @@ jobs:
             - node_modules
           key: dependencies-{{ checksum "package-lock.json" }}
 
+  build:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - dependencies-{{ checksum "package-lock.json" }}
+      - run: npm run build
+
   lint:
     <<: *defaults
     steps:
@@ -84,6 +93,9 @@ workflows:
   build:
     jobs:
       - install
+      - build:
+          requires:
+            - install
       - lint:
           requires:
             - install

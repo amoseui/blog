@@ -6,7 +6,7 @@ draft: false
 slug: "/2022-retrospective"
 category: "retrospective"
 tags:
-  - 2022
+  - "2022"
   - retrospective
 description: 오랜만에 한 해 회고를 남긴다.
 ---
