@@ -45,7 +45,7 @@
   },
   "utterances": {
     "repo": "amoseui/blog",
-    "issueTerm": "title",
+    "issueTerm": "og:title",
     "label": "comments",
     "theme": "preferred-color-scheme"
   }
