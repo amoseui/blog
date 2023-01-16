@@ -7,6 +7,7 @@ slug: "/code-coverage"
 category: "review"
 tags:
   - testing
+  - codecoverage
 description: 지난 8월 Google Testing Blog 에 올라왔던 Code Coverage Best Practices 를 보고 간단히 정리해 보았다.
 ---
 
