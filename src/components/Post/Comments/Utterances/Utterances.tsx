@@ -38,6 +38,7 @@ const Utterances: React.FC<IUtterancesProps> = React.memo(({ utterances }) => {
       }
     };
 
+    const utterancesEl = containerRef.current.querySelector(utterancesSelector);
     const postThemeMessage = () => {
       const message = {
         type: "set-theme",
@@ -46,8 +47,11 @@ const Utterances: React.FC<IUtterancesProps> = React.memo(({ utterances }) => {
       utterancesEl.contentWindow.postMessage(message, src);
     };
 
-    const utterancesEl = containerRef.current.querySelector(utterancesSelector);
-    utterancesEl ? postThemeMessage() : createUtterancesEl();
+    if (utterancesEl) {
+      postThemeMessage();
+    } else {
+      createUtterancesEl();
+    }
   }, [utterances, themeMode]);
 
   return <div ref={containerRef} />;
