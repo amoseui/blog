@@ -4,10 +4,10 @@ date: 2018-12-28 22:00:00
 template: post
 draft: false
 slug: "/hacktoberfest-2018"
-category: "event"
+category: "opensource"
 tags:
-  - Hacktoberfest
-  - 오픈소스
+  - hacktoberfest
+  - opensource
 description: 2018년 Hacktoberfest 에 참여했다.
 socialImage: "./media/hacktoberfest.jpg"
 ---
