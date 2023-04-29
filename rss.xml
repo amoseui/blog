@@ -1,4 +1,200 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Everything in its Right Place]]></title><description><![CDATA[Everything in its Right Place]]></description><link>https://blog.amoseui.com</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 29 Apr 2023 04:47:29 GMT</lastBuildDate><item><title><![CDATA[2022년 회고]]></title><description><![CDATA[오랜만에 한 해 회고를 남긴다.]]></description><link>https://blog.amoseui.com/2022-retrospective</link><guid isPermaLink="false">https://blog.amoseui.com/2022-retrospective</guid><pubDate>Sat, 31 Dec 2022 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;오랜만에 한 해 회고를 남긴다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Everything in its Right Place]]></title><description><![CDATA[Everything in its Right Place]]></description><link>https://blog.amoseui.com</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 29 Apr 2023 04:52:02 GMT</lastBuildDate><item><title><![CDATA[Android 13 AOSP 빌드 및 cuttlefish 실행]]></title><description><![CDATA[Ubuntu 20.04 환경에서 Android 13 버전 기준으로 AOSP 빌드를 하고 Cuttlefish 라는 가상 디바이스에서 실행하는 방법을 정리해보았다.]]></description><link>https://blog.amoseui.com/android-13-aosp-cuttlefish</link><guid isPermaLink="false">https://blog.amoseui.com/android-13-aosp-cuttlefish</guid><pubDate>Sun, 19 Mar 2023 00:50:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;개요&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B0%9C%EC%9A%94&quot; aria-label=&quot;개요 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;개요&lt;/h2&gt;
+&lt;p&gt;Ubuntu 20.04 환경에서 Android 13 버전 기준으로 AOSP 빌드를 하고 Cuttlefish 라는 가상 디바이스에서 실행하는 방법을 정리해보았다.&lt;/p&gt;
+&lt;h2 id=&quot;aosp&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#aosp&quot; aria-label=&quot;aosp permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;AOSP?&lt;/h2&gt;
+&lt;p&gt;보통 Android Open Source Project 를 줄여서 AOSP 라고 부른다. 모바일 기기에 탑재되는 Android OS 는 보통 AOSP에 비공개 코드로 빌드된 여러 모듈과 레이어 + 구글 서비스 + 단말 업체의 수정, 앱, 서비스 등이 포함되어있다고 보면 된다.&lt;/p&gt;
+&lt;p&gt;AOSP는 오픈소스 프로젝트지만 개발 프로세스, 문서, 코드가 투명하게 모두 공개되어있는 커뮤니티 기반의 일반적인 오픈소스 프로젝트라고 보기는 어렵다. 공개된 repository 에 코드 반영이 가능하긴 하지만 대부분 보수적으로 운영되기 때문에 적극적인 contribution 이 쉽지 않다. AOSP gerrit 에 코드를 올릴 때  CI 빌드가 돌기는 하지만 결과 링크는 구글 내부 URL 이라서 접속을 할 수 없다. 구글이 내부적으로 신규 OS 개발을 1년동안 진행하고 정식 릴리즈 때에 AOSP 브랜치로 전체 merge 를 하는 방식으로 코드를 공개한다.&lt;/p&gt;
+&lt;p&gt;안드로이드 앱 개발자는 &lt;a href=&quot;https://developer.android.com/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;developer.android.com&lt;/a&gt; 웹사이트가 익숙한데 AOSP는 이 곳이 아닌 별도의 &lt;a href=&quot;https://source.android.com&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;source.android.com&lt;/a&gt; 사이트에 플랫폼 개발자를 위한 문서를 제공한다. developer 사이트에 비해 내용이 많이 부족했지만 몇 년 사이에 리뉴얼도 하고 최신 내용도 많이 보충되었다.&lt;/p&gt;
+&lt;h2 id=&quot;cuttlefish&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#cuttlefish&quot; aria-label=&quot;cuttlefish permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Cuttlefish?&lt;/h2&gt;
+&lt;p&gt;Cuttlefish 는 에뮬레이터와 비슷한 가상 환경의 안드로이드 디바이스 이름이다. (Cuttlefish 뜻은 갑오징어이다. 이 때문에 한국어 AOSP 사이트에는 ‘오징어 가상 Android 기기’로 이상하게 번역되어 있다.) 아래 링크에 에뮬레이터와의 차이점이 설명되어있다. 기존 에뮬레이터는 앱 개발을 쉽게 하기 위한 용도로 기능적으로 앱이 잘 실행될 수 있도록 후킹이 되어있는 부분이 있어서 플랫폼/프레임워크에 대한 적합성을 100% 보장하지 않는다고 한다. 반면 Cuttlefish 는 CTS(Compatibility Test Suite) 등을 돌릴 수 있을 정도로 HAL(Hardware Abstraction Layer)을 제외하면 실제 기기와 거의 동일한 순수 AOSP 플랫폼/프레임워크 기반의 디바이스라고 한다. AOSP 의 대표 공식 가상 환경으로 설명되어있다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://source.android.com/docs/setup/create/cuttlefish&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://source.android.com/docs/setup/create/cuttlefish&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Cuttlefish 는 기본적으로 웹 환경으로 제공된다. 웹페이지에 접속하여 기기를 실행한다. 로컬 환경에서 AOSP 코드를 빌드해서 직접 구동을 할 수도 있고 빌드된 이미지를 로컬 환경이나 클라우드 환경에서 구동할 수도 있다. 직접 돌려봤을 때는 에뮬레이터 대비 가벼운 느낌도 좀 있었다.&lt;/p&gt;
+&lt;h2 id=&quot;aosp-빌드-방법&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#aosp-%EB%B9%8C%EB%93%9C-%EB%B0%A9%EB%B2%95&quot; aria-label=&quot;aosp 빌드 방법 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;AOSP 빌드 방법&lt;/h2&gt;
+&lt;h3 id=&quot;빌드-환경&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%B9%8C%EB%93%9C-%ED%99%98%EA%B2%BD&quot; aria-label=&quot;빌드 환경 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;빌드 환경&lt;/h3&gt;
+&lt;p&gt;빌드 환경 셋업은 아래 링크에 나와있는 그대로 따라했다. Ubuntu 20.04 를 사용하고 있는데 아래 링크에서 Ubuntu 18.04 와 동일하게 패키지를 설치하였는데 별 다른 문제는 없었다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://source.android.com/docs/setup/start/initializing&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://source.android.com/docs/setup/start/initializing&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;소스-다운로드-및-빌드&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%86%8C%EC%8A%A4-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C-%EB%B0%8F-%EB%B9%8C%EB%93%9C&quot; aria-label=&quot;소스 다운로드 및 빌드 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;소스 다운로드 및 빌드&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;mkdir&lt;/span&gt; AOSP
+$ &lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; AOSP
+$ repo init &lt;span class=&quot;token parameter variable&quot;&gt;--depth&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-u&lt;/span&gt; https://android.googlesource.com/platform/manifest &lt;span class=&quot;token parameter variable&quot;&gt;-b&lt;/span&gt; android13-gsi
+$ repo &lt;span class=&quot;token function&quot;&gt;sync&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-c&lt;/span&gt; --no-clone-bundle --no-tags -j&lt;span class=&quot;token variable&quot;&gt;&lt;span class=&quot;token variable&quot;&gt;$(&lt;/span&gt;nproc &lt;span class=&quot;token parameter variable&quot;&gt;--all&lt;/span&gt;&lt;span class=&quot;token variable&quot;&gt;)&lt;/span&gt;&lt;/span&gt;
+$ &lt;span class=&quot;token builtin class-name&quot;&gt;.&lt;/span&gt; build/envsetup.sh
+$ lunch aosp_cf_arm64_phone
+$ m&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;repo 는 빌드 환경을 위한 도구이다. AOSP 는 수십개의 repository 로 구성되어있으며 manifest 로 이를 관리한다. master 브랜치는 개발 중인 브랜치로 빌드나 디바이스 실행 등이 잘 안 될 수 있기 때문에 Android 13 의 안정화 버전이라고 할 수 있는 Generic System Image 를 위한 android13-gsi 태그로 코드를 받았다. 소스 싱크는 1~2시간 가량 걸렸다.&lt;/p&gt;
+&lt;p&gt;프로젝트가 워낙 크기 때문에 전체 git history 를 포함한 코드를 모두 받으면 디스크 용량이 부족할 수 있다. 다운받을 소스 코드를 최소화하기 위해 repo init, sync 시에 —depth=1, -c, —no-clone-bundle, —no-tags 옵션 등을 추가했다. 코드는 빌드로만 사용하고 히스토리 트래킹은 &lt;a href=&quot;https://cs.android.com&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://cs.android.com&lt;/a&gt; 이나 &lt;a href=&quot;https://android.googlesource.com/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://android.googlesource.com/&lt;/a&gt; 를 참고하는 것이 낫다. 만약 contribution 이 필요한 경우 관련 project 만 따로 코드를 받는 것이 좋다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;repo init --help&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;repo sync --help&lt;/code&gt; 를 하면 사용할 수 있는 옵션을 볼 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;. build/envsetup.sh&lt;/code&gt; 으로 &lt;code class=&quot;language-text&quot;&gt;PATH&lt;/code&gt; 등의 빌드 환경을 잡고 &lt;code class=&quot;language-text&quot;&gt;lunch&lt;/code&gt; 명령어로 디바이스 타겟을 설정하여 빌드 준비를 한다. Cuttlefish 타겟을 위해 aosp_cf_arm64_phone 디바이스를 타겟으로 했다. &lt;code class=&quot;language-text&quot;&gt;lunch&lt;/code&gt; 명령어를 실행하면 아래와 같은 결과가 나온다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;============================================
+PLATFORM_VERSION_CODENAME=REL
+PLATFORM_VERSION=13
+TARGET_PRODUCT=aosp_cf_x86_64_phone
+TARGET_BUILD_VARIANT=eng
+TARGET_BUILD_TYPE=release
+TARGET_ARCH=x86_64
+TARGET_ARCH_VARIANT=silvermont
+TARGET_2ND_ARCH=x86
+TARGET_2ND_ARCH_VARIANT=silvermont
+HOST_ARCH=x86_64
+HOST_2ND_ARCH=x86
+HOST_OS=linux
+HOST_OS_EXTRA=Linux-5.15.0-67-generic-x86_64-Ubuntu-20.04.4-LTS
+HOST_CROSS_OS=windows
+HOST_CROSS_ARCH=x86
+HOST_CROSS_2ND_ARCH=x86_64
+HOST_BUILD_TYPE=release
+BUILD_ID=TP1A.220624.019
+OUT_DIR=out
+PRODUCT_SOONG_NAMESPACES=device/generic/goldfish-opengl device/generic/goldfish device/generic/goldfish-opengl hardware/google/camera hardware/google/camera/devices/EmulatedCamera device/google/cuttlefish/apex/com.google.cf.wifi_hwsim external/mesa3d vendor/google_devices/common/proprietary/confirmatioui_hal
+============================================&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;마지막으로 m 명령어로 전체 빌드를 한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://source.android.com/docs/setup/download/downloading&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://source.android.com/docs/setup/download/downloading&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://source.android.com/docs/setup/build/building&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://source.android.com/docs/setup/build/building&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;빌드-에러&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%B9%8C%EB%93%9C-%EC%97%90%EB%9F%AC&quot; aria-label=&quot;빌드 에러 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;빌드 에러&lt;/h3&gt;
+&lt;p&gt;빌드 에러가 간간히 발생했는데 무시하고 다시 m 명령어로 빌드를 몇 번 재시도했더니 결국 전체 소스 빌드에 성공했다. 빌드는 3~4시간은 걸린 걸로 기억한다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;rust 에서 빌드 중 segmentation fault 발생&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;[ 87% 161402/183718] //packages/modules/Virtualization/compos:compsvc rustc src/compsvc_main.rs [apex10000]
+FAILED: out/soong/.intermediates/packages/modules/Virtualization/compos/compsvc/android_arm64_armv8-a_cortex-a53_apex10000/unstripped/compsvc&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;R8 에러&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Error: java.lang.ClassCastException: class co m.android.tools.r8.graph.i1$g cannot be cast to class co[m.android.tools.r8.graph.o0](http://m.android.tools.r8.graph.o0) (co m.android.tools.r8.graph.i1$g and co[m.android.tools.r8.graph.o0](http://m.android.tools.r8.graph.o0) are in unnamed 
+module of loader &apos;app&apos;)
+Compilation failed with an internal error.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;cuttlefish-실행&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#cuttlefish-%EC%8B%A4%ED%96%89&quot; aria-label=&quot;cuttlefish 실행 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Cuttlefish 실행&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://source.android.com/docs/setup/create/cuttlefish-use&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://source.android.com/docs/setup/create/cuttlefish-use&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;위 링크를 참고하여 Cuttlefish 를 설치했다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;apt&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-y&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; devscripts config-package-dev debhelper-compat golang &lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt;
+$ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; clone https://github.com/google/android-cuttlefish
+$ &lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; android-cuttlefish
+$ &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token for-or-select variable&quot;&gt;dir&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; base frontend&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;do&lt;/span&gt;
+  &lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;token variable&quot;&gt;$dir&lt;/span&gt;
+  debuild &lt;span class=&quot;token parameter variable&quot;&gt;-i&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-us&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-uc&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-b&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-d&lt;/span&gt;
+  &lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;done&lt;/span&gt;
+$ &lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; dpkg &lt;span class=&quot;token parameter variable&quot;&gt;-i&lt;/span&gt; ./cuttlefish-base_*_*64.deb &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;apt-get&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-f&lt;/span&gt;
+$ &lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; dpkg &lt;span class=&quot;token parameter variable&quot;&gt;-i&lt;/span&gt; ./cuttlefish-user_*_*64.deb &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;apt-get&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-f&lt;/span&gt;
+$ &lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;usermod&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-aG&lt;/span&gt; kvm,cvdnetwork,render &lt;span class=&quot;token environment constant&quot;&gt;$USER&lt;/span&gt;
+$ &lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;reboot&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;재부팅을 하면 빌드할 때 실행했던 &lt;code class=&quot;language-text&quot;&gt;build/envsetup.sh&lt;/code&gt; 로 지정된 &lt;code class=&quot;language-text&quot;&gt;PATH&lt;/code&gt;가 다 날아가므로 다시 실행을 해줘야 한다. (터미널을 새로 실행하거나 새 탭을 열 때도 마찬가지)&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; AOSP
+$ &lt;span class=&quot;token builtin class-name&quot;&gt;.&lt;/span&gt; build/envsetup.sh
+$ lunch aosp_cf_arm64_phone
+&lt;span class=&quot;token comment&quot;&gt;# 실행&lt;/span&gt;
+$ launch_cvd &lt;span class=&quot;token parameter variable&quot;&gt;--daemon&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# 종료&lt;/span&gt;
+$ stop_cvd&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;launch_cvd&lt;/code&gt; 를 실행한 뒤 &lt;a href=&quot;https://localhost:8443&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://localhost:8443&lt;/a&gt; 에 접속하여 Devices 밑에 cvd-1 이 뜨는지 확인한다. 토글 버튼을 눌러 cvd-1 을 실행하면 디바이스가 부팅이 된다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/610dde62fe7e601367bcd297e14d6d7c/21b4d/screenshot_cuttlefish.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 61.24999999999999%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAAB8ElEQVQoz6WRzWvScRzHv85mmlDZw4xobo02xrYgykPgoWWntaarxqgOs4KwhTVqi6CCyqeVKORKOtki6hAdqr+gQwU5/CVdfPoNSsVEVqBOiA7xCt2OI2YdXnw+pxfvN28xMnGdkYkbnJq6xaEzl+gcOEGPZYxeq41e61j9N9scDI9PccR+hWOOa5y8fJOjF64yZJ/Ecn6SoWVqv8jlCiwUi/z+9ZOXr95gsY3Tsms3G1o72dTezdoWA8HQI4r5HKlEHDmZWLqpJPMrIOT5DF++Zlj48Z2nT55x3D7KtsN6tpq3sNmsQ2EUuPwukokUkbk5opKEJEn1uxKiUPhGNpulWq3icXsYHLbyIRbh7cf3vPsk8fjFc8Kzs8Tj8booFov9FZHP58lkMizWhS5s5xx8LkL4dYTbzrucPmvH450mnU4TjUZXJ6wlrFQWCfim2dM/ysDFMCpdF0KIOk6nG1mWGxOWSiVCoYcolVqEUKMQzazT6hFCg9PlaVxYLpWZeTBDk0KNdn0b+nYjKtXG/xCWywSD9xFCgUa7g46eAwhRS9vceOXaKJVKBZ/vHhqNDtPBQfbuM7Lf1E9Lhwm314cspxsXBgJ+hFBh2NlHa1s3BkMX6u193PEHkdOpf6kcXF62CSHWoFAol1b2eFdd+Q8pDLAQFlMniQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/610dde62fe7e601367bcd297e14d6d7c/8ac56/screenshot_cuttlefish.webp 240w,
+/static/610dde62fe7e601367bcd297e14d6d7c/d3be9/screenshot_cuttlefish.webp 480w,
+/static/610dde62fe7e601367bcd297e14d6d7c/e46b2/screenshot_cuttlefish.webp 960w,
+/static/610dde62fe7e601367bcd297e14d6d7c/af3f0/screenshot_cuttlefish.webp 1280w&quot;
+              sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/610dde62fe7e601367bcd297e14d6d7c/8ff5a/screenshot_cuttlefish.png 240w,
+/static/610dde62fe7e601367bcd297e14d6d7c/e85cb/screenshot_cuttlefish.png 480w,
+/static/610dde62fe7e601367bcd297e14d6d7c/d9199/screenshot_cuttlefish.png 960w,
+/static/610dde62fe7e601367bcd297e14d6d7c/21b4d/screenshot_cuttlefish.png 1280w&quot;
+            sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/610dde62fe7e601367bcd297e14d6d7c/d9199/screenshot_cuttlefish.png&quot;
+            alt=&quot;cuttlefish&quot;
+            title=&quot;cuttlefish&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;em&gt;&lt;center&gt;부팅된 Cuttlefish 화면&lt;/center&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;launch_cvd&lt;/code&gt; 를 실행했을 때 정상적인 경우 아래처럼 로그가 나오고&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ launch_cvd --daemon
+===================================================================
+NOTICE:
+
+We collect usage statistics in accordance with our
+Content Licenses (https://source.android.com/setup/start/licenses),
+Contributor License Agreement (https://cla.developers.google.com/),
+Privacy Policy (https://policies.google.com/privacy) and
+Terms of Service (https://policies.google.com/terms).
+===================================================================
+
+launch_cvd I 03-19 00:29:01 75269 75269 main.cc:186] Host changed from last run: 0
+assemble_cvd D 03-19 00:29:01 75657 75657 fetcher_config.cpp:212] Could not find file ending in kernel
+assemble_cvd D 03-19 00:29:01 75657 75657 fetcher_config.cpp:212] Could not find file ending in initramfs.img
+assemble_cvd I 03-19 00:29:01 75657 75657 config_flag.cpp:148] Launching CVD using --config=&apos;phone&apos;.
+assemble_cvd D 03-19 00:29:01 75657 75657 subprocess.cpp:335] Started (pid: 75660): /home/amoseui/Workspace/AOSP/out/host/linux-x86/bin/extract-ikconfig
+assemble_cvd D 03-19 00:29:01 75657 75657 subprocess.cpp:337] /home/amoseui/Workspace/AOSP/out/target/product/vsoc_x86_64/boot.img
+GPU auto mode: did not detect prerequisites for accelerated rendering support, enabling --gpu_mode=guest_swiftshader.
+The following files contain useful debugging information:
+  Serial console is disabled; use -console=true to enable it.
+  Kernel log: /home/amoseui/cuttlefish/instances/cvd-1/kernel.log
+  Logcat output: /home/amoseui/cuttlefish/instances/cvd-1/logs/logcat
+  Launcher log: /home/amoseui/cuttlefish/instances/cvd-1/logs/launcher.log
+  Instance configuration: /home/amoseui/cuttlefish/instances/cvd-1/cuttlefish_config.json
+  Instance environment: /home/amoseui/.cuttlefish.sh&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;cvd-1 을 켜서 부팅에 성공하면 아래 로그까지 나온다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Virtual device booted successfully
+VIRTUAL_DEVICE_BOOT_COMPLETED&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;부팅이 안 되는 경우에는 &lt;code class=&quot;language-text&quot;&gt;kernel.log&lt;/code&gt; 나 &lt;code class=&quot;language-text&quot;&gt;launcher.log&lt;/code&gt; 의 내용을 확인해야 한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;The following files contain useful debugging information:
+  Serial console is disabled; use -console=true to enable it.
+  Kernel log: /home/amoseui/cuttlefish/instances/cvd-1/kernel.log
+  Logcat output: /home/amoseui/cuttlefish/instances/cvd-1/logs/logcat
+  Launcher log: /home/amoseui/cuttlefish/instances/cvd-1/logs/launcher.log
+  Instance configuration: /home/amoseui/cuttlefish/instances/cvd-1/cuttlefish_config.json
+  Instance environment: /home/amoseui/.cuttlefish.sh&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;launcher.log&lt;/code&gt; 내용을 확인해보니 아래처럼 kvm (kernel-based virtual machine) 경로가 없다는 에러가 있었다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;run_cvd D 03-14 21:12:36 3458590 3458590 subprocess.cpp:337] /home/amoseui/Workspace/AOSP/out/target/product/vsoc_x86_64/bootloader
+openwrt D 03-14 21:12:36 3458613 3458613 log_tee.cpp:75] `--seccomp-policy-dir=/home/amoseui/Workspace/AOSP/out/host/linux-x86/usr/share/cuttlefish/x86_64-linux-gnu/seccomp` is deprecated, please use `--seccomp-policy-dir /home/amoseui/Workspace/AOSP/out/host/linux-x86/usr/share/cuttlefish/x86_64-linux-gnu/seccomp`
+openwrt D 03-14 21:12:36 3458613 3458613 log_tee.cpp:75] [2023-03-14T21:12:36.663845565+09:00 ERROR crosvm] kvm path &quot;/dev/kvm&quot; does not exist
+run_cvd I 03-14 21:12:36 3458590 3458590 process_monitor.cc:118] Detected unexpected exit of monitored subprocess /home/amoseui/Workspace/AOSP/out/host/linux-x86/bin/crosvm
+run_cvd I 03-14 21:12:36 3458590 3458590 process_monitor.cc:120] Subprocess /home/amoseui/Workspace/AOSP/out/host/linux-x86/bin/crosvm (3458640) has exited with exit code 1&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;sudo kvm-ok&lt;/code&gt; 로 kvm 을 확인해보았더니 BIOS 에서 disable 되어있어서 안된다는 메시지를 나왔다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; kvm-ok
+INFO: /dev/kvm does not exist
+HINT:   &lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; modprobe kvm_amd
+INFO: Your CPU supports KVM extensions
+INFO: KVM &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;svm&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; is disabled by your BIOS
+HINT: Enter your BIOS setup and &lt;span class=&quot;token builtin class-name&quot;&gt;enable&lt;/span&gt; Virtualization Technology &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;VT&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;,
+      and &lt;span class=&quot;token keyword&quot;&gt;then&lt;/span&gt; hard poweroff/poweron your system
+KVM acceleration can NOT be used&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;AMD 라이젠 GIGABYTE 기준, 부팅 화면에서 BIOS 설정으로 들어가서
+M.I.T &gt; Advanced Frequency Settings &gt; Advanced CPU Core Settings &gt; SVM Mode 을 enable 한 뒤,
+아래 명령어를 실행하다보니 부팅이 됐다. (바로 기록한 것이 아니라 순서나 내용이 정확하지 않을 수 있음)&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; modprobe kvm_amd
+$ &lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;apt&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-y&lt;/span&gt; qemu qemu-kvm libvirt-daemon libvirt-clients bridge-utils virt-manager
+$ &lt;span class=&quot;token function&quot;&gt;ls&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-al&lt;/span&gt; /dev/kvm
+$ &lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;usermod&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-aG&lt;/span&gt; kvm,cvdnetwork,render &lt;span class=&quot;token environment constant&quot;&gt;$USER&lt;/span&gt;
+$ &lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; kvm-ok
+INFO: /dev/kvm exists
+KVM acceleration can be used&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[2022년 회고]]></title><description><![CDATA[오랜만에 한 해 회고를 남긴다.]]></description><link>https://blog.amoseui.com/2022-retrospective</link><guid isPermaLink="false">https://blog.amoseui.com/2022-retrospective</guid><pubDate>Sat, 31 Dec 2022 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;오랜만에 한 해 회고를 남긴다.&lt;/p&gt;
 &lt;p&gt;개인적으로 오픈소스 프로젝트 활동, 컨퍼런스 발표가 엄청 큰 이벤트였고, 성장할 수 있는 기회가 됐다.&lt;/p&gt;
 &lt;h3 id=&quot;오픈소스-프로젝트-활동&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%ED%99%9C%EB%8F%99&quot; aria-label=&quot;오픈소스 프로젝트 활동 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;오픈소스 프로젝트 활동&lt;/h3&gt;
 &lt;p&gt;3년 만에 Chromium 프로젝트 컨트리뷰션을 다시 시작했다. 2018년부터 2019년 초까지 committer 를 목표로 달리다가 결국 목표를 달성하지 못하고 부서를 옮기면서 그만 뒀었다. 오픈소스 컨트리뷰션을 그만 뒀다가 다시 시작하는 건 어려우면서 두려운 일인데 봄에 그 어려운 걸 이겨낼 수 있는 동기가 생겨 다시 시작할 수 있었다. 6월부터 5개월 간 주로 Web Authentication W3C 스펙과 관련한 수정을 했다. 11월에는 컨퍼런스 발표 준비, 코로나 감염으로 고생하면서 쉬었고 12월까지 아무런 패치를 하지 못 했다. 올해 반영한 패치 수는 10개. 6월에 다시 시작하면서 올해 목표를 committer 로 잡았었는데 결국 달성하지 못 했다. 개인적인 기준으로는 아주 조금만 더 반영하면 가능할 것 같은데 그게 너무 어렵다. 다시 힘을 내서 2023년 1분기 안에 committer nomination 요청을 해 볼 계획이다.&lt;/p&gt;
