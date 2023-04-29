@@ -113,7 +113,7 @@ strong {
 }
 
 ul {
-  list-style: square;
+  list-style: circle;
   @include margin-bottom(1);
 
   & li {
