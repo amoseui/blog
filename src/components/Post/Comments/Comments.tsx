@@ -2,16 +2,16 @@ import React from "react";
 
 import { useSiteMetadata } from "@/hooks";
 
-import { Utterances } from "./Utterances";
+import { GiscusComments } from "./GiscusComments";
 
 const Comments: React.FC = () => {
-  const { utterances } = useSiteMetadata();
+  const { giscus } = useSiteMetadata();
 
-  if (!utterances) {
+  if (!giscus) {
     return null;
   }
 
-  return <Utterances utterances={utterances} />;
+  return <GiscusComments />;
 };
 
 export default Comments;
