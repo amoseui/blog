@@ -45,10 +45,13 @@ const GiscusComments: React.FC = () => {
     const postThemeMessage = () => {
       const message = {
         setConfig: {
-          theme: themeMode
-        }
+          theme: themeMode,
+        },
       };
-      giscusEl.contentWindow.postMessage({ giscus: message }, "https://giscus.app");
+      giscusEl.contentWindow.postMessage(
+        { giscus: message },
+        "https://giscus.app",
+      );
     };
 
     if (giscusEl) {
