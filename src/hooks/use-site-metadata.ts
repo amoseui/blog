@@ -37,12 +37,7 @@ const useSiteMetadata = () => {
             title
             subtitle
             copyright
-            utterances {
-              repo
-              issueTerm
-              label
-              theme
-            }
+            giscus
           }
         }
       }
