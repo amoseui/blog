@@ -1,5 +1,5 @@
 ---
-title: "[Chromium Contribution] 불필요한 register-property-syntax-parsing.html.ini 파일 삭제"
+title: "Chromium Contribution: 불필요한 register-property-syntax-parsing.html.ini 파일 삭제"
 date: 2023-06-21 21:10:00
 template: post
 draft: false
@@ -11,7 +11,7 @@ tags:
   - css
   - w3c
   - wpt
-description: Chromium 에 반영한 패치 내용 정리
+description: 2023년 Chromium 에 반영한 두 번째 패치 내용 정리
 ---
 
 ### 관련 링크

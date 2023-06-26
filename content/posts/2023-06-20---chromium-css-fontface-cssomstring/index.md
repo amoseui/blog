@@ -1,5 +1,5 @@
 ---
-title: "[Chromium Contribution] CSS FontFace 속성 타입을 DOMString 에서 CSSOMString 으로 변경"
+title: "Chromium Contribution: CSS FontFace 속성 타입을 DOMString 에서 CSSOMString 으로 변경"
 date: 2023-06-20 22:50:00
 template: post
 draft: false
@@ -10,7 +10,7 @@ tags:
   - chromium
   - css
   - w3c
-description: Chromium 에 반영한 패치 내용 정리
+description: 2023년 Chromium 에 반영한 첫 번째 패치 내용 정리
 ---
 
 ### 관련 링크
