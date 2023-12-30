@@ -10,6 +10,7 @@ const Meta: React.FC<Props> = ({ description, title, image }: Props) => (
   <>
     <title>{title}</title>
     <meta name="description" content={description} />
+    <meta name="naver-site-verification" content="b14b409f559df7b1c4219c72067097d7cd45ce9c" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
