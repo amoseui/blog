@@ -1,4 +1,154 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Everything in its Right Place]]></title><description><![CDATA[Everything in its Right Place]]></description><link>https://blog.amoseui.com</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 02 Jan 2024 13:43:55 GMT</lastBuildDate><item><title><![CDATA[Chromium Contribution: CSS KeyframesRule length attribute 추가]]></title><description><![CDATA[2023년 Chromium 에 반영한 여섯 번째 패치 내용 정리]]></description><link>https://blog.amoseui.com/chromium-css-keyframesrule-length-attribute</link><guid isPermaLink="false">https://blog.amoseui.com/chromium-css-keyframesrule-length-attribute</guid><pubDate>Thu, 30 Nov 2023 09:30:00 GMT</pubDate><content:encoded>&lt;h3 id=&quot;관련-링크&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B4%80%EB%A0%A8-%EB%A7%81%ED%81%AC&quot; aria-label=&quot;관련 링크 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;관련 링크&lt;/h3&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Everything in its Right Place]]></title><description><![CDATA[Everything in its Right Place]]></description><link>https://blog.amoseui.com</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 02 Jan 2024 14:58:20 GMT</lastBuildDate><item><title><![CDATA[2023년 회고 그리고 2024년]]></title><description><![CDATA[살짝 늦은 2023년 회고]]></description><link>https://blog.amoseui.com/2023-retrospective</link><guid isPermaLink="false">https://blog.amoseui.com/2023-retrospective</guid><pubDate>Tue, 02 Jan 2024 14:45:00 GMT</pubDate><content:encoded>&lt;h3 id=&quot;회사&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%9A%8C%EC%82%AC&quot; aria-label=&quot;회사 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;회사&lt;/h3&gt;
+&lt;p&gt;11월에 팀을 옮겼다. 특이한 부서의 인원 모집 공고가 떴는데 마침 예전에 있던 팀에서 알던 분이 계셔서 먼저 연락을 드렸고, 감사하게도 뽑아주셨다. 이전 팀은 우리 회사의 핵심 부서 중 하나이고 아주 큰 조직이었다. 3년 6개월 동안 많이 배우기도 했지만 힘든 점도 많았다. 내외적으로 여러 종류의 스트레스가 있었다. 스스로 해결하기 어려운 어쩔 수 없는 문제가 많았다. 정신적으로 지쳐서 그런지 내적인 문제도 계속 쌓였다. 결국 환경을 바꿔주면 조금이라도 해소가 될 수 있을거라고 믿었다. 이런저런 고민이 많을 때에 좋은 기회가 있어서 옮겼다. 회사가 크다 보니 팀을 옮기는게 이직하는 것과 비슷한 효과를 주는 것 같다.&lt;/p&gt;
+&lt;p&gt;나오면서 이전 부서에서 경험한 일과 조직에 대한 복기를 해봐야겠다고 생각했는데 아직 정리를 못했다. 더 늦기 전에 정리를 해두려고 한다. 분명 배운 점도 많이 있었다. 그동안 배운 것과 고민했던 것이 새로 온 부서에서 적응하는데 도움이 되고 있다. 이전 부서에 생각보다 길게 있었기 때문에 더 큰 스트레스를 받았던 것 같기도 한데, 이 정도 있었기에 알게 된 것도 많다.&lt;/p&gt;
+&lt;p&gt;이제 이 회사에서 일을 시작한지 만으로 10년이 되었다. 그동안 자의로 팀을 세 번 옮겨서 이번이 네번째 팀이다. 그동안 거쳐 온 부서들의 성격이 각각 달랐었는데 이번 팀은 또 완전 다르다. 선행 조직이고 다양한 직군이 있다보니 지금까지 경험해보지 못한 업무 목표, 방향, 관점을 갖고 있다. 팀이 작다보니 개인적인 역할도 더 생겼다. 리더는 아니지만 주니어 양성에도 좀 더 신경을 써야 한다. 예전보다는 나를 좀 더 돌아보고 주변도 함께 돌아볼 수 있는 여유가 생겼기에 많은 걸 시도해보고 배울 수 있기를 기대하고 있다.&lt;/p&gt;
+&lt;h3 id=&quot;오픈소스&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4&quot; aria-label=&quot;오픈소스 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;오픈소스&lt;/h3&gt;
+&lt;p&gt;작년에 다시 시작했던 Chromium 기여 활동을 잠깐 쉬다가 오픈 프런티어 활동을 하면서 조금씩 패치를 반영했다. 회사에서도 오픈소스에 관심 있는 분들 대상으로 멘토링을 했다. 회사에서 갑자기 멘토링 프로그램을 시작하였고 별 다른 가이드없이 멘토에게 자율적으로 멘토링을 맡겼다. 멘토링이 처음이었기 때문에 준비해둔 자료가 없었다. 이 프로그램을 위해서 새로 무언가를 만드는 건 부담되는 일이었다. 멘티는 두 명이었는데 간단한 세미나 한 번, 식사 몇 차례와 티타임을 가졌다. 한 분은 현업과 관련이 크게 없는 프로젝트였음에도 몇 차례 패치를 반영했다. 좀 더 준비가 되어있었으면 서로 좋았을텐데 아쉽다. 평소에 정리와 문서화를 잘 해두어야겠다는 생각을 했다.&lt;/p&gt;
+&lt;p&gt;그동안 오픈소스에 관심을 갖고 직접 기여를 하면서 많이 배웠다. 2024년에는 1. Chromium 기여를 좀 더 해서 committer 가 되는 것, 2. 다른 오픈소스 프로젝트를 선택해서 꾸준히 기여하는 것, 3. 내 프로젝트를 오픈소스 프로젝트 형식으로 개발하여 플레이스토어에 출시하는 것을 목표로 세웠다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/490b491e125e6c90f24d62e2d51cd85a/dd507/screenshot_github.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 69.16666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB+UlEQVQ4y42U25KUMBCGef8X88LyarXc0XVH57gCgZwTCPBZCTPWzLgXdlUXodOHv/9uqJRSCNHRtoKu72mFIKXE/8o4JqzzeB9w3lPN84LUik5LvAs467DWFYf8tMahnME4R4wDWhuMdRhj8SFg3erfa8WQRqohDDyfX9icXjn1DbvuTCM7lDYoZZDK8CJ+8UPsSlCvVLEXn8v9Vu459TXDmNaEnw/feK33aGNpVc9Z1yUga681tRRsuwPb9kDbdWht14IZrXa0uudNNqhgqDIP05AQRiKNxllfKtsYGKYRFoqO04geLNpbUpqYpongI51XbJpX3roGGx2ViwmhLN55QhxR1hVygzOFr6LGlARXWZblTqd5vlxApWxgf25omqa0nIlOQyA6jZQKpXXRjOqa7HL4Z+LzPFPFGOlES9PUSCkxETo3k+Z75ztULDgfyoDmC7pszxtT5Z3bNY6nn4qvB8fTYeTjNlCrsfRwdVzeQeSjf0C4rEM5CcfzXvL9KNnsBMfWkabLNG7Q5eJhiAjfc7Y1x/6NOA5F8132KYudsmGMxBgIwTNN6Y6v6zMvcOa5CYIPvz/xpd6Uln1cP4K/Cd+TK6rH86244Z2W54egEvgQ/Ji88BcCnZSX99U2rwjnlfiH3brVXPk6mKtfHIbyU5im+cZv5g9EukHmuYXcOAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/490b491e125e6c90f24d62e2d51cd85a/8ac56/screenshot_github.webp 240w,
+/static/490b491e125e6c90f24d62e2d51cd85a/d3be9/screenshot_github.webp 480w,
+/static/490b491e125e6c90f24d62e2d51cd85a/e46b2/screenshot_github.webp 960w,
+/static/490b491e125e6c90f24d62e2d51cd85a/f992d/screenshot_github.webp 1440w,
+/static/490b491e125e6c90f24d62e2d51cd85a/2be02/screenshot_github.webp 1528w&quot;
+              sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/490b491e125e6c90f24d62e2d51cd85a/8ff5a/screenshot_github.png 240w,
+/static/490b491e125e6c90f24d62e2d51cd85a/e85cb/screenshot_github.png 480w,
+/static/490b491e125e6c90f24d62e2d51cd85a/d9199/screenshot_github.png 960w,
+/static/490b491e125e6c90f24d62e2d51cd85a/07a9c/screenshot_github.png 1440w,
+/static/490b491e125e6c90f24d62e2d51cd85a/dd507/screenshot_github.png 1528w&quot;
+            sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/490b491e125e6c90f24d62e2d51cd85a/d9199/screenshot_github.png&quot;
+            alt=&quot;github&quot;
+            title=&quot;github&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&quot;스터디&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%8A%A4%ED%84%B0%EB%94%94&quot; aria-label=&quot;스터디 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;스터디&lt;/h3&gt;
+&lt;p&gt;2개의 스터디를 해봤지만 큰 성과는 없었다. 하나는 AOSP 스터디였다. 온라인에서 스터디 인원을 모집하는 글을 보고 신청했다. 스터디 그룹 인원은 4~5명 정도 됐는데 각자 업무가 다르고 목표가 달랐다. 너무 광범위한 주제였고 스터디를 진행하기에 적절한 도서나 레퍼런스가 없었다. 온라인 스터디 8회, 오프라인 모임 1회를 하고 마무리했다. 현재 국내에서 AOSP 에 관심을 갖고 블로그에 자료를 꾸준히 올리는 사람이 거의 없다. 스터디를 하면서 다른 회사에서 AOSP 관련 현업을 하면서 관심을 갖고 있는 개발자들을 만나서 좋았는데 이 기회를 발전시키지 못한게 아쉽다. 다른 스터디 하나는 Chromium contribution 을 하면서 부족한 부분을 채우고자 예전 부서 분들과 C++ 스터디를 해봤는데 이것도 잘 안 됐다. 제대로 된 스터디를 경험해본 적이 없어서 그런지 아직까지는 스터디 그룹으로 공부하는 방식이 잘 안 맞는 것 같다. 이외에 Chromium contribution 을 하는 국내 개발자들을 모아서 했던 ‘오픈소스를 하는 사람들’이라는 모임에도 참여했었다. 매주 일요일 밤 10시에 온라인으로 모여서 인사하고 각자 개발하는 시간을 가졌다. 이것도 어느 순간 흐지부지되면서 하반기부터는 모임 진행이 잘 안 됐던 것 같다. 올해는 스터디보다는 차라리 온라인 강의 수강을 시도해보려고 한다. 집에 있는 책도 많이 읽어야겠다.&lt;/p&gt;
+&lt;h3 id=&quot;블로그&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%B8%94%EB%A1%9C%EA%B7%B8&quot; aria-label=&quot;블로그 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;블로그&lt;/h3&gt;
+&lt;p&gt;2023년에는 이 블로그에 8개의 글을 올렸다. Chromium 에 반영한 내용을 정리해서 올리기 시작했다. 블로그에 올리면서 좀 더 정리를 하게 되는 효과가 있어 2024년에도 같은 방식으로 글을 올리려고 한다. 2023년 초에 velog, 티스토리를 따로 만들어서 조금씩 올렸는데 흐지부지됐다. velog 에는 간단한 TIL(Today I Learned) 을 올리고 티스토리에는 책, 강의, 레퍼런스 등을 정리하는 글을 올리려고 한다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/aa3d96740aa966510bdcb70a0d608d1b/05244/screenshot_ga.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 47.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA80lEQVQoz62S207DMAyG8/7vyA1CQoKC2qU5+JQf2Vu3MbbCBZZ+xU6+WHac9PQmUFXU2kDEIGbkdUUpFaKKUis6EVQtuJ8ysAg6E5gF6fnlNQ6m6QPMjFIK5mUJyMwwz0uc7xkJo/QKU0Mi6jAbcWmMEUl8ddvizX+kEwARQdrg2/Ua3kvm6jLAotFV+g3+i94PikYST5aAf0iYvbrj0JKat3Ut3Imxy0zZUPupws8sWLuFclMsRZDDP+4dqoQujGFe+VvsaqTHoah/jwF4paKG2ih8l+93EnTiM6M6sJYGH/7GbcOLli/l37PxwL+hzgkNXyM6Fffce8OgAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/aa3d96740aa966510bdcb70a0d608d1b/8ac56/screenshot_ga.webp 240w,
+/static/aa3d96740aa966510bdcb70a0d608d1b/d3be9/screenshot_ga.webp 480w,
+/static/aa3d96740aa966510bdcb70a0d608d1b/e46b2/screenshot_ga.webp 960w,
+/static/aa3d96740aa966510bdcb70a0d608d1b/f992d/screenshot_ga.webp 1440w,
+/static/aa3d96740aa966510bdcb70a0d608d1b/fb80a/screenshot_ga.webp 1752w&quot;
+              sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/aa3d96740aa966510bdcb70a0d608d1b/8ff5a/screenshot_ga.png 240w,
+/static/aa3d96740aa966510bdcb70a0d608d1b/e85cb/screenshot_ga.png 480w,
+/static/aa3d96740aa966510bdcb70a0d608d1b/d9199/screenshot_ga.png 960w,
+/static/aa3d96740aa966510bdcb70a0d608d1b/07a9c/screenshot_ga.png 1440w,
+/static/aa3d96740aa966510bdcb70a0d608d1b/05244/screenshot_ga.png 1752w&quot;
+            sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/aa3d96740aa966510bdcb70a0d608d1b/d9199/screenshot_ga.png&quot;
+            alt=&quot;ga&quot;
+            title=&quot;ga&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;중국 개발자가 내 Google Analytics ID 를 삭제하지 않은 채로 내 블로그 repo 를 그대로 갖다 썼다. 이 사실을 알게 되어 내가 해당 repo 에서 ID 를 직접 삭제하기 전까지 며칠동안 그 블로그가 추적되었다. 조회수가 너무 확 튀어버렸다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/b7e397c61c50ffc737851637a4e89618/b79a5/screenshot_search.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 80%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAABYlAAAWJQFJUiTwAAABaElEQVQ4y41U227DIAzN/39iX9rHdSQBkgYCNpzJXki7SVuxZIUo6HAuDgNxQYwB+75Dqtb6tqVSSnDWopW8MxcMcU9Y1xXbtimofHjXOWfd77xHylnfwxYgWIMZJ9xuN1yvV1wuFxhjME0TxnH8t+d5woeZYMyo+z8/DEYzYQgh4n6/wzmnJ/UwbB3ifjJ+uA0x7BgyMdZlwePxABF1ediaS0VRTysoMZgKhpQylmVRGQIqVUrp6kSsQdRakHcCZcaQM8HaWSXP83yyfAdWS0F+BYyErIDE8N5rS3K97BSE2roqOyLGkDKdqcr49LB7BeRjzXQAimTvHKy1KltY9vgoB2d+rgsXkIaiHlr1T5h2e1gL6AXwDKUBCjvxsdvD8hNQxuYp2Xv1L8Z4suubQwE81uJnkyxyJZQmWQCZ+U92fDxJx+Z7n4bCB0MZ7BCC/kanyR0e8q9Q9LZpHgpY7/V1Suan5Ab4BTrr5wO2IsMvAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/b7e397c61c50ffc737851637a4e89618/8ac56/screenshot_search.webp 240w,
+/static/b7e397c61c50ffc737851637a4e89618/d3be9/screenshot_search.webp 480w,
+/static/b7e397c61c50ffc737851637a4e89618/e46b2/screenshot_search.webp 960w,
+/static/b7e397c61c50ffc737851637a4e89618/1177a/screenshot_search.webp 1372w&quot;
+              sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/b7e397c61c50ffc737851637a4e89618/8ff5a/screenshot_search.png 240w,
+/static/b7e397c61c50ffc737851637a4e89618/e85cb/screenshot_search.png 480w,
+/static/b7e397c61c50ffc737851637a4e89618/d9199/screenshot_search.png 960w,
+/static/b7e397c61c50ffc737851637a4e89618/b79a5/screenshot_search.png 1372w&quot;
+            sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/b7e397c61c50ffc737851637a4e89618/d9199/screenshot_search.png&quot;
+            alt=&quot;search&quot;
+            title=&quot;search&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;다음은 검색어 순위. aosp cuttlefish 관련 검색어가 많다. 검색어 노출 순위도 나름 높은 편이다.&lt;/p&gt;
+&lt;h3 id=&quot;2024년&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2024%EB%85%84&quot; aria-label=&quot;2024년 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2024년&lt;/h3&gt;
+&lt;p&gt;2024년 한 해의 목표를 &lt;code class=&quot;language-text&quot;&gt;Pay Off&lt;/code&gt; 로 정했다. 밀린 부채를 갚는 것이다. 아주 예전부터 매년 계획을 세웠지만 달성하지 못한 적이 훨씬 많았다. 잊고 살다가도 다시 또 비슷한 계획을 세우고 시도하려고 한다. 위에 작성한 오픈소스 활동이라던지, 앱 출시, 블로그 관리 같은 일들은 대학생 때부터 생각하고 여러 방식으로 계획을 세웠던 일이지만 지금까지 제대로 마무리한 적이 없다. 10년 동안 일을 하면서 쌓인 기술 부채와 미뤄두었던 여러 목표를 갚을 수 있는 해가 되길 바란다. 부족한 부분을 채우고 다시 나아갈 수 있는 힘을 기르고 싶다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Chromium Contribution: CSS KeyframesRule length attribute 추가]]></title><description><![CDATA[2023년 Chromium 에 반영한 여섯 번째 패치 내용 정리]]></description><link>https://blog.amoseui.com/chromium-css-keyframesrule-length-attribute</link><guid isPermaLink="false">https://blog.amoseui.com/chromium-css-keyframesrule-length-attribute</guid><pubDate>Thu, 30 Nov 2023 09:30:00 GMT</pubDate><content:encoded>&lt;h3 id=&quot;관련-링크&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B4%80%EB%A0%A8-%EB%A7%81%ED%81%AC&quot; aria-label=&quot;관련 링크 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;관련 링크&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;제목: css: Expose length attribute of CSSKeyframesRule&lt;/li&gt;
 &lt;li&gt;패치: &lt;a href=&quot;https://chromium-review.googlesource.com/c/chromium/src/+/5069356&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://chromium-review.googlesource.com/c/chromium/src/+/5069356&lt;/a&gt;&lt;/li&gt;
