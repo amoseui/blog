@@ -5,7 +5,7 @@ import * as types from "./internal/gatsby/types";
 
 export default {
   pathPrefix: config.pathPrefix,
-  trailingSlash: "always",
+  trailingSlash: "never",
   siteMetadata: {
     url: config.url,
     siteUrl: config.url,
