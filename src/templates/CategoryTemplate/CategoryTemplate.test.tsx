@@ -36,8 +36,15 @@ describe("CategoryTemplate", () => {
   test("head renders correctly", () => {
     reactTestingLibraryRender(<GatsbyHead {...props} />);
 
+    expect(testUtils.getMeta("twitter:card")).toEqual("summary");
     expect(testUtils.getMeta("og:title")).toEqual(
       "Typography - Page 2 - Blog by John Doe",
+    );
+    expect(testUtils.getMeta("twitter:title")).toEqual(
+      "Typography - Page 2 - Blog by John Doe",
+    );
+    expect(testUtils.getMeta("twitter:description")).toEqual(
+      "Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.",
     );
     expect(testUtils.getMeta("description")).toEqual(
       "Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.",
@@ -45,6 +52,5 @@ describe("CategoryTemplate", () => {
     expect(testUtils.getMeta("og:description")).toEqual(
       "Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.",
     );
-    expect(testUtils.getMeta("twitter:card")).toEqual("summary_large_image");
   });
 });

@@ -31,6 +31,10 @@ describe("CategoriesTemplate", () => {
   test("head renders correctly", () => {
     testUtils.renderWithCoilProvider(<GatsbyHead />);
 
+    expect(testUtils.getMeta("twitter:card")).toEqual("summary");
+    expect(testUtils.getMeta("twitter:title")).toEqual(
+      "Categories - Blog by John Doe",
+    );
     expect(testUtils.getMeta("og:title")).toEqual(
       "Categories - Blog by John Doe",
     );
@@ -40,6 +44,8 @@ describe("CategoriesTemplate", () => {
     expect(testUtils.getMeta("og:description")).toEqual(
       "Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.",
     );
-    expect(testUtils.getMeta("twitter:card")).toEqual("summary_large_image");
+    expect(testUtils.getMeta("twitter:description")).toEqual(
+      "Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.",
+    );
   });
 });
