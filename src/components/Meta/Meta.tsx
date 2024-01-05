@@ -13,7 +13,7 @@ const Meta: React.FC<Props> = ({ description, title, image }: Props) => (
     <meta name="description" content={description} />
     <meta name="naver-site-verification" content={naverMeta} />
     <meta name="google-adsense-account" content="ca-pub-4762858711025506" />
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="og:title" content={title} />
