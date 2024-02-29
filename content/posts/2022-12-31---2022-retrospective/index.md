@@ -23,6 +23,8 @@ description: 오랜만에 한 해 회고를 남긴다.
 
 하나는 구글에서 구글이 주도하는 오픈소스 프로젝트에 기여한 외부 개발자에게 상과 상금을 주는 Open Source Peer Bonus 프로그램의 Winner 로 선정된 것이었다.
 
+![](/media/opensourcepeerbonus.png)
+
 > The Google Open Source Peer Bonus program is designed to recognize external open source contributors nominated by Googlers for their open source contributions. This cycle, we are pleased to announce a total of 141 winners across 110+ projects, residing in 36 countries.
 
 [Announcing the second group of Open Source Peer Bonus winners in 2022 | Google Open Source Blog](https://opensource.googleblog.com/2022/09/announcing-the-second-group-of-open-source-peer-bonus-winners-in-2022.html)
@@ -33,6 +35,8 @@ description: 오랜만에 한 해 회고를 남긴다.
 다른 하나는 회사에서도 오픈소스 컨트리뷰션에 대한 보상을 받은 일이다. 최근 1~2년 사이에 회사에서 오픈소스 개발자를 대우해주려는 몇 가지 보상 제도가 생겼다. 가을에도 하나가 생겼는데 조건이 딱 맞아 보상을 받을 수 있었다. 이걸 기대하고 시작한 건 아니었는데 운이 좋았다.
 
 ### 컨퍼런스 발표
+
+![](/media/conference.png)
 
 회사 컨퍼런스에서 발표를 했다. 타의 반, 자의 반으로 하게 됐다. 막상 발표를 준비해보니 고려해야할 것이 너무 많았다. 나 혼자 한 일이 아니라 많은 사람들이 다 같이 한 일을 회사와 부서를 대표해서 발표하는 것이 정말 큰 부담이었다. 특히 내가 잘 모르는 기술에 대한 내용과 저작권, 초상권, 기술 공개 범위를 고려하여 자료를 만드는 것이 가장 큰 스트레스였다.
 
