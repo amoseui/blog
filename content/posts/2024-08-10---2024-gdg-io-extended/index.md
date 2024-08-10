@@ -69,4 +69,32 @@ Google I/O Exteneded 를 섹터별로 매년 열고 있다.
 다시 익숙해지고 궤도에 올려야 한다. 모든 루틴을 말이다. 
 어쨌든 다짐을 위해 일기처럼 남겨본다. 나라면 어떤 발표를 할 수 있을까? 어떻게 발표를 하면 좋을까에 대한 고민도 좀 했다. 
 
+--- 
+### 메모에 있던 것들..
+
+Android
+키노트
+
+1. 안드로이드
+gemini 1.5
+
+gemini nano
+aicore
+s24
+ai edge sdk private preview early access
+
+material3 adaptive layout
+compose
+glance widget
+credential manager
+
+macrobenchmark
+
+
+에어프레미아
+graphql gdgs framework
+connection pool
+
+상태관리
+riverpod bloc
 
