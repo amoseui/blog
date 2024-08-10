@@ -9,7 +9,7 @@ tags:
   - chromium
   - opensource
   - committer
-description: 지난 2024년 3월에 Chromium Committer 되었다. Chromium Gerrit 에 아이디를 만든 지 8년 10개월, 첫 번째 패치를 반영한 지 5년 10개월 만이다. 그동안 반영한 패치 수는 75개. 짧은 기간에 적은 패치로 Committer 가 되는 사람이 많은데 중간 3년 이상의 공백을 빼더라도 유독 오래 걸렸다.
+description: 지난 2024년 3월에 Chromium Committer 가 되었다. Chromium Gerrit 에 아이디를 만든 지 8년 10개월, 첫 번째 패치를 반영한 지 5년 10개월 만이다. 그동안 반영한 패치 수는 75개. 짧은 기간에 적은 패치로 Committer 가 되는 사람이 많은데 중간 3년 이상의 공백을 빼더라도 유독 오래 걸렸다.
 ---
 
 지난 2024년 3월에 [Chromium Committer](https://www.chromium.org/getting-involved/become-a-committer/) 가 되었다. [Chromium Gerrit](https://chromium-review.googlesource.com/) 에 아이디를 만든 지 8년 10개월, 첫 번째 패치를 반영한 지 5년 10개월 만이다. 그동안 반영한 패치 수는 75개. 짧은 기간에 적은 패치로 Committer 가 되는 사람이 많은데 중간 3년 이상의 공백을 빼더라도 유독 오래 걸렸다.
