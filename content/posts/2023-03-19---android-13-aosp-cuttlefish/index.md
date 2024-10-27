@@ -10,6 +10,7 @@ tags:
   - android
   - cuttlefish
 description: Ubuntu 20.04 환경에서 Android 13 버전 기준으로 AOSP 빌드를 하고 Cuttlefish 라는 가상 디바이스에서 실행하는 방법을 정리해보았다.
+socialImage: "./media/screenshot_cuttlefish.png"
 ---
 
 ## 개요
