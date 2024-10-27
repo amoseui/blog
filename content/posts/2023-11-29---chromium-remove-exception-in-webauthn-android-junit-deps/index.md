@@ -10,6 +10,7 @@ tags:
   - chromium
   - webauthn
 description: 2023년 Chromium 에 반영한 네 번째 패치 내용 정리
+socialImage: "./media/content-layer-diagram.png"
 ---
 
 ### 관련 링크
@@ -23,7 +24,7 @@ description: 2023년 Chromium 에 반영한 네 번째 패치 내용 정리
 
 Chromium 프로젝트의 content 모듈은 사실상 웹 브라우저의 본체와 같다. content 모듈에서 Chrome 의 자체 기능을 구현하거나 UI 를 활용한 부분을 제외한 전반적인 멀티프로세스 브라우저 기능을 담당한다. content 레이어까지만 포함하여 기본적인 브라우저 기능을 제공하는 Content Shell 이라는 앱을 빌드할 수도 있다. chrome 이나 android_webview 등의 content 를 사용하는 모듈은 content/public 폴더에 있는 public API 를 통해 content 모듈에 접근하도록 설계되어있다. Android 를 위한 Java 파일의 경우 content_public 과 같은 package 명으로 구분을 하기도 한다.
 
-![](/media/content-layer-diagram.png)
+![content-layer-diagram](/media/content-layer-diagram.png)
 
 - 출처: https://chromium.googlesource.com/chromium/src/+/HEAD/content/README.md
 - 참고: https://chromium.googlesource.com/chromium/src/+/HEAD/content/public/README.md

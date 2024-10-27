@@ -10,6 +10,7 @@ tags:
   - conference
   - android
 description: 지난 7월 두 개의 GDG Google I/O Extended 에 참석했던 후기를 뒤늦게 올린다.
+socialImage: "./media/android.JPG"
 ---
 
 지난 7월 두 개의 GDG Google I/O Extended 에 참석했던 후기를 뒤늦게 올린다.
@@ -36,7 +37,7 @@ GDG 에서 개최하는 행사는 구글 이름이 걸려 있지만 기업 주�
 
 ## [안드로이드](https://festa.io/events/5509)
 
-![](media/android.JPG)
+![android](media/android.JPG)
 
 안드로이드의 경우 트랙 하나로 모든 세션이 운영 되었고 각 세션이 Google I/O 에 충실한 느낌. 저녁에 다른 일정이 있어 중간에 나왔지만 안드로이드와 관련된 업무를 하는 입장에서 새로 발표한 내용을 다뤄줘서 좋았다. Google I/O 의 경우 이벤트 키노트와 개발자 키노트가 중요한데 I/O Extended 발표를 통해 이해하게 된 부분이 많았고 정리도 많이 됐다. 모든 세션이 끝나고 네트워킹 타임도 있었는데 참여하지 못했다.
 
@@ -50,7 +51,7 @@ GDG 에서 개최하는 행사는 구글 이름이 걸려 있지만 기업 주�
 
 ## [인천/송도](https://festa.io/events/5477)
 
-![](media/incheon.JPG)
+![incheon](media/incheon.JPG)
 
 인천/송도는 Google I/O 에 한정짓지 않고 좀 더 개발자 축제 느낌으로 다양한 주제와 발표자를 선정한 느낌이었다. GDG 인천/송도는 코로나 이후로 다른 GDG 에 비해 컨퍼런스를 크게 열고 있는데 이번에도 역시나 발표가 많고 참석 인원도 많아 고민이 많았을 것 같다. 나는 컨퍼런스 참여 목적 첫번째가 동기 부여였기 때문에 General 주제 위주로 많이 들었다. 듣다 보니 피곤해지고 집중력이 너무 떨어져서 나중에는 지인의 발표나 내용이 쉬운 발표 위주로 들었다.
 
