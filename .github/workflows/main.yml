@@ -110,11 +110,9 @@ jobs:
           path: node_modules
           key: dependencies-${{ hashFiles('package-lock.json') }}
 
-      - name: Set Git config
+      - name: Deploy
         run: |
           git config user.email "amoseui@gmail.com"
           git config user.name "Amos Lim"
-
-      - name: Deploy
-        run: npm run deploy
+          npm run deploy
 
