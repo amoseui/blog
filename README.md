@@ -1,4 +1,4 @@
 # blog
 
-[![CircleCI](https://circleci.com/gh/amoseui/blog/tree/main.svg?style=shield)](https://circleci.com/gh/amoseui/blog/tree/main)
+[![CI](https://github.com/amoseui/blog/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/amoseui/blog/actions/workflows/main.yml)
 [![codecov](https://codecov.io/gh/amoseui/blog/branch/main/graph/badge.svg)](https://codecov.io/gh/amoseui/blog)
