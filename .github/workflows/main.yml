@@ -98,8 +98,6 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@v3
-        with:
-          persist-credentials: false
 
       - name: Configure SSH
         uses: webfactory/ssh-agent@v0.8.0
