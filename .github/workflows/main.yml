@@ -114,7 +114,9 @@ jobs:
           key: coverage-${{ github.sha }}
 
       - name: Upload to Codecov
-        run: npx codecov
+        run: |
+          ls -al coverage
+          npx codecov
 
   deploy:
     runs-on: ubuntu-latest
