@@ -111,8 +111,8 @@ jobs:
           key: dependencies-${{ hashFiles('package-lock.json') }}
 
       - name: Deploy
-        run: |
-          git config user.email "amoseui@gmail.com"
-          git config user.name "Amos Lim"
-          npm run deploy
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
 
