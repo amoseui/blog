@@ -110,6 +110,12 @@ jobs:
           path: node_modules
           key: dependencies-${{ hashFiles('package-lock.json') }}
 
+      - name: Run Deploy
+        run: |
+          git config user.email "amoseui@gmail.com"
+          git config user.name "Amos Lim"
+          npm run deploy
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:
