@@ -1,6 +1,6 @@
 ---
 title: 오쏘콘(Open Source Conference) 발표 후기
-date: 2024-11-25 09:00:00
+date: 2024-11-24 15:00:00
 template: post
 draft: false
 slug: "/opensourceconference"
