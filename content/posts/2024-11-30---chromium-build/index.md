@@ -7,55 +7,49 @@ slug: "/chromium-faster-build"
 category: "chromium"
 tags:
   - chromium
-description: faster build
+description: Chromium 빠른 빌드를 위한 환경 셋업 방법을 정리해 보았다.
+socialImage: "./media/build.png"
 ---
 
-Chromium 빠른 빌드를 위한 환경 셋업 방법을 ㅣ
+Chromium 빠른 빌드를 위한 환경 셋업 방법을 정리해 보았다.
 
-Chromium 빌드는 굉장히 오래 걸린다. 2018년 데스크톱을 새로 맞췄다. 구매한지 벌써 6년.
+Chromium 빌드는 굉장히 오래 걸린다. 2018년에 맞춘 아래 사양의 데스크톱 PC 기준으로 chrome 빌드와 blink 를 위한 기본적인 유닛테스트 빌드를 하면 4시간이 넘게 걸린다.  2018년에는 1~2시간 정도 걸렸던 것 같은데 지금은 거의 2배 이상 차이가 난다. 
 
 - AMD 라이젠 7 피나클릿지 2700X (8 core / 16 thread)
 - 32GB RAM
 
-지금은 2018년 때보다 풀빌드 시간이 더 많이 걸린다.
+![buildtime](media/buildtime.png)
+*_<center>https://commondatastorage.googleapis.com/chromium-browser-clang/build-time.html</center>_*
 
+Chromium 팀에서 측정 중인 Chromium Build Time 그래프에서 2018년과 2024년을 비교해도 거의 3배 차이가 난다. 
 
-구글 개발자를 위한 별도의 가이드가 있다. 내부 문서와 서버 사용으로 굉장히 빠르게 빌드를 할 수 있는 것 같은데 볼 방법이 없으니 실제로 어느 정도인지는 알기 어렵다.
+Chromium 빌드 가이드에는 빌드를 빨리 할 수 있는 방법을 여러가지 제공하고 있다. 
 
-[Faster builds](https://chromium.googlesource.com/chromium/src/+/main/docs/linux/build_instructions.md#Faster-builds) 가이드를 제공한다.
-리모트 캐시 빌드를 사용한 빌드가 따로 있다. tryjob access 가 있는 개발자라면 별도의 신청으로 권한을 얻을 수 있다.
-내가 보냈을 때는 committer 인지 확인을 했다. 구글에서 비용을 사용하는 것이다보니 아무나 해주는 것 같진 않다.
+먼저 구글 개발자를 위한 별도의 가이드가 있다. 내부 리모트 서버를 사용하는 방법이 있는 것 같은데 외부 개발자는 가이드조차 볼 수 없어서 실제로 어떻게 사용하는지, 얼마나 빨라지는지 알 수 없다. 대신 외부 개발자를 위한 [Faster builds](~https://chromium.googlesource.com/chromium/src/+/main/docs/linux/build_instructions.md#Faster-builds~) 가이드가 따로 있다. Reclient 권한을 받으면 리모트 캐시 빌드를 할 수 있다. 가이드 상으로 tryjob access 가 있는 개발자라면 별도의 신청으로 권한을 얻을 수 있다. 하지만 내가 권한 요청을 했을 때는 committer 인지 확인을 했다. 구글에서 비용을 쓰는 것이다보니 아무나 해주는 것 같진 않았다. 다행히 committer 가 된 후에 신청을 했기 때문에 받아주었다. 
 
-나도 committer 가 된 후에 신청을 했다.
+## 빌드 방법
 
-Reclient 를 사용한다.
-구글 클라우드 계정이 필요하다.
+먼저 구글 클라우드 계정 등록이 필요하다.
 
-https://github.com/bazelbuild/remote-apis
-https://github.com/bazelbuild/reclient
+1. [gcloud CLI 설치](https://cloud.google.com/sdk/docs/install)
+2. gcloud 로그인 실행 
+```bash
+$ gcloud auth login --update-adc
+```
+3. 생성된 링크를 웹브라우저로 복사, verification code 복사 
+![gcloud](media/gcloud.png)
+![gcloudcli](media/gcloudcli.png)
+4. `Enter authorization code` 에 복사한 verification code 붙여넣기 
 
-### 셋업
+5. chromium/.gclient 파일 수정 - `custom_vars` 내  `"rbe_instance": "projects/rbe-chromium-untrusted/instances/default_instance",` 추가
 
-This section contains some things you can change to speed up your builds, sorted so that the things that make the biggest difference are first.
-
-Use Reclient
-Warning: If you are a Google employee, do not follow the instructions below. See go/chrome-linux-build#setup-remote-execution instead.
-Chromium's build can be sped up significantly by using a remote execution system compatible with REAPI. This allows you to benefit from remote caching and executing many build actions in parallel on a shared cluster of workers.
-
-For contributors who have tryjob access , please ask a Googler to email accounts@chromium.org on your behalf to access RBE backend paid by Google. Note that reclient for external contributors is a best-effort process. We do not guarantee when you will be invited. Reach out to reclient-users@chromium.org if you have any questions about reclient usage.
-
-To get started, you need access to an REAPI-compatible backend. The following instructions assume that you received an invitation from Google to use Chromium's RBE service and were granted access to it. However, you are welcome to use any of the other compatible backends, in which case you will have to adapt the following instructions regarding the authentication method, instance name, etc. to work with your backend.
-
-Chromium‘s build uses a client developed by Google called reclient to remotely execute build actions. If you would like to use reclient with RBE, you’ll first need to:
-
-Install the gcloud CLI. You can pick any installation method from that page that works best for you.
-Run gcloud auth login --update-adc and login with your authorized account. Ignore the message about the --update-adc flag being deprecated.
-Next, you'll have to specify your rbe_instance in your .gclient configuration to use the correct one for Chromium contributors:
-
-Warning: If you are a Google employee, do not follow the instructions below. See go/chrome-linux-build#setup-remote-execution instead.
+```
 solutions = [
   {
-    ...,
+    "name": "src",
+    "url": "https://chromium.googlesource.com/chromium/src.git",
+    "managed": False,
+    "custom_deps": {},
     "custom_vars": {
       # This is the correct instance name for using Chromium's RBE service.
       # You can only use it if you were granted access to it. If you use your
@@ -65,11 +59,22 @@ solutions = [
     },
   },
 ]
-And run gclient sync. This will regenerate the config files in buildtools/reclient_cfgs to use the rbe_instance that you just added to your .gclient file.
-
-Then, add the following GN args to your args.gn:
-
+```
+6. gclient sync 실행
+```bash
+$ gclient sync
+```
+7. out/Debug/args.gn 에 내용 추가 
+```
 use_remoteexec = true
 reclient_cfg_dir = "../../buildtools/reclient_cfgs/linux"
-If you are building an older version of Chrome with reclient you will need to use rbe_cfg_dir = "../../buildtools/reclient_cfgs_linux"
-That‘s it. Remember to always use autoninja for building Chromium as described below, which handles the startup and shutdown of the reproxy daemon process that’s required during the build, instead of directly invoking ninja.
+```
+8. 빌드 실행
+```bash
+$ gn gen out/Debug
+$ autoninja -C out/Debug chrome blink_tests blink_unittests blink_platform_unittests
+```
+
+![build](media/build.png)
+
+빌드는 위 명령어 기준으로 1시간~1시간 반 사이로 걸린다. 평소 로컬 빌드를 했을 때 4시간 이상 걸리는 것과 비교하면 꽤 빠르다. 1시간도 빠르다고 볼 수는 없지만 꽤 만족스러운 속도. 
