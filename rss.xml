@@ -1,4 +1,270 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Everything in its Right Place]]></title><description><![CDATA[Everything in its Right Place]]></description><link>https://blog.amoseui.com</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 24 Nov 2024 15:24:26 GMT</lastBuildDate><item><title><![CDATA[오쏘콘(Open Source Conference) 발표 후기]]></title><description><![CDATA[11월 16일 토요일 Open Source Conference(오픈소스 컨퍼런스, 줄여서 오쏘콘) 에서 ‘오픈소스 웹 브라우저 개발자는 이렇게 일한다’ 라는 주제로 발표를 했다.]]></description><link>https://blog.amoseui.com/opensourceconference</link><guid isPermaLink="false">https://blog.amoseui.com/opensourceconference</guid><pubDate>Sun, 24 Nov 2024 15:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Everything in its Right Place]]></title><description><![CDATA[Everything in its Right Place]]></description><link>https://blog.amoseui.com</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 01 Dec 2024 14:15:43 GMT</lastBuildDate><item><title><![CDATA[Chromium Faster Build 방법]]></title><description><![CDATA[Chromium 의 빠른 빌드를 위한 환경 셋업 방법을 정리해 보았다.]]></description><link>https://blog.amoseui.com/chromium-faster-build</link><guid isPermaLink="false">https://blog.amoseui.com/chromium-faster-build</guid><pubDate>Sat, 30 Nov 2024 12:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Chromium 의 빠른 빌드를 위한 환경 셋업 방법을 정리해 보았다.&lt;/p&gt;
+&lt;p&gt;Chromium 빌드는 굉장히 오래 걸린다. 2018년에 맞춘 아래 사양의 데스크톱 PC 기준으로 chrome 빌드와 blink 를 위한 기본적인 유닛테스트 빌드를 하면 4시간이 넘게 걸린다. 2018년에는 1~2시간 정도 걸렸던 것 같은데 지금은 거의 2배 이상 차이가 난다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;AMD 라이젠 7 피나클릿지 2700X (8 core / 16 thread)&lt;/li&gt;
+&lt;li&gt;32GB RAM&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/68670439725556fd81e28249f774e53c/de766/buildtime.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 80.41666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAABYlAAAWJQFJUiTwAAACG0lEQVQ4y5VU246bMBDle/tH/Yaq/YFKrVT1YfsQJZsq1abakk1CCBBizN3Y4FPNJCaXqjejoxk8mtsZBm+xWGA+n2M6nWI2m2EymbBO9/967JXuKaWw3+8RRRGKooCUEnmes9513V/Rtgq90dBdB9MP8Pq+R1VVsNb+gmEYQPZ76aCN4ar2osKbz0s0SsPTWqMsSzY4p2vcB7zcD+zjRxLvHnwsg5Sb94wxY4W/q4ikO646pQ2WuwyvXn/Cx68B26jim4D9MMDaEwaS9NiBM0dhijyvWKcEUz/Bh3mAVZRDmx40C0o0BsS5QuKhaDrksoRSHaq6xZfvESbftpg//sDbBx/vZxtskoJ9eMrW8oA4oONQm3OwWqHpDLRSUI1CUTZQSrPjYC1k1SKvFWBPXBpzomQMaIyGLEp0bOjPEx7Y2eJSAQ3BjlzamwGRfWyZXuq6HodCxFInWpsTBW3Lsj1LcqSqqCKiizp0ILtXFCXyXDKyLGNIKXA8ppzRcALLko57v/6MSB835eXFx/NzhKenBOv1CstlgNVLgV3YQghzu2JXQ3Dy/s7bbjZYr3fw/S2CYIvDQUCIElI2aBrNdFxX8MedthaeyARkLpDJI+I4xuFwQJLEiKKQ2w7DEGma8o4THUIIhtt5d+c49pJQINoeEQdH1FXNBgKRfw9na5qG5enncLpzXXhpLBBuIxxiAZldstLU/vdQyz8BHIfYxkhdcrgAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/68670439725556fd81e28249f774e53c/8ac56/buildtime.webp 240w,
+/static/68670439725556fd81e28249f774e53c/d3be9/buildtime.webp 480w,
+/static/68670439725556fd81e28249f774e53c/e46b2/buildtime.webp 960w,
+/static/68670439725556fd81e28249f774e53c/f992d/buildtime.webp 1440w,
+/static/68670439725556fd81e28249f774e53c/c4106/buildtime.webp 1838w&quot;
+              sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/68670439725556fd81e28249f774e53c/8ff5a/buildtime.png 240w,
+/static/68670439725556fd81e28249f774e53c/e85cb/buildtime.png 480w,
+/static/68670439725556fd81e28249f774e53c/d9199/buildtime.png 960w,
+/static/68670439725556fd81e28249f774e53c/07a9c/buildtime.png 1440w,
+/static/68670439725556fd81e28249f774e53c/de766/buildtime.png 1838w&quot;
+            sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/68670439725556fd81e28249f774e53c/d9199/buildtime.png&quot;
+            alt=&quot;buildtime&quot;
+            title=&quot;buildtime&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;em&gt;&lt;center&gt;&lt;a href=&quot;https://commondatastorage.googleapis.com/chromium-browser-clang/build-time.html&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://commondatastorage.googleapis.com/chromium-browser-clang/build-time.html&lt;/a&gt;&lt;/center&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Chromium 팀에서 측정 중인 Chromium Build Time 그래프에서 2018년과 2024년을 비교해도 거의 3배 차이가 난다.&lt;/p&gt;
+&lt;p&gt;Chromium 빌드 가이드에는 빌드를 빨리 할 수 있는 방법을 여러가지 제공하고 있다.&lt;/p&gt;
+&lt;p&gt;먼저 구글 개발자를 위한 별도의 가이드가 있다. 내부 리모트 서버를 사용하는 방법이 있는 것 같은데 외부 개발자는 가이드조차 볼 수 없어서 실제로 어떻게 사용하는지, 얼마나 빨라지는지 알 수 없다. 대신 외부 개발자를 위한 &lt;a href=&quot;~https://chromium.googlesource.com/chromium/src/+/main/docs/linux/build_instructions.md#Faster-builds~&quot;&gt;Faster builds&lt;/a&gt; 가이드가 따로 있다. Reclient 권한을 받으면 리모트 캐시 빌드를 할 수 있다. 가이드 상으로 tryjob access 가 있는 개발자라면 별도의 신청으로 권한을 얻을 수 있다. 하지만 내가 권한 요청을 했을 때는 committer 인지 확인을 했다. 구글에서 비용을 쓰는 것이다보니 아무나 해주는 것 같진 않았다. 다행히 committer 가 된 후에 신청을 했기 때문에 받아주었다.&lt;/p&gt;
+&lt;p&gt;리모트 빌드는 &lt;code class=&quot;language-text&quot;&gt;Bazel&lt;/code&gt; 의 &lt;a href=&quot;https://github.com/bazelbuild/remote-apis&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;remote-apis&lt;/a&gt; 기반으로 &lt;a href=&quot;https://github.com/bazelbuild/reclient&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;reclient&lt;/a&gt; 를 클라이언트로 사용한다. 백엔드는 구글내 클라우드 서버에서 돌고 있는데 가이드에는 &lt;code class=&quot;language-text&quot;&gt;RBE&lt;/code&gt; 라고만 되어있고 별다른 설명은 없다. 직접 &lt;code class=&quot;language-text&quot;&gt;remote-apis&lt;/code&gt; 서버를 구축해서 사용할 수도 있다고 한다. 업무로 chromium 프로젝트를 한다면 한 번 깊게 알아볼 것 같다.&lt;/p&gt;
+&lt;h2 id=&quot;빌드-방법&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%B9%8C%EB%93%9C-%EB%B0%A9%EB%B2%95&quot; aria-label=&quot;빌드 방법 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;빌드 방법&lt;/h2&gt;
+&lt;p&gt;먼저 구글 클라우드 계정 등록이 필요하다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;https://cloud.google.com/sdk/docs/install&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;gcloud CLI 설치&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;gcloud 로그인 실행&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ gcloud auth login --update-adc&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ol start=&quot;3&quot;&gt;
+&lt;li&gt;
+&lt;p&gt;생성된 링크를 웹브라우저로 복사, verification code 복사
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 868px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/eb1618a17e0e89ad7e802582472cbd85/748b0/gcloud.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 146.66666666666669%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAdCAYAAACqhkzFAAAACXBIWXMAABYlAAAWJQFJUiTwAAAC2klEQVRIx51WS08aURTm57glkfA/WKr8iu6ITRMM6bZNSjddNO4riWkXtmHTxGLTFC1vEXlaIIyC+OAhzvA138E7mYGRsU5ycs+ce+4353z3nHvHg0ee6XQqo24AmYaOfBvQZxN4mHJ8PI+gCRAwxafEAK8/D/Hh4yH+/krJtGEY5gefBEhncdd7yCXeYQxgWMyg9vLFbH4ZoJoQEKsYOiTI5nsMym9RevMK3S+7swh13YzSut6McLqMFMJqexj/+Q43vm0Rnp2dodFooNvtotPpiGidDiqVKvq3Brq3I/E5Pz+XsVarodfrSaS2CJVSKBSws7ODbDaLfD6PdDottkTiBw6Tv/Ht6x5+Hhxgf38fyWQSx8fHKJfL0HV9EVDJeDzGZDKxCRfQPhqNRFdC29KU6/W6fLVYLMrIKE9OTpBKpZDL5cROW6lUEjvfl6bcbrdlIZ1PT09N8Gq1agIQjDxXKhXxIT0EdQQkH1xMB4JrmobLy0vZpIuLC1M4Z924wWBgKzsT8Pr62qV8lj8LEZJ0FQ1Hlgej5djv9212CjPgSDs3T4GagM1mUzgk8eRPlcXR0RFarZbo5DCTyZj8UmdpMRgT0L1T/jNl9cLQmQaJZkTSKZomOqNXadJOXfmQBlWTtpTZSiwPVXPUmRpTotDOtGljyTB90kM7q2EBkP3JSeWsFhCYQKo+KaxDlhg/NN9+NkAVGVO6v78Xsu/u7mQX+U6dQl21JnVHDuf7mS1lFf3hDHTSHSNkYcfjcaytrWFjYwPr6+uuEgwGEQgEEI1GzavBBOQObm9vw+v1wufzYXV11VX8fj9WVlYQCoUWAckXmz0cDotsbW25SiQSwebmJmKxmL2wiXxzcyONz3Z7TqHbNoWA5FCddcPhUBzmN+YxsV5Unue23fwtuQDIlHmqMGUKW4rCLlBnozofr66ubKCO97K1cFUxW9/n55zukyfey8tTnv9z+AemWGtvM3cxLAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/eb1618a17e0e89ad7e802582472cbd85/8ac56/gcloud.webp 240w,
+/static/eb1618a17e0e89ad7e802582472cbd85/d3be9/gcloud.webp 480w,
+/static/eb1618a17e0e89ad7e802582472cbd85/1ae05/gcloud.webp 868w&quot;
+              sizes=&quot;(max-width: 868px) 100vw, 868px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/eb1618a17e0e89ad7e802582472cbd85/8ff5a/gcloud.png 240w,
+/static/eb1618a17e0e89ad7e802582472cbd85/e85cb/gcloud.png 480w,
+/static/eb1618a17e0e89ad7e802582472cbd85/748b0/gcloud.png 868w&quot;
+            sizes=&quot;(max-width: 868px) 100vw, 868px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/eb1618a17e0e89ad7e802582472cbd85/748b0/gcloud.png&quot;
+            alt=&quot;gcloud&quot;
+            title=&quot;gcloud&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/ce11566f3279ef31e190259b87befec7/d544a/gcloudcli.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 57.50000000000001%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAABu0lEQVQoz41S2W7bMBBUU9gOChQJbEuiKPESL1GXG7f+jtRN/v9XpiDlOCmKtHkYzOxyZ7VcMavHAbzv4AaP4w+LfhJwoUHFNbbMggoNoTtUtcC2aLAtGbblwruL3hF2zWfST7DhO9ruAdItoHJEJTpQ4UFlQMk9KhnA9JjiWvWgsks1URO+1DE9ILtpzvjUPOIzO+OGPWIlfmItzljLXwkb+fSq1ateyyes0tkzVmKJN+oZWaUm0HYGkQMKMeMLebjitjjgNj8s/EZv8gO+Fg73ROOuNLgnJvFdqZEpG6D9gMjK9mC6B2sX7GmLvNbIaZv0nqoLt9gTjl3c31uQuEPTQ5jYoEPrRmg/QpqA1o8pNt2UchEmzLBhhusPiL5aOjTKX5kKi8yGA8J0hPYziD4hVycU6oS9OKHgA2ppkyGn8g8UtfoLMZ/FSUw3Q7kRys+QbgKVHoRbEG5AWIuKm1S8i9f8D7I4ZqMcqDCJue7ALix0SO+R65DOomFfiX8i68Zj2k2cNO4yfoBys7CwKJs2MWH6Yw3LWiVTnCRyTEbj8vLZVb80e7nauw1d/w26m69/KTZ+r/gjE/4GUNpGXmtRa0QAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/ce11566f3279ef31e190259b87befec7/8ac56/gcloudcli.webp 240w,
+/static/ce11566f3279ef31e190259b87befec7/d3be9/gcloudcli.webp 480w,
+/static/ce11566f3279ef31e190259b87befec7/e46b2/gcloudcli.webp 960w,
+/static/ce11566f3279ef31e190259b87befec7/f992d/gcloudcli.webp 1440w,
+/static/ce11566f3279ef31e190259b87befec7/882b9/gcloudcli.webp 1920w,
+/static/ce11566f3279ef31e190259b87befec7/bb072/gcloudcli.webp 1950w&quot;
+              sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/ce11566f3279ef31e190259b87befec7/8ff5a/gcloudcli.png 240w,
+/static/ce11566f3279ef31e190259b87befec7/e85cb/gcloudcli.png 480w,
+/static/ce11566f3279ef31e190259b87befec7/d9199/gcloudcli.png 960w,
+/static/ce11566f3279ef31e190259b87befec7/07a9c/gcloudcli.png 1440w,
+/static/ce11566f3279ef31e190259b87befec7/29114/gcloudcli.png 1920w,
+/static/ce11566f3279ef31e190259b87befec7/d544a/gcloudcli.png 1950w&quot;
+            sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/ce11566f3279ef31e190259b87befec7/d9199/gcloudcli.png&quot;
+            alt=&quot;gcloudcli&quot;
+            title=&quot;gcloudcli&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Enter authorization code&lt;/code&gt; 에 복사한 verification code 붙여넣기&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;chromium/.gclient 파일 수정 - &lt;code class=&quot;language-text&quot;&gt;custom_vars&lt;/code&gt; 내 &lt;code class=&quot;language-text&quot;&gt;&quot;rbe_instance&quot;: &quot;projects/rbe-chromium-untrusted/instances/default_instance&quot;,&lt;/code&gt; 추가&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;solutions = [
+  {
+    &quot;name&quot;: &quot;src&quot;,
+    &quot;url&quot;: &quot;https://chromium.googlesource.com/chromium/src.git&quot;,
+    &quot;managed&quot;: False,
+    &quot;custom_deps&quot;: {},
+    &quot;custom_vars&quot;: {
+      # This is the correct instance name for using Chromium&apos;s RBE service.
+      # You can only use it if you were granted access to it. If you use your
+      # own REAPI-compatible backend, you will need to change this accordingly
+      # to its requirements.
+      &quot;rbe_instance&quot;: &quot;projects/rbe-chromium-untrusted/instances/default_instance&quot;,
+    },
+  },
+]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ol start=&quot;6&quot;&gt;
+&lt;li&gt;gclient sync 실행&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ gclient &lt;span class=&quot;token function&quot;&gt;sync&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ol start=&quot;7&quot;&gt;
+&lt;li&gt;out/Debug/args.gn 에 내용 추가&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;use_remoteexec = true
+reclient_cfg_dir = &quot;../../buildtools/reclient_cfgs/linux&quot;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ol start=&quot;8&quot;&gt;
+&lt;li&gt;빌드 실행&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ gn gen out/Debug
+$ autoninja &lt;span class=&quot;token parameter variable&quot;&gt;-C&lt;/span&gt; out/Debug chrome blink_tests blink_unittests blink_platform_unittests&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/35b07507d05453853a276dddf5d18770/9cac8/build.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 17.083333333333332%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAiUlEQVQI142OSQ6CQAAE+YJxhRlmYZzNARWXBP//sDLBwNlDpfrU3ZWMmTZl0jCS+oJLEeU8jUm0XUa7C43yNHohzAgT1lwrv7q6PSbuzw/DOBHKC9X1HKVHaM++tmwOLduT/psqXt/YPNClnlgKPmdsSL+HLmPOZV2XNiLMQpgtTeQgurlsVxu+YsBS+i+9w0UAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/static/35b07507d05453853a276dddf5d18770/8ac56/build.webp 240w,
+/static/35b07507d05453853a276dddf5d18770/d3be9/build.webp 480w,
+/static/35b07507d05453853a276dddf5d18770/e46b2/build.webp 960w,
+/static/35b07507d05453853a276dddf5d18770/f992d/build.webp 1440w,
+/static/35b07507d05453853a276dddf5d18770/882b9/build.webp 1920w,
+/static/35b07507d05453853a276dddf5d18770/58cee/build.webp 2288w&quot;
+              sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/static/35b07507d05453853a276dddf5d18770/8ff5a/build.png 240w,
+/static/35b07507d05453853a276dddf5d18770/e85cb/build.png 480w,
+/static/35b07507d05453853a276dddf5d18770/d9199/build.png 960w,
+/static/35b07507d05453853a276dddf5d18770/07a9c/build.png 1440w,
+/static/35b07507d05453853a276dddf5d18770/29114/build.png 1920w,
+/static/35b07507d05453853a276dddf5d18770/9cac8/build.png 2288w&quot;
+            sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/static/35b07507d05453853a276dddf5d18770/d9199/build.png&quot;
+            alt=&quot;build&quot;
+            title=&quot;build&quot;
+            loading=&quot;lazy&quot;
+            decoding=&quot;async&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;빌드는 스크린샷에서는 2시간 정도 걸리고 8번 명령어 기준으로는 1시간 조금 넘게 걸린다. 평소 로컬 빌드를 했을 때 4시간 이상 걸리는 것과 비교하면 꽤 빠르다. 다른 프로젝트에 비하면 1시간도 빠르다고 볼 수는 없지만 요즘 로컬 빌드 속도에 비하면 꽤 만족스러운 속도이다.&lt;/p&gt;
+&lt;h3 id=&quot;빌드를-빠르게-할-수-있는-기타-방법&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%B9%8C%EB%93%9C%EB%A5%BC-%EB%B9%A0%EB%A5%B4%EA%B2%8C-%ED%95%A0-%EC%88%98-%EC%9E%88%EB%8A%94-%EA%B8%B0%ED%83%80-%EB%B0%A9%EB%B2%95&quot; aria-label=&quot;빌드를 빠르게 할 수 있는 기타 방법 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;빌드를 빠르게 할 수 있는 기타 방법&lt;/h3&gt;
+&lt;p&gt;리모트 캐시 빌드를 사용할 수 없는 경우, 빌드 옵션을 조정하여 빌드 속도를 빠르게 할 수 있다. 리모트 캐시 서버를 사용하는만큼 빨라지지는 않지만 조금은 시간을 줄일 수 있다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;symbol_level 조정 : level 을 낮출수록 빌드 속도가 빨라진다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;symbol_level=2 full debug info&lt;/li&gt;
+&lt;li&gt;symbol_level=1 stack traces, not line-by-line debugging&lt;/li&gt;
+&lt;li&gt;symbol_level=0 no debug symbol다&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;blink, v8 symbol_level 조정 : blink, v8 debug 정보가 불필요한 경우 0으로 낮출 수 있다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;blink_symbol_level=0&lt;/li&gt;
+&lt;li&gt;v8_symbol_level=0&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&quot;3&quot;&gt;
+&lt;li&gt;ccache 사용 (reclient 사용하는 경우 큰 효과 없음)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://chromium.googlesource.com/chromium/src/+/main/docs/linux/build_instructions.md#ccache&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://chromium.googlesource.com/chromium/src/+/main/docs/linux/build_instructions.md#ccache&lt;/a&gt; 참고&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;지금은 reclient 를 사용하고 있기 때문에 위 방법은 따로 사용하고 있지 않다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[오쏘콘(Open Source Conference) 발표 후기]]></title><description><![CDATA[11월 16일 토요일 Open Source Conference(오픈소스 컨퍼런스, 줄여서 오쏘콘) 에서 ‘오픈소스 웹 브라우저 개발자는 이렇게 일한다’ 라는 주제로 발표를 했다.]]></description><link>https://blog.amoseui.com/opensourceconference</link><guid isPermaLink="false">https://blog.amoseui.com/opensourceconference</guid><pubDate>Sun, 24 Nov 2024 15:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
     &gt;
