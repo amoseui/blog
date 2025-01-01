@@ -3,8 +3,8 @@ title: "Chromium Contribution: 불필요한 register-property-syntax-parsing.htm
 date: 2023-06-21 21:10:00
 template: post
 draft: false
-slug: "/chromium-remove-css-wpt-ini-file"
-category: "chromium"
+slug: /chromium-remove-css-wpt-ini-file
+category: chromium
 tags:
   - opensource
   - chromium
@@ -12,6 +12,8 @@ tags:
   - w3c
   - wpt
 description: 2023년 Chromium 에 반영한 두 번째 패치 내용 정리
+aliases:
+  - "Chromium Contribution: 불필요한 register-property-syntax-parsing.html.ini 파일 삭제"
 ---
 
 ### 관련 링크

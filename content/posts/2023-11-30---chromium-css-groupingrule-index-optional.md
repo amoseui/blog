@@ -3,8 +3,8 @@ title: "Chromium Contribution: CSS GroupingRule insertRule 함수의 index 파�
 date: 2023-11-30 08:00:00
 template: post
 draft: false
-slug: "/chromium-css-groupingrule-index-optional"
-category: "chromium"
+slug: /chromium-css-groupingrule-index-optional
+category: chromium
 tags:
   - opensource
   - chromium
@@ -12,6 +12,8 @@ tags:
   - w3c
   - wpt
 description: 2023년 Chromium 에 반영한 다섯 번째 패치 내용 정리
+aliases:
+  - "Chromium Contribution: CSS GroupingRule insertRule 함수의 index 파라미터를 optional 로 변경"
 ---
 
 ### 관련 링크

@@ -3,8 +3,8 @@ title: "Chromium Contribution: CSS @supports <general-enclosed> rule 에서 비�
 date: 2023-06-22 20:30:00
 template: post
 draft: false
-slug: "/chromium-css-supports-allow-empty-parentheses"
-category: "chromium"
+slug: /chromium-css-supports-allow-empty-parentheses
+category: chromium
 tags:
   - opensource
   - chromium
@@ -12,6 +12,8 @@ tags:
   - w3c
   - wpt
 description: 2023년 Chromium 에 반영한 세 번째 패치 내용 정리
+aliases:
+  - "Chromium Contribution: CSS @supports <general-enclosed> rule 에서 비어있는 () 허용"
 ---
 
 ### 관련 링크

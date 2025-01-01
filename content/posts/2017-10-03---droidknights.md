@@ -3,17 +3,19 @@ title: Droid Knights 2017 후기
 date: 2017-10-03 13:08:05
 template: post
 draft: false
-slug: "/droidknights-2017"
-category: "conference"
+slug: /droidknights-2017
+category: conference
 tags:
   - conference
   - android
   - droidknights
 description: 3월 25일 토요일, DROID KNIGHTS 라는 안드로이드 기술 컨퍼런스에 다녀왔다. 근 7개월 만에 후기를 남긴다. 개인 노트에는 어느 정도 정리를 해뒀었는데 블로그에 올리는데 부담을 느껴 미루다보니 이제서야 올리게 되었다.
-socialImage: "./media/droid.png"
+socialImage: ./media/droid.png
+aliases:
+  - Droid Knights 2017 후기
 ---
 
-![droid](/media/droid.png)
+![droid](media/droid.png)
 
 3월 25일 토요일, DROID KNIGHTS 라는 안드로이드 기술 컨퍼런스에 다녀왔다. 근 7개월 만에 후기를 남긴다. 개인 노트에는 어느 정도 정리를 해뒀었는데 블로그에 올리는데 부담을 느껴 미루다보니 이제서야 올리게 되었다.
 
@@ -56,7 +58,7 @@ socialImage: "./media/droid.png"
 
 - Realm 사이트를 통해 동영상과 발표 자료를 같이 올리려다보니 발표 슬라이드와 발표가 공유되는데 시간이 꽤 걸렸다.
 
-![survey](/media/survey.png)
+![survey](media/survey.png)
 
 > 행사 중에 진행했던 설문조사
 

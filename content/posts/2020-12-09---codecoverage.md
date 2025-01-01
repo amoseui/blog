@@ -3,12 +3,14 @@ title: Code Coverage Best Practices
 date: 2020-12-09 22:00:00
 template: post
 draft: false
-slug: "/code-coverage"
-category: "review"
+slug: /code-coverage
+category: review
 tags:
   - testing
   - codecoverage
 description: 지난 8월 Google Testing Blog 에 올라왔던 Code Coverage Best Practices 를 보고 간단히 정리해 보았다.
+aliases:
+  - Code Coverage Best Practices
 ---
 
 지난 8월 [Google Testing Blog](https://testing.googleblog.com/) 에 올라왔던 [Code Coverage Best Practices](https://testing.googleblog.com/2020/08/code-coverage-best-practices.html) 를 보고 간단히 정리해 보았다.

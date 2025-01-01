@@ -3,18 +3,20 @@ title: Hacktoberfest 2018 후기
 date: 2018-12-28 22:00:00
 template: post
 draft: false
-slug: "/hacktoberfest-2018"
-category: "opensource"
+slug: /hacktoberfest-2018
+category: opensource
 tags:
   - hacktoberfest
   - opensource
 description: 2018년 Hacktoberfest 에 참여했다.
-socialImage: "./media/hacktoberfest.jpg"
+socialImage: ./media/hacktoberfest.jpg
+aliases:
+  - Hacktoberfest 2018 후기
 ---
 
 2018년 [Hacktoberfest](https://hacktoberfest.digitalocean.com) 에 참여했다.
 
-![hacktoberfest](/media/hacktoberfest.jpg)
+![hacktoberfest](media/hacktoberfest.jpg)
 
 Hacktoberfest 는 Digital Ocean 에서 github 과 함께 매년 10월에 주최하는 행사이다. 올해가 다섯번째라는데 여지껏 몰랐다가 10월 중에 알게 되어 등록을 하고 참여하게 되었다.
 

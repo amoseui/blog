@@ -3,8 +3,8 @@ title: "Chromium Contribution: CSS KeyframesRule length attribute 추가"
 date: 2023-11-30 09:30:00
 template: post
 draft: false
-slug: "/chromium-css-keyframesrule-length-attribute"
-category: "chromium"
+slug: /chromium-css-keyframesrule-length-attribute
+category: chromium
 tags:
   - opensource
   - chromium
@@ -12,6 +12,8 @@ tags:
   - w3c
   - wpt
 description: 2023년 Chromium 에 반영한 여섯 번째 패치 내용 정리
+aliases:
+  - "Chromium Contribution: CSS KeyframesRule length attribute 추가"
 ---
 
 ### 관련 링크

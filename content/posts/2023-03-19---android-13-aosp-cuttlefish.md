@@ -3,14 +3,16 @@ title: Android 13 AOSP 빌드 및 cuttlefish 실행
 date: 2023-03-19 00:50:00
 template: post
 draft: false
-slug: "/android-13-aosp-cuttlefish"
-category: "aosp"
+slug: /android-13-aosp-cuttlefish
+category: aosp
 tags:
   - aosp
   - android
   - cuttlefish
 description: Ubuntu 20.04 환경에서 Android 13 버전 기준으로 AOSP 빌드를 하고 Cuttlefish 라는 가상 디바이스에서 실행하는 방법을 정리해보았다.
-socialImage: "./media/screenshot_cuttlefish.png"
+socialImage: ./media/screenshot_cuttlefish.png
+aliases:
+  - Android 13 AOSP 빌드 및 cuttlefish 실행
 ---
 
 ## 개요
@@ -145,7 +147,7 @@ $ stop_cvd
 
 `launch_cvd` 를 실행한 뒤 https://localhost:8443 에 접속하여 Devices 밑에 cvd-1 이 뜨는지 확인한다. 토글 버튼을 눌러 cvd-1 을 실행하면 디바이스가 부팅이 된다.
 
-![cuttlefish](/media/screenshot_cuttlefish.png)
+![cuttlefish](media/screenshot_cuttlefish.png)
 _<center>부팅된 Cuttlefish 화면</center>_
 
 `launch_cvd` 를 실행했을 때 정상적인 경우 아래처럼 로그가 나오고
