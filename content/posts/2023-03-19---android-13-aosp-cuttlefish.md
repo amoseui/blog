@@ -145,7 +145,7 @@ $ stop_cvd
 
 `launch_cvd` 를 실행한 뒤 https://localhost:8443 에 접속하여 Devices 밑에 cvd-1 이 뜨는지 확인한다. 토글 버튼을 눌러 cvd-1 을 실행하면 디바이스가 부팅이 된다.
 
-![cuttlefish](/media/screenshot_cuttlefish.png)
+![cuttlefish](media/screenshot_cuttlefish.png)
 _<center>부팅된 Cuttlefish 화면</center>_
 
 `launch_cvd` 를 실행했을 때 정상적인 경우 아래처럼 로그가 나오고

@@ -26,7 +26,7 @@ socialImage: "./media/screenshot_github.png"
 
 그동안 오픈소스에 관심을 갖고 직접 기여를 하면서 많이 배웠다. 2024년에는 1. Chromium 기여를 좀 더 해서 committer 가 되는 것, 2. 다른 오픈소스 프로젝트를 선택해서 꾸준히 기여하는 것, 3. 내 프로젝트를 오픈소스 프로젝트 형식으로 개발하여 플레이스토어에 출시하는 것을 목표로 세웠다.
 
-![github](/media/screenshot_github.png)
+![github](media/screenshot_github.png)
 
 ### 스터디
 
@@ -36,11 +36,11 @@ socialImage: "./media/screenshot_github.png"
 
 2023년에는 이 블로그에 8개의 글을 올렸다. Chromium 에 반영한 내용을 정리해서 올리기 시작했다. 블로그에 올리면서 좀 더 정리를 하게 되는 효과가 있어 2024년에도 같은 방식으로 글을 올리려고 한다. 2023년 초에 velog, 티스토리를 따로 만들어서 조금씩 올렸는데 흐지부지됐다. velog 에는 간단한 TIL(Today I Learned) 을 올리고 티스토리에는 책, 강의, 레퍼런스 등을 정리하는 글을 올리려고 한다.
 
-![ga](/media/screenshot_ga.png)
+![ga](media/screenshot_ga.png)
 
 중국 개발자가 내 Google Analytics ID 를 삭제하지 않은 채로 내 블로그 repo 를 그대로 갖다 썼다. 이 사실을 알게 되어 내가 해당 repo 에서 ID 를 직접 삭제하기 전까지 며칠동안 그 블로그가 추적되었다. 조회수가 너무 확 튀어버렸다.
 
-![search](/media/screenshot_search.png)
+![search](media/screenshot_search.png)
 
 다음은 검색어 순위. aosp cuttlefish 관련 검색어가 많다. 검색어 노출 순위도 나름 높은 편이다.
 

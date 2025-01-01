@@ -24,7 +24,7 @@ socialImage: "./media/opensourcepeerbonus.png"
 
 하나는 구글에서 구글이 주도하는 오픈소스 프로젝트에 기여한 외부 개발자에게 상과 상금을 주는 Open Source Peer Bonus 프로그램의 Winner 로 선정된 것이었다.
 
-![opensourcepeerbonus](/media/opensourcepeerbonus.png)
+![opensourcepeerbonus](media/opensourcepeerbonus.png)
 
 > The Google Open Source Peer Bonus program is designed to recognize external open source contributors nominated by Googlers for their open source contributions. This cycle, we are pleased to announce a total of 141 winners across 110+ projects, residing in 36 countries.
 
@@ -37,7 +37,7 @@ socialImage: "./media/opensourcepeerbonus.png"
 
 ### 컨퍼런스 발표
 
-![conference](/media/conference.png)
+![conference](media/conference.png)
 
 회사 컨퍼런스에서 발표를 했다. 타의 반, 자의 반으로 하게 됐다. 막상 발표를 준비해보니 고려해야할 것이 너무 많았다. 나 혼자 한 일이 아니라 많은 사람들이 다 같이 한 일을 회사와 부서를 대표해서 발표하는 것이 정말 큰 부담이었다. 특히 내가 잘 모르는 기술에 대한 내용과 저작권, 초상권, 기술 공개 범위를 고려하여 자료를 만드는 것이 가장 큰 스트레스였다.
 

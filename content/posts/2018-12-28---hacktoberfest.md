@@ -14,7 +14,7 @@ socialImage: "./media/hacktoberfest.jpg"
 
 2018년 [Hacktoberfest](https://hacktoberfest.digitalocean.com) 에 참여했다.
 
-![hacktoberfest](/media/hacktoberfest.jpg)
+![hacktoberfest](media/hacktoberfest.jpg)
 
 Hacktoberfest 는 Digital Ocean 에서 github 과 함께 매년 10월에 주최하는 행사이다. 올해가 다섯번째라는데 여지껏 몰랐다가 10월 중에 알게 되어 등록을 하고 참여하게 되었다.
 
