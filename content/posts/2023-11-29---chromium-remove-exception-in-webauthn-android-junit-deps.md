@@ -3,14 +3,16 @@ title: "Chromium Contribution: webauthn junit 사용하지 않는 코드 및 DEP
 date: 2023-11-29 07:00:00
 template: post
 draft: false
-slug: "/chromium-remove-exception-in-webauthn-android-junit-deps"
-category: "chromium"
+slug: /chromium-remove-exception-in-webauthn-android-junit-deps
+category: chromium
 tags:
   - opensource
   - chromium
   - webauthn
 description: 2023년 Chromium 에 반영한 네 번째 패치 내용 정리
-socialImage: "./media/content-layer-diagram.png"
+socialImage: ./media/content-layer-diagram.png
+aliases:
+  - "Chromium Contribution: webauthn junit 사용하지 않는 코드 및 DEPS 삭제"
 ---
 
 ### 관련 링크

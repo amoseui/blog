@@ -3,13 +3,15 @@ title: 2023년 회고 그리고 2024년
 date: 2024-01-02 14:45:00
 template: post
 draft: false
-slug: "/2023-retrospective"
-category: "retrospective"
+slug: /2023-retrospective
+category: retrospective
 tags:
   - "2023"
   - retrospective
 description: 살짝 늦은 2023년 회고
-socialImage: "./media/screenshot_github.png"
+socialImage: ./media/screenshot_github.png
+aliases:
+  - 2023년 회고 그리고 2024년
 ---
 
 ### 회사

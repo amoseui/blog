@@ -1,15 +1,17 @@
 ---
-title: "cpp-mini-chromium-template 프로젝트 소개"
+title: cpp-mini-chromium-template 프로젝트 소개
 date: 2023-05-29 21:00:00
 template: post
 draft: false
-slug: "/cpp-mini-chromium-template"
-category: "opensource"
+slug: /cpp-mini-chromium-template
+category: opensource
 tags:
   - opensource
   - chromium
   - cpp
 description: cpp-mini-chromium-template 프로젝트 소개
+aliases:
+  - cpp-mini-chromium-template 프로젝트 소개
 ---
 
 Chromium [base](https://chromium.googlesource.com/chromium/src/base/) 에는 Chromium 의 전반적인 핵심 기능과 유틸리티를 제공하는 코드가 있다. 공통으로 사용되는 유틸리티 함수, 데이터 구조, 도구, 플랫폼 지원 등과 같은 코드가 있는 일종의 C++ 라이브러리이다. C++ 최신 기능을 앞서 구현해서 사용하기도 하고 대체해서 사용하기도 한다. 상당히 고도화되어 있고 안정화되어있기 때문에 이쪽 코드를 분석하면 C++ 실력을 키우는데 상당히 도움이 될거라 생각한다. 유닛 테스트도 잘 되어있다.

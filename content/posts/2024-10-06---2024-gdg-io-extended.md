@@ -3,14 +3,16 @@ title: 2024 GDG Google I/O Extended 간단 후기
 date: 2024-10-06 05:00:00
 template: post
 draft: false
-slug: "/2024-gdg-google-io-extended"
-category: "conference"
+slug: /2024-gdg-google-io-extended
+category: conference
 tags:
   - gdg
   - conference
   - android
 description: 지난 7월 두 개의 GDG Google I/O Extended 에 참석했던 후기를 뒤늦게 올린다.
-socialImage: "./media/android.JPG"
+socialImage: ./media/android.JPG
+aliases:
+  - 2024 GDG Google I/O Extended 간단 후기
 ---
 
 지난 7월 두 개의 GDG Google I/O Extended 에 참석했던 후기를 뒤늦게 올린다.

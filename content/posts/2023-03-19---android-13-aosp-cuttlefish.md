@@ -3,14 +3,16 @@ title: Android 13 AOSP 빌드 및 cuttlefish 실행
 date: 2023-03-19 00:50:00
 template: post
 draft: false
-slug: "/android-13-aosp-cuttlefish"
-category: "aosp"
+slug: /android-13-aosp-cuttlefish
+category: aosp
 tags:
   - aosp
   - android
   - cuttlefish
 description: Ubuntu 20.04 환경에서 Android 13 버전 기준으로 AOSP 빌드를 하고 Cuttlefish 라는 가상 디바이스에서 실행하는 방법을 정리해보았다.
-socialImage: "./media/screenshot_cuttlefish.png"
+socialImage: ./media/screenshot_cuttlefish.png
+aliases:
+  - Android 13 AOSP 빌드 및 cuttlefish 실행
 ---
 
 ## 개요

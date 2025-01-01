@@ -3,13 +3,15 @@ title: Hacktoberfest 2018 후기
 date: 2018-12-28 22:00:00
 template: post
 draft: false
-slug: "/hacktoberfest-2018"
-category: "opensource"
+slug: /hacktoberfest-2018
+category: opensource
 tags:
   - hacktoberfest
   - opensource
 description: 2018년 Hacktoberfest 에 참여했다.
-socialImage: "./media/hacktoberfest.jpg"
+socialImage: ./media/hacktoberfest.jpg
+aliases:
+  - Hacktoberfest 2018 후기
 ---
 
 2018년 [Hacktoberfest](https://hacktoberfest.digitalocean.com) 에 참여했다.

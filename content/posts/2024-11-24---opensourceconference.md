@@ -3,8 +3,8 @@ title: 오쏘콘(Open Source Conference) 발표 후기
 date: 2024-11-24 15:00:00
 template: post
 draft: false
-slug: "/opensourceconference"
-category: "conference"
+slug: /opensourceconference
+category: conference
 tags:
   - gdg
   - opensource
@@ -12,7 +12,9 @@ tags:
   - chromium
   - committer
 description: 11월 16일 토요일 Open Source Conference(오픈소스 컨퍼런스, 줄여서 오쏘콘) 에서 ‘오픈소스 웹 브라우저 개발자는 이렇게 일한다’ 라는 주제로 발표를 했다.
-socialImage: "./media/opensourceconference.png"
+socialImage: ./media/opensourceconference.png
+aliases:
+  - 오쏘콘(Open Source Conference) 발표 후기
 ---
 
 ![opensourceconference](media/opensourceconference.png)

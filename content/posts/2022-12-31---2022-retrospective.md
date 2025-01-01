@@ -3,13 +3,15 @@ title: 2022년 회고
 date: 2022-12-31 09:00:00
 template: post
 draft: false
-slug: "/2022-retrospective"
-category: "retrospective"
+slug: /2022-retrospective
+category: retrospective
 tags:
   - "2022"
   - retrospective
 description: 오랜만에 한 해 회고를 남긴다.
-socialImage: "./media/opensourcepeerbonus.png"
+socialImage: ./media/opensourcepeerbonus.png
+aliases:
+  - 2022년 회고
 ---
 
 오랜만에 한 해 회고를 남긴다.
