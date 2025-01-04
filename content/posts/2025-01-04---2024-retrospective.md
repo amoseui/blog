@@ -1,6 +1,6 @@
 ---
 title: 2024년 회고
-date: 2025-01-04 05:20:00
+date: 2025-01-04 05:40:00
 template: post
 draft: false
 slug: /2024-retrospective
