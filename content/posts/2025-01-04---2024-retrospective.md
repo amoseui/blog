@@ -39,7 +39,7 @@ aliases:
 
 올해도 Chromium 프로젝트에 기여는 할 생각이다. 커미터 달고 먹튀한 느낌도 있어서 의무감도 있지만 오픈소스 기여는 꾸준함이 생명이기 때문에 다시 이어 나갈 생각이다. 언젠가 웹브라우저를 업무로 다시 할 수도 있고...
 
-![[2024-github.png]]
+![github](media/2024-github.png)
 _<center>항상 연초에만 매일 하다가... 흐지부지</center>_
 
 ### 컨퍼런스/세미나/멘토링
@@ -49,7 +49,7 @@ _<center>항상 연초에만 매일 하다가... 흐지부지</center>_
 - 2024-07-20 I/O Extended Android in Korea 2024 [후기](https://blog.amoseui.com/2024-gdg-google-io-extended)
 - 2024-07-27 I/O Extended 2024 Incheon [후기](https://blog.amoseui.com/2024-gdg-google-io-extended)
 - 2024-10-12 DEVCON 2024
-- 2024-11-16 Open Source Conference (오쏘콘) [발표 후기]((https://blog.amoseui.com/opensourceconference)
+- 2024-11-16 Open Source Conference (오쏘콘) [발표 후기](https://blog.amoseui.com/opensourceconference)
 - 2024-12-11 솔로프리너 컨퍼런스: 1인 개발자, 인디해커의 삶
 - 2024-12-21 au VimEnter \* call Bye2024()
 
@@ -71,7 +71,7 @@ _<center>항상 연초에만 매일 하다가... 흐지부지</center>_
 
 2024년에는 5개의 글을 올렸다. Chromium Committer 가 된 과정과 오쏘콘 발표 후기는 꽤 공을 들여서 썼다. 꽤 오랫동안 오픈소스 활동을 해서 결국 하나의 마일스톤을 찍고, 발표까지 한 건 나름대로 큰 성과였다. 그리고 블로그에 글까지 남겼다니... 내 자신 많이 발전했다.
 
-![[2024-blog-ga.png]]
+![ga](media/2024-blog-ga.png)
 조회수는 여전히 소소하다. 인기가 있는 주제의 글도 딱히 없고 글 수도 적다. 앞으로 양질의 글을 꾸준히 올리고 싶다. 간단히 공부한 내용이나 튜토리얼 성격의 글은 티스토리나 다른 곳에 올려서 퀄리티 보정을 살짝 할 생각이다.
 
 #### 조회수 순위
@@ -82,7 +82,7 @@ _<center>항상 연초에만 매일 하다가... 흐지부지</center>_
 4. [오쏘콘(Open Source Conference) 발표 후기](https://blog.amoseui.com/opensourceconference)
 5. [cpp-mini-chromium-template 프로젝트 소개](https://blog.amoseui.com/cpp-mini-chromium-template)
 
-![[2024-search.png]]
+![search](2024-search.png)
 검색어 유입은 여전히 aosp 빌드와 cuttlefish 가 대부분이다. 검색이 잘 될 만한 글을 올려서 테스트해보고 싶은데 어떤 글을 올려야 될지 모르겠다. 데이터가 궁금해서 한 번씩 보게 된다. 한 달 전에 [awesome-devlog](https://github.com/awesome-devblog/awesome-devblog) 에 블로그를 등록해 놓았는데 이를 통한 유입이 어느 정도 있을지도 궁금하다. (등록 후 이 글이 첫 번째) 조회수는 높으면 좋겠는데 지인은 딱히 안 봤으면 좋겠다. ㅎㅎ
 
 ### 회사
