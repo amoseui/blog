@@ -20,7 +20,7 @@ Chromium [base](https://chromium.googlesource.com/chromium/src/base/) 에는 Chr
 
 이런 문제를 해결하기 위해서 그랬는지는 몰라도 Chromium 팀에서 [mini_chromium](https://chromium.googlesource.com/chromium/mini_chromium) 이라는 프로젝트를 따로 만들어 놓았다. mini_chromium 은 Chromium 에서 base 코드만 따로 떼어서 구성한 작은 프로젝트이다. 이를 활용하면 base 코드를 어느 정도 사용하고 분석할 수 있다. 빌드 환경이나 스크립트, 명령어 등은 Chromium 프로젝트와 거의 동일하다. 하지만 이 프로젝트를 받아서 코드를 구현할 수 있는 건 아니다.
 
-이를 쉽게 하기 위해서 [cpp-mini-chromium-tmeplate](https://github.com/amoseui/cpp-mini-chromium-template/) 이라는 프로젝트를 하나 만들었다. `hello.cc`, `hello_static.cc` 에 원하는 코드를 추가해서 테스트해볼 수 있다. 또 `hello_test.cc`로 googletest 도 돌려볼 수 있다. GitHub 에서 이 프로젝트를 템플릿 프로젝트로 선언해 놓았기 때문에 클릭 한번으로 이 프로젝트 기반의 신규 프로젝트를 만들 수도 있다. 실제로 개인적인 알고리즘 공부를 위한 프로젝트도 이 프로젝트 템플릿으로 만들어서 쓰고 있다.
+이를 쉽게 하기 위해서 [cpp-mini-chromium-template](https://github.com/amoseui/cpp-mini-chromium-template/) 이라는 프로젝트를 하나 만들었다. `hello.cc`, `hello_static.cc` 에 원하는 코드를 추가해서 테스트해볼 수 있다. 또 `hello_test.cc`로 googletest 도 돌려볼 수 있다. GitHub 에서 이 프로젝트를 템플릿 프로젝트로 선언해 놓았기 때문에 클릭 한번으로 이 프로젝트 기반의 신규 프로젝트를 만들 수도 있다. 실제로 개인적인 알고리즘 공부를 위한 프로젝트도 이 프로젝트 템플릿으로 만들어서 쓰고 있다.
 
 환경 셋업 및 사용 방법은 아래 가이드를 따르면 된다.
 
