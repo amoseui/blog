@@ -27,7 +27,7 @@ Chromium 팀에서 측정 중인 Chromium Build Time 그래프에서 2018년과 
 
 Chromium 빌드 가이드에는 빌드를 빨리 할 수 있는 방법을 여러가지 제공하고 있다.
 
-먼저 구글 개발자를 위한 별도의 가이드가 있다. 내부 리모트 서버를 사용하는 방법이 있는 것 같은데 외부 개발자는 가이드조차 볼 수 없어서 실제로 어떻게 사용하는지, 얼마나 빨라지는지 알 수 없다. 대신 외부 개발자를 위한 [Faster builds](~https://chromium.googlesource.com/chromium/src/+/main/docs/linux/build_instructions.md#Faster-builds~) 가이드가 따로 있다. Reclient 권한을 받으면 리모트 캐시 빌드를 할 수 있다. 가이드 상으로 tryjob access 가 있는 개발자라면 별도의 신청으로 권한을 얻을 수 있다. 하지만 내가 권한 요청을 했을 때는 committer 인지 확인을 했다. 구글에서 비용을 쓰는 것이다보니 아무나 해주는 것 같진 않았다. 다행히 committer 가 된 후에 신청을 했기 때문에 받아주었다.
+먼저 구글 개발자를 위한 별도의 가이드가 있다. 내부 리모트 서버를 사용하는 방법이 있는 것 같은데 외부 개발자는 가이드조차 볼 수 없어서 실제로 어떻게 사용하는지, 얼마나 빨라지는지 알 수 없다. 대신 외부 개발자를 위한 [Faster builds](https://chromium.googlesource.com/chromium/src/+/main/docs/linux/build_instructions.md#Faster-builds) 가이드가 따로 있다. Reclient 권한을 받으면 리모트 캐시 빌드를 할 수 있다. 가이드 상으로 tryjob access 가 있는 개발자라면 별도의 신청으로 권한을 얻을 수 있다. 하지만 내가 권한 요청을 했을 때는 committer 인지 확인을 했다. 구글에서 비용을 쓰는 것이다보니 아무나 해주는 것 같진 않았다. 다행히 committer 가 된 후에 신청을 했기 때문에 받아주었다.
 
 리모트 빌드는 `Bazel` 의 [remote-apis](https://github.com/bazelbuild/remote-apis) 기반으로 [reclient](https://github.com/bazelbuild/reclient) 를 클라이언트로 사용한다. 백엔드는 구글내 클라우드 서버에서 돌고 있는데 가이드에는 `RBE` 라고만 되어있고 별다른 설명은 없다. 직접 `remote-apis` 서버를 구축해서 사용할 수도 있다고 한다. 업무로 chromium 프로젝트를 한다면 한 번 깊게 알아볼 것 같다.
 
