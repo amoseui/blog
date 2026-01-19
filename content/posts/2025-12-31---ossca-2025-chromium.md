@@ -4,9 +4,12 @@ date: 2025-12-31 14:30
 template: post
 draft: false
 slug: /ossca-2025-chromium
-category:
+category: opensource
 tags:
-description:
+  - "2025"
+  - chromium
+  - opensource
+description: 올해 봄, 6주 동안 오픈소스 컨트리뷰션 아카데미 체험형 프로그램 git 활용 및 Chromium 프로젝트의 멘토링을 했다. 2025년 마지막 날이 되어서야 멘토링 과정과 후기를 남긴다.
 socialImage: ./media/ossca-2025.png
 aliases:
   - 2025 오픈소스 컨트리뷰션 아카데미 체험형 멘토 후기
