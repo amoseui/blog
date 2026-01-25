@@ -20,7 +20,7 @@ const jestConfig: Config.InitialOptions = {
     ".+\\.(css|sass|scss)$": "identity-obj-proxy",
     ".+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
       "identity-obj-proxy",
-    "^gatsby-core-utils/(.*)$": "gatsby-core-utils/dist/$1",
+    "^gatsby-core-utils/(.*)$": "gatsby-core-utils/$1",
     "^gatsby-plugin-utils/(.*)$": [
       "gatsby-plugin-utils/dist/$1",
       "gatsby-plugin-utils/$1",
@@ -29,7 +29,9 @@ const jestConfig: Config.InitialOptions = {
   transform: { "^.+\\.[jt]sx?$": ["@swc/jest", swc] },
   setupFiles: ["<rootDir>/internal/testing/jest-setup.ts"],
   testPathIgnorePatterns: ["node_modules", "\\.cache", "<rootDir>.*/public"],
-  transformIgnorePatterns: ["node_modules/(?!(gatsby|gatsby-script)/)"],
+  transformIgnorePatterns: [
+    "node_modules/(?!(gatsby|gatsby-script|gatsby-core-utils|gatsby-plugin-utils)/)",
+  ],
 };
 
 export default jestConfig;
