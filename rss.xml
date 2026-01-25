@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Everything in its Right Place]]></title><description><![CDATA[Everything in its Right Place]]></description><link>https://blog.amoseui.com</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 25 Jan 2026 14:00:50 GMT</lastBuildDate><item><title><![CDATA[2025년 회고]]></title><description><![CDATA[조금 늦게 남겨 보는 2025년 회고와 2026년.]]></description><link>https://blog.amoseui.com/2025-retrospective</link><guid isPermaLink="false">https://blog.amoseui.com/2025-retrospective</guid><pubDate>Tue, 20 Jan 2026 12:00:00 GMT</pubDate><content:encoded>&lt;p&gt;조금 늦게 남겨 보는 2025년 회고와 2026년.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Everything in its Right Place]]></title><description><![CDATA[Everything in its Right Place]]></description><link>https://blog.amoseui.com</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 25 Jan 2026 14:30:15 GMT</lastBuildDate><item><title><![CDATA[2025년 회고]]></title><description><![CDATA[조금 늦게 남겨 보는 2025년 회고와 2026년.]]></description><link>https://blog.amoseui.com/2025-retrospective</link><guid isPermaLink="false">https://blog.amoseui.com/2025-retrospective</guid><pubDate>Tue, 20 Jan 2026 12:00:00 GMT</pubDate><content:encoded>&lt;p&gt;조금 늦게 남겨 보는 2025년 회고와 2026년.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://blog.amoseui.com/2024-retrospective&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;2024년 회고&lt;/a&gt;와 동일하게 오픈소스, 컨퍼런스/세미나/멘토링, 블로그, 회사에 대한 회고를 작성했고, 이번에는 개인 항목까지 추가했다.&lt;/p&gt;
 &lt;h2 id=&quot;오픈소스&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4&quot; aria-label=&quot;오픈소스 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;오픈소스&lt;/h2&gt;
 &lt;p&gt;2025년 오픈소스 목표는 아래와 같았다.&lt;/p&gt;
@@ -7,7 +7,7 @@
 &lt;li&gt;Chromium Feature 구현 및 배포 3회 이상&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;앱 개발과 출시는 올해도 실패. Chromium 기여는 OSSCA 멘토링 실습을 위한 확인 용도로 오타 수정 패치만 반영했다. 예전부터 개발해 보려고 노렸던 web feature 는 구글 쪽에서 진행하겠다고 해서 포기했다. 현재 회사 업무와 괴리가 점점 커지고 있어서 시간을 내기가 더 어려워진 것 같다.&lt;/p&gt;
-&lt;p&gt;연초부터 바이브 코딩이 유행하기 시작했고, 코딩 에이전트들이 빠르게 발전하면서 개발자들의 생산성이 급격하게 올라갔다. 자기계발과 개인 프로젝트에 대한 방향을 잡기가 어려웠다. 예전에는 다른 사람들과 함께 프로젝트를 해봐야겠다는 생각을 많이 했는데 이제는 토이 프로젝트를 남들과 할 생각을 아예 안하게 됐다. 대신 AI 도구를 적극적으로 활용해, 가능한 한 많은 프로덕트를 빠르게 완성하고 출시하는 것을 목표로 삼게 됐다. 옛날부터 프로젝트를 시작만 하고 끝을 못 내는 일이 비일비재했는데 올해는 꼭 프로젝트 완성이라는 목표를 달성하고 싶다. 도구를 잘 쓰기 위한 지속적인 훈련 목적도 있다.&lt;/p&gt;
+&lt;p&gt;연초부터 바이브 코딩이 유행하기 시작했고, 코딩 에이전트들이 빠르게 발전하면서 개발자들의 생산성이 급격하게 올라갔다. 자기계발과 개인 프로젝트에 대한 방향을 잡기가 어려웠다. 예전에는 다른 사람들과 함께 프로젝트를 해봐야겠다는 생각을 많이 했는데 이제는 토이 프로젝트를 남들과 할 생각을 아예 안하게 됐다. 대신 AI 도구를 적극적으로 활용해, 가능한 한 많은 프로덕트를 빠르게 완성하고 출시하는 것을 목표로 삼게 됐다. 옛날부터 프로젝트를 시작만 하고 끝을 못 내는 일이 비일비재했는데 올해는 꼭 프로젝트 완성이라는 목표를 달성하고 싶다. 도구를 잘 쓰기 위한 지속적인 훈련 목적도 있다.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
@@ -21,7 +21,7 @@
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 50.416666666666664%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABu0lEQVQoz32SS08VQRCF5/8v/Acmrt250Q0rZSOSaAxCJIgkEO51bt+Znn6/PzN9gYRIPMnZVFWfqj5VQ4gJHxL7SSImSUiZmDLWWpRSaK3x3vM/5JwJIZJSYtDGsCjdHzrnqa3RWsOHwKLVIWcM2lk2y4iPgRAjzodO7wPaWmazdNFhWRSbzRalNOu00HrXVUQYibQWaQzjPPHp7pS9VSzadipt0cb1vNALLgQGKWe2f0aMNbQciQVag1wyypk+tXeBySzc+5HSGqVUUi6dMWak0+yWmZQzw93PSy4+vmU8ecevsy2vP9wSYsH4zH6auReGrViwxrDbSaZZdntW31bUVsk1E3Oi1spwI895f3LE8ZcLUoadUN1D4zxCCIz11NpoNZPSwfhVbK1ZEWyg1fYg3hi25prr/S2jac8250Li65Xg7GbmcuO5mzLK1557rPQ5cC6uMNH2YBfcjROTmCgpYKzrY69YfZLKspeaaTGEVEnlcAG5lO7r5913Xv14wzdxQQqpxwelFdM8962GELpgezidl7DGH08rt8Kl/E0o8fDl1cPzqxuOjk//efQyed6sgdWOksuTh38BlnYEpgo2EVkAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 50.416666666666664%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABuklEQVR42n1S227UMBTM/z/yB0j9Ah544AUheEFlpVa0C6IICtssSTaO47vj2BmOvbtpVSQsHfk2njNnjis/BTg/oesZGBcIc6SYobXGOApIKeGdw/9GCDOc8+VdpZSGkAraGPhpWkHOe0itTncWo1F44A0cYbIAYx0MJbJEJIzGoEUhrrKKpmmgSNEUwko4KglGIE7ngggf+hYf9hsIayBIhFSWElqqxBVMrwQ8va9Yf0C9r2GNQJxIlV8K4RxnKGdgSYmzHgPds2nEkoAY0xohRHAr0csRKS2ofm9vsX17ge7yNT5ftXj5Zkd0C0Y9YWAcdW/RMQGjDf60DJwqyjbFGEviRBlijhRpDVTfx2u8+vgOn253BaDp4XG26BkrHmVgSlnRXIjyOo9lWagyV+bzvmrkD+x4C+HPh0cPpfHY3B1wc8/xtbaohxnSPRLl4JPEVbeFCXY9qw7dAE6leU9dM3bNlv3JnVSkWJOHMas8JZtJZfb2fbvBi+0F7sZ7BB+o7ERdFgIH+oOOvkB40uUz8fOxPLmLS8QvuS8+riXffPuJy+sv/5AcSzjNz0lPuJQ9pG+T0qOHfwFN3AWSzGRVoAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
           &lt;source
@@ -44,7 +44,7 @@
             class=&quot;gatsby-resp-image-image&quot;
             src=&quot;/static/f4edd864470eee8de03c47aca8acd720/d9199/2025-github.png&quot;
             alt=&quot;github&quot;
-            title=&quot;github&quot;
+            title=&quot;&quot;
             loading=&quot;lazy&quot;
             decoding=&quot;async&quot;
             style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
@@ -83,7 +83,7 @@
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 52.083333333333336%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABS0lEQVQoz21SiW6DMAzt/3/lpHXV1sGAkNPXm5IApd0iWfHzlefYlxAihmFEPbOLeLveYWbw3uP6cQMRNfw9jHDrihACRKTF1zuGiMwFi3fIueCyxoBh6gUnN+P9doWpIcSAz+He7KoKP46AWcP1gV12vMddRBWKLQDd0YJgUNNHoshToXNBZkYpBaqGi6n+efXH/5P8EnOW2not2hgmEoi28M7LDLdJwLLZ7OF7ErPGqOqqp4KZFFNQzEEbs6qPvutLVISiWLMhkTZxSRGpd1FzQjGkwmCm3nKtHDOjsIEEyIVBxCAxZDK4KFh8QciGNSl8EnxNufliUfisqKRq241hIcG8OKSUEVJGivFYi308wvxAphCmw3c+fcqiqLvYp6TH5F6P2bE1T7ZYDD5b+wbixpAQU0YpBGbZhE/6X0wbJhb4xHCB213/8he18RK9ycRQZwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 52.083333333333336%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABUElEQVR42o1S7U7DMAzs+78gQgiB+LEiNNbRtPm0czunyygIBJEsx4l99tkeci7wIaBWhQsVL8eCWCqkFDi3IOcMrRWr97Qd1tVDRGDHdGRsloI1eKSUMcyLw+F1bA7H04S7+weIKmYGPz4/EUxRab+NIwMSShEmr81f+Z4JIioIKSKziCGVjJAjQJ9YEnwKzbkw6xJ9CzZAZYW4ArW3q3TgTSoGu2xOXSpSqbd7D/oKhN2/UVdWvrVmkCvg/oxnJQ38eXquRp2zaIA+KWlWUtzEBnKYhHTpRNucdFdlRzIWnYkNpw+vVXheK0UxUT68NjDTZk+L4rRI+zf97hTHmbq9bz5LlAbaephY6rYK7APBY4xIzNaPvYcQbxQzp+wW/63vWz8bYGGA7Zv3ASFmrkH6qVu/93EHbGwHK9VzJawHnxOs/xKryAWjLZipYxZcADGLE2W4Z9HHAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
           &lt;source
@@ -104,7 +104,7 @@
             class=&quot;gatsby-resp-image-image&quot;
             src=&quot;/static/8a7deddd8e7084e2b1f7fa48daa987e7/d48f1/2025-blog-ga.png&quot;
             alt=&quot;ga&quot;
-            title=&quot;ga&quot;
+            title=&quot;&quot;
             loading=&quot;lazy&quot;
             decoding=&quot;async&quot;
             style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
@@ -116,7 +116,7 @@
 &lt;h3 id=&quot;조회수-순위&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%A1%B0%ED%9A%8C%EC%88%98-%EC%88%9C%EC%9C%84&quot; aria-label=&quot;조회수 순위 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;조회수 순위&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&quot;https://blog.amoseui.com/android-13-aosp-cuttlefish&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Android 13 AOSP 빌드 및 cuttlefish 실행&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://blog.amoseui.com/chromium-faster-build&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Chromium Faster Build 방법&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://blog.amoseui.com/chromium-faster-build&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Chromium Faster Build 방법&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://blog.amoseui.com/became-chromium-committer&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Chromium Committer 가 되었다&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://blog.amoseui.com/cpp-mini-chromium-template&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;cpp-mini-chromium-template 프로젝트 소개&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://blog.amoseui.com/2024-gdg-google-io-extended&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;2024 GDG Google I/O Extended 간단 후기&lt;/a&gt;&lt;/li&gt;
@@ -134,7 +134,7 @@
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 45.416666666666664%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAABS0lEQVQoz12Sh27DMAxE/f+/2QKNt7UlalxxtNGmDSDE4ng8UpwAIOeClBKkVrTWkXNGiFFPa019IUS18x5CgLUOIqK59MUYNW5qvSOXgloreu96BqB37z1EKmsipgTvA8YYejfWagH+aCOUAiZWWJYVy7ohxoQiVZUy+TgvlCJ6+O1YoFYtYoxFiAm1NqScsR8nfHgDbtuu8pnAIDrPB0iAAp1XH89lzA3UERUc5wnnA6aUMtZ1w8fHpxoZTGgRwXWZexztBhjrfoDs4A9QFRJIufuBr9esBnlapjICchEF8vtdIWM5V/oIZDfacsoF87zg9ZrVSSATCDr/KbTuVyHnyZlzK/i/7cetkFX4IHwlqiKACgm8jNXqBFjnVaU8IyH8brk9wP0GEsAHoYFz4D5xDerz0kzuY4CzZtHeB7hq3EMWY2wpRTtgzDe2a7tL7Nht4wAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 45.416666666666664%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsTAAALEwEAmpwYAAABUklEQVR42k1SCW7EMAjM/7/ZVpttDh9JfDt0hqylWkKAgGEAT/ctklKSGJOUWqW2LjFEOc8gIQTpvcsFfV1Bcs7SWkPslOM4pCI/ROZeiF8an3q/H7BStJg+H5MPJNba1A8f0PGcc5JRw3eDFQGJMyWg7ruR3RiJ6WFJOZFgnVc756I2mVYwLKWK94fmsyG1sVb1RNTXa5ZlWYXgTGgYm2NsaMRiyrrtGPPUGHOMsWAd1SfGum06AQCzbEh+zbN4FNTaAdCw1wIWJ9hV9R0Yca8jTpu19FPKWIFXXxnO81u+vn+UAbtTOKaxTjVZ7GDkPwwpzP3PcFk/DFlAhhxv7GcAsmj4tFkwRqZNZgPQojn9iV3m91vCFfXC4yjcJxete0UjFjjvn6aIcwX8Mg0/gwf8/V30aFPWK9vn0hB2U2Aw06uCzfhabE57jMwp6FPz6tR/sTC8IB8rgB4AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
           &lt;source
@@ -157,7 +157,7 @@
             class=&quot;gatsby-resp-image-image&quot;
             src=&quot;/static/c177e7488aed063fec76f153ef4e456f/d9199/2025-search.png&quot;
             alt=&quot;search&quot;
-            title=&quot;search&quot;
+            title=&quot;&quot;
             loading=&quot;lazy&quot;
             decoding=&quot;async&quot;
             style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
@@ -183,7 +183,7 @@
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 49.583333333333336%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABYlAAAWJQFJUiTwAAAC40lEQVQoz1WRe0hTcRzF7x9FBEF/BUFFgQhR9Ef0EIVyEEZFBZa9TLKSxCALe5hhWailzYqystToJVhGT9LKNvKFZdnatNJcj+mauTu3O+/u3e7d/d37PTHpnw6cf84fH87hcBsKbrKEnEoWn3WJJWeb2eHcInZtayorTjCxmRUmL/cmkSa9Wo341kzimlcQ9yIJXLNJ+Oj5KgS8oySFZaZpGgPAiIhx+/OOoqTkLGpq6lF3pQZFecXYu/cUDqTtRuLVjfxWp5l2OszY7aigLfZS2t5ThhTHMeHZJ6v4oO4eOt92kqqqiImIwFWUlZP5+BEqO5JL5pwtVLR9E1Xu2ExdyxZh3YUUPtVppryvVdjVW0G5fVeo0HkLS7r2CfbRATEqKQjJEo2NjREZBsWYXOKqTGxKWo7sxUtxcn4cLsTNwJn58WSfPgcrSxbzUz9kkOldHpJsBZTcnU+m94cwwbJKcEpuETpg6Bpp0SgUnWDoOrgnl8/iY/UJ9F4rwKfKfNirTsBWW0zfawtR3l7Ef1N4cik+fGnJp2+DFvrDZNS4G4VOwSkqDPgTYdQf0tHui0KLquDGxw/boXTeRvRzE5TuBijvb8Tq45z7Me9VAhQhHcM99ygQGBjP73heC62+PjEYJriCMrkEGb/FCDRNA6cO9cJ/9yD8D09CfHoGruoc3Di2kGxNVagaaeY9Ek8jsh8DgVH66R8mPjiCBm+b0OLuFjUxDKappEdVxBw7h1MHHfCdW4PQ9SWQHuyB92Ia3KVzKWI5jxLPE/6+20rPhzrQKDro0YdqaribiUJXvdDFfxEjQRlyJEyGYUA3DDDGwGkBD8JDdoRs1ZB+tUMd7IH0w0YQgkj/XM5PsayneR1ZmN2aQQvaMmlhazomW9cJ/eKQqITC40D8kx47RZcCUBmDQoCkAroSghwWCVFgW89pnnu5jKa1pGFWWzrFte+kCda1mGhZLfQFXaJ/xIdAUPgP+BfaM26FXPT9ngAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 49.583333333333336%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABYlAAAWJQFJUiTwAAAC4klEQVR42jWSaUhUURzFHwXVh/oS9CGEgjakjYL2QSsJDSorCk1cwmi1wtDCEHPJhZzSlDJILUaKNgObdqaaHDU0rdzGcksbzXkzzzfPyVnem3fvvNN7hRfOhXs/nHvu7/yZvRnVdMvJMrrs6A26/eQ1mp6aQyviY4JFmyKk0LyIccaiw+w3kVjecAQzTJFg3ugwzbRdfPerlXWxHHjBRQKBAAVAFUWhTGp6JooLi3G36j4eVFQh93wBTqRcxoWDx0i4PppPGCrFsS5VnSVI7LiC5J4S7OnOFu+1GLnXdS9h/mhWJEnC1GIKiq6i4OJ55Kel4MqJWOTG7UdJ/AG069aRuJwwfmtfLs5Yy3HUWork7qvIGjRgbUuKaHG0c1Qk8Pi8iiAIUNP9N9y4MxkxunAcX78BeSsWo3hRCPJXLsW3eQtI/IU1/JyvSdjWnIYdHdnY3JaO3d8uYdb7XWKr8J3TDGQiKZIsw0cVKEGqIqkqR2dNIfoMObBWXkL3nXxY7+thf6AnpfVZ/A+Jw7jsxc+mHIwMPMcEFDy2fxDN41bOr5Jj/bLS7qaod0qgcgCM9kpwzArpkwFS1yuIX2ox2XRTuyVlNiM/5GdB1JP9+wu4nN3/vlXrsIgmZyfnUdHZ3F5lxO3HqNsHQggYmR0AX3MOrtos/HlWgLHq06jMWIWvtXpy227ih712CD43BgUew7wD/IQdRq5ZNNmaOerxIyCLipZMk1aOatiP8ev7MHlrDbyPkuCsSMTvohWgLwuJfsTIV9lewfirAXVCK5501uCh4RAy+w1iI9fFSZN+eLyef3UE1Z1SlSG8PIKuYQT6nkKyf4biskF2DAA+mZztreCnmaKwpOEwQsxxCLUkYXVjPGa+2yW2TfRyGgu/JCpTI6M1zRCPi1VbYkWV758AWCJ5WK/f7YAM26meslHmbRjmmvdjfn0sFloSMMMcjemmKC1hr+Dgnepg24PBIKtJZcj+BU93byMcvjqHAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
           &lt;source
@@ -210,7 +210,7 @@
             class=&quot;gatsby-resp-image-image&quot;
             src=&quot;/static/d3e886411c3b48cd161840d57d70a76a/d9199/2025-personal.png&quot;
             alt=&quot;personal&quot;
-            title=&quot;personal&quot;
+            title=&quot;&quot;
             loading=&quot;lazy&quot;
             decoding=&quot;async&quot;
             style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
@@ -240,7 +240,7 @@
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 54.58333333333334%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAACfElEQVQoz31P+0tTYRg+O9vZ1OUNQSUjN9cYoTEaKUo/dCFF13bOhhnRhaD6wbTEC+nUpbuvqcMycPvRPy2cnl0qWu54tkG9T5xjrKzog4fved/vfZ7veZm5ZBwjSzMQ/AtwTT6B69VL8IFFuJ8/hWvqGZzjXoyNjsLpdMLtdkMQBHi9XvACD97lhuf+PUwEffDE/Zh8vwGm/9EE9MODMFy/gjq7DcbhIXAjQ2D7e2G86kD92XbU6w3QGwxgGOZv1OnAXLsMxnYObQN2MIFVP5LROBZn5zA7/QK7b99hZmoajx88xMqSDwvz80il09ja2oKlp0c10ev1MBgM0Gl1YLVaNNwYADd4CRbnTTCCxwNTjxm9fX0wmUywWq2w2Wzo7OxEe0cHmpub0NXVBavFAq7JeCody7LqrT3TANZxEWb3LTB2u11tajSa2mBdfQPGnC64eY8Kl1tQa++du+C94+B5D267BHCc/kSr6FgNzlsv/DLkOK72Y2trG16vhxAKxxCJvkE0lsCKfw3BUASJjST8awGsB8JobGw8lVTZhHE4HCextVoVyuPvaf8HZdZoNILVsirv7u4GYzaba4Z/Cv5lrGyi+cl1Ol0tnYKWlhYwm5ub5F9dpe3tbQqHwxQMBsnn81EoGKLUbooSiQTFYnGKRCKUTCZpb2+PdnZ2aHl5mVKpFKXTaYpGoyoULfONvqN0LKEklVCtVCDJxyhXK5DKstqXZRnlsgxZPoYkSTg6+opisaj2FK5AkkqoVCpQDlMofqEP+SwdiIeUFUU6KOQp+/kTZT7mVZ7P5ahQKFBmf59yuRxlMvtqLYoiiYomK9Lh4QFJkkTVapV+AJkyuX+tf+m5AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 54.58333333333334%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAACiUlEQVR42k1R709SURg+IqD8klq0ppZmbmIDHBszm63N1ZYp3nu5ubKVmx9yNSt1piWipAgCYgM3p7j1xT+tYaBgU37pYm736dyDl/Xhue/7Puc+7/uc85KZH2E8987CszIPbuoduMVZCGvfwE9NYuTTJNyjIoaHhuAeGQHP8/B4PBBFEYIgQOA4eMbf4FXQB27Dh4WfOyB9E2MwPOuH6UkfzC4bzIOPoBvsh+6BHebHLphuN8OkN8BoNKK+vh6EkCrq6qrxhhmqARdIZzMcgwMga8sr2ApuYH56BrOfp7ETT+Dj+w+YGB/H4sJXfJmbw+7uLiKRCNrutLEmGo0G2oYGNkClVsPw9CGI6z56X4sgHM/hXmcn7A4H7nZ0wGq1oru7G62trWhpaYHFYkF7ezusXV0wXm+izkjNpeJYfY3yzi643o6COGgj5VClUrHcZGqib8bTNxPBCyI43oNhNwfx5RiEF6OMG3LzUKs17H9F5+zrBbHb7bVrKAeWm7fwfTWItUAIwVCYwevzszoS3cKyf5VBp9NXG1457enpAWEf2TZ9C8WlgtoCKOqUJfwH2YRer69d3el0gthsNlYYDIaaSI7yAK1WW+WueLlubGxEA12IzMsauVYGMHObsU34V/xIJBJYX19HIBCA1+tFkOZ7e3uIRqNsw6FQCPF4HAcHB9je3sbSkg/7+0kkk0mEw2GmjcViIH8rFeSLBRRLRVxcXKBULqFMY7FUYtz5eZmhXC6jWCyiUCggnz9DiZ7LsVDIU75Atee4vLwEyZ2dSr+Oj6TfmbR0dJSR0rmslDn9Ix2eZFmezR5LuZOclEqlWH54mJJyuZyUTqelTCbDNBmqpQOlSqUi/QNfX7wnXtlb0AAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
           &lt;source
@@ -267,7 +267,7 @@
             class=&quot;gatsby-resp-image-image&quot;
             src=&quot;/static/bd67cbc9a8bdc5e60675eee219e14ab9/d9199/ossca-2025.png&quot;
             alt=&quot;ossca 2025&quot;
-            title=&quot;ossca 2025&quot;
+            title=&quot;&quot;
             loading=&quot;lazy&quot;
             decoding=&quot;async&quot;
             style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
@@ -394,7 +394,7 @@
 &lt;/ol&gt;
 &lt;p&gt;3월에 Chromium Committer 로 선정되면서 1번 목표를 달성했다. 자세한 후기는 &lt;a href=&quot;https://blog.amoseui.com/became-chromium-committer&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;블로그 글&lt;/a&gt; 로 남겼다. 커미터가 된 후에는 컨트리뷰션을 거의 하지 않았다. 내가 앞으로도 열심히 할 것 같다고 리뷰어가 커미터로 추천을 해줬는데 미안하게 됐다. (올해는 제대로 해볼게…) 한 해동안 반영한 패치는 달랑 두 개. 그 중 하나는 1년 전에 작업이 다 끝났는데 스펙이 정리가 안 돼서 반영을 못했던 것이었다. 1년이 지나서야 정리가 돼서 rebase 를 하고 반영했다. 그 사이에 내가 만들어 놓은 WPT 테스트를 파이어폭스 쪽에서 먼저 그대로 반영해버렸다. 괜히 아쉽다.&lt;/p&gt;
 &lt;p&gt;2, 3번은 역시나 실패했다. 플레이스토어에 앱을 올려보려고 연초에 조금 끄적거리다가 말았다. 10년 넘게 매번 시작만 하고 완성을 못하고 있다. 작게라도 완성하는 습관을 들이는게 목표이다.&lt;/p&gt;
-&lt;p&gt;2년 째 오픈 프런티어 기여형 프로그램에 참여하면서 어느 정도 강제적으로 오픈소스 활동을 했었다. 2025년에는 기여형 프로그램이 없어지고 멘토형 프로그램만 남는다고 들었다. 멘토링도 관심은 있지만 Chromium 프로젝트로 멘토링을 하기에는 아직 많이 부족하다고 생각한다. 나중에 다시 업무로 웹브라우저를 하게 되면 도전해볼 생각이다.&lt;/p&gt;
+&lt;p&gt;2년 째 오픈 프런티어 기여형 프로그램에 참여하면서 어느 정도 강제적으로 오픈소스 활동을 했었다. 2025년에는 기여형 프로그램이 없어지고 멘토형 프로그램만 남는다고 들었다. 멘토링도 관심은 있지만 Chromium 프로젝트로 멘토링을 하기에는 아직 많이 부족하다고 생각한다. 나중에 다시 업무로 웹브라우저를 하게 되면 도전해볼 생각이다.&lt;/p&gt;
 &lt;h4 id=&quot;2025년-오픈소스-목표&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2025%EB%85%84-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%EB%AA%A9%ED%91%9C&quot; aria-label=&quot;2025년 오픈소스 목표 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2025년 오픈소스 목표&lt;/h4&gt;
 &lt;ol&gt;
 &lt;li&gt;오픈소스로 개발한 앱 구글 플레이스토어 출시&lt;/li&gt;
@@ -415,7 +415,7 @@
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 57.50000000000001%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAACVklEQVQoz1WSTYsVRxSG++eZHxDcSECycKWDoERxoQtFEJHsFEEXIUjIRlFxXKioiDoQnMVMAqL4Qe7cj7nTt7uqu76r+pGqe4fRA4eq7qo65z3POZV2idefLRtfHDYMpBhQ2pAGiGlgGAay5TV7Wvn+/2whDvQm4kKiurkhWHtQc/JhzR+bGh8i9UIwXWjmraLrFT6EZUAGtLbsNT2tkBhjiDGSY/s4EGKiOvX7bc5cuc6J89c4e+Mv3m2/z9LolcYYSwiRlFJ5lD0Yi9aGThmM9SVI9rSqprp69jAXT//KueO/cPm3n9l8+wwdYbfVzIVF9qoENtYWNcZ59oRBmESrEo2KLPpIRjcMierOzYscO3KItaM/8fetS1jdobsO5yzeuXIpZ48pFXbeGpw1hH0MAyueS7bVeDzi8aO7vHm5juplgSw6zVw69oSj6X0p3zlfHmaldedYdBa7Up2R7Hs1Go353nKWWvSITqGMp9cW61y5nM0YTSO64qokckV9nojSlNyt6WwXISUhRpwPBbq3Du/8D8mG5fwcfCcKjtVJsRIwj0aevZIpJtpOsNNMaGRbSsxnyhq8D6VBeb/oWnbqGcb2/LdjuHBvxvpWTzWeTJCiJfgDNZvTf7k/ecpM1AjZ07SSRkhqIRg3c+Ztw5fdEaPFjE73CBXZ+l8zFZFqNplSd1mBLs3ItiNnfGi+ImWPVKpgsC5gnEM7i/O+qNwVNca6Ze2EZcmP1z/y56t/eP7pCS+2p4XHom5QUpXGNFLT9R2taEkxHfAbBkKKZc2YMo4c8Bu5QYwx5fLMiQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 57.50000000000001%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAACS0lEQVR42mVTy2oUQRTtn3PjXkFwI7oOEsUX6CLgQsQHguQD4sKFuwRXQcREQUGNCioRg0lIZqYz/aruenZ1H09Vz2jEC5fqqdtz7rnn3E4y2WF922Bzx0G1gG8dpNLwHdB2Pfq+R4h+lh1/h1oXahjC+R616eDaHsmDjQIXV1MsrqV4stXAuRZZLjAuFKalRCMl2rbFPKTUyMoGlRDQ2hDYx/vQxLNJcvn+Mq7cfoiFW3dx4/EKvnz7wUpPIA1tLMH8X5Y8Wm2hlWHdQNuWrLrIsJtNk9y7egpLl87h5sJZ3Ll2Gt8/v0XjgLRUOKo06kYS2MzYdFDGYSoMhO5Rqi5mQdmMG0RJVpaXcP7MCSxeOIm1p4/gHf9c1xzdMl3sGjKABYbOKqaJMhzXd5iAgKPRCJuv1vGVzAJIKJdCI60sGVrktY06WjfoGNhOhUPBdwyfvfd/ms4Ax3H+eQQmedVEDQ01UtTRHWOjtWZDmlI3UHwOJgbnw0ZEUwQLkzRFOFtaFZgoro0lkLUW/0X/b/OQf5cKSMqqiiOFUbqZVpnIsZcfoKyreC+VgjQ6ahp2tDHBsBz72ZhNJT7salx/NsHGtubIkwnqWkTqc4XfjT7h+fgltSoi87Kq45iZKDEqpwQrsHd0iIMiZSOFWnnsTAbnk/3dQ4wrSesrZDxDHIoUe+WIjSRENMRHPQ0ZGn5JjrspLY3jJEGisNx+tvzJ+otdrH7cwptfr/H+Zz64XPIroCk1UzQcURGYqzToNR+EJvRdVM7zPrgdAH8DjjmNzto/zS8AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
           &lt;source
@@ -438,7 +438,7 @@
             class=&quot;gatsby-resp-image-image&quot;
             src=&quot;/static/d2edf765fbb8b72d70e966f6a42b18c2/d9199/2024-github.png&quot;
             alt=&quot;github&quot;
-            title=&quot;github&quot;
+            title=&quot;&quot;
             loading=&quot;lazy&quot;
             decoding=&quot;async&quot;
             style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
@@ -467,7 +467,7 @@
 &lt;li&gt;2024-05-26 &lt;a href=&quot;https://blog.amoseui.com/became-chromium-committer&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Chromium Committer 가 되었다&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;2024-10-06 &lt;a href=&quot;https://blog.amoseui.com/2024-gdg-google-io-extended&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;2024 GDG Google I/O Extended 간단 후기&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;2024-11-25 &lt;a href=&quot;https://blog.amoseui.com/opensourceconference&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;오쏘콘(Open Source Conference) 발표 후기&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;2024-11-30 &lt;a href=&quot;https://blog.amoseui.com/chromium-faster-build&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Chromium Faster Build 방법&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;2024-11-30 &lt;a href=&quot;https://blog.amoseui.com/chromium-faster-build&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Chromium Faster Build 방법&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;2024년에는 5개의 글을 올렸다. Chromium Committer 가 된 과정과 오쏘콘 발표 후기를 꽤 공을 들여서 썼다. 꽤 오랫동안 오픈소스 활동을 해서 결국 하나의 마일스톤을 찍고, 발표까지 한 건 나름대로 큰 성과였다. 그리고 블로그에 글까지 남기다니… 내 자신 많이 발전했다.&lt;/p&gt;
 &lt;p&gt;&lt;span
@@ -483,7 +483,7 @@
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 57.91666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAABeUlEQVQoz41Sa0/DMAzs//91CD4gJMRjvAaDlXZtnMR2Duy0tAyQiGTVdu3zxbnm7LrH6eUb2j5ARBBjBFGEiCKl5H4gAhEhxgRVBcWIEAKYGaKKlDMys1tzcvGA0/MrjMTouh6bzZ0DWePj0xb7tsUwDG45Zx/6/LJzQAOz044dKFUSzdXtA67vthijOJthHL2olOK+Fa2PAdrAucYMZfnXmKMF4FXjV+HKX+fmPOY8irP3Kye2ovKj8T/GUqBah9juc2Y0XdBl0jGbP/JaKontu0AmQFuDA/YGaJR5nrY0iSwxjga1o2Dzxng9CChb7fTKFRB46QTvQUG5xpErAwN08NUwA7nfC252jJAUPZWFYRcK9oOgJ8VzJ9gd6tcYWH4/KGwt1be8wvdeCvJ0gwMpYmLXZTMG8uWWiUUIhMTqvt3OXs/k5LJQW42AQvixBtMts6Ax1PUxAKzkYYWmr7VcUsr47biwZ/TZaly+xd9rjuPJTEafDD8A7ryvPQ7nNBwAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 57.91666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAABdUlEQVR42n1Sa2/CMAzs//9z06Q9vkzbgK0MiqAF0ryc3Gy3QRFjWHLTi53zOXHzvDjh6X2P/mRBRBithbUOKSU45xSPo9VVcM6Z4xZmHBFjVOyjR4iBMaF5eF3h8eUNxkUMw4DlcoUQAhNmtO0ah76HMUZdCOTQdtspqRQV680RzrMISmgW3z9Yth0TErz3WnmyzMpGVV2bkEjBW0ZCyIqR+COKlIb/xYsVXO9fcEUmRbRlF/4ervEtK7ueWMgMHHcXQkQzjElTrpXc94nka08INAFfFBZCFzNiKTdfgY/5UqzuQNJ2p4SPLqI7EoyXfKoJgc1A2J+TBsUsX8W6T3qY+BNpUsb3rmRtT/jcRRVytFlblilgwqxEsrnlajv+3wwJB5N0X9aBY4fzVLBnHAhaaOoAODnuhu+PRKEMrQTzrERwpKQvn+fXk0HXkcmilHScJL9+MrkKGbHmes7K9NdzV+dITHLuzGHWQ8Wv8U3/J0ce5Rcf46++qqC3owAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
           &lt;source
@@ -504,7 +504,7 @@
             class=&quot;gatsby-resp-image-image&quot;
             src=&quot;/static/e3d50a75a3973af20aed959b30b450e9/d67ca/2024-blog-ga.png&quot;
             alt=&quot;ga&quot;
-            title=&quot;ga&quot;
+            title=&quot;&quot;
             loading=&quot;lazy&quot;
             decoding=&quot;async&quot;
             style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
@@ -527,7 +527,7 @@
     &gt;
       &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 58.75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAAByUlEQVQoz01T6c6cMAzk/Z+uqtR/rfrBcu2WQDgCJA5MNQ7QIq3WMvYctslEBMviMM8Ltm2DlxNBIpxzKKsK27bjOA40TYthsODT9wPKqsZ5ntj3HXXdoH1/EGNExiQb+ANObbhzdhy1gQ8Jp2nS2HuPzhit47OuKwZrE6BzK6Z5hsSIEATeB/1ftw2DHcH3PgQFT02Hqu46o3k6ZA1VhxCQfeUlvn3/gZ+/vpAXNYpXjfbTwQwj3h+D9p3iT9ejrNon/p2/0JkBXW9heotX1ejoMlqpmxZlWSkLlSpzjNi9V3aqovJpmiGSnHCeSWHUWuIwn83LogNv2jfGaUqAtC0R275jcesDPk4zgojGpu+vOlGgRPY/YNM+jD6IghDQXYBsmhenAATqVaEoMd9zxsxnRC6KF6q6Sc2SLLNw9wFu3R4SAt7jsJYX4J8REFCXQhu8tzwvYEwPiYcC3Uq40Rv8nhNBWUvrallELyIpnGe8ykoZmbgZb5uq4oq5xWcp9t9SuDQ7TjfgomDxONUWi6iGMf9XKrzuM1lOS+EM7zoq5ELZm/H6OUMy8vJ57VTEL0UkbZcx8269TigE/Ok63WrkV3ae2s8Z/gXZvqEenT1jswAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 58.75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAAB3UlEQVR42lVTiW6lMBDj/7+vK21XWlUtN48j3Dngee3wqLpII4bBmdjOJAEf5xyWdcWyLAjhgPUnzuNA23Uoq1oQrPyfF2XEPp9P5HmBvh/iv3GakGYZxnFEooIAivu5c+89JoL1fZ5nXGDZUM/Mzed5jrn+iYwi8T6g407zvHL3gH23Max1rC2RhfJ13ci456IVx3FiGAx6hnLhjRkxGIOkY/H9z1+8/fqNj88UaV4iL2t0gwAT6qZF2xsM44KKub7NtKCoGmRFxfqMnri2MyjrBokjw34Y6FWFoiyxW4vAXX0IOChl2/co86TsddsY+3c+TXPEBPrtaI/OIXHOXw3LCs2j5WLPZgdkheRIqiQr39hM3+f5jB6O4xTrOshdFtGOxFoffcryPL4FVrO74fKjobyKDImRl5Hhq6EwhhtEhg8y+/xKI0M1Cj8YqokwyrVILO/8P4bEaYNEEh9thzTN8MWQZ5IsT8IRohR5KJ9uD+Wb5A08WdXlt7w3msM4NhyHqq6vhWwWwrWrpImdMMrFSkw0pmKqsVJdLIWLDMVAcyizdbo6devC9+Fsmkti7nx54SY2E6NLzaXk5aGLN6BuGjhS1x2RJIXGQ5IUqt/joXyjfN0M5cJJtk7+Hw1noo2VOXgaAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
           &lt;source
@@ -548,7 +548,7 @@
             class=&quot;gatsby-resp-image-image&quot;
             src=&quot;/static/2df5f7548a2e964fd6bea049e64c7f89/5b4a1/2024-search.png&quot;
             alt=&quot;search&quot;
-            title=&quot;search&quot;
+            title=&quot;&quot;
             loading=&quot;lazy&quot;
             decoding=&quot;async&quot;
             style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
@@ -580,7 +580,7 @@
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 80.41666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAABYlAAAWJQFJUiTwAAACG0lEQVQ4y5VU246bMBDle/tH/Yaq/YFKrVT1YfsQJZsq1abakk1CCBBizN3Y4FPNJCaXqjejoxk8mtsZBm+xWGA+n2M6nWI2m2EymbBO9/967JXuKaWw3+8RRRGKooCUEnmes9513V/Rtgq90dBdB9MP8Pq+R1VVsNb+gmEYQPZ76aCN4ar2osKbz0s0SsPTWqMsSzY4p2vcB7zcD+zjRxLvHnwsg5Sb94wxY4W/q4ikO646pQ2WuwyvXn/Cx68B26jim4D9MMDaEwaS9NiBM0dhijyvWKcEUz/Bh3mAVZRDmx40C0o0BsS5QuKhaDrksoRSHaq6xZfvESbftpg//sDbBx/vZxtskoJ9eMrW8oA4oONQm3OwWqHpDLRSUI1CUTZQSrPjYC1k1SKvFWBPXBpzomQMaIyGLEp0bOjPEx7Y2eJSAQ3BjlzamwGRfWyZXuq6HodCxFInWpsTBW3Lsj1LcqSqqCKiizp0ILtXFCXyXDKyLGNIKXA8ppzRcALLko57v/6MSB835eXFx/NzhKenBOv1CstlgNVLgV3YQghzu2JXQ3Dy/s7bbjZYr3fw/S2CYIvDQUCIElI2aBrNdFxX8MedthaeyARkLpDJI+I4xuFwQJLEiKKQ2w7DEGma8o4THUIIhtt5d+c49pJQINoeEQdH1FXNBgKRfw9na5qG5enncLpzXXhpLBBuIxxiAZldstLU/vdQyz8BHIfYxkhdcrgAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 80.41666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAABYlAAAWJQFJUiTwAAACG0lEQVR42p1UyW7bQAz1F/eL+g1FUfTW3goU6AYIsR0f6kWWYjW2tc1IM9Jo8StJRY7jHoxUAEFqlsfHR1GTxWKB+XyO6XSK2WwGz/Mk5vXXPKfT4CfWWkRRhN1uhzzPkaYpsiwTa5rmpjnn0LYtHMVd32PSdR3KsqQMJ7GeFi9j3r/2o7VkxA373ODd198orMOE0YuiELp8YQS85buuF7AoKfHhxwbeai91C0NjzPmwsLgCuGQ9sOthXYvgWODN2y/4+HMr4E3bPTMcD/Nl/MMIiOMcZTEkZq3u/BifvRD3YYKKwFlLvi+ArKF0ig7WtKmMg9aGRG9hK4dfqwO+T7e485Z4/22DT16AzV7BEaOxvdyg/rIpbdtTpgba1KgJqLYVKlMRe4vS1sLKNR0SbZEWlTRkrIo9AwrDjhjmSks22exPwvSyZNbnUkexqyadGfILN2UQvxMtegKt61o8f6d8pqoq8bzOifkcg8g3+KSfAJaloZK1mNaaSlRkOZTKJMHAEC/8C6bnKp4mxffXWC4fcb84Igh8iiOs1hpBaKizzdCsV4zgZOv78P0Q6/UDwjDA4+ORxq8kljWV684l3p7lgS2VXMDYkqxAkiQ0wynNdEpxDN6L41ikYJ0YnLVkXTlm45iNtRQNo+0BD+s9gtUf5JmST4gBRlNKnWP+efA7/zg45oEY1xlcSs5ShQOVmaU5tHq+yIz+5/kL+RzZ02g5BLsAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
           &lt;source
@@ -605,7 +605,7 @@
             class=&quot;gatsby-resp-image-image&quot;
             src=&quot;/static/68670439725556fd81e28249f774e53c/d9199/buildtime.png&quot;
             alt=&quot;buildtime&quot;
-            title=&quot;buildtime&quot;
+            title=&quot;&quot;
             loading=&quot;lazy&quot;
             decoding=&quot;async&quot;
             style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
@@ -641,7 +641,7 @@
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 146.66666666666669%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAdCAYAAACqhkzFAAAACXBIWXMAABYlAAAWJQFJUiTwAAAC2klEQVRIx51WS08aURTm57glkfA/WKr8iu6ITRMM6bZNSjddNO4riWkXtmHTxGLTFC1vEXlaIIyC+OAhzvA138E7mYGRsU5ycs+ce+4353z3nHvHg0ee6XQqo24AmYaOfBvQZxN4mHJ8PI+gCRAwxafEAK8/D/Hh4yH+/krJtGEY5gefBEhncdd7yCXeYQxgWMyg9vLFbH4ZoJoQEKsYOiTI5nsMym9RevMK3S+7swh13YzSut6McLqMFMJqexj/+Q43vm0Rnp2dodFooNvtotPpiGidDiqVKvq3Brq3I/E5Pz+XsVarodfrSaS2CJVSKBSws7ODbDaLfD6PdDottkTiBw6Tv/Ht6x5+Hhxgf38fyWQSx8fHKJfL0HV9EVDJeDzGZDKxCRfQPhqNRFdC29KU6/W6fLVYLMrIKE9OTpBKpZDL5cROW6lUEjvfl6bcbrdlIZ1PT09N8Gq1agIQjDxXKhXxIT0EdQQkH1xMB4JrmobLy0vZpIuLC1M4Z924wWBgKzsT8Pr62qV8lj8LEZJ0FQ1Hlgej5djv9212CjPgSDs3T4GagM1mUzgk8eRPlcXR0RFarZbo5DCTyZj8UmdpMRgT0L1T/jNl9cLQmQaJZkTSKZomOqNXadJOXfmQBlWTtpTZSiwPVXPUmRpTotDOtGljyTB90kM7q2EBkP3JSeWsFhCYQKo+KaxDlhg/NN9+NkAVGVO6v78Xsu/u7mQX+U6dQl21JnVHDuf7mS1lFf3hDHTSHSNkYcfjcaytrWFjYwPr6+uuEgwGEQgEEI1GzavBBOQObm9vw+v1wufzYXV11VX8fj9WVlYQCoUWAckXmz0cDotsbW25SiQSwebmJmKxmL2wiXxzcyONz3Z7TqHbNoWA5FCddcPhUBzmN+YxsV5Unue23fwtuQDIlHmqMGUKW4rCLlBnozofr66ubKCO97K1cFUxW9/n55zukyfey8tTnv9z+AemWGtvM3cxLAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 146.66666666666669%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAdCAYAAACqhkzFAAAACXBIWXMAABYlAAAWJQFJUiTwAAACyklEQVR42qVWuW5aQRT1B7mhQDJCLiz8R1HK1HGDIlGkcBk3kdNGiZRgCIuJsItYZt9Xs5j9WfAwPN4JZ5x5ZjGLw5Ou5s7MnTP33GVgD2s/fSqT55muY9O3txLq39lEVcNH5xCffylQ1fHc3isAdTydUfDpexSuJBA4/4HKl/On3cnk9YDiGzUxiLybKioaP7+i8uH99oCMz7xoAlZvfYPy5w1yJ28xLBT/18MFb7U+MB4txFhfDxgMBuF0OhGNRnF7e4ubmxuEQiG4Li4Qjafwe7ofuLzE1dWVsL2+vkY+n8dkwVsDsNVqCZD7+3u0220xcq1Wq6FQKCA2vaharaJQLKLRaKDT6QhZ6WG320Wz2US9XhcHCUS9XC4LnSCcSxuuaZq2GpBexONxJJNJZDIZxGIxoXONeiKREHPacZ9SKpUwHA7nYmoAFqdUwuGwMOThVColdAJQl/NsNotcLifAI5GIYPYiII24OR6Pxa2Pj49C5zgajYRQV1XV0CmLtA1AZmubXt26lxlo0kin00JIj2XB+DEBkq4MB4XxpS09XgJkqVQqFSO7LBsKA68oisgy53d3d8a+1GdpL7Ueqc8Wq1ybbcvF9SXKXGRSZIYldUmLQrpyTVKXYen3+8Ylc3VIIBkjHp6NF1uShyUgHWBrMsaDwWAZkLexh3mQYLyAI0HYLaxT6hw5Z2w5Z1et7GW2FfuT9bVz2dBdZu5y+qL4/X74fL6NQju32y3YGZRllpj+09NTmEwmWCwWHBwcbBSr1Yr9/X3Y7XajOQxA1uHZ2RkODw9hs9lwdHS0UY6Pj2E2m+FwOJ4BJWX2Lwvb5XLB6/UiEAgI+uuENh6PR2R9LstEZjJYJgTlo7BTUohMDwlK6hJwsTPWyVKW2Y+ynQgonyz5hHGU8tJLvQTY6/UMD1mTcuQaHwbOqbNWHx4edvkZ3f5/DQH/AkjfanZddiO7AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
           &lt;source
@@ -662,7 +662,7 @@
             class=&quot;gatsby-resp-image-image&quot;
             src=&quot;/static/eb1618a17e0e89ad7e802582472cbd85/748b0/gcloud.png&quot;
             alt=&quot;gcloud&quot;
-            title=&quot;gcloud&quot;
+            title=&quot;&quot;
             loading=&quot;lazy&quot;
             decoding=&quot;async&quot;
             style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
@@ -683,7 +683,7 @@
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 57.50000000000001%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAABu0lEQVQoz41S2W7bMBBUU9gOChQJbEuiKPESL1GXG7f+jtRN/v9XpiDlOCmKtHkYzOxyZ7VcMavHAbzv4AaP4w+LfhJwoUHFNbbMggoNoTtUtcC2aLAtGbblwruL3hF2zWfST7DhO9ruAdItoHJEJTpQ4UFlQMk9KhnA9JjiWvWgsks1URO+1DE9ILtpzvjUPOIzO+OGPWIlfmItzljLXwkb+fSq1ateyyes0tkzVmKJN+oZWaUm0HYGkQMKMeMLebjitjjgNj8s/EZv8gO+Fg73ROOuNLgnJvFdqZEpG6D9gMjK9mC6B2sX7GmLvNbIaZv0nqoLt9gTjl3c31uQuEPTQ5jYoEPrRmg/QpqA1o8pNt2UchEmzLBhhusPiL5aOjTKX5kKi8yGA8J0hPYziD4hVycU6oS9OKHgA2ppkyGn8g8UtfoLMZ/FSUw3Q7kRys+QbgKVHoRbEG5AWIuKm1S8i9f8D7I4ZqMcqDCJue7ALix0SO+R65DOomFfiX8i68Zj2k2cNO4yfoBys7CwKJs2MWH6Yw3LWiVTnCRyTEbj8vLZVb80e7nauw1d/w26m69/KTZ+r/gjE/4GUNpGXmtRa0QAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 57.50000000000001%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAABpklEQVR42o2S6W7bMBCElbr50QK9LMe6eYu6ZTtp2rdo6qTv/yrT5UowgqIt/OPDLEFyOLtSJKYeZujQTS1ODx7toGB9ibQyiIlCGFS6RppXiJMCu7RETOxWXtfbpEQkm3vY7htU8wjhFzJ9JCbkAXNAKkfSGaK+Zy3sgfZmOrPUybov/QnRTXnGTfGEN+VP4gmb6oyNOOMt84xb+XJRrmWon0lfmNtVN+IXPrkfiCo7QLgRlemRqgkfshM+5ifSI97vJ7zbj8zrOvA5MdimakUzXxKJSHuaYTNA16R+gHT0gO2JDklpaZaONbAvzKW+yyTNrVoRF410PUDVi4FpZuhmYlPtJ1pPcO0E24ysrpsZ3x/oTI9SNxCmJfXUYYtMOER+OKKfH2BbGr79jr1+ZGLxFYnoUCqHXNbYUaK7XLIutfornND4kVMG1UShPDIyCS+mlSVDR+3qi9n/iDi2bdlEmo5bCfHDA9J1nE5xe/46w9CypfmEZME4pArka8KkNJww/OhXGaZ0IaPD+dpemENMX2tLxH9wleGSbuCWlyT2qov/MvwNhetHPnH+DMsAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
           &lt;source
@@ -710,7 +710,7 @@
             class=&quot;gatsby-resp-image-image&quot;
             src=&quot;/static/ce11566f3279ef31e190259b87befec7/d9199/gcloudcli.png&quot;
             alt=&quot;gcloudcli&quot;
-            title=&quot;gcloudcli&quot;
+            title=&quot;&quot;
             loading=&quot;lazy&quot;
             decoding=&quot;async&quot;
             style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
@@ -768,7 +768,7 @@ $ autoninja &lt;span class=&quot;token parameter variable&quot;&gt;-C&lt;/span&g
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 17.083333333333332%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAiUlEQVQI142OSQ6CQAAE+YJxhRlmYZzNARWXBP//sDLBwNlDpfrU3ZWMmTZl0jCS+oJLEeU8jUm0XUa7C43yNHohzAgT1lwrv7q6PSbuzw/DOBHKC9X1HKVHaM++tmwOLduT/psqXt/YPNClnlgKPmdsSL+HLmPOZV2XNiLMQpgtTeQgurlsVxu+YsBS+i+9w0UAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 17.083333333333332%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAkElEQVR42n3OyxKDIAwFUP6hLx+ogCagIFpd2On//9etuHDaTRdnkptFElFwj5It2EdY72AsoW4JmXKojNv7AXlNP4qk+Z51e2ZkVQcRlw3T+sb4fIGGFdIEPCpCqQi3QuOSNUf955qrk3Dzhm6cwWFCXCL85EH9ANl6KArQPB7fJFLZ/VDCh5SltriX5lz4AWYcU1wKM8ywAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
           &lt;source
@@ -795,7 +795,7 @@ $ autoninja &lt;span class=&quot;token parameter variable&quot;&gt;-C&lt;/span&g
             class=&quot;gatsby-resp-image-image&quot;
             src=&quot;/static/35b07507d05453853a276dddf5d18770/d9199/build.png&quot;
             alt=&quot;build&quot;
-            title=&quot;build&quot;
+            title=&quot;&quot;
             loading=&quot;lazy&quot;
             decoding=&quot;async&quot;
             style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
@@ -840,7 +840,7 @@ $ autoninja &lt;span class=&quot;token parameter variable&quot;&gt;-C&lt;/span&g
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB3ElEQVQoz3WSa0/iQBSG/f9/xU+7m+wGUROQILssmxgRIhcttChFbTu0cym9PJsZg4vR/fB0pmnPM2/OmSOtNbWpqaqKuq7J8xyjDLnOKXVJoQtHpSuMNiitsDX/40hoQePpnP6gz2X3kuBhhTCCTfbEXerhZyvHJJ0Rq/hVqtSnOGFmMjphj5PmCe1Wm8fwkbXZcJ8u6CQ/udoOGaW3XCQ9QrlxyaWSr5KDtG9CqZQ7uSgLyrJESonKFDu9o9Y1lS7B1GCg1IUrst8sh6I3oZCC4+Qrx/dfaJ40OTs/47R5yty/Y6kChmLMj+iMvvhDV/xims75Hp/SiM9JlHjXAifUShOpmGgbE4UR2+2WJE4wO0Ne55gyJ94lRDLmRUau8Fk+s5Yhcp9OHwiFEgzEFWM14SYcM+j/xvM8xqMxo5sR89kc3/ORRjrpIvN5li9u8ofJDoRb2kmXb0mD3rpPp92h2+3SarUc7Ys2w+tr1jpkmQX0xIB5du+Gs5e8E9qHbbZtfJVXVHXl7uQeO6iiKLCtsZJC7ciV+ZDs37XJMvzAZ/WwYrFcMJvO2Gw2+L7PdDp1TCYTgiDAW3gs/SXDmyFxHGPMR/GR3aRp+g57iL0+dt2zf7f/79fPEv4Fznw92mSYw7IAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAAByUlEQVR42n2Sa2/TMBSG+/9/Bx+QkPjIxtoKIbVdGnUMwqKKJoU2CWhtB7nbzqV7sI0qTVD24djH9tFzLq8HUkp61dP3PcfjkaZpUELRyObPvexoVUunfSUVJv45GxSy4OIwwnEdppMJyfeEvCnY1XtW5ZptlZDUP1hVIanIdKLnoYNK1Uz3c8bvxkw08P6wY6cOGhTj5Au8wmdZfmGazW0SU3kta4QU54HmoRAFqlN0XUeRF1RFRStaHtWjNdP6UR11261uu6GVrQWfBeYa9iJ9xctvr7m8uGQ4GnL19oowXhPJBL9YcpGOcfMPTDKHsPzKm3Sk70ZkIrcjeFrtwCy1ElRVTZmWKKW0X6Eahep1FZ0kbTI7v0ybFJKf4hcH8XC2bVvhLHO5FZ+5SW5xZg5BGOB5Ht4nj+VySbSJMLM20EiLZICm7fMqG2DuMsze8/HB43p2zeJmgeNo1adTXNfF933u5Y5NFTHN5wTV2gLPVmgW88+sNa0VxvxFY099I4KJ6WVv/f+qXNc1cRLb/7fdbgmCgP1+TxzH1g/DkNVqZWM2mw2R3u/8O9I0tYmEEP9WaEQwYLOXZWl9E2jOp7eTne7/Bp2AvwEptT4xfM81egAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
           &lt;source
@@ -863,7 +863,7 @@ $ autoninja &lt;span class=&quot;token parameter variable&quot;&gt;-C&lt;/span&g
             class=&quot;gatsby-resp-image-image&quot;
             src=&quot;/static/7d36409a5983e119849c2b39a4184b9f/d9199/opensourceconference.png&quot;
             alt=&quot;opensourceconference&quot;
-            title=&quot;opensourceconference&quot;
+            title=&quot;&quot;
             loading=&quot;lazy&quot;
             decoding=&quot;async&quot;
             style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
@@ -1034,7 +1034,7 @@ $ autoninja &lt;span class=&quot;token parameter variable&quot;&gt;-C&lt;/span&g
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 69.16666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB+UlEQVQ4y42U25KUMBCGef8X88LyarXc0XVH57gCgZwTCPBZCTPWzLgXdlUXodOHv/9uqJRSCNHRtoKu72mFIKXE/8o4JqzzeB9w3lPN84LUik5LvAs467DWFYf8tMahnME4R4wDWhuMdRhj8SFg3erfa8WQRqohDDyfX9icXjn1DbvuTCM7lDYoZZDK8CJ+8UPsSlCvVLEXn8v9Vu459TXDmNaEnw/feK33aGNpVc9Z1yUga681tRRsuwPb9kDbdWht14IZrXa0uudNNqhgqDIP05AQRiKNxllfKtsYGKYRFoqO04geLNpbUpqYpongI51XbJpX3roGGx2ViwmhLN55QhxR1hVygzOFr6LGlARXWZblTqd5vlxApWxgf25omqa0nIlOQyA6jZQKpXXRjOqa7HL4Z+LzPFPFGOlES9PUSCkxETo3k+Z75ztULDgfyoDmC7pszxtT5Z3bNY6nn4qvB8fTYeTjNlCrsfRwdVzeQeSjf0C4rEM5CcfzXvL9KNnsBMfWkabLNG7Q5eJhiAjfc7Y1x/6NOA5F8132KYudsmGMxBgIwTNN6Y6v6zMvcOa5CYIPvz/xpd6Uln1cP4K/Cd+TK6rH86244Z2W54egEvgQ/Ji88BcCnZSX99U2rwjnlfiH3brVXPk6mKtfHIbyU5im+cZv5g9EukHmuYXcOAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 69.16666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB+0lEQVR42pVTXY/TMBDM//9ZvCEhHpCAOzhdS9PSNk5ix992Yg9rh5ZeOelgpW1d1zs7M143nAv0fQ/GGIZhqDnPM/41YozQxsBaB+scmpQSJiUxaQlvPYy2MMbCeVrbdW2sqb9jnKG1qWmNg/dhPUM1pT4uM5rgAr6dnvF03OLAz9jzE4ZJYJIKgrJ8P40/sBlaiNJ4UuCTRD9xSKkxThO2osWRM0RS1pROH3efsR9OxFThPPU4SZJPBUyMBCrxk3fYjntshwO4mGqTkpLOK2nRqQEd1Zlg0WRkkhrQyaFKV8pAEAvtSfbskROQEp2ZA2QgEKsqk2VJVfZgOB67DU4jI0BDDMNM+g0CGepDhCI/LHnm3Wq0IcOLT6kg30Um/xfaD0ukda6NG64s2iOjW+4gCVgRgLcaRgmMNAFlCgTJXNIKWBS9FmU3ZQL0xGwcaVx6Vn2xESQ3E8BdQc43xbmyLh6m2/0CGGiOtmeFLzuBh4PGpzbgw8ahl/Namv/kbcw0ItqbK7srYPnY9wZfW4nvB4mH3YiW2RcML2DLsqAQEF6CmRGMbrfMXpxjteQKGEJA8DTppgyt/uulXHxTxWP6/2jOeHd8j0f2XC/DuPUBlGgu3fMbT+w1ycrpFw2vDN+K/ApgebflEu+bNrem/08656sF6bd3Jcv6FwIwQo5i1nGTAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
           &lt;source
@@ -1059,7 +1059,7 @@ $ autoninja &lt;span class=&quot;token parameter variable&quot;&gt;-C&lt;/span&g
             class=&quot;gatsby-resp-image-image&quot;
             src=&quot;/static/490b491e125e6c90f24d62e2d51cd85a/d9199/screenshot_github.png&quot;
             alt=&quot;github&quot;
-            title=&quot;github&quot;
+            title=&quot;&quot;
             loading=&quot;lazy&quot;
             decoding=&quot;async&quot;
             style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
@@ -1084,7 +1084,7 @@ $ autoninja &lt;span class=&quot;token parameter variable&quot;&gt;-C&lt;/span&g
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 47.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA80lEQVQoz62S207DMAyG8/7vyA1CQoKC2qU5+JQf2Vu3MbbCBZZ+xU6+WHac9PQmUFXU2kDEIGbkdUUpFaKKUis6EVQtuJ8ysAg6E5gF6fnlNQ6m6QPMjFIK5mUJyMwwz0uc7xkJo/QKU0Mi6jAbcWmMEUl8ddvizX+kEwARQdrg2/Ua3kvm6jLAotFV+g3+i94PikYST5aAf0iYvbrj0JKat3Ut3Imxy0zZUPupws8sWLuFclMsRZDDP+4dqoQujGFe+VvsaqTHoah/jwF4paKG2ih8l+93EnTiM6M6sJYGH/7GbcOLli/l37PxwL+hzgkNXyM6Fffce8OgAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 47.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA50lEQVR42q1SXW/DMAj0//+Pe5iqPWxSsyXxJxjfwInTTJqqah3SxWBjcuBzL+8ErhUxRuRSQMxY1hU+BFQRhH1fWuvxb6DKyFTAXOFeL2/qMK7ThKIXY0qY5wVVfyLSDv+eGaGQo+YLnBUzs6Api4FhZ/+eWZ4VdvgHi9RAVHun7szqL9APPhZBzKwFaWPYzmiPoB2+XbKCmUTHpi1zbU+3fPWqhsFw8oQ1CXwWXSu+LO7+trdExhwYoWyx4dOXwx+5Sc/7DE07g77JJBe6tWOS0HMi3l9yQ0r55wh2pl02zz7KGabXb2qcFpOldJJnAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
           &lt;source
@@ -1109,7 +1109,7 @@ $ autoninja &lt;span class=&quot;token parameter variable&quot;&gt;-C&lt;/span&g
             class=&quot;gatsby-resp-image-image&quot;
             src=&quot;/static/aa3d96740aa966510bdcb70a0d608d1b/d9199/screenshot_ga.png&quot;
             alt=&quot;ga&quot;
-            title=&quot;ga&quot;
+            title=&quot;&quot;
             loading=&quot;lazy&quot;
             decoding=&quot;async&quot;
             style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
@@ -1131,7 +1131,7 @@ $ autoninja &lt;span class=&quot;token parameter variable&quot;&gt;-C&lt;/span&g
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 80%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAABYlAAAWJQFJUiTwAAABaElEQVQ4y41U227DIAzN/39iX9rHdSQBkgYCNpzJXki7SVuxZIUo6HAuDgNxQYwB+75Dqtb6tqVSSnDWopW8MxcMcU9Y1xXbtimofHjXOWfd77xHylnfwxYgWIMZJ9xuN1yvV1wuFxhjME0TxnH8t+d5woeZYMyo+z8/DEYzYQgh4n6/wzmnJ/UwbB3ifjJ+uA0x7BgyMdZlwePxABF1ediaS0VRTysoMZgKhpQylmVRGQIqVUrp6kSsQdRakHcCZcaQM8HaWSXP83yyfAdWS0F+BYyErIDE8N5rS3K97BSE2roqOyLGkDKdqcr49LB7BeRjzXQAimTvHKy1KltY9vgoB2d+rgsXkIaiHlr1T5h2e1gL6AXwDKUBCjvxsdvD8hNQxuYp2Xv1L8Z4suubQwE81uJnkyxyJZQmWQCZ+U92fDxJx+Z7n4bCB0MZ7BCC/kanyR0e8q9Q9LZpHgpY7/V1Suan5Ab4BTrr5wO2IsMvAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 80%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAABYlAAAWJQFJUiTwAAABPUlEQVR42p1T266DMAzj/79x0nicuA9GaZO0OXFhjPMGRIqUQjC2kxYsUZ1zGkLQK7Esiw7DsJ/xPXPUYlm8TtOkn88nN+HFmUT/OE772c3Ovg9aVHWjZVnq8/nUx+Ohbdueyq7r9FV32jTruX7V9mzQwhnDqqoySxFRIjLqfCp9IKWtduNiDEkLYjHqY5YAwCshMWlKWx1k9TDYXwAI2vM8W0PSGOOpDEZGZK3JswYSAyQ27W2eGHwBy1uAJjcYywIevN/vzBJTBsOzSRlsrcXYUZZsQ/hODj5eBtzqaPUGyFnuN8ESARk3AUn7vs8JD88AfZMPgOyxcgaIXeoNCOzg4xXJGMheHz0EEBbbe38N8KDmn4eQ2jRNHsyVtWE+9LL8ACdj6O2CA+wuwyTwNK2SsYe4j4i7HiarAfgH7NXozaWi1vMAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
           &lt;source
@@ -1154,7 +1154,7 @@ $ autoninja &lt;span class=&quot;token parameter variable&quot;&gt;-C&lt;/span&g
             class=&quot;gatsby-resp-image-image&quot;
             src=&quot;/static/b7e397c61c50ffc737851637a4e89618/d9199/screenshot_search.png&quot;
             alt=&quot;search&quot;
-            title=&quot;search&quot;
+            title=&quot;&quot;
             loading=&quot;lazy&quot;
             decoding=&quot;async&quot;
             style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
@@ -1300,7 +1300,7 @@ stylesheet&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 98.33333333333334%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAACf0lEQVQ4y3VU2Y6jMBDk/79o3vZp31YrrTQTcpIQkszkhByAjTE1qoZmSKS1ZNm03UVVHw6KokCe51gulwjDELPZDHEcyzqfz2VGUYTxeCx2rrRNJhMkSYKqqnC73WCMAUeggLvdDufzGZfLBVmW9fvT6SQrv4eTdt67Xq8gBoEFkMhlWeLxeMjKb+ccvPcy6XC/32GtlW8O7jmbphHQuq5lL4BEpoG0+ScCUv50OhXZ2+1WzpUJ7ylL7tM0FXAOggogJ2WTCZ1+JKc4HA7C3hgr99brNZJkg9VqJT+jD5U9MVQJnGQzHLWjAtd9tU7e12g6+VSkCekZEohGawyqyqGsPHLTrpfsgUfpUDdAaX1ru+ZiL4oSWZqK7D7LQ8DKWhTGYvbl8LF1CHcO/1Y5fv1Z4e13iL+LG8LPGh8bi/fEYBatsY5jRNFSst4DCrtOcuVqfJ4LJMccx7vH7lxisblgnpywzyocrrXM+OsO3wDOVX3J9JIZVGXK+DBurmolOGvga4fGP8fWlLnEm75M5FNSaGTtaQm1+zYRPLO2/RldfNPA+wZl2dar1jEBhSGNWtQsHf0r9wqopfXE0BgpdA2ZDgFka5E2s8UWJBiLVhlIbDslnLy33++lVnmftapMRTK7gM4sUjY8D7U/+2R1xU+nxWIhDwY7aTQaSbFTGf2Dn2S0vUsHHmp/Sjl1klWeSiUJdpUqoT14jQ+Z6VBAZTiMn9qPx6P4EJShCDS7OsjwNfg8Z+K40onxpQIC8o1kyDjY3/Ieah3pqzN8jhgXfqtE/kBjqUyVrcSQMdD3Tl8aXiAws6d9+upMQH0fhyN4fV10sJSYzf+dazI11lrY3+bEDGi96fuIAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 98.33333333333334%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAACUUlEQVR42n2UyY7iQAyG8/4v1Ne5zK2Zy6jVrGILhDTZCGQhJHjyGTkqmFZbsqrscv1eymWvLEupqkpWq5WMx2OZzWay2WxkPp/LYrHQdblc6hn66XSqOlbkpmnkfD4rBuSxATQIAonjWNI0ldPpJEmS6N50yMboYOxgMABWwOv1qoqiKHRF5rBtW+m6TvI81wjQo4PY13WtewDR3+/3B+DtdhP4crkoKGCkP5lMNP3tdqsXACUTHBBlFEW6J3oDHwABwdi9ZKkfj0d1xiVsfd9XXq/Xstvt1JbMniIEkDRgZJesBA96XMIGPWRv8CNg3XRS1Dep+jU5FZIXfXS9fXXtVJedS4lSsqkky9KntD3zppFQ7Gsji7CVj91NPvet/N1U8uvPWt5+f8r7NJVx0MmH3yjPln5f403fVistzQAIuhvhV1bL9usi8eUuQVLLKshk4ccSZo0c81aicyfrMO8zafs7tZSvNQTQ0uZFH7pqqJGduXUsy0JtuftUQ5R2yfoPHoruOFO4rmfqWdWD3dMro7SmxpPVFB1UvwAamS3n/wHySgDQd/QWe3rSgCx6u5xlmYRhqN9vv9/L4XAYzhSQ5sQbQDQtB25kBkhUyPwkBgbDg6FBk9tvG9qGkPm7gLHCbspWX2RWk8nOzsHy3K63V7V6fFdDHKGzVqP/yAwcSjb8lJ8ALR3sbGQBjEyJiBKilp7bRxjxGO44MtmmknWAjbrhl/Xg6D1LSXusB7E/aZMYZ98Rzm0+uuS5c412IB1kXm40GmmN0HHmsj3GK+A/vU0MO3YbTesAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
           &lt;source
@@ -1321,7 +1321,7 @@ stylesheet&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span
             class=&quot;gatsby-resp-image-image&quot;
             src=&quot;/static/a70aa0c5dcb25d48306256ff0a36ebf6/1ac66/content-layer-diagram.png&quot;
             alt=&quot;content-layer-diagram&quot;
-            title=&quot;content-layer-diagram&quot;
+            title=&quot;&quot;
             loading=&quot;lazy&quot;
             decoding=&quot;async&quot;
             style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
@@ -1583,7 +1583,7 @@ $ stop_cvd&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 61.24999999999999%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAAB8ElEQVQoz6WRzWvScRzHv85mmlDZw4xobo02xrYgykPgoWWntaarxqgOs4KwhTVqi6CCyqeVKORKOtki6hAdqr+gQwU5/CVdfPoNSsVEVqBOiA7xCt2OI2YdXnw+pxfvN28xMnGdkYkbnJq6xaEzl+gcOEGPZYxeq41e61j9N9scDI9PccR+hWOOa5y8fJOjF64yZJ/Ecn6SoWVqv8jlCiwUi/z+9ZOXr95gsY3Tsms3G1o72dTezdoWA8HQI4r5HKlEHDmZWLqpJPMrIOT5DF++Zlj48Z2nT55x3D7KtsN6tpq3sNmsQ2EUuPwukokUkbk5opKEJEn1uxKiUPhGNpulWq3icXsYHLbyIRbh7cf3vPsk8fjFc8Kzs8Tj8booFov9FZHP58lkMizWhS5s5xx8LkL4dYTbzrucPmvH450mnU4TjUZXJ6wlrFQWCfim2dM/ysDFMCpdF0KIOk6nG1mWGxOWSiVCoYcolVqEUKMQzazT6hFCg9PlaVxYLpWZeTBDk0KNdn0b+nYjKtXG/xCWywSD9xFCgUa7g46eAwhRS9vceOXaKJVKBZ/vHhqNDtPBQfbuM7Lf1E9Lhwm314cspxsXBgJ+hFBh2NlHa1s3BkMX6u193PEHkdOpf6kcXF62CSHWoFAol1b2eFdd+Q8pDLAQFlMniQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 61.24999999999999%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAACDklEQVR42p2S3UvTYRTHf/ttMOc2rZTFIlB6Mb0xJMgwoggziKw2W5ZZWFBBzSILzCB7cUNztE1dLrIii0SIUIou+gvK3NhFL6Nt+YZbseGFcyOC4NODhTe9oF58OJxz8Tnf5+FIRy/ZsJxtYt+pC1SdaaSmoZm6JtscxwTV55sx1V/GZG2i5uI1Tlxp+zUTvVnM5xC95H3ylJ7+AfpevKLB7qR4dy1FFQcpLD8gajVrt1uwNrfR3duHs6eXjvuP6HzweLa67/2JNDkZZyqR4Mf3bwwOPudIvZWMvGxkQwaqFZlIegmH00HiS4xQ8COR0KdZPv8DaWRsnJHRMRJTU3R7vOw8tAvz1f3saTRR2biXTSfLcN1x8/7dB94MDfF22Peb4b8ixWIxxicmSKfTtLTc4HBtHV/jScKjcULhKAPPXuL13iUYDOL3+wkEAv9FikajTAjhTCrFzVY7luPnePg6RdXpVtaXlJK/qlAsaiESieDz+eYvnE4m6XDfwrhmI3klZhSyHlkh/lCShdAuhOEFCqen8dz2oJTVKBVa1OpsdFlGJIVu8cKurk6RSkNWTgHrNlQiK/UioXpxwqR4ssvlFAIVhuUF5K8uZsmylciq3EUKZ2ZwONrR6XLZVmGitGwzW7aWYyzaga3dSTgUEkL/whK63S6RUEKjyUGrN6DNXIqkM3Dd4RTHHJpXwp+1Vq4fk0BbbgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
           &lt;source
@@ -1606,7 +1606,7 @@ $ stop_cvd&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
             class=&quot;gatsby-resp-image-image&quot;
             src=&quot;/static/610dde62fe7e601367bcd297e14d6d7c/d9199/screenshot_cuttlefish.png&quot;
             alt=&quot;cuttlefish&quot;
-            title=&quot;cuttlefish&quot;
+            title=&quot;&quot;
             loading=&quot;lazy&quot;
             decoding=&quot;async&quot;
             style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
@@ -1695,7 +1695,7 @@ KVM acceleration can be used&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encod
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 56.666666666666664%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAABYklEQVQoz42SWW8CMQyE+f8/qo+tRF8qVUUVEizXsrDaI3svCJjqcwlH6QORrHEcZ+KMPSjLUlEUKUkSbTYb8+M4Nh8Mw9B8bLvdarVaXXJA9mmainU6nTSAaDabWfJisdByubREYvP5XHVdq21bs91up6Zp1Pe97UFi+/3+SlhVlb3OK96IdV1n9uyCjDWAnYu85O1vojeBktJeyltilnEhswqdc1qv1/ZNvu19sCiKhwoO60juY6Sv71SfaXImvKkwz3MTFvERGo34Mtodj8cr2bk65ZkOwYuGUaywqe5+YYRchoyKMJoEMdV6De++LanL3tTlQ/OPN2eXLo9GIwVBoMlkoul0qvF4bEgX/5FfKt4l9yod3MPpgDn0ulGp1xLMssyahCz45BZFqaruVGJlZTr/xgsbH9OQ+fMNYYRA9jSMeWOUeMATc9m5/IzOkDMetwppCgQE0I3GgLeNeXb9AB3RTXI6tUI7AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 56.666666666666664%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAABXElEQVR42pWSWU7DQBBEff8zcQEQCnyA+IgiZ1+8r3EW24VfCycOiZCwVOoZz0x1dVc7eZ5rt9spiiKLwPd9eZ6nIAi0Xq9t3YM9dzgjrlYrxXGs/nM4mE6n2m63ms1mhs1mY/9YZ1mmoigMVVVdYlmW2u/3tj4ej1dCLqCILAClqOYBaNtW//kc2IcEZK3r+nLhNyG7vJGqutWjXA4kqAJJkigMQwOtINGA2ULdtcMffen9M9JH94YUQ17r4WQykeu6Wi6XVjb/SHA+n28I7WHo6eg+6aUzZ1kkP6qvlA5NXywW5lbvKO5hEg3XXcHSIX5Wno4e9xBClEEEyXA0mqa5f9F0jmZvUvoqnaKbREZIaZTMiFA2EcVESj+dTjYqN8Z1pVZlctkPzXQYmfF4rPl8biREZhBSziBDOXuSh2GgJE27dWwmDs1kYszlfg7JgCKAIYfD4XHZf8zhN3X2TgYg4Rb+AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
           &lt;source
@@ -1720,7 +1720,7 @@ KVM acceleration can be used&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encod
             class=&quot;gatsby-resp-image-image&quot;
             src=&quot;/static/2397f97ecd21c2f0bec52ad82311ca0f/d9199/opensourcepeerbonus.png&quot;
             alt=&quot;opensourcepeerbonus&quot;
-            title=&quot;opensourcepeerbonus&quot;
+            title=&quot;&quot;
             loading=&quot;lazy&quot;
             decoding=&quot;async&quot;
             style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
@@ -1749,7 +1749,7 @@ KVM acceleration can be used&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encod
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAIAAABr+ngCAAAACXBIWXMAAAsTAAALEwEAmpwYAAADnklEQVQozwGTA2z8AEkdEWwxF3U/IWY5ImMwHG83Hmg7Iy0dHUEhGWEyHV44Ik0nGUMgFUYmGEAjGTMZFCgTEygVFCMTEiESEAAcExEXEBEOCQwQCQwOCg0MCQ0PCg0YDg0TDQ4OCw4OCQwODA0PDAwPCwwQCgsWDwwmGhIqGxQrHRQuIRgANSQVNCMWJxkTIRUSIxcUIxcWJhoZJRoaJxscKRwfKhwgKhwgLiEiMCMjLyInMSQxNio3OS89OC9BMyUrAB8roh0rpi41iUBFjT1EkEVNlj9Hl0NNnERPoURPo0ZTp0pYrS47qCAsox4srxQmyitAyTtTzDJL0hwfYAANJt4OJ98kNKo7Saw8SrA9S7E1RK83Rq81RLA2RbA8S7I6SLMoNq8eLKgXJq8NI80KHsQJG78KI9AbH2gADSPNDyfNHCiVOUOcO0WgOkWhPUijQEqlRE+pNkKoHyqhJS6iIy6nISygFjCrDSbKCR2/Chy7DTjjFh9sAAwizg0myic7l1Fgok1do1ZmqE5fqERXqExeqjtRp2Nck5h7jR8vmRhRpBZ5wQ0jxggmxwg51ws96BMdcwAMIcwNJsQwRJdTYqJRYaRVZqdJW6YlPp4SM5wVPbRBV7JQYK4kQ68PR7MRX7sNJ8YJOtoJO9gMRu0RJIQADCPOESnCL0OYR1iiSVqkTF2mM0qiMz2YdjyCKUzFEUrXDz/JEkHKJ0awHzOVD0jpDULhDVPnDkHoEiCOABAp1xcxxBozkx42mCI7nyg/oxs8oWg+isxBbS48oxQ9sR1eyAxIvWVhh1JdnBJU9hhW7wtJ2g4u2xUqpgBEVJ45S49EU4ZMXJJKVIBKTXBUZZtXX5FYV4ZLV4tLXJBPdqVNcKc9OlM2QWtDYa9AXao+T6BIWag+T5MAYks2XFpqc3F+fXyIUElKQDMyW05KW1JXbnCBbWp5Y01FZEk7bmVyUlFiVEtUYFVjYE9SVEtYSDcxT0lZACQUEH9sZ4R1cYBwaVlEN2NOQCUWD29bTJmHgnJhYyIVEw4FBFdKS4d4eWhRQ0s4LCgaE1o+MGU9JG9jYwAbEg8wHhI8JhcmFg84JxuceE88Jhaqh1qZeVZALiE6KiAfFxYzJB06KR41JR0fDgsNBgknFA2dbEKZbUUAIRYPJxoRKxwSVUI4f2hVp35LjGU6Z0wwp4Zbu5hrmnlSknNPg2pOLiMdXko3f2JGQy4eZU02jWdEg1Mv3uUQBh3LXlMAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAIAAABr+ngCAAAACXBIWXMAAAsTAAALEwEAmpwYAAADnklEQVR42gGTA2z8AEkdEWYvF2w7IF40IF0sGmc0HF01ISoaG0EgGFowHFYyIEYkFz4fFEEkGDogFy8XEyYTEycVFCMTEiETEQAcFBIXEBEOCQwQCgwPCg0NCg0RCg4YDg4SDQ8QDA8QCw4QDQ4RDQ0RDA0RCwsZEQ0oGxMrHBUtHhUwIhkANiUaMyQbJhoXIhYXJBgaJRkbKBseJxsgKR0iKx4lKx4nKx8oLyMpMCQqLyMwMCU7Ny1BOzJHOTJKMSQsAB4rph0qqDE4i0JHkEBHlEdPmj9JmkVPoERQo0RRpkhVqktZrys4qR8soxwrshMmyy1CyTpSzjBGzxwcVgANJd0PJ9olNaQ5Rqs5R604Rq4yQKw0Qq0xQKwzQaw4RrA0QrAnNKwfLKQXJK8OI8oIG8AHGL0JI80dH1wADSTODybJICySP0ifQEmhP0qiQk2lRE+mSVSqNkOpICuhJzCjIy6nISyfFTOvDSXKCRy9Ch69DTniFxteAAwjzg0mxC0/lVBfokxdolVmp0pcpkFVp0lcqTdNpHBjkJZ5jBosmBhbpxZ4xAwfxQkqygo82Qw96BMaYwAMIc0OJ783SpdWZKRUY6RYaKhIWqYgO50PMp0WQLhAV7RHXLIhQrEOSbUQWLoMJ8gJPd0JOtcMSO8SHnIADSPQEiu+MEWXQ1WiRlikSFmlLEWhPjyUgj6CI0zKD0fWDj3IEkLLLkeoIDSaD0ruDUPiDVToDT3nFB59ABIs2Bkzvxo0kR02mCI9oChAoxs9oXhAhsFBbyY8oxc/rh1jyQ5HuW5lf0laohVX9xlX7AxG1hAv3RkqkgBHVJY7S4lJV4VPX5JLUnhLTm1ZZ5lXX45UWYVNWYlPXo5TdaBQbaE5NUw4RHBGYKhCW6NBUJpLW6NAT4kAXUUzZGFwd3R+gH6JSkA/Rjk4VEY/X1VZdXOCbmh1X0c6X0M1bmVyVlNiW09VX1NcXkxMU0hSRjIqUU1eACkZFH9rZX1taHdoX1VAMmVPQCMUDn5oWJSBfGdXWB0REA4GBl1PUIBvb2NNPkQyKCUYEl4/MWpCKXJnZgAdFA8tGxA5IxQjFA5HNSWbd0xBKRixjV6Nb05INSU+LSIrIBw0JR01JRozIxwiEQ4OBwkxGxGhcEaQZT4AJBgQJhoSLR4STz41f2ZOondFjWY6Z0wvp4Vbuphpk3NNmHhTinBSPS8mcVtDiGpLTzgld11BlG5Jf08tRUcQKtAuHsAAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
           &lt;source
@@ -1776,7 +1776,7 @@ KVM acceleration can be used&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encod
             class=&quot;gatsby-resp-image-image&quot;
             src=&quot;/static/b5c59b2302d906d245355bb87814861d/d9199/conference.png&quot;
             alt=&quot;conference&quot;
-            title=&quot;conference&quot;
+            title=&quot;&quot;
             loading=&quot;lazy&quot;
             decoding=&quot;async&quot;
             style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
@@ -1810,7 +1810,7 @@ KVM acceleration can be used&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encod
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 68.75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAOABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwAB/8QAFgEBAQEAAAAAAAAAAAAAAAAAAQID/9oADAMBAAIQAxAAAAHCLTRIYr//xAAaEAADAAMBAAAAAAAAAAAAAAAAAQIDERMS/9oACAEBAAEFAnHkc6XKh0dB5D//xAAXEQEAAwAAAAAAAAAAAAAAAAAAEiEi/9oACAEDAQE/AdSW/8QAFhEAAwAAAAAAAAAAAAAAAAAAEBEh/9oACAECAQE/AYh//8QAFhABAQEAAAAAAAAAAAAAAAAAADEQ/9oACAEBAAY/AlTY/8QAGhAAAwADAQAAAAAAAAAAAAAAAAERITFRYf/aAAgBAQABPyGiVWZFU24VyqXjGpihaKOj/9oADAMBAAIAAwAAABDPL//EABgRAQEAAwAAAAAAAAAAAAAAAAEAESFR/9oACAEDAQE/EEGQ6h6v/8QAFxEBAAMAAAAAAAAAAAAAAAAAAAEhgf/aAAgBAgEBPxCNFP/EABwQAQADAQADAQAAAAAAAAAAAAEAESExQVGB8f/aAAgBAQABPxALieRv5Cg06zn2VgTFiFMUraru9icrt7yCuN+mf//Z&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 68.75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAOABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwAB/8QAFgEBAQEAAAAAAAAAAAAAAAAAAQID/9oADAMBAAIQAxAAAAHCLTRIYr//xAAZEAADAQEBAAAAAAAAAAAAAAAAAQITERL/2gAIAQEAAQUCceRzxZUOjQ0P/8QAFxEBAAMAAAAAAAAAAAAAAAAAABEhIv/aAAgBAwEBPwHUrf/EABYRAAMAAAAAAAAAAAAAAAAAABARIf/aAAgBAgEBPwGIf//EABYQAQEBAAAAAAAAAAAAAAAAAAAxEP/aAAgBAQAGPwJU2P/EABsQAAMAAgMAAAAAAAAAAAAAAAABESExUWGx/9oACAEBAAE/IaJVYKptwVyqXQ2ihao0bvo//9oADAMBAAIAAwAAABDPL//EABgRAQEAAwAAAAAAAAAAAAAAAAEAIfDx/9oACAEDAQE/EEBRxDvt/8QAFxEBAAMAAAAAAAAAAAAAAAAAAAEhgf/aAAgBAgEBPxCNFP/EABsQAQADAQADAAAAAAAAAAAAAAEAESExUYHx/9oACAEBAAE/EKJItXvyFBRdZp7lItRYrIJravd7E4dXTyObS/Ef/9k=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
           &lt;source
@@ -1837,7 +1837,7 @@ KVM acceleration can be used&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encod
             class=&quot;gatsby-resp-image-image&quot;
             src=&quot;/static/f9e1c2339a406ba7582b25abe241a74d/6a068/hacktoberfest.jpg&quot;
             alt=&quot;hacktoberfest&quot;
-            title=&quot;hacktoberfest&quot;
+            title=&quot;&quot;
             loading=&quot;lazy&quot;
             decoding=&quot;async&quot;
             style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
@@ -1864,7 +1864,7 @@ KVM acceleration can be used&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encod
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAACqklEQVQozwGfAmD9AE4SA1MTA1MUBFAUBFMXB1IYCU4aC0EVCDkVCT8bDUEcDEklFUojEUkfC00nFE4nFkggDlAlEkslElMoEQBHFgZUIw9fKRNhLRZULBg+IQ5BKBc5IhM4JBQ9KRc3IxNsRTB9TDVzQSloPilaNCJVLhpSLBhNKBRGIxIAdjEblFQxnVo4n149ZD4lYDoib0MoWjgaaj8oZjwmYjojajwnaDsnYDUiVC0ZTykVNh4RFg4HFg0GDgkDAHAyGHU6HV8zHkInGkgoGZBXP5NkUIpjT49pXIxuZIlyaYV3cYN9eIKCfoOLiXVuZiIQCAABAAQEAQQDAQBmIwVZHgU+FQUQAwEtEwixmpS/wMbFzNXH1uPE1eHD1unA1ue80+K3z9210eGRkpMmEgcCBAEIBgIGBAEAdCwJaycJUB8KFAcDSicUzLy1ycG+xLGnwbCrw8bDrsGNnrl0k7hwha5ehrNti4l5KhQKAAMBBwUCBQQBAGcnC3UsC0gaCAUAAF84HeLTytfJv9G1os23rc7OxbvKmrvNtrHGsKPBnaDEpJGMfywVCQADAQcFAgUEAQAwEgV2NQ91PBRRKgyIXTbv39Ho5ODo4t7j4uPc3+HY3PC+0bCVt1arurW81ueXj4oqEwUAAwIHBQIEAwEAFwkDcTgQqGEfpGEdqH1Q9Oba8ufh7ePc5uLf4eLlzc/Cp7pvocR7uMrPttHWlIuFKRIEAAMCBwUCBAMBABIHAoFCErVtIqNlHcOWX//x0/7t1/rp1+/l2+Lf3NLX2cnX4MXa5sDY4rva6JSNiCgQAgEEAwcFAgQDAQAPBQJdLgyRUhpsOBZxRCHFm1vjtG3cqmXSnl/AhFCsc0+XZ02KYk2CYE99ZVd0UDopFAYBAwIIBgMDAwEAhfVKh/SpfgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAACpElEQVR42mPwFWIOEmYOFGYJFGEJFWMNleAIlORyFGG3EuWwl+Kxl+ZxVhJ2ludzkeXyVBH2URXxkOcLUBXyUhUKUhNgcBdjC1Lki1YViNYSCdISt5bnsVcVMZcXMFUSslYXtVASLHA3rPU0KnJQz7DViDJRDNWTDNaVCNAU9VYVYig2kJoSarwwxnJRgm2ctVK0uUK6vWqImUSanXqSpXKMmXyWtWqmpXK8oWyQhrCfupClgpCsIKcUP7sAJwtDkZl0lb1imoWSj558kL5cf7B5f4xLa5Rzd0Jge2pEa1Z8fW5KTVF2dVlBTX1NbkK4NC8rAyMDMzMjEDGkKrOGyrBaCLFwMTAYiHJvmjN99+4Dh05cOnLp3sGLdw9efnbg6ot9V1/svPRk+9XnPb1dCnwszCxMHKxMrCyMDCVanBlqnL5yXMKsTIE6kucO7Dl5aP/xHRuP7Np55NSJDYenLtzbOG1XRefGjJ7tNR1NpcoCbIzMjOwQzbla3MXa3E7iHIwMDOl2yo+unb9yePv5jXNObVx2+uz+rcc6t5xYturQgjn7umfsn9DTUqoqyMbAwgTVbC7KXmnKl2Mm5KTI0ZNg/f7htedPHjy7d/Ph/bu37z26ee/LgUvbZm5LXbtn595rLye21avwMzGCNbMA/SzJxVxmI7giUWFhgsyaprBvL+5+evHg7ZP7z58+evj4+ekzBxbtSph3tHjHyUvbLt+Y0FKjzMfEyAzTLM7F3OkuvD1feUmq7IkFOf+/P/77/vHPt4/fv3r6+MmzK3fvnb795Njd1wdvP917782EtgYlHgZGFmY2iGYhdqYcc/5ZkTLFduJNIdr3NmX/OFnzbm/Jo/V5JycmrK+Jm1MSP7Ewsasgpa00pzTEXlmAhQkc2szMjACDP/Wo1N0eBwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
           &lt;source
@@ -1891,7 +1891,7 @@ KVM acceleration can be used&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encod
             class=&quot;gatsby-resp-image-image&quot;
             src=&quot;/static/8ef93087d9a8ef50a42f94519547c577/d9199/droid.png&quot;
             alt=&quot;droid&quot;
-            title=&quot;droid&quot;
+            title=&quot;&quot;
             loading=&quot;lazy&quot;
             decoding=&quot;async&quot;
             style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
@@ -1990,7 +1990,7 @@ KVM acceleration can be used&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encod
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAChUlEQVQozwXBWU/aAAAA4P6XxWQxzjiBKTKUlnHfVXpBoYCUtqyclkIPbqQ4DmGbTmBmGjOnD/Nl2cNe/BnL9rBkyX7Ivg+IOU1sCEoFHfPJdNzTMDeE23f85g0U0hFWHWXTUzZdzLqJmtf9W6sew1Pbxor9+QoO6cMWA3CiVoQ0wSGeIzom0GQ+EuTCjlRwj4VBft8y5PEeDTOenZTLmLBvx21GAjRErXolCUe9VqAncAzmVUo5We2KYkWu5sXc4RF10ODQN0Ji0eJGebyEQIV9qEaFu3mW8Vm4ALhsl1qFDJCnYyUyUBfKhTqvXan8pISIEYxFxsfSqCtcjIR+NXM57owkflzhJmJOjvoEzHF32pz3JWAxG571lRLDsA20fZ/0SbCrEMArWK8lHC85fpRk1cPr5dvmsCzJxWm/Xs2Tcgp5ONduzgfAr98/H398S0dwpu7t3OKOKOQI7YURd62cblyhcM5OxP2Xc618FkaYkKZlI0VnLg7fzzr9pgR8Xnx4uJpn4niU9uRbkQDlMgUMfsJe4mJMNeAmQJd39/1pK6sGA4ijrtKehDmJOL5M280yB8Q8Zh6xHRL7ZPUlP7UbKb0OW/NH7WU2wk3BXXLD6jOM+1XmxGkNGRWFctGbURi8mTQbNR74ev1RZSN40MV2TdwM3Dp4tml5ghP2Aofkzna2sVUn/OJ0WEtLZpdT36hFSWqLCUNLTZTLSeDfn793i3fhEJiU9SnJbHq1DlrWUjHnQM0KRS+f9NQy8KBINDi085pUEh417pZIx1jJtmUOuL2YCSmkwqFKIZbDbEXUJlO+Kul8/H7/SZO7aX+X9os4VCNdMuWrEFAZB9N+00Ckh5r8H3RPCr9487w/AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAACiUlEQVR42hXC6U7aAAAA4D7LlmXGmKBOVEREjoIUKmcphVJaoZRCOSotpVAKrcrtgc6pMV7TxGRLNEu2LNm/PYbJ/ixZstdY9uUDEq5lNmjLhKD7i6uhtoe4rIhjCV41oOtzcft8yvk/YZ+LrM74jFOehbcOw2tw9k3UOh+1GYG+IgrpWC7iETK4lCXKCX8+DFKwhQmsF0LWIYd2KDjnXclsmFLORdxujFnnkw5jg/THNqxAt8YxqFcVeVnWaoLQqnG1PClREZWJDCr4jc6NS2gxsMoF1mQK1TmGhixc0HGp8408BXAkyuOwWpcEje9et7mDKiYlk7nYpKccdaWLYXUgZi+H6mE9fyCy4+2cjEFSHPo80c726sDpuHvUESs5ptSNa59ov4J4hSAuJ7q62L8ube/TFY19uD1X+1VNlY57aqOAq5no83n//mwAvPx6+fH1iUQRVvcqNxEwYXOHbbEY3KzRrbuor+gk6MjtVb9yGsFYpD/iEjxU3UI+n3aHuyrw5fHh2+NdBkcJ1lfR4jDmNnsWwpiHzyezwiaEWIN+59mJnm/6Q1FIadEbuDmHeR8nepPngKTXUsEgCgvSmq343ruUXjLEZwKkh8/FuBPHMmYA/abDoUzs2MGwpdUmwfQshbgejjS9WQbujkdSOoIGNrI7Jnq0ZgzOzFpe4QmolA+zH5bnwlMQsjI5kDNtEwi+66gESiwUUPBm1BTLBPD395/7k/1wwFroGynFvGibtqxPM1twRySrkjtDuuu50EhMNRhE43Bly6ukPM0UdNgq6g0WeP541SoQ5bSfZ0KluKuCuSQCkknfz+9PF+3tHhPYpWE5blfITYXy13GHELfTm+axkh/05H+zVgng+XJBSwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
           &lt;source
@@ -2017,7 +2017,7 @@ KVM acceleration can be used&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encod
             class=&quot;gatsby-resp-image-image&quot;
             src=&quot;/static/3eeef5c09d9cf2bafdf3f32626cbcdcc/d9199/survey.png&quot;
             alt=&quot;survey&quot;
-            title=&quot;survey&quot;
+            title=&quot;&quot;
             loading=&quot;lazy&quot;
             decoding=&quot;async&quot;
             style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
@@ -2053,7 +2053,7 @@ KVM acceleration can be used&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encod
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAACl0lEQVQozxXL608SAQAA8PubspXLL4kPkGlpWc5RuNyq6SwrQPCAgwA1FBEQkIdwPI7juCdvEHyAHo6X8kpy5nSux9/R+n3/AQhsDfttEcQJ21edRiifZKROVZ92mqefH/kmnjRq3+3Ypd6Qk0rn2Qpba1XPWvV6ufu9fnf7A0ADOxHESaBuv3PDZf56mInLPWuPtLOj65KnBvVLk0G47frgQNdCKRO6twFnXViRrTavrq9+//0DYCEXEfaQmA/ZNbm3dcVcSuXb6tXMTRnVb22meYd7xuJ7tYXObTOL5viiISE1pfInZ+3uZb3VASJhLxnx0TiCwrZd6+rxfkYXsPcoFwRqmdJskpgdoMWtsgWWrNRziJkC6RmIzhbrjc4FW6kDRMRH4kGGDGF+h8euZw+zK0H3PVA0JgdntXqhxvhmxSXQBidV1NBnavgjNi4hssf1WrNTPK0CBB6gSSRKhSOI2+swlI5yawjcA0JcqVIo18xpDEItPKWlX2uTAigqUFDvdbF86azSaB+dVgD8fw7FGAxHvbDTWCrk9Ujwvkw3pNgcUdp5SpivJMbk8XFFemQpNvyJfLYcLZRblWZnr1gCCAKhqFCUwQgM9rnNbDG/joQfSjc4kIujDHDk+GNpdECS5EnTfEmcL2ImwGjsoFZuXFCpA4AkUZrGYlGcwP3+XUupuL+O4A/Epn7Q07+MDIIUV57iLWcmoOwTWYIrYgSaRI5tHFdbATINUBTGRPFYnCIJxO+1np4cGIJUr8jKlQfGIGJUkRyQpfu/JPnS9LQ6vWA8sBC1UvNnvXvbvv4F0AzOxIh4gqYo1A/bSydHm0isT+QalIU4YoIjjr/Q5JZ2WG+ynSlfF85vC+c3bOum1r07v7z7B3rKjDmBRH9gAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAClUlEQVR42iXR6VISAQAA4H0ma2w6pkk8ME1zxsy0rLEyJ3MaCFKOXbmykFBBLl2OXY5lYU9gUZRDxLgCASGkxoOZ+lVvkU0P8P36AB9i8rstQe+m06SBDcrEdkhgld3STPRr5+5qRWNrmlmbTYpgDjaWKR6V6ye1erNyVDz5Vm6fnwB+jzXo2yQxO2rT2k2a/V1ODKtuap4P6t4P6xXjBv0zk10A4zr/zgYe16O7TjJTOKqfX5z9/vMbCGAwiTuoAOqFVx3m5Ux8R+JYua55Pb6umjYbXtnsT4zo1Dr+xswKTRHhKgeaYul8rdH6UWk0gSDuIoMoQ3gx14bTqs2m9kDEeBWcn1bLlWaTzAxDFqfShonNzNgSMyFnXqpDqVy12mjmShXgUlKEhyUxHLG4bLrsfhxCrB2ydyNy+czHz1PqtZlP9qcadFzF8ARUz3xgdJG6xOXjRjpfBEjCw1BYiMYDni1kS58/SCgQuEMO8Rfkk1LFnFo3qXY9VDOTKm4CZB7Jqdnl8H6hWq43txMpgPiP2UAQc6Dwej6TVKLoFYmGD+qHl6wDkGsQIu6D4QdLO8OS8ICInlJGsuVGqd6iuB2AJL00/Q8TfqfbYcwfJtWIt3NR162AeZCbBxJ3JCGeOMpf2O4XhfqEzKjsMq3y9bhFRRMARfkZBg+FCCKAuJ2m/GFKjeCdYkOXzNkl9fXI6G5JlC+JjUB7Q4uRXiHzWMUlc7V0sYYGOYCmAyxLhMM0Sbg9LkvhS/oDErwmMvNBzyBEDkHRXmnstoDrE0dHpNyLlfgqXizUz0rNdqXVBhg2yIbICMfQlM+D2gq5g2WEuSHa6pVgPQs0Txy5B8beGjMWusZlT5Oli4NqO1tvl7//PD799RejYYtwUCtK1wAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
           &lt;source
@@ -2080,7 +2080,7 @@ KVM acceleration can be used&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encod
             class=&quot;gatsby-resp-image-image&quot;
             src=&quot;/static/75f761a0c336ddeeb3a88afed55d92e4/d9199/deview.png&quot;
             alt=&quot;deview&quot;
-            title=&quot;deview&quot;
+            title=&quot;&quot;
             loading=&quot;lazy&quot;
             decoding=&quot;async&quot;
             style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
@@ -2145,7 +2145,7 @@ KVM acceleration can be used&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encod
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAClUlEQVQozwXBbU8SAQAA4PsNrfXFlRoKQ970EO6O4+AA4bjjXuG4gwPuhBMRAdNhTZvfXKu1tvoh/QC31ie/VNOyMC3KYGrLN7I2p7ZMex6AZkYkia6U1XFdnqqM6loyp/D1Kb1aysxOFSaL6UyKma5q5bH0dEVLSzRDB8f1VGUiW6loQFyMRaO4mk3M1UvzM8V8JpGV2dla4X69eO9OXlPYgibUJpXJkqJlhRiJFzQpr4lykvLhEMALFEWFSDKgKnE9m8xJrCLStaIyP61XdVmOR0pj4lxdL+RFgvAWRqVKeZRjI6EQmlEEAPG6g7iHIAIMTbBslOOiPEeKiZiUpGWJkUQqLdFKiuW5CC8QsswxbDQQwhiW4HgSMJoMtr7uoeEhNwJhkMfn8uBuNAh5RxA0giIhHMGCCIYjCApBsAuCnCjq9vtgFHWBoBVwWE2OAaPdYfOBroVYZlHIPRTkJ6LwVOWfFYlHc+GZBSxzF4/XxfhMiZqoerJlO5PuM5nMt7sBxG52Gg2Q2RiwmBODYNIFyi5bCrIoiFnFLdqIRSUHBMpKcn5KTIb5LCYWoWwNdMOgyQCQ7sGBnt6h/n7cYQ057RE3yHjgRMAvhUOCH+UwhPEinBfhvbDoR0mnDeu7Odx13XDjmvVWFxB1DVp6esOgQ/ajcdyLQbAfglVZ1tUMhfuEaJgNBwncz8XIQl7FYA8OwRU5kaaj8RgFRFzOnFpaWn73ZmVt9cP6q7XGSmNjs9X+sr3b+LzVbLc/tVqbW62NrW/N7d3V9Uajubl39OPo+OdepwMsPnj8/OXq8sft5u7R4elV5+zfr7+Xh6cXnfOLg9/fO2d/Ti6v2gfH+yfnBydXjWbj9dul9xsvPu/sN77u/AfVIgKlzVRxoQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAACmElEQVR42h3M7U8ScQDA8fsnWltbmCEDOUHwOPjdHXA8KI8H9wAHdzw/nCgCgg2dbrW18o2b/0pb7+pFmrM1WlPHcJauZs21Kaxw5soMJ7lef/f5Qj6/MybS5ZnUZF6oljK5VDgVZ+tVqTIVn6/mipKQEAJzlczMZKxWSgu8P0A5CpI4W05XKlmIC/m9Hns2zS/VpxZrUjbGJUWmPptfnMsv1LLpWFDKhsrFWLEQSydYn4fMZfhsOhzl/RbS9B97HZR/PJeKFNLRJB+M8VRtOvmoPlXKRyKcq1jgl+alfDbsdlmknFCeydCM2+kkRJGBzCQ2MW7xeB0BykXTHpb13eyifECIBEUhGOWphEgn4wwdnGBYtyiyDOu1OQia8bKcD1Iq5VrFoMFowAgcBwBHTQQKLMBsw3EHAewkMJPAQmK4GWC4EceMBI7abZjVChBUB2lgpUalUGtgEjE9pJKPmdQyI6yEuNU4s5pzP11wlZaskQdksBqiypIrN4lF81oPJ1fIlfIBCGhUBpUCg5XjsDqOmJLAmMb0GRzOkfC0RztFjUicOhQapQR3IJGaiBbMiaohWdONITrlIORCtCrZgF5+3wwrrdph55jGb0I4kgjbrbQZBHCjHzMGABoECIej7tFhYkiGyO7Ib98aG7oHuVGd6q6MHFHdNAqgQKfHRnURJhihAzYD4iKAA6AWFPE47NEQaxjRmGBYsBM2vZY0GiCzWsnzyecvNtfXXq9tbL7c2Hz15u3O3ofmx/13283m3t52a3er1dpq7Tb3DzYajffN5kmn3fnePu50oCfLK8/WdxoH3760z7qX/dO/V+fX193Lq7PeVffi51mv96vfb5//7v7p/bjofz3+dHi09fmocXhyenB08g8Fr/9lWHOQzAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
           &lt;source
@@ -2172,7 +2172,7 @@ KVM acceleration can be used&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encod
             class=&quot;gatsby-resp-image-image&quot;
             src=&quot;/static/4f083aa505a578d6c49499746bdb17d0/d9199/pycon.png&quot;
             alt=&quot;pycon&quot;
-            title=&quot;pycon&quot;
+            title=&quot;&quot;
             loading=&quot;lazy&quot;
             decoding=&quot;async&quot;
             style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
