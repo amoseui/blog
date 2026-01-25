@@ -147,7 +147,7 @@ export default {
       resolve: "gatsby-plugin-robots-txt",
       options: {
         host: "https://blog.amoseui.com",
-        sitemap: "https://blog.amoseui.com/sitemap.xml",
+        sitemap: "https://blog.amoseui.com/sitemap-index.xml",
         policy: [
           {
             userAgent: "*",
