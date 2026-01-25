@@ -31,12 +31,7 @@ const onCreateNode: GatsbyNode["onCreateNode"] = ({
 
     if (tags) {
       const value = tags.map((tag) =>
-        utils.concat(
-          constants.routes.tagRoute,
-          "/",
-          utils.toKebabCase(tag),
-          "/",
-        ),
+        utils.concat(constants.routes.tagRoute, "/", utils.toKebabCase(tag)),
       );
 
       createNodeField({ node, name: "tagSlugs", value });
@@ -47,7 +42,6 @@ const onCreateNode: GatsbyNode["onCreateNode"] = ({
         constants.routes.categoryRoute,
         "/",
         utils.toKebabCase(category),
-        "/",
       );
 
       createNodeField({ node, name: "categorySlug", value });
