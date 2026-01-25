@@ -56,19 +56,29 @@ export default {
                   edges: Array<types.Edge>;
                 };
               };
-            }) =>
-              allMarkdownRemark.edges.map(({ node }) => ({
+            }) => {
+              // Remove invalid XML characters
+              const sanitizeXml = (text: string): string => {
+                if (!text) return "";
+                // eslint-disable-next-line no-control-regex
+                return text.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, "");
+              };
+
+              return allMarkdownRemark.edges.map(({ node }) => ({
                 ...node.frontmatter,
                 date: node?.frontmatter?.date,
-                description: node?.frontmatter?.description,
+                description: sanitizeXml(node?.frontmatter?.description || ""),
                 url:
                   site.siteMetadata.url +
                   (node.frontmatter?.slug || node.fields?.slug),
                 guid:
                   site.siteMetadata.url +
                   (node.frontmatter?.slug || node.fields?.slug),
-                custom_elements: [{ "content:encoded": node.html }],
-              })),
+                custom_elements: [
+                  { "content:encoded": sanitizeXml(node.html || "") },
+                ],
+              }));
+            },
             query: `
               {
                 allMarkdownRemark(
