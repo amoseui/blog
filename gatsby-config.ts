@@ -3,7 +3,9 @@ import path from "path";
 import config from "./content/config.json";
 import * as types from "./internal/gatsby/types";
 
-export default {
+import type { GatsbyConfig } from "gatsby";
+
+const gatsbyConfig: GatsbyConfig = {
   pathPrefix: config.pathPrefix,
   trailingSlash: "never",
   siteMetadata: {
@@ -215,3 +217,5 @@ export default {
     "gatsby-plugin-cname",
   ],
 };
+
+export default gatsbyConfig;
