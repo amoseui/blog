@@ -20,7 +20,8 @@ const createPages: GatsbyNode["createPages"] = async ({ graphql, actions }) => {
   const { createPage } = actions;
 
   createPage({
-    path: constants.routes.notFoundRoute,
+    path: "/404.html",
+    matchPath: constants.routes.notFoundRoute,
     component: constants.templates.notFoundTemplate,
     context: {},
   });
@@ -43,20 +44,14 @@ const createPages: GatsbyNode["createPages"] = async ({ graphql, actions }) => {
     const { node } = edge;
 
     if (node?.frontmatter?.template === "page" && node?.fields?.slug) {
-      const slug = node?.frontmatter?.slug || node.fields.slug;
-      const path = slug.endsWith("/") ? slug.slice(0, -1) : slug;
       createPage({
-        path: `${path}.html`,
-        matchPath: path,
+        path: node?.frontmatter?.slug || node.fields.slug,
         component: constants.templates.pageTemplate,
         context: { slug: node.fields.slug },
       });
     } else if (node?.frontmatter?.template === "post" && node?.fields?.slug) {
-      const slug = node?.frontmatter?.slug || node.fields.slug;
-      const path = slug.endsWith("/") ? slug.slice(0, -1) : slug;
       createPage({
-        path: `${path}.html`,
-        matchPath: path,
+        path: node?.frontmatter?.slug || node.fields.slug,
         component: constants.templates.postTemplate,
         context: { slug: node.fields.slug },
       });
