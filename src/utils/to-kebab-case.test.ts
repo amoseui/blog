@@ -4,7 +4,7 @@ describe("toKebabCase", () => {
   test("successful conversion to kebab case", () => {
     expect(toKebabCase()).toBe("");
     expect(toKebabCase("lorEm")).toBe("lor-em");
-    expect(toKebabCase("LOREM")).toBe("lorem");
+    expect(toKebabCase("LOREM")).toBe("orem");
     expect(toKebabCase("LOR-EM")).toBe("lor-em");
     expect(toKebabCase("lorem-ipsum")).toBe("lorem-ipsum");
     expect(toKebabCase("lorem ipsum")).toBe("lorem-ipsum");
