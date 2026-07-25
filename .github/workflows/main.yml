@@ -13,10 +13,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v7
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
 
       - name: Restore npm cache
-        uses: actions/cache@v3
+        uses: actions/cache@v6
         with:
           path: node_modules
           key: dependencies-${{ hashFiles('package-lock.json') }}
@@ -29,10 +34,15 @@ jobs:
     needs: install
     steps:
       - name: Check out code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v7
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
 
       - name: Restore npm cache
-        uses: actions/cache@v3
+        uses: actions/cache@v6
         with:
           path: node_modules
           key: dependencies-${{ hashFiles('package-lock.json') }}
@@ -45,10 +55,15 @@ jobs:
     needs: install
     steps:
       - name: Check out code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v7
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
 
       - name: Restore npm cache
-        uses: actions/cache@v3
+        uses: actions/cache@v6
         with:
           path: node_modules
           key: dependencies-${{ hashFiles('package-lock.json') }}
@@ -61,10 +76,15 @@ jobs:
     needs: install
     steps:
       - name: Check out code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v7
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
 
       - name: Restore npm cache
-        uses: actions/cache@v3
+        uses: actions/cache@v6
         with:
           path: node_modules
           key: dependencies-${{ hashFiles('package-lock.json') }}
@@ -73,7 +93,7 @@ jobs:
         run: npm run test:coverage -- --runInBand --no-cache
 
       - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v3
+        uses: codecov/codecov-action@v7
 
   deploy:
     runs-on: ubuntu-latest
@@ -81,15 +101,20 @@ jobs:
     if: github.ref == 'refs/heads/main'
     steps:
       - name: Check out code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v7
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
 
       - name: Configure SSH
-        uses: webfactory/ssh-agent@v0.8.0
+        uses: webfactory/ssh-agent@v0.10.0
         with:
           ssh-private-key: ${{ secrets.SSH_KEY }}
 
       - name: Restore npm cache
-        uses: actions/cache@v3
+        uses: actions/cache@v6
         with:
           path: node_modules
           key: dependencies-${{ hashFiles('package-lock.json') }}
@@ -100,4 +125,3 @@ jobs:
           npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
