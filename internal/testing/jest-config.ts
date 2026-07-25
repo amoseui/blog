@@ -1,6 +1,25 @@
 import type { Config } from "@jest/types";
 
-import swc from "./swc-config";
+// Inlined swc transform config: a relative import here breaks depending on
+// how the TS config is loaded (ts-node requires extensionless imports while
+// Node's native type stripping requires the .ts extension).
+const swc = {
+  sourceMaps: true,
+  module: {
+    type: "commonjs",
+  },
+  jsc: {
+    parser: {
+      syntax: "typescript",
+      tsx: true,
+    },
+    transform: {
+      react: {
+        runtime: "automatic",
+      },
+    },
+  },
+};
 
 const jestConfig: Config.InitialOptions = {
   testEnvironment: "jsdom",
