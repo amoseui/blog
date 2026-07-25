@@ -55,15 +55,18 @@ JS 에서 registerProperty 함수를 사용하여 선언하는 방법도 있다.
 ```js
 function assert_valid(syntax, initialValue) {
   // No actual assertions, this just shouldn't throw
-  test(function () {
-    var name = "--syntax-test-" + test_count++;
-    CSS.registerProperty({
-      name: name,
-      syntax: syntax,
-      initialValue: initialValue,
-      inherits: false,
-    });
-  }, "syntax:'" + syntax + "', initialValue:'" + initialValue + "' is valid");
+  test(
+    function () {
+      var name = "--syntax-test-" + test_count++;
+      CSS.registerProperty({
+        name: name,
+        syntax: syntax,
+        initialValue: initialValue,
+        inherits: false,
+      });
+    },
+    "syntax:'" + syntax + "', initialValue:'" + initialValue + "' is valid",
+  );
 }
 
 assert_valid("*", "default");
