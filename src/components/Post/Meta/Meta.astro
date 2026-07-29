@@ -1,0 +1,21 @@
+---
+import styles from "./Meta.module.scss";
+
+interface Props {
+  date?: Date;
+}
+
+const { date } = Astro.props;
+---
+
+<div class={styles.meta}>
+  <p class={styles.date}>
+    Published {
+      date?.toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+      })
+    }
+  </p>
+</div>

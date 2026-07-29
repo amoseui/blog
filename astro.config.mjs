@@ -27,6 +27,13 @@ export default defineConfig({
       postcss: {
         plugins: [lost(), autoprefixer()],
       },
+      preprocessorOptions: {
+        scss: {
+          // Some legacy scss modules import "src/assets/..." relative to the
+          // repo root (resolved via includePaths in the gatsby setup).
+          loadPaths: ["."],
+        },
+      },
     },
   },
 });
