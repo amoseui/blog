@@ -3,8 +3,10 @@ import sitemap from "@astrojs/sitemap";
 import autoprefixer from "autoprefixer";
 import lost from "lost";
 import rehypeSlug from "rehype-slug";
-import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeExternalLinks from "rehype-external-links";
+
+import rehypeAutolinkGatsby from "./src/lib/rehype-autolink-gatsby.mjs";
+import rehypeInlineCode from "./src/lib/rehype-inline-code.mjs";
 
 export default defineConfig({
   site: "https://blog.amoseui.com",
@@ -17,7 +19,8 @@ export default defineConfig({
     syntaxHighlight: "prism",
     rehypePlugins: [
       rehypeSlug,
-      [rehypeAutolinkHeadings, { behavior: "wrap" }],
+      rehypeAutolinkGatsby,
+      rehypeInlineCode,
       [
         rehypeExternalLinks,
         { target: "_blank", rel: ["nofollow", "noopener", "noreferrer"] },
