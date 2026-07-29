@@ -7,17 +7,22 @@ import { describe, expect, test } from "vitest";
 const fixtures = (name: string) =>
   JSON.parse(readFileSync(`internal/verification/fixtures/${name}`, "utf8"));
 
-describe("dist parity with gatsby baseline", () => {
+// The fixtures are a frozen snapshot of the last gatsby build (2026-07-30) and
+// are never regenerated (gatsby is gone). The contract is monotonic: every
+// baseline url, anchor and rss item must keep existing so old links never
+// break, while new posts are free to add urls and rss items on top.
+describe("dist keeps the gatsby baseline contract", () => {
   test("dist exists (run npm run build first)", () => {
     expect(existsSync("dist/index.html")).toBe(true);
   });
 
-  test("url set is identical", () => {
+  test("every baseline url still exists", () => {
     const expected = fixtures("urls.json") as string[];
-    const actual = globSync("dist/**/*.html")
-      .map((f) => "/" + path.relative("dist", f))
-      .sort();
-    expect(actual).toEqual(expected);
+    const actual = new Set(
+      globSync("dist/**/*.html").map((f) => "/" + path.relative("dist", f)),
+    );
+    const missing = expected.filter((url) => !actual.has(url));
+    expect(missing).toEqual([]);
   });
 
   test("heading anchors are identical per page", () => {
@@ -51,7 +56,7 @@ describe("dist parity with gatsby baseline", () => {
     }
   });
 
-  test("rss items match", () => {
+  test("every baseline rss item still exists", () => {
     const expected = fixtures("rss-items.json") as {
       title: string;
       link: string;
@@ -66,15 +71,17 @@ describe("dist parity with gatsby baseline", () => {
         .replace(/&amp;/g, "&");
     const rssContent = readFileSync("dist/rss.xml", "utf8");
     const items = [...rssContent.matchAll(/<item>[\s\S]*?<\/item>/g)];
-    expect(items).toHaveLength(expected.length);
-    const actualTitles = items.map(([item]) =>
-      decodeEntities(
-        (item.match(/<title>(?:<!\[CDATA\[)?([\s\S]*?)(?:\]\]>)?<\/title>/) ??
-          [])[1] ?? "",
+    expect(items.length).toBeGreaterThanOrEqual(expected.length);
+    const actualTitles = new Set(
+      items.map(([item]) =>
+        decodeEntities(
+          (item.match(/<title>(?:<!\[CDATA\[)?([\s\S]*?)(?:\]\]>)?<\/title>/) ??
+            [])[1] ?? "",
+        ),
       ),
     );
-    expect(actualTitles).toEqual(expected.map((e) => e.title));
-    for (const { link, guid } of expected) {
+    for (const { title, link, guid } of expected) {
+      expect(actualTitles.has(title), title).toBe(true);
       expect(rssContent).toContain(`<link>${link}</link>`);
       expect(rssContent).toContain(`<guid isPermaLink="true">${guid}</guid>`);
     }
