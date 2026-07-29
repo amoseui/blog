@@ -1,0 +1,54 @@
+---
+import "@/assets/scss/main.scss";
+
+import Meta from "@/components/Meta/Meta.astro";
+import styles from "@/components/Layout/Layout.module.scss";
+import { site } from "@/lib/site";
+
+interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+}
+
+const { title, description = site.subtitle, image } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <Meta title={title} description={description} image={image} />
+    <script is:inline>
+      (() => {
+        let mode = "light";
+        try {
+          const stored = JSON.parse(localStorage.getItem("diesel:theme-atom"));
+          if (stored && (stored.mode === "dark" || stored.mode === "light"))
+            mode = stored.mode;
+          else if (matchMedia("(prefers-color-scheme: dark)").matches)
+            mode = "dark";
+        } catch (_) {
+          if (matchMedia("(prefers-color-scheme: dark)").matches) mode = "dark";
+        }
+        document.documentElement.className = mode;
+      })();
+    </script>
+    <script
+      is:inline
+      async
+      src={`https://www.googletagmanager.com/gtag/js?id=${site.googleAnalyticsId}`}
+    ></script>
+    <script is:inline define:vars={{ gaId: site.googleAnalyticsId }}>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", gaId);
+    </script>
+  </head>
+  <body>
+    <div class={styles.layout}><slot /></div>
+  </body>
+</html>
