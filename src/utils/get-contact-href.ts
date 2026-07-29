@@ -1,5 +1,5 @@
-import { btoa } from "abab";
-
+// Uses the global btoa (available in Node >= 16 and browsers);
+// the abab polyfill was removed with the gatsby toolchain.
 const getContactHref = (name: string, contact: string) => {
   const hrefs: { [key: string]: string } = {
     email: btoa(contact) || "",

@@ -1,0 +1,56 @@
+---
+import Icon from "@/components/Icon/Icon.astro";
+import { ICONS } from "@/constants";
+import getContactHref from "@/utils/get-contact-href";
+import getIcon from "@/utils/get-icon";
+
+import styles from "./Contacts.module.scss";
+
+interface Props {
+  contacts: Record<string, string>;
+}
+
+const { contacts } = Astro.props;
+const names = Object.keys(contacts) as Array<keyof typeof ICONS>;
+---
+
+<div class={styles.contacts}>
+  <ul class={styles.list}>
+    {
+      names.map((name) =>
+        contacts[name] ? (
+          <li class={styles.item}>
+            {name === "email" ? (
+              <span
+                class={styles.link}
+                data-contact-email={getContactHref(name, contacts[name])}
+              >
+                <Icon name={name} icon={getIcon(name)} />
+              </span>
+            ) : (
+              <a
+                class={styles.link}
+                href={getContactHref(name, contacts[name])}
+                target="_blank"
+                rel={`noopener noreferrer${name === "mastodon" ? " me" : ""}`}
+              >
+                <Icon name={name} icon={getIcon(name)} />
+              </a>
+            )}
+          </li>
+        ) : null,
+      )
+    }
+  </ul>
+</div>
+
+<script>
+  // Decode the base64-obfuscated email address on click (ported from Contacts.tsx)
+  document
+    .querySelectorAll<HTMLElement>("[data-contact-email]")
+    .forEach((element) => {
+      element.addEventListener("click", () => {
+        window.location.href = `mailto:${atob(element.dataset.contactEmail ?? "")}`;
+      });
+    });
+</script>

@@ -1,0 +1,35 @@
+---
+import styles from "./Menu.module.scss";
+
+interface Props {
+  menu: Array<{
+    label: string;
+    path: string;
+  }>;
+}
+
+const { menu } = Astro.props;
+
+// Gatsby Link's activeClassName equivalent: exact match against the page path.
+const currentPath = Astro.url.pathname.replace(/\.html$/, "");
+---
+
+<nav class={styles.menu}>
+  <ul class={styles.list}>
+    {
+      menu.map((item) => (
+        <li class={styles.item}>
+          <a
+            href={item.path}
+            class:list={[
+              styles.link,
+              { [styles.active]: currentPath === item.path },
+            ]}
+          >
+            {item.label}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>

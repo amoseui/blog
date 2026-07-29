@@ -1,0 +1,20 @@
+---
+import { ICONS } from "@/constants";
+
+import styles from "./Icon.module.scss";
+
+interface Props {
+  name: keyof typeof ICONS;
+  icon: {
+    viewBox?: string;
+    path?: string;
+  };
+}
+
+const { name, icon } = Astro.props;
+---
+
+<svg class={styles.icon} viewBox={icon.viewBox}>
+  <title>{name}</title>
+  <path d={icon.path}></path>
+</svg>

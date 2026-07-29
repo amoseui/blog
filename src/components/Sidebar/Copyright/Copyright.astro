@@ -1,0 +1,11 @@
+---
+import styles from "./Copyright.module.scss";
+
+interface Props {
+  copyright: string;
+}
+
+const { copyright } = Astro.props;
+---
+
+<div class={styles.copyright}>{copyright}</div>
