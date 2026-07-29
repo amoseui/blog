@@ -1,0 +1,151 @@
+{
+  "/2022-retrospective/index.html": [
+    "오픈소스-프로젝트-활동",
+    "컨퍼런스-발표",
+    "회사"
+  ],
+  "/2023-retrospective/index.html": [
+    "2024년",
+    "블로그",
+    "스터디",
+    "오픈소스",
+    "회사"
+  ],
+  "/2024-gdg-google-io-extended/index.html": [
+    "google-io-extended",
+    "소감",
+    "수강",
+    "수강-1",
+    "안드로이드",
+    "인천송도"
+  ],
+  "/2024-retrospective/index.html": [
+    "2025년",
+    "2025년-오픈소스-목표",
+    "멘토링",
+    "블로그",
+    "오픈소스",
+    "조회수-순위",
+    "참석한-컨퍼런스세미나",
+    "컨퍼런스세미나멘토링",
+    "회사"
+  ],
+  "/2025-retrospective/index.html": [
+    "2026년",
+    "개인",
+    "멘토링",
+    "블로그",
+    "오픈소스",
+    "조회수-순위",
+    "참석한-컨퍼런스세미나",
+    "컨퍼런스세미나멘토링",
+    "회사"
+  ],
+  "/android-13-aosp-cuttlefish/index.html": [
+    "aosp",
+    "aosp-빌드-방법",
+    "cuttlefish",
+    "cuttlefish-실행",
+    "개요",
+    "빌드-에러",
+    "빌드-환경",
+    "소스-다운로드-및-빌드"
+  ],
+  "/became-chromium-committer/index.html": [
+    "chromium-committer",
+    "chromium-contribution-의-한계",
+    "두-번째-도전",
+    "시작",
+    "앞으로",
+    "첫-번째-도전"
+  ],
+  "/chromium-css-fontface-cssomstring/index.html": [
+    "개요",
+    "관련-링크",
+    "내용",
+    "후기"
+  ],
+  "/chromium-css-groupingrule-index-optional/index.html": [
+    "개요",
+    "관련-링크",
+    "내용",
+    "테스트",
+    "후기"
+  ],
+  "/chromium-css-keyframesrule-length-attribute/index.html": [
+    "개요",
+    "관련-링크",
+    "내용",
+    "테스트",
+    "후기"
+  ],
+  "/chromium-css-supports-allow-empty-parentheses/index.html": [
+    "개요",
+    "관련-링크",
+    "내용",
+    "코드-리뷰",
+    "테스트",
+    "후기"
+  ],
+  "/chromium-faster-build/index.html": [
+    "빌드-방법",
+    "빌드를-빠르게-할-수-있는-기타-방법"
+  ],
+  "/chromium-remove-css-wpt-ini-file/index.html": [
+    "개요",
+    "관련-링크",
+    "내용",
+    "후기"
+  ],
+  "/chromium-remove-exception-in-webauthn-android-junit-deps/index.html": [
+    "개요",
+    "관련-링크",
+    "내용",
+    "후기"
+  ],
+  "/code-coverage/index.html": [
+    "code-coverage-기준",
+    "code-coverage-의-의미",
+    "code-coverage-의-활용"
+  ],
+  "/cpp-mini-chromium-template/index.html": [
+    "build",
+    "prerequisites",
+    "run",
+    "sync",
+    "test"
+  ],
+  "/opensourceconference/index.html": [
+    "2개의-메인-주제",
+    "the-speakers-commentary",
+    "개발기여-프로세스-페이지-32---77",
+    "느낀-점",
+    "더보기내가-하고-싶은-이야기-페이지-78---93",
+    "발표-제안",
+    "발표-준비",
+    "발표자-소개-페이지-1---9",
+    "빌드업-페이지-17---31",
+    "서론-페이지-10---16",
+    "주제-선정",
+    "주최-측의-컨퍼런스-발표-주제-방향",
+    "준비하면서-이루고자-했던-것"
+  ],
+  "/ossca-2025-chromium/index.html": [
+    "1-2주차",
+    "3주차",
+    "4주차",
+    "5주차",
+    "6주차",
+    "keep",
+    "kpt-회고",
+    "problem",
+    "try",
+    "마무리",
+    "멘티-선발",
+    "모임-내용",
+    "모임-진행-방식",
+    "시작",
+    "실습-목표",
+    "준비와-발대식"
+  ]
+}
