@@ -1,4 +1,4 @@
-export const toKebabCase = (str: string = ""): string =>
+export const toKebabCase = (str = ""): string =>
   str
     .toLowerCase()
     .replace(/[^\w\s]/gi, "")

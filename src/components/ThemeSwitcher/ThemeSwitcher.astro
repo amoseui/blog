@@ -67,7 +67,8 @@ import styles from "./ThemeSwitcher.module.scss";
 
   // Keep the switcher icon (sun/moon) in sync with the documentElement theme
   const syncIcon = () => {
-    const mode = document.documentElement.className === "dark" ? "dark" : "light";
+    const mode =
+      document.documentElement.className === "dark" ? "dark" : "light";
     switcher?.classList.toggle(styles.dark, mode === "dark");
     if (title) title.textContent = mode;
   };
@@ -75,7 +76,8 @@ import styles from "./ThemeSwitcher.module.scss";
   syncIcon();
 
   switcher?.addEventListener("click", () => {
-    const next = document.documentElement.className === "dark" ? "light" : "dark";
+    const next =
+      document.documentElement.className === "dark" ? "light" : "dark";
     document.documentElement.className = next;
     localStorage.setItem("diesel:theme-atom", JSON.stringify({ mode: next }));
     syncIcon();

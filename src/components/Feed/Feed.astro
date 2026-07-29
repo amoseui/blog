@@ -31,7 +31,10 @@ const { entries } = Astro.props;
           </time>
           <span class={styles.divider} />
           <span class={styles.category}>
-            <a href={categoryUrl(entry.data.category ?? "")} class={styles.link}>
+            <a
+              href={categoryUrl(entry.data.category ?? "")}
+              class={styles.link}
+            >
               {entry.data.category}
             </a>
           </span>
