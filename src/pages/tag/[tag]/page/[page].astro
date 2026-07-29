@@ -1,0 +1,43 @@
+---
+import Feed from "@/components/Feed/Feed.astro";
+import Page from "@/components/Page/Page.astro";
+import Pagination from "@/components/Pagination/Pagination.astro";
+import Sidebar from "@/components/Sidebar/Sidebar.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { byTag, paginate } from "@/lib/posts";
+import { site } from "@/lib/site";
+import { paginationUrl, tagUrl } from "@/lib/urls";
+
+export async function getStaticPaths() {
+  const groups = await byTag();
+  return [...groups.entries()].flatMap(([group, posts]) => {
+    const pages = paginate(posts, site.postsLimit);
+    return pages.slice(1).map((entries, index) => ({
+      params: {
+        tag: tagUrl(group).replace("/tag/", ""),
+        page: String(index + 1),
+      },
+      props: { group, entries, page: index + 1, total: pages.length },
+    }));
+  });
+}
+
+const { group, entries, page, total } = Astro.props;
+const base = tagUrl(group);
+---
+
+<BaseLayout
+  title={`${group} - Page ${page} - ${site.title}`}
+  description={site.subtitle}
+>
+  <Sidebar />
+  <Page title={group}>
+    <Feed entries={entries} />
+    <Pagination
+      prevPagePath={page <= 1 ? base : paginationUrl(base, page - 1)}
+      nextPagePath={paginationUrl(base, page + 1)}
+      hasPrevPage={page !== 0}
+      hasNextPage={page !== total - 1}
+    />
+  </Page>
+</BaseLayout>

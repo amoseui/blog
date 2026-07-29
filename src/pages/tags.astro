@@ -1,0 +1,27 @@
+---
+import Page from "@/components/Page/Page.astro";
+import Sidebar from "@/components/Sidebar/Sidebar.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { byTag } from "@/lib/posts";
+import { site } from "@/lib/site";
+import { toKebabCase } from "@/lib/to-kebab-case";
+
+const tags = await byTag();
+---
+
+<BaseLayout title={`Tags - ${site.title}`} description={site.subtitle}>
+  <Sidebar />
+  <Page title="Tags">
+    <ul>
+      {
+        [...tags.entries()].map(([tag, posts]) => (
+          <li>
+            <a href={`/tag/${toKebabCase(tag)}/`}>
+              {tag} ({posts.length})
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </Page>
+</BaseLayout>

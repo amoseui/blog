@@ -1,0 +1,13 @@
+---
+import Page from "@/components/Page/Page.astro";
+import Sidebar from "@/components/Sidebar/Sidebar.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { site } from "@/lib/site";
+---
+
+<BaseLayout title={`Not Found - ${site.title}`} description={site.subtitle}>
+  <Sidebar />
+  <Page title="NOT FOUND">
+    <p>You just hit a route that doesn't exist... the sadness.</p>
+  </Page>
+</BaseLayout>
