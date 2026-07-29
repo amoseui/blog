@@ -9,7 +9,9 @@ import rehypeExternalLinks from "rehype-external-links";
 export default defineConfig({
   site: "https://blog.amoseui.com",
   trailingSlash: "never",
-  build: { format: "file" },
+  // The gatsby baseline emits directory-style output (foo/index.html, verified
+  // by the extracted url fixtures), so match it exactly for the parity gate.
+  build: { format: "directory" },
   integrations: [sitemap()],
   markdown: {
     syntaxHighlight: "prism",
