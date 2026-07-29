@@ -26,11 +26,15 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await render(entry);
+const image = entry.data.socialImage
+  ? new URL(entry.data.socialImage.src, site.url).toString()
+  : undefined;
 ---
 
 <BaseLayout
   title={`${entry.data.title} - ${site.title}`}
   description={entry.data.description || site.subtitle}
+  image={image}
 >
   {
     entry.data.template === "post" ? (
