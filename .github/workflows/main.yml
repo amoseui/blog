@@ -101,8 +101,12 @@ jobs:
     needs: test
     if: github.ref == 'refs/heads/main'
     permissions:
+      contents: read
       pages: write
       id-token: write
+    concurrency:
+      group: github-pages
+      cancel-in-progress: false
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
