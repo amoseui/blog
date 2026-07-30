@@ -10,11 +10,18 @@ import rehypeInlineCode from "./src/lib/rehype-inline-code.mjs";
 
 export default defineConfig({
   site: "https://blog.amoseui.com",
-  trailingSlash: "never",
+  // GitHub Pages serves the directory output at the trailing-slash url and
+  // 301-redirects the bare form, so both must resolve in dev/preview too.
+  trailingSlash: "ignore",
   // The gatsby baseline emits directory-style output (foo/index.html, verified
   // by the extracted url fixtures), so match it exactly for the parity gate.
   build: { format: "directory" },
-  integrations: [sitemap()],
+  integrations: [
+    sitemap({
+      // Keep the gatsby sitemap url form (no trailing slash).
+      serialize: (item) => ({ ...item, url: item.url.replace(/\/$/, "") }),
+    }),
+  ],
   markdown: {
     syntaxHighlight: "prism",
     rehypePlugins: [

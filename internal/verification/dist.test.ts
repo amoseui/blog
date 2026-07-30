@@ -103,6 +103,16 @@ describe("dist keeps the gatsby baseline contract", () => {
     expect(existsSync("dist/CNAME")).toBe(true);
   });
 
+  test("sitemap urls keep the gatsby no-trailing-slash form", () => {
+    const sitemap = readFileSync("dist/sitemap-0.xml", "utf8");
+    const locs = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
+    expect(locs.length).toBeGreaterThan(0);
+    const slashed = locs.filter(
+      (u) => u.endsWith("/") && u !== "https://blog.amoseui.com/",
+    );
+    expect(slashed).toEqual([]);
+  });
+
   test("generated favicon set and profile photo exist", () => {
     // These are built from content/photo.jpg by scripts/generate-icons.mjs
     // (prebuild hook) and are not tracked in git.
