@@ -16,6 +16,13 @@ interface Props {
 
 const { title, description = site.subtitle, image } = Astro.props;
 
+// Github pages serves directory output at the trailing-slash url (bare form
+// 301s), so the slash form is the canonical one search engines should index.
+const canonicalPath = Astro.url.pathname.endsWith("/")
+  ? Astro.url.pathname
+  : `${Astro.url.pathname.replace(/\.html$/, "")}/`;
+const canonicalUrl = new URL(canonicalPath, site.url).toString();
+
 // Favicons are generated from content/photo.jpg at build time (see
 // scripts/generate-icons.mjs). The cache-buster is derived from the source
 // image content so swapping the photo invalidates cached icons automatically.
@@ -30,6 +37,7 @@ const iconVersion = createHash("md5")
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <Meta title={title} description={description} image={image} />
+    <link rel="canonical" href={canonicalUrl} />
     <link
       rel="icon"
       href={`/favicon-32x32.png?v=${iconVersion}`}

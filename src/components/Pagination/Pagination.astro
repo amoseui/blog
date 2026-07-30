@@ -1,5 +1,6 @@
 ---
 import { PAGINATION } from "@/constants";
+import { href } from "@/lib/urls";
 
 import styles from "./Pagination.module.scss";
 
@@ -17,7 +18,7 @@ const { prevPagePath, nextPagePath, hasNextPage, hasPrevPage } = Astro.props;
   <div class={styles.previous}>
     <a
       rel="prev"
-      href={hasPrevPage ? prevPagePath : "/"}
+      href={hasPrevPage ? href(prevPagePath) : "/"}
       class:list={[styles.previousLink, { [styles.disable]: !hasPrevPage }]}
     >
       {PAGINATION.PREV_PAGE}
@@ -26,7 +27,7 @@ const { prevPagePath, nextPagePath, hasNextPage, hasPrevPage } = Astro.props;
   <div class={styles.next}>
     <a
       rel="next"
-      href={hasNextPage ? nextPagePath : "/"}
+      href={hasNextPage ? href(nextPagePath) : "/"}
       class:list={[styles.nextLink, { [styles.disable]: !hasNextPage }]}
     >
       {PAGINATION.NEXT_PAGE}

@@ -11,6 +11,10 @@ import Sidebar from "@/components/Sidebar/Sidebar.astro";
 import ThemeSwitcher from "@/components/ThemeSwitcher/ThemeSwitcher.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
+// Container output embeds dev-mode script urls containing the absolute repo
+// path, which differs per machine (local vs ci); strip it for portability.
+const normalize = (html: string): string => html.replaceAll(process.cwd(), "");
+
 // Deterministic fixture: the oldest post of the collection, which never
 // changes as new posts are added.
 const fixturePost = async () => {
@@ -26,7 +30,7 @@ test("BaseLayout snapshot", async () => {
     props: { title: "Snapshot Title", description: "Snapshot description" },
     slots: { default: "<main>content</main>" },
   });
-  expect(html).toMatchSnapshot();
+  expect(normalize(html)).toMatchSnapshot();
 });
 
 test("Sidebar snapshot", async () => {
@@ -34,13 +38,13 @@ test("Sidebar snapshot", async () => {
   const html = await container.renderToString(Sidebar, {
     props: { isIndex: true },
   });
-  expect(html).toMatchSnapshot();
+  expect(normalize(html)).toMatchSnapshot();
 });
 
 test("ThemeSwitcher snapshot", async () => {
   const container = await AstroContainer.create();
   const html = await container.renderToString(ThemeSwitcher);
-  expect(html).toMatchSnapshot();
+  expect(normalize(html)).toMatchSnapshot();
 });
 
 test("Feed snapshot", async () => {
@@ -48,7 +52,7 @@ test("Feed snapshot", async () => {
   const html = await container.renderToString(Feed, {
     props: { entries: [await fixturePost()] },
   });
-  expect(html).toMatchSnapshot();
+  expect(normalize(html)).toMatchSnapshot();
 });
 
 test("Pagination snapshot", async () => {
@@ -61,7 +65,7 @@ test("Pagination snapshot", async () => {
       hasNextPage: true,
     },
   });
-  expect(html).toMatchSnapshot();
+  expect(normalize(html)).toMatchSnapshot();
 });
 
 test("Post snapshot", async () => {
@@ -70,7 +74,7 @@ test("Post snapshot", async () => {
     props: { entry: await fixturePost() },
     slots: { default: "<p>post body</p>" },
   });
-  expect(html).toMatchSnapshot();
+  expect(normalize(html)).toMatchSnapshot();
 });
 
 test("Page snapshot", async () => {
@@ -79,7 +83,7 @@ test("Page snapshot", async () => {
     props: { title: "About me" },
     slots: { default: "<p>page body</p>" },
   });
-  expect(html).toMatchSnapshot();
+  expect(normalize(html)).toMatchSnapshot();
 });
 
 test("Meta snapshot", async () => {
@@ -91,5 +95,5 @@ test("Meta snapshot", async () => {
       image: "/media/image.png",
     },
   });
-  expect(html).toMatchSnapshot();
+  expect(normalize(html)).toMatchSnapshot();
 });

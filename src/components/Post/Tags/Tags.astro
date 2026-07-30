@@ -1,6 +1,6 @@
 ---
 import Button from "@/components/Button/Button.astro";
-import { tagUrl } from "@/lib/urls";
+import { href, tagUrl } from "@/lib/urls";
 
 import styles from "./Tags.module.scss";
 
@@ -16,7 +16,7 @@ const { tags } = Astro.props;
     {
       tags.map((tag) => (
         <li class={styles.item}>
-          <Button title={tag} to={tagUrl(tag)} />
+          <Button title={tag} to={href(tagUrl(tag))} />
         </li>
       ))
     }

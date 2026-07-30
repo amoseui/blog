@@ -1,6 +1,17 @@
 import { defineCollection, z } from "astro:content";
 import { glob } from "astro/loaders";
 
+// Naive frontmatter datetimes ("2016-01-01 18:20:22") must be read as utc:
+// gatsby (js-yaml) did so, the published rss pubDates depend on it, and local
+// parsing would make kst and utc build machines emit different output.
+const utcDate = z.preprocess((value) => {
+  if (typeof value === "string") {
+    const m = value.match(/^(\d{4}-\d{2}-\d{2})[ T](\d{2}:\d{2}(?::\d{2})?)$/);
+    if (m) return new Date(`${m[1]}T${m[2]}Z`);
+  }
+  return value;
+}, z.coerce.date());
+
 const shared = {
   title: z.string(),
   draft: z.boolean().default(false),
@@ -19,7 +30,7 @@ export const blogSchema = (image: () => z.ZodTypeAny) =>
       .object({
         ...shared,
         template: z.literal("post"),
-        date: z.coerce.date(),
+        date: utcDate,
         socialImage: image().optional(),
       })
       .passthrough(),
@@ -27,7 +38,7 @@ export const blogSchema = (image: () => z.ZodTypeAny) =>
       .object({
         ...shared,
         template: z.literal("page"),
-        date: z.coerce.date().optional(),
+        date: utcDate.optional(),
         socialImage: image().optional(),
       })
       .passthrough(),

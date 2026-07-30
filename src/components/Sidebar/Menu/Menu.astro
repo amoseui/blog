@@ -1,4 +1,6 @@
 ---
+import { href } from "@/lib/urls";
+
 import styles from "./Menu.module.scss";
 
 interface Props {
@@ -10,8 +12,9 @@ interface Props {
 
 const { menu } = Astro.props;
 
-// Gatsby Link's activeClassName equivalent: exact match against the page path.
-const currentPath = Astro.url.pathname.replace(/\.html$/, "");
+// Gatsby Link's activeClassName equivalent: exact match against the page
+// path, normalized to the trailing-slash link form.
+const currentPath = href(Astro.url.pathname.replace(/\.html$/, ""));
 ---
 
 <nav class={styles.menu}>
@@ -20,10 +23,10 @@ const currentPath = Astro.url.pathname.replace(/\.html$/, "");
       menu.map((item) => (
         <li class={styles.item}>
           <a
-            href={item.path}
+            href={href(item.path)}
             class:list={[
               styles.link,
-              { [styles.active]: currentPath === item.path },
+              { [styles.active]: currentPath === href(item.path) },
             ]}
           >
             {item.label}

@@ -1,6 +1,6 @@
 import { expect, test } from "vitest";
 
-import { categoryUrl, entryUrl, paginationUrl, tagUrl } from "./urls";
+import { categoryUrl, entryUrl, href, paginationUrl, tagUrl } from "./urls";
 
 test("uses frontmatter slug verbatim", () => {
   expect(
@@ -41,4 +41,15 @@ test("paginationUrl appends page segment for later pages", () => {
   expect(paginationUrl("/category/chromium", 2)).toBe(
     "/category/chromium/page/2",
   );
+});
+
+test("href appends a trailing slash for internal page urls", () => {
+  expect(href("/2015-retrospective")).toBe("/2015-retrospective/");
+  expect(href("/category/aosp")).toBe("/category/aosp/");
+  expect(href("/page/1")).toBe("/page/1/");
+});
+
+test("href keeps root and already-slashed urls unchanged", () => {
+  expect(href("/")).toBe("/");
+  expect(href("/categories/")).toBe("/categories/");
 });

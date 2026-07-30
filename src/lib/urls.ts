@@ -18,3 +18,9 @@ export const tagUrl = (tag: string): string => `/tag/${toKebabCase(tag)}`;
 
 export const paginationUrl = (base: string, page: number): string =>
   page === 0 ? base : [base === "/" ? "" : base, "page", page].join("/");
+
+// Canonical link form for github pages: the directory output is served with
+// a trailing slash (the bare form 301-redirects), so every internal href must
+// use the slash form or crawlers walk through redirects on each link.
+export const href = (url: string): string =>
+  url.endsWith("/") ? url : `${url}/`;

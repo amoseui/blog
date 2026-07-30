@@ -25,7 +25,7 @@ export async function GET(context: { site: URL }) {
       content: sanitizeXml(html),
     });
   }
-  return rss({
+  const response = await rss({
     title: site.title,
     description: site.subtitle,
     site: context.site,
@@ -34,4 +34,12 @@ export async function GET(context: { site: URL }) {
     trailingSlash: false,
     items,
   });
+  // @astrojs/rss hardcodes isPermaLink="true"; the published gatsby feed used
+  // "false", and keeping every guid byte identical avoids any chance of feed
+  // readers re-surfacing old items.
+  const xml = (await response.text()).replaceAll(
+    'isPermaLink="true"',
+    'isPermaLink="false"',
+  );
+  return new Response(xml, { headers: response.headers });
 }

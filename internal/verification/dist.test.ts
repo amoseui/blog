@@ -83,7 +83,7 @@ describe("dist keeps the gatsby baseline contract", () => {
     for (const { title, link, guid } of expected) {
       expect(actualTitles.has(title), title).toBe(true);
       expect(rssContent).toContain(`<link>${link}</link>`);
-      expect(rssContent).toContain(`<guid isPermaLink="true">${guid}</guid>`);
+      expect(rssContent).toContain(`<guid isPermaLink="false">${guid}</guid>`);
     }
   });
 
@@ -97,20 +97,51 @@ describe("dist keeps the gatsby baseline contract", () => {
     expect(css).toMatch(/img\[width\]\[height\]\s*\{[^}]*height:\s*auto/);
   });
 
+  test("rss dates and guid match the gatsby form", () => {
+    // Frontmatter datetimes are naive and gatsby interpreted them as utc;
+    // parsing them in the build machine's local timezone shifts every
+    // pubDate (and can reset read-state in strict feed readers). The gatsby
+    // feed also marked guids isPermaLink="false".
+    const rssContent = readFileSync("dist/rss.xml", "utf8");
+    expect(rssContent).toContain('<guid isPermaLink="false">');
+    expect(rssContent).not.toContain('isPermaLink="true"');
+    expect(rssContent).toContain(
+      "<pubDate>Fri, 01 Jan 2016 18:20:22 GMT</pubDate>",
+    );
+  });
+
   test("sitemap, robots, cname exist", () => {
     expect(existsSync("dist/sitemap-index.xml")).toBe(true);
     expect(existsSync("dist/robots.txt")).toBe(true);
     expect(existsSync("dist/CNAME")).toBe(true);
   });
 
-  test("sitemap urls keep the gatsby no-trailing-slash form", () => {
+  test("sitemap urls use the canonical trailing-slash form", () => {
+    // Github pages serves the slash form with 200 and 301-redirects the bare
+    // form; the sitemap must point crawlers at the 200 form.
     const sitemap = readFileSync("dist/sitemap-0.xml", "utf8");
     const locs = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
     expect(locs.length).toBeGreaterThan(0);
-    const slashed = locs.filter(
-      (u) => u.endsWith("/") && u !== "https://blog.amoseui.com/",
-    );
-    expect(slashed).toEqual([]);
+    const bare = locs.filter((u) => !u.endsWith("/"));
+    expect(bare).toEqual([]);
+  });
+
+  test("internal links use the canonical trailing-slash form", () => {
+    // Crawlers walking bare-form links hit a 301 on every hop, which search
+    // console reports as "page with redirect". All internal hrefs must use
+    // the slash form.
+    const pages = ["index.html", "2015-retrospective/index.html"];
+    for (const page of pages) {
+      const html = readFileSync(path.join("dist", page), "utf8");
+      const hrefs = [...html.matchAll(/href="(\/[^"]*)"/g)].map((m) => m[1]);
+      const bare = hrefs.filter(
+        (h) =>
+          !h.endsWith("/") &&
+          !h.includes("#") &&
+          !/\.(png|jpg|jpeg|webp|svg|css|js|xml|ico)(\?|$)/.test(h),
+      );
+      expect(bare, page).toEqual([]);
+    }
   });
 
   test("generated favicon set and profile photo exist", () => {
