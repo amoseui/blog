@@ -1,6 +1,6 @@
 ---
 title: Android 13 AOSP 빌드 및 cuttlefish 실행
-date: 2023-03-19 00:50:00
+date: 2023-03-19 09:50:00
 template: post
 draft: false
 slug: /android-13-aosp-cuttlefish

@@ -1,6 +1,6 @@
 ---
 title: "Chromium Contribution: 불필요한 register-property-syntax-parsing.html.ini 파일 삭제"
-date: 2023-06-21 21:10:00
+date: 2023-06-22 06:10:00
 template: post
 draft: false
 slug: /chromium-remove-css-wpt-ini-file

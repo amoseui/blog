@@ -25,14 +25,14 @@ const { entries } = Astro.props;
                 year: "numeric",
                 month: "long",
                 day: "numeric",
-                timeZone: "UTC",
+                timeZone: "Asia/Seoul",
               },
             )}
           >
             {new Date(entry.data.date ?? 0).toLocaleDateString("en-US", {
               year: "numeric",
               month: "long",
-              timeZone: "UTC",
+              timeZone: "Asia/Seoul",
             })}
           </time>
           <span class={styles.divider} />

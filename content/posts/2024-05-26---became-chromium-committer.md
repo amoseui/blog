@@ -1,6 +1,6 @@
 ---
 title: Chromium Committer 가 되었다
-date: 2024-05-26 14:00:00
+date: 2024-05-26 23:00:00
 template: post
 draft: false
 slug: /became-chromium-committer

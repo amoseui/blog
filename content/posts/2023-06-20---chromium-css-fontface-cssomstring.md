@@ -1,6 +1,6 @@
 ---
 title: "Chromium Contribution: CSS FontFace 속성 타입을 DOMString 에서 CSSOMString 으로 변경"
-date: 2023-06-20 22:50:00
+date: 2023-06-21 07:50:00
 template: post
 draft: false
 slug: /chromium-css-fontface-cssomstring

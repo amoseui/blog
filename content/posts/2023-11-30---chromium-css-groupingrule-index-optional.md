@@ -1,6 +1,6 @@
 ---
 title: "Chromium Contribution: CSS GroupingRule insertRule 함수의 index 파라미터를 optional 로 변경"
-date: 2023-11-30 08:00:00
+date: 2023-11-30 17:00:00
 template: post
 draft: false
 slug: /chromium-css-groupingrule-index-optional

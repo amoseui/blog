@@ -1,13 +1,22 @@
 import { defineCollection, z } from "astro:content";
 import { glob } from "astro/loaders";
 
-// Naive frontmatter datetimes ("2016-01-01 18:20:22") must be read as utc:
-// gatsby (js-yaml) did so, the published rss pubDates depend on it, and local
-// parsing would make kst and utc build machines emit different output.
-const utcDate = z.preprocess((value) => {
+// Naive frontmatter datetimes are authored in kst ("2026-01-20 21:00" means
+// 21:00 in Seoul). Pinning the offset keeps output identical on any build
+// machine, and the represented instants stay byte-compatible with the
+// published rss pubDates (the old utc-form values were migrated by +9h).
+const KST_OFFSET_MS = 9 * 60 * 60 * 1000;
+
+const kstDate = z.preprocess((value) => {
+  // The yaml parser pre-converts second-precision timestamps to utc dates
+  // (digits read as utc); minute-precision values arrive as strings. Both
+  // carry the same meaning — naive kst digits — so reinterpret accordingly.
+  if (value instanceof Date) {
+    return new Date(value.getTime() - KST_OFFSET_MS);
+  }
   if (typeof value === "string") {
     const m = value.match(/^(\d{4}-\d{2}-\d{2})[ T](\d{2}:\d{2}(?::\d{2})?)$/);
-    if (m) return new Date(`${m[1]}T${m[2]}Z`);
+    if (m) return new Date(`${m[1]}T${m[2]}+09:00`);
   }
   return value;
 }, z.coerce.date());
@@ -30,7 +39,7 @@ export const blogSchema = (image: () => z.ZodTypeAny) =>
       .object({
         ...shared,
         template: z.literal("post"),
-        date: utcDate,
+        date: kstDate,
         socialImage: image().optional(),
       })
       .passthrough(),
@@ -38,7 +47,7 @@ export const blogSchema = (image: () => z.ZodTypeAny) =>
       .object({
         ...shared,
         template: z.literal("page"),
-        date: utcDate.optional(),
+        date: kstDate.optional(),
         socialImage: image().optional(),
       })
       .passthrough(),

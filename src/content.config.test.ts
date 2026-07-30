@@ -31,11 +31,11 @@ describe("blog frontmatter contract", () => {
   });
 });
 
-test("parses naive frontmatter datetimes as utc like gatsby", () => {
+test("parses naive frontmatter datetimes as kst", () => {
   const result = schema.safeParse({
     title: "T",
     template: "post",
-    date: "2016-01-01 18:20:22",
+    date: "2016-01-02 03:20:22",
   });
   expect(result.success).toBe(true);
   if (result.success) {
@@ -43,14 +43,26 @@ test("parses naive frontmatter datetimes as utc like gatsby", () => {
   }
 });
 
-test("parses minute-precision naive datetimes as utc", () => {
+test("parses minute-precision naive datetimes as kst", () => {
   const result = schema.safeParse({
     title: "T",
     template: "post",
-    date: "2026-01-20 12:00",
+    date: "2026-01-20 21:00",
   });
   expect(result.success).toBe(true);
   if (result.success) {
     expect(result.data.date.toISOString()).toBe("2026-01-20T12:00:00.000Z");
+  }
+});
+
+test("reinterprets yaml-parsed utc dates as kst digits", () => {
+  const result = schema.safeParse({
+    title: "T",
+    template: "post",
+    date: new Date("2016-01-02T03:20:22Z"),
+  });
+  expect(result.success).toBe(true);
+  if (result.success) {
+    expect(result.data.date.toISOString()).toBe("2016-01-01T18:20:22.000Z");
   }
 });

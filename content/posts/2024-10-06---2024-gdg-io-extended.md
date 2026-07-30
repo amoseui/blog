@@ -1,6 +1,6 @@
 ---
 title: 2024 GDG Google I/O Extended 간단 후기
-date: 2024-10-06 05:00:00
+date: 2024-10-06 14:00:00
 template: post
 draft: false
 slug: /2024-gdg-google-io-extended
