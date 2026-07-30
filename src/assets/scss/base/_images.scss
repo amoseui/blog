@@ -1,0 +1,7 @@
+// astro:assets emits explicit width/height attributes on markdown images.
+// Post body css caps rendered width (max-width), so height must follow the
+// intrinsic ratio; browsers derive the aspect ratio from the attributes.
+// The gatsby-resp-image wrapper used to guarantee this before the migration.
+img[width][height] {
+  height: auto;
+}

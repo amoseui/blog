@@ -1,0 +1,27 @@
+---
+import Page from "@/components/Page/Page.astro";
+import Sidebar from "@/components/Sidebar/Sidebar.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { byCategory } from "@/lib/posts";
+import { site } from "@/lib/site";
+import { toKebabCase } from "@/lib/to-kebab-case";
+
+const categories = await byCategory();
+---
+
+<BaseLayout title={`Categories - ${site.title}`} description={site.subtitle}>
+  <Sidebar />
+  <Page title="Categories">
+    <ul>
+      {
+        [...categories.entries()].map(([category, posts]) => (
+          <li>
+            <a href={`/category/${toKebabCase(category)}/`}>
+              {category} ({posts.length})
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </Page>
+</BaseLayout>

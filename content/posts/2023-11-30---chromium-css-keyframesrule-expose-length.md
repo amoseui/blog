@@ -1,6 +1,6 @@
 ---
 title: "Chromium Contribution: CSS KeyframesRule length attribute 추가"
-date: 2023-11-30 09:30:00
+date: 2023-11-30 18:30:00
 template: post
 draft: false
 slug: /chromium-css-keyframesrule-length-attribute

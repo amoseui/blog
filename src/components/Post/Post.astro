@@ -1,0 +1,40 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+import Button from "@/components/Button/Button.astro";
+import ThemeSwitcher from "@/components/ThemeSwitcher/ThemeSwitcher.astro";
+
+import Comments from "./Comments/Comments.astro";
+import Content from "./Content/Content.astro";
+import Meta from "./Meta/Meta.astro";
+import Tags from "./Tags/Tags.astro";
+
+import styles from "./Post.module.scss";
+
+interface Props {
+  entry: CollectionEntry<"blog">;
+}
+
+const { entry } = Astro.props;
+const { tags, title, date } = entry.data;
+---
+
+<div class={styles.post}>
+  <div class={styles.buttons}>
+    <Button class={styles.buttonArticles} title="All Articles" to="/" />
+    <ThemeSwitcher />
+  </div>
+
+  <div class={styles.content}>
+    <Content title={title}><slot /></Content>
+  </div>
+
+  <div class={styles.footer}>
+    <Meta date={date} />
+    {tags && <Tags tags={tags} />}
+  </div>
+
+  <div class={styles.comments}>
+    <Comments />
+  </div>
+</div>

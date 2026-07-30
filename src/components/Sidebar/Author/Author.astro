@@ -1,0 +1,43 @@
+---
+import Image from "@/components/Image/Image.astro";
+import ThemeSwitcher from "@/components/ThemeSwitcher/ThemeSwitcher.astro";
+
+import styles from "./Author.module.scss";
+
+interface Props {
+  author: {
+    name: string;
+    bio: string;
+    photo: string;
+  };
+  isIndex?: boolean;
+}
+
+const { author, isIndex } = Astro.props;
+---
+
+<div class={styles.author}>
+  <a href="/">
+    <Image alt={author.name} path={author.photo} class={styles.photo} />
+  </a>
+
+  <div class={styles.titleContainer}>
+    {
+      isIndex ? (
+        <h1 class={styles.title}>
+          <a class={styles.link} href="/">
+            {author.name}
+          </a>
+        </h1>
+      ) : (
+        <h2 class={styles.title}>
+          <a class={styles.link} href="/">
+            {author.name}
+          </a>
+        </h2>
+      )
+    }
+    <ThemeSwitcher />
+  </div>
+  <p class={styles.subtitle}>{author.bio}</p>
+</div>

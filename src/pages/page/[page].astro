@@ -1,0 +1,36 @@
+---
+import Feed from "@/components/Feed/Feed.astro";
+import Page from "@/components/Page/Page.astro";
+import Pagination from "@/components/Pagination/Pagination.astro";
+import Sidebar from "@/components/Sidebar/Sidebar.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { allPosts, paginate } from "@/lib/posts";
+import { site } from "@/lib/site";
+import { paginationUrl } from "@/lib/urls";
+
+export async function getStaticPaths() {
+  const pages = paginate(await allPosts(), site.postsLimit);
+  return pages.slice(1).map((entries, index) => ({
+    params: { page: String(index + 1) },
+    props: { entries, page: index + 1, total: pages.length },
+  }));
+}
+
+const { entries, page, total } = Astro.props;
+---
+
+<BaseLayout
+  title={`Posts - Page ${page} - ${site.title}`}
+  description={site.subtitle}
+>
+  <Sidebar isIndex />
+  <Page>
+    <Feed entries={entries} />
+    <Pagination
+      prevPagePath={page <= 1 ? "/" : paginationUrl("/", page - 1)}
+      nextPagePath={paginationUrl("/", page + 1)}
+      hasPrevPage={page !== 0}
+      hasNextPage={page !== total - 1}
+    />
+  </Page>
+</BaseLayout>

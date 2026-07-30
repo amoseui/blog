@@ -1,0 +1,53 @@
+---
+import { getCollection, render } from "astro:content";
+
+import PageView from "@/components/Page/Page.astro";
+import PostView from "@/components/Post/Post.astro";
+import Sidebar from "@/components/Sidebar/Sidebar.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { site } from "@/lib/site";
+import { entryUrl } from "@/lib/urls";
+
+export async function getStaticPaths() {
+  const entries = await getCollection("blog", ({ data }) => !data.draft);
+  const paths = entries.map((entry) => ({
+    params: { slug: entryUrl(entry).replace(/^\//, "") },
+    props: { entry },
+  }));
+  const seen = new Set();
+  for (const p of paths) {
+    if (seen.has(p.params.slug)) {
+      throw new Error(`duplicate url: ${p.params.slug}`);
+    }
+    seen.add(p.params.slug);
+  }
+  return paths;
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const image = entry.data.socialImage
+  ? new URL(entry.data.socialImage.src, site.url).toString()
+  : undefined;
+---
+
+<BaseLayout
+  title={`${entry.data.title} - ${site.title}`}
+  description={entry.data.description || site.subtitle}
+  image={image}
+>
+  {
+    entry.data.template === "post" ? (
+      <PostView entry={entry}>
+        <Content />
+      </PostView>
+    ) : (
+      <>
+        <Sidebar />
+        <PageView title={entry.data.title}>
+          <Content />
+        </PageView>
+      </>
+    )
+  }
+</BaseLayout>

@@ -1,6 +1,6 @@
 ---
 title: 2025 오픈소스 컨트리뷰션 아카데미 체험형 멘토 후기
-date: 2025-12-31 14:30
+date: 2025-12-31 23:30
 template: post
 draft: false
 slug: /ossca-2025-chromium

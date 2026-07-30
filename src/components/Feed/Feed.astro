@@ -1,0 +1,60 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+import { categoryUrl, entryUrl, href } from "@/lib/urls";
+
+import styles from "./Feed.module.scss";
+
+interface Props {
+  entries: CollectionEntry<"blog">[];
+}
+
+const { entries } = Astro.props;
+---
+
+<div class={styles.feed}>
+  {
+    entries.map((entry) => (
+      <div class={styles.item}>
+        <div class={styles.meta}>
+          <time
+            class={styles.time}
+            datetime={new Date(entry.data.date ?? 0).toLocaleDateString(
+              "en-US",
+              {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+                timeZone: "Asia/Seoul",
+              },
+            )}
+          >
+            {new Date(entry.data.date ?? 0).toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "long",
+              timeZone: "Asia/Seoul",
+            })}
+          </time>
+          <span class={styles.divider} />
+          <span class={styles.category}>
+            <a
+              href={href(categoryUrl(entry.data.category ?? ""))}
+              class={styles.link}
+            >
+              {entry.data.category}
+            </a>
+          </span>
+        </div>
+        <h2 class={styles.title}>
+          <a class={styles.link} href={href(entryUrl(entry))}>
+            {entry.data.title}
+          </a>
+        </h2>
+        <p class={styles.description}>{entry.data.description}</p>
+        <a class={styles.more} href={href(entryUrl(entry))}>
+          Read
+        </a>
+      </div>
+    ))
+  }
+</div>

@@ -1,0 +1,26 @@
+---
+import { site } from "@/lib/site";
+
+import Author from "./Author/Author.astro";
+import Contacts from "./Contacts/Contacts.astro";
+import Copyright from "./Copyright/Copyright.astro";
+import Menu from "./Menu/Menu.astro";
+
+import styles from "./Sidebar.module.scss";
+
+interface Props {
+  isIndex?: boolean;
+}
+
+const { isIndex } = Astro.props;
+const { author, copyright, menu } = site;
+---
+
+<div class={styles.sidebar}>
+  <div class={styles.inner}>
+    <Author author={author} isIndex={isIndex} />
+    <Menu menu={menu} />
+    <Contacts contacts={author.contacts} />
+    <Copyright copyright={copyright} />
+  </div>
+</div>

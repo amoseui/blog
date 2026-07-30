@@ -1,0 +1,53 @@
+---
+// Official giscus embed; data-* values ported from GiscusComments.tsx.
+// No SRI hash on purpose: giscus updates client.js without publishing hashes.
+---
+
+<div>
+  <script
+    is:inline
+    src="https://giscus.app/client.js"
+    data-repo="amoseui/blog"
+    data-repo-id="MDEwOlJlcG9zaXRvcnk0MjM4NTYyNw=="
+    data-category="Comments"
+    data-category-id="DIC_kwDOAobA284CXVz8"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="light"
+    data-lang="en"
+    crossorigin="anonymous"
+    async></script>
+</div>
+
+<script>
+  // Keep the giscus iframe theme in sync with the documentElement theme,
+  // mirroring the postMessage behavior of the old GiscusComments.tsx.
+  const syncGiscusTheme = () => {
+    const frame = document.querySelector<HTMLIFrameElement>(
+      "iframe.giscus-frame",
+    );
+    const mode =
+      document.documentElement.className === "dark" ? "dark" : "light";
+    frame?.contentWindow?.postMessage(
+      { giscus: { setConfig: { theme: mode } } },
+      "https://giscus.app",
+    );
+  };
+
+  // Initial sync once the giscus iframe announces itself.
+  const onFirstGiscusMessage = (event: MessageEvent) => {
+    if (event.origin !== "https://giscus.app") return;
+    window.removeEventListener("message", onFirstGiscusMessage);
+    syncGiscusTheme();
+  };
+  window.addEventListener("message", onFirstGiscusMessage);
+
+  // Follow theme toggles (ThemeSwitcher swaps documentElement.className).
+  new MutationObserver(syncGiscusTheme).observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ["class"],
+  });
+</script>

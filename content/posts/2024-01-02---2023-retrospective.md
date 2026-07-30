@@ -1,6 +1,6 @@
 ---
 title: 2023년 회고 그리고 2024년
-date: 2024-01-02 14:45:00
+date: 2024-01-02 23:45:00
 template: post
 draft: false
 slug: /2023-retrospective

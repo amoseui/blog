@@ -3,8 +3,9 @@
 !*.md
 !*.mdx
 !*.ts
-!*.tsx
+!*.astro
 !*.yml
 !*.js
 /coverage/
+/dist/
 /public/

@@ -1,6 +1,6 @@
 ---
 title: 2015년과 2016년
-date: 2016-01-01 18:20:22
+date: 2016-01-02 03:20:22
 template: post
 draft: false
 slug: /2015-retrospective

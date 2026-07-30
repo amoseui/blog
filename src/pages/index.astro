@@ -1,0 +1,26 @@
+---
+import Feed from "@/components/Feed/Feed.astro";
+import Page from "@/components/Page/Page.astro";
+import Pagination from "@/components/Pagination/Pagination.astro";
+import Sidebar from "@/components/Sidebar/Sidebar.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { allPosts, paginate } from "@/lib/posts";
+import { site } from "@/lib/site";
+import { paginationUrl } from "@/lib/urls";
+
+const pages = paginate(await allPosts(), site.postsLimit);
+const total = pages.length;
+---
+
+<BaseLayout title={site.title} description={site.subtitle}>
+  <Sidebar isIndex />
+  <Page>
+    <Feed entries={pages[0] ?? []} />
+    <Pagination
+      prevPagePath="/"
+      nextPagePath={paginationUrl("/", 1)}
+      hasPrevPage={false}
+      hasNextPage={total > 1}
+    />
+  </Page>
+</BaseLayout>

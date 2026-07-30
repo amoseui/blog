@@ -1,0 +1,13 @@
+---
+import styles from "./Button.module.scss";
+
+interface Props {
+  class?: string;
+  title: string;
+  to: string;
+}
+
+const { class: className, title, to } = Astro.props;
+---
+
+<a class:list={[styles.button, className]} href={to}>{title}</a>

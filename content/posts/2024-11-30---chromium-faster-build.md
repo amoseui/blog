@@ -1,6 +1,6 @@
 ---
 title: Chromium Faster Build 방법
-date: 2024-11-30 12:00:00
+date: 2024-11-30 21:00:00
 template: post
 draft: false
 slug: /chromium-faster-build

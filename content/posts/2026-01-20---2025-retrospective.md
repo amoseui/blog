@@ -1,6 +1,6 @@
 ---
 title: 2025년 회고
-date: 2026-01-20 12:00
+date: 2026-01-20 21:00
 template: post
 draft: false
 slug: /2025-retrospective

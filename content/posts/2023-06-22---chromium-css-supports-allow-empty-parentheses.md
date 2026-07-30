@@ -1,6 +1,6 @@
 ---
 title: "Chromium Contribution: CSS @supports <general-enclosed> rule 에서 비어있는 () 허용"
-date: 2023-06-22 20:30:00
+date: 2023-06-23 05:30:00
 template: post
 draft: false
 slug: /chromium-css-supports-allow-empty-parentheses
