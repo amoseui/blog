@@ -42,3 +42,8 @@ yarn.lock
 
 # workspace-flow spec/plan (local only)
 docs/superpowers/
+
+# generated from content/photo.jpg (scripts/generate-icons.mjs)
+public/icons/
+public/favicon-32x32.png
+public/photo.jpg

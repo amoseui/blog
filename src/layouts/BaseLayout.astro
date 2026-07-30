@@ -1,4 +1,7 @@
 ---
+import { createHash } from "node:crypto";
+import { readFileSync } from "node:fs";
+
 import "@/assets/scss/main.scss";
 
 import Meta from "@/components/Meta/Meta.astro";
@@ -12,6 +15,14 @@ interface Props {
 }
 
 const { title, description = site.subtitle, image } = Astro.props;
+
+// Favicons are generated from content/photo.jpg at build time (see
+// scripts/generate-icons.mjs). The cache-buster is derived from the source
+// image content so swapping the photo invalidates cached icons automatically.
+const ICON_SIZES = [48, 72, 96, 144, 192, 256, 384, 512];
+const iconVersion = createHash("md5")
+  .update(readFileSync("content/photo.jpg"))
+  .digest("hex");
 ---
 
 <html lang="en">
@@ -21,49 +32,18 @@ const { title, description = site.subtitle, image } = Astro.props;
     <Meta title={title} description={description} image={image} />
     <link
       rel="icon"
-      href="/favicon-32x32.png?v=15add44ca6493b05c7e04dcb785a9707"
+      href={`/favicon-32x32.png?v=${iconVersion}`}
       type="image/png"
     />
-    <link
-      rel="apple-touch-icon"
-      sizes="48x48"
-      href="/icons/icon-48x48.png?v=15add44ca6493b05c7e04dcb785a9707"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="72x72"
-      href="/icons/icon-72x72.png?v=15add44ca6493b05c7e04dcb785a9707"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="96x96"
-      href="/icons/icon-96x96.png?v=15add44ca6493b05c7e04dcb785a9707"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="144x144"
-      href="/icons/icon-144x144.png?v=15add44ca6493b05c7e04dcb785a9707"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="192x192"
-      href="/icons/icon-192x192.png?v=15add44ca6493b05c7e04dcb785a9707"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="256x256"
-      href="/icons/icon-256x256.png?v=15add44ca6493b05c7e04dcb785a9707"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="384x384"
-      href="/icons/icon-384x384.png?v=15add44ca6493b05c7e04dcb785a9707"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="512x512"
-      href="/icons/icon-512x512.png?v=15add44ca6493b05c7e04dcb785a9707"
-    />
+    {
+      ICON_SIZES.map((size) => (
+        <link
+          rel="apple-touch-icon"
+          sizes={`${size}x${size}`}
+          href={`/icons/icon-${size}x${size}.png?v=${iconVersion}`}
+        />
+      ))
+    }
     <script is:inline>
       (() => {
         let mode = "light";
