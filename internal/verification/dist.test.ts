@@ -87,6 +87,16 @@ describe("dist keeps the gatsby baseline contract", () => {
     }
   });
 
+  test("content images keep their intrinsic ratio when width is capped", () => {
+    // astro:assets emits explicit width/height attributes; the post body caps
+    // rendered width via max-width, so the stylesheet must reset height to
+    // auto or every image wider than the column renders distorted.
+    const cssFiles = globSync("dist/_astro/*.css");
+    expect(cssFiles.length).toBeGreaterThan(0);
+    const css = cssFiles.map((f) => readFileSync(f, "utf8")).join("\n");
+    expect(css).toMatch(/img\[width\]\[height\]\s*\{[^}]*height:\s*auto/);
+  });
+
   test("sitemap, robots, cname exist", () => {
     expect(existsSync("dist/sitemap-index.xml")).toBe(true);
     expect(existsSync("dist/robots.txt")).toBe(true);
