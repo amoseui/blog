@@ -110,10 +110,14 @@ describe("dist keeps the gatsby baseline contract", () => {
     );
   });
 
-  test("sitemap, robots, cname exist", () => {
+  test("sitemap and robots exist", () => {
+    // No CNAME check: pages deployed via actions takes the custom domain
+    // from the repo settings, not from a file in the artifact.
     expect(existsSync("dist/sitemap-index.xml")).toBe(true);
     expect(existsSync("dist/robots.txt")).toBe(true);
-    expect(existsSync("dist/CNAME")).toBe(true);
+    expect(readFileSync("dist/robots.txt", "utf8")).toContain(
+      "Sitemap: https://blog.amoseui.com/sitemap-index.xml",
+    );
   });
 
   test("sitemap urls use the canonical trailing-slash form", () => {
