@@ -23,5 +23,8 @@ await Promise.all([
     .toFile("public/favicon-32x32.png"),
 ]);
 copyFileSync(SOURCE, "public/photo.jpg");
+// public/ is wholly gitignored, so static sources live outside it and are
+// copied in here alongside the generated assets.
+copyFileSync("src/sw.js", "public/sw.js");
 
 console.log(`generated ${SIZES.length} icons + favicon + photo from ${SOURCE}`);

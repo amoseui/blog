@@ -44,7 +44,5 @@ yarn.lock
 docs/superpowers/
 
 # fully generated at build time (scripts/generate-icons.mjs + prebuild hook);
-# other files in public/ are real sources and stay tracked
-public/favicon-32x32.png
-public/icons/
-public/photo.jpg
+# static sources such as src/sw.js are copied in by the same script
+public/

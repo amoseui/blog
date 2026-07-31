@@ -1,5 +1,6 @@
-// Self-destroying service worker. The previous Gatsby site
-// (gatsby-plugin-offline) registered a worker at this path that keeps serving
+// Self-destroying service worker, served at /sw.js (copied into public/ by
+// scripts/generate-icons.mjs). The previous Gatsby site (gatsby-plugin-offline)
+// registered a worker at that path that keeps serving
 // its cached app shell to returning visitors, who then see a blank page. This
 // replacement takes over immediately, wipes every cache it left behind, and
 // reloads open tabs so the current site is fetched from the network.
