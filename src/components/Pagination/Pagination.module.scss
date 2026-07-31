@@ -1,11 +1,12 @@
 @use "sass:color";
 
-@import "../../assets/scss/variables";
-@import "../../assets/scss/mixins";
+@use "../../assets/scss/variables";
+@use "../../assets/scss/mixins";
+@use "../../assets/scss/mixins/margin";
 
 .pagination {
   display: flex;
-  @include margin-top(2);
+  @include margin.margin-top(2);
 
   .previous {
     text-align: left;
@@ -22,7 +23,7 @@
       }
 
       &.disable {
-        color: $color-dark-cloud;
+        color: variables.$color-dark-cloud;
         pointer-events: none;
       }
     }
@@ -43,7 +44,7 @@
       }
 
       &.disable {
-        color: $color-dark-cloud;
+        color: variables.$color-dark-cloud;
         pointer-events: none;
       }
     }

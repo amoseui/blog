@@ -1,12 +1,12 @@
-@import "../../assets/scss/variables";
-@import "../../assets/scss/mixins";
+@use "../../assets/scss/variables";
+@use "../../assets/scss/mixins";
 
 .layout {
   // Centered clearfix container, inlined from the css the retired lost
   // plugin generated for `lost-center` so the rendered layout is unchanged.
   margin-left: auto;
   margin-right: auto;
-  max-width: $layout-width;
+  max-width: variables.$layout-width;
 
   &::before {
     content: "";

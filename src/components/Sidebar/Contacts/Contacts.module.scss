@@ -1,8 +1,8 @@
-@import "../../../assets/scss/variables";
-@import "../../../assets/scss/mixins";
+@use "../../../assets/scss/variables";
+@use "../../../assets/scss/mixins";
 
 .contacts {
-  @include margin-bottom(1);
+  @include mixins.margin-bottom(1);
 
   .list {
     display: flex;
@@ -11,8 +11,8 @@
     flex-shrink: 0;
     list-style: none;
     max-width: 165px;
-    @include padding-equal(0);
-    @include margin(0.5, 0);
+    @include mixins.padding-equal(0);
+    @include mixins.margin(0.5, 0);
 
     .item {
       align-content: center;
@@ -20,16 +20,16 @@
       border: 1px solid var(--color-contacts-border);
       border-radius: 50%;
       display: flex;
-      height: $button-height;
+      height: variables.$button-height;
       justify-content: center;
-      line-height: $button-height;
+      line-height: variables.$button-height;
       text-align: center;
-      width: $button-height;
-      @include padding-equal(0);
-      @include margin-equal(0.25);
+      width: variables.$button-height;
+      @include mixins.padding-equal(0);
+      @include mixins.margin-equal(0.25);
 
       &:nth-child(3n + 1) {
-        @include margin-left(0);
+        @include mixins.margin-left(0);
       }
 
       .link {

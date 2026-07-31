@@ -1,14 +1,18 @@
-@import "../variables";
-@import "../mixins";
+@use "../variables";
+@use "../mixins";
+@use "../mixins/breakpoints";
+@use "../mixins/line-height";
+@use "../mixins/margin";
+@use "../mixins/padding";
 
 body {
   background: var(--color-page-background);
   color: var(--color-typographic-base-font);
-  font-family: $typographic-font-family;
-  font-size: $typographic-base-font-size;
+  font-family: variables.$typographic-font-family;
+  font-size: variables.$typographic-base-font-size;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  line-height: $typographic-base-line-height;
+  line-height: variables.$typographic-base-line-height;
   margin: 0 0 0 calc(100vw - 100%);
   text-rendering: optimizelegibility;
   -ms-text-size-adjust: 100%;
@@ -21,50 +25,50 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $typographic-font-family;
+  font-family: variables.$typographic-font-family;
   font-weight: 600;
 }
 
 h1 {
-  font-size: $typographic-base-font-size * 2.5;
-  @include line-height(2);
-  @include margin-top(4);
-  @include margin-bottom(1);
+  font-size: variables.$typographic-base-font-size * 2.5;
+  @include line-height.line-height(2);
+  @include margin.margin-top(4);
+  @include margin.margin-bottom(1);
 }
 
 h2 {
-  font-size: $typographic-base-font-size * 1.6875;
-  @include line-height(1.5);
-  @include margin-top(2);
-  @include margin-bottom(0.5);
+  font-size: variables.$typographic-base-font-size * 1.6875;
+  @include line-height.line-height(1.5);
+  @include margin.margin-top(2);
+  @include margin.margin-bottom(0.5);
 }
 
 h3 {
-  font-size: $typographic-base-font-size * 1.375;
-  @include line-height(1.3);
-  @include margin-top(1);
-  @include margin-bottom(0.5);
+  font-size: variables.$typographic-base-font-size * 1.375;
+  @include line-height.line-height(1.3);
+  @include margin.margin-top(1);
+  @include margin.margin-bottom(0.5);
 }
 
 h4 {
-  font-size: $typographic-base-font-size * 1.2;
-  @include line-height(1);
-  @include margin-top(1.5);
-  @include margin-bottom(0.5);
+  font-size: variables.$typographic-base-font-size * 1.2;
+  @include line-height.line-height(1);
+  @include margin.margin-top(1.5);
+  @include margin.margin-bottom(0.5);
 }
 
 h5 {
-  font-size: $typographic-base-font-size;
-  @include line-height(1);
-  @include margin-top(2.5);
-  @include margin-bottom(0.5);
+  font-size: variables.$typographic-base-font-size;
+  @include line-height.line-height(1);
+  @include margin.margin-top(2.5);
+  @include margin.margin-bottom(0.5);
 }
 
 h6 {
-  font-size: $typographic-base-font-size;
-  @include line-height(1);
-  @include margin-top(2.5);
-  @include margin-bottom(0.5);
+  font-size: variables.$typographic-base-font-size;
+  @include line-height.line-height(1);
+  @include margin.margin-top(2.5);
+  @include margin.margin-bottom(0.5);
 }
 
 img {
@@ -77,8 +81,8 @@ hr {
   background-image: linear-gradient(to bottom,
       transparent 1px,
       transparent 11px,
-      $color-dark 11px,
-      $color-dark 15px,
+      variables.$color-dark 11px,
+      variables.$color-dark 15px,
       transparent 15px,
       transparent 26px);
   background-size: 100% 26px;
@@ -116,27 +120,27 @@ ol {
 
 ul,
 ol {
-  @include margin-bottom(1);
+  @include margin.margin-bottom(1);
   margin-top: 0;
 
   & li {
     padding: 0 5px;
 
     &+li {
-      @include margin-top(0.32);
+      @include margin.margin-top(0.32);
     }
   }
 
   & ul,
   & ol {
     margin-bottom: 0;
-    @include margin-top(0.32);
+    @include margin.margin-top(0.32);
   }
 }
 
 p {
-  @include line-height(1);
-  @include margin-bottom(1);
+  @include line-height.line-height(1);
+  @include margin.margin-bottom(1);
 }
 
 blockquote {
@@ -152,21 +156,21 @@ figure {
 }
 
 figcaption {
-  @include line-height(0.75);
-  @include margin-top(0.25);
+  @include line-height.line-height(0.75);
+  @include margin.margin-top(0.25);
   color: var(--color-typographic-base-font);
-  font-size: $typographic-small-font-size;
+  font-size: variables.$typographic-small-font-size;
   font-style: italic;
   margin-bottom: 0;
   text-align: center;
 }
 
-@include breakpoint-sm {
+@include breakpoints.breakpoint-sm {
 
   figure.float-left,
   figure.float-right {
     max-width: 310px;
-    @include padding(0, 1, 0, 1);
+    @include padding.padding(0, 1, 0, 1);
   }
 
   .float-right {

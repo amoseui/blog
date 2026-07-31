@@ -1,21 +1,21 @@
-@import "../../assets/scss/variables";
-@import "../../assets/scss/mixins";
+@use "../../assets/scss/variables";
+@use "../../assets/scss/mixins";
 
 .post {
   .content {
-    @include margin-auto();
+    @include mixins.margin-auto();
   }
 
   .footer {
-    max-width: $layout-post-width;
-    @include padding(0, 0.5);
-    @include margin-auto();
+    max-width: variables.$layout-post-width;
+    @include mixins.padding(0, 0.5);
+    @include mixins.margin-auto();
   }
 
   .comments {
-    max-width: $layout-post-width;
-    @include padding(0, 0.5);
-    @include margin-auto();
+    max-width: variables.$layout-post-width;
+    @include mixins.padding(0, 0.5);
+    @include mixins.margin-auto();
   }
 
   .buttons {
@@ -23,22 +23,22 @@
     display: flex;
     justify-content: center;
     text-align: center;
-    @include margin(1, 0, 0, 0);
+    @include mixins.margin(1, 0, 0, 0);
 
     .buttonArticles {
-      @include margin(0, 0.5, 0, 0);
+      @include mixins.margin(0, 0.5, 0, 0);
     }
   }
 }
 
-@include breakpoint-md {
+@include mixins.breakpoint-md {
   .post {
     .footer {
-      @include padding-equal(0);
+      @include mixins.padding-equal(0);
     }
 
     .comments {
-      @include padding-equal(0);
+      @include mixins.padding-equal(0);
     }
 
     .buttons {
@@ -46,7 +46,7 @@
       max-width: none;
       position: fixed;
       top: 30px;
-      @include margin(0, 0.5, 0, 0);
+      @include mixins.margin(0, 0.5, 0, 0);
     }
   }
 }

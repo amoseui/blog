@@ -1,10 +1,12 @@
-@import "../../assets/scss/mixins";
+@use "../../assets/scss/mixins";
+@use "../../assets/scss/mixins/breakpoints";
+@use "../../assets/scss/mixins/padding";
 
 .sidebar {
   width: 100%;
 
   .inner {
-    @include padding(1, 0.75, 0);
+    @include padding.padding(1, 0.75, 0);
     position: relative;
 
     &:after {
@@ -19,7 +21,7 @@
   }
 }
 
-@include breakpoint-sm {
+@include breakpoints.breakpoint-sm {
   .sidebar {
     // Float-grid column, inlined from the css the retired lost plugin
     // generated for `lost-column: 5/12` (gutter 30px, cycle 12) so the
@@ -46,7 +48,7 @@
     }
 
     .inner {
-      @include padding(1.25, 0.75, 0);
+      @include padding.padding(1.25, 0.75, 0);
 
       &:after {
         bottom: 0;
@@ -61,7 +63,7 @@
   }
 }
 
-@include breakpoint-md {
+@include breakpoints.breakpoint-md {
   .sidebar {
     // lost-column: 1/3 equivalent (gutter 30px, cycle 3).
     width: calc(33.3% - 20px);
@@ -86,7 +88,7 @@
     }
 
     .inner {
-      @include padding-equal(1.5);
+      @include padding.padding-equal(1.5);
     }
   }
 }

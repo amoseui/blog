@@ -1,4 +1,5 @@
 import { defineConfig } from "astro/config";
+import { unified } from "@astrojs/markdown-remark";
 import sitemap from "@astrojs/sitemap";
 import autoprefixer from "autoprefixer";
 import rehypeSlug from "rehype-slug";
@@ -21,15 +22,20 @@ export default defineConfig({
   integrations: [sitemap()],
   markdown: {
     syntaxHighlight: "prism",
-    rehypePlugins: [
-      rehypeSlug,
-      rehypeAutolinkGatsby,
-      rehypeInlineCode,
-      [
-        rehypeExternalLinks,
-        { target: "_blank", rel: ["nofollow", "noopener", "noreferrer"] },
+    // The top-level markdown.rehypePlugins option is deprecated since Astro 7
+    // (Sätteri is the default pipeline); these plugins need the unified()
+    // processor from @astrojs/markdown-remark.
+    processor: unified({
+      rehypePlugins: [
+        rehypeSlug,
+        rehypeAutolinkGatsby,
+        rehypeInlineCode,
+        [
+          rehypeExternalLinks,
+          { target: "_blank", rel: ["nofollow", "noopener", "noreferrer"] },
+        ],
       ],
-    ],
+    }),
   },
   vite: {
     css: {

@@ -1,23 +1,23 @@
 @use "sass:color";
-@import "../variables";
+@use "../variables";
 
 :root.dark,
 .dark *:after,
 .dark *:before {
-  --color-white: #{$color-white};
-  --color-primary: #{$color-sky-blue};
-  --color-secondary: #{$color-blue};
-  --color-prism-background: #{$color-dark-paper};
-  --color-typographic-base-font: #{$color-white};
-  --color-typographic-link-p-font: #{$color-sky-blue};
-  --color-typographic-link-s-font: #{$color-blue};
-  --color-page-border: #{$color-dark-cloud};
-  --color-page-background: #{$color-dark};
-  --color-sidebar-border: #{$color-dark-cloud};
-  --color-sidebar-border-fade: #{$color-dark};
-  --color-contacts-border: #{$color-dark-cloud};
-  --color-button-border: #{$color-dark-cloud};
-  --color-button-color: #{$color-white};
-  --color-theme-switcher: #{$color-white-cloud};
-  --color-theme-switcher-hover: #{$color-blue};
+  --color-white: #{variables.$color-white};
+  --color-primary: #{variables.$color-sky-blue};
+  --color-secondary: #{variables.$color-blue};
+  --color-prism-background: #{variables.$color-dark-paper};
+  --color-typographic-base-font: #{variables.$color-white};
+  --color-typographic-link-p-font: #{variables.$color-sky-blue};
+  --color-typographic-link-s-font: #{variables.$color-blue};
+  --color-page-border: #{variables.$color-dark-cloud};
+  --color-page-background: #{variables.$color-dark};
+  --color-sidebar-border: #{variables.$color-dark-cloud};
+  --color-sidebar-border-fade: #{variables.$color-dark};
+  --color-contacts-border: #{variables.$color-dark-cloud};
+  --color-button-border: #{variables.$color-dark-cloud};
+  --color-button-color: #{variables.$color-white};
+  --color-theme-switcher: #{variables.$color-white-cloud};
+  --color-theme-switcher-hover: #{variables.$color-blue};
 }
