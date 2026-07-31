@@ -1,7 +1,7 @@
 @use "../../../assets/scss/variables";
 @use "../../../assets/scss/mixins";
-@use "src/assets/scss/mixins/line-height";
-@use "src/assets/scss/mixins/margin";
+@use "../../../assets/scss/mixins/line-height";
+@use "../../../assets/scss/mixins/margin";
 
 .author {
   .photo {

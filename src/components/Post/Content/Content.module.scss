@@ -1,9 +1,9 @@
 @use "../../../assets/scss/variables";
 @use "../../../assets/scss/mixins";
-@use "src/assets/scss/mixins/breakpoints";
-@use "src/assets/scss/mixins/line-height";
-@use "src/assets/scss/mixins/margin";
-@use "src/assets/scss/mixins/padding";
+@use "../../../assets/scss/mixins/breakpoints";
+@use "../../../assets/scss/mixins/line-height";
+@use "../../../assets/scss/mixins/margin";
+@use "../../../assets/scss/mixins/padding";
 
 .content {
   @include margin.margin-auto();

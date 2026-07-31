@@ -1,7 +1,7 @@
 @use "../../../assets/scss/variables";
 @use "../../../assets/scss/mixins";
-@use "src/assets/scss/mixins/margin";
-@use "src/assets/scss/mixins/padding";
+@use "../../../assets/scss/mixins/margin";
+@use "../../../assets/scss/mixins/padding";
 
 .menu {
   @include margin.margin-bottom(1);

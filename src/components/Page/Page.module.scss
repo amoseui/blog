@@ -1,9 +1,9 @@
 @use "../../assets/scss/variables";
 @use "../../assets/scss/mixins";
-@use "src/assets/scss/mixins/breakpoints";
-@use "src/assets/scss/mixins/line-height";
-@use "src/assets/scss/mixins/margin";
-@use "src/assets/scss/mixins/padding";
+@use "../../assets/scss/mixins/breakpoints";
+@use "../../assets/scss/mixins/line-height";
+@use "../../assets/scss/mixins/margin";
+@use "../../assets/scss/mixins/padding";
 
 .page {
   @include margin.margin-bottom(2);
@@ -29,7 +29,29 @@
 
 @include breakpoints.breakpoint-sm {
   .page {
-    lost-column: 7/12;
+    // Float-grid column, inlined from the css the retired lost plugin
+    // generated for `lost-column: 7/12` (gutter 30px, cycle 12) so the
+    // rendered layout is unchanged.
+    width: calc(58.275% - 12.5px);
+
+    &:nth-child(n) {
+      clear: none;
+      float: left;
+      margin-right: 30px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:nth-child(12n) {
+      float: right;
+      margin-right: 0;
+    }
+
+    &:nth-child(12n + 1) {
+      clear: both;
+    }
 
     .inner {
       @include padding.padding(1.25, 0.75, 0);
@@ -39,7 +61,27 @@
 
 @include breakpoints.breakpoint-md {
   .page {
-    lost-column: 2/3;
+    // lost-column: 2/3 equivalent (gutter 30px, cycle 3).
+    width: calc(66.6% - 10px);
+
+    &:nth-child(n) {
+      clear: none;
+      float: left;
+      margin-right: 30px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:nth-child(3n) {
+      float: right;
+      margin-right: 0;
+    }
+
+    &:nth-child(3n + 1) {
+      clear: both;
+    }
 
     .inner {
       @include padding.padding(1.5, 1, 0);

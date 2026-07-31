@@ -1,5 +1,5 @@
-@use "src/assets/scss/variables";
-@use "src/assets/scss/mixins";
+@use "../../../assets/scss/variables";
+@use "../../../assets/scss/mixins";
 
 .contacts {
   @include mixins.margin-bottom(1);

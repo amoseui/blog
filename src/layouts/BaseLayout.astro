@@ -6,6 +6,7 @@ import "@/assets/scss/main.scss";
 
 import Meta from "@/components/Meta/Meta.astro";
 import styles from "@/components/Layout/Layout.module.scss";
+import { ICON_SOURCE } from "@/lib/icons";
 import { site } from "@/lib/site";
 
 interface Props {
@@ -20,15 +21,15 @@ const { title, description = site.subtitle, image } = Astro.props;
 // 301s), so the slash form is the canonical one search engines should index.
 const canonicalPath = Astro.url.pathname.endsWith("/")
   ? Astro.url.pathname
-  : `${Astro.url.pathname.replace(/\.html$/, "")}/`;
+  : `${Astro.url.pathname}/`;
 const canonicalUrl = new URL(canonicalPath, site.url).toString();
 
-// Favicons are generated from content/photo.jpg at build time (see
-// scripts/generate-icons.mjs). The cache-buster is derived from the source
-// image content so swapping the photo invalidates cached icons automatically.
-const ICON_SIZES = [48, 72, 96, 144, 192, 256, 384, 512];
+// Favicons are rendered from content/photo.jpg by the file endpoints in
+// src/pages (favicon-32x32.png.ts, apple-touch-icon.png.ts). The cache-buster
+// is derived from the source image content so swapping the photo invalidates
+// cached icons automatically.
 const iconVersion = createHash("md5")
-  .update(readFileSync("content/photo.jpg"))
+  .update(readFileSync(ICON_SOURCE))
   .digest("hex");
 ---
 
@@ -43,15 +44,11 @@ const iconVersion = createHash("md5")
       href={`/favicon-32x32.png?v=${iconVersion}`}
       type="image/png"
     />
-    {
-      ICON_SIZES.map((size) => (
-        <link
-          rel="apple-touch-icon"
-          sizes={`${size}x${size}`}
-          href={`/icons/icon-${size}x${size}.png?v=${iconVersion}`}
-        />
-      ))
-    }
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href={`/apple-touch-icon.png?v=${iconVersion}`}
+    />
     <script is:inline>
       (() => {
         let mode = "light";

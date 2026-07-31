@@ -42,6 +42,3 @@ yarn.lock
 
 # workspace-flow spec/plan (local only)
 docs/superpowers/
-
-# fully generated at build time (scripts/generate-icons.mjs + prebuild hook)
-public/

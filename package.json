@@ -24,10 +24,7 @@
     "serve": "astro preview",
     "start": "astro dev",
     "test": "vitest run",
-    "test:watch": "vitest",
-    "icons": "node scripts/generate-icons.mjs",
-    "prebuild": "npm run icons",
-    "prestart": "npm run icons"
+    "test:watch": "vitest"
   },
   "devDependencies": {
     "@types/node": "^22.20.1",
@@ -38,7 +35,6 @@
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-astro": "^1.7.0",
     "glob": "^13.0.6",
-    "lost": "9.0.1",
     "prettier": "^3.9.6",
     "prettier-plugin-astro": "^0.14.1",
     "rehype-external-links": "^3.0.0",

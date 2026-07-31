@@ -5,10 +5,6 @@
 @use "../mixins/margin";
 @use "../mixins/padding";
 
-html {
-  font-size: variables.$typographic-root-font-size;
-}
-
 body {
   background: var(--color-page-background);
   color: var(--color-typographic-base-font);

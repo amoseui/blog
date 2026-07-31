@@ -1,5 +1,4 @@
 ---
-import Image from "@/components/Image/Image.astro";
 import ThemeSwitcher from "@/components/ThemeSwitcher/ThemeSwitcher.astro";
 
 import styles from "./Author.module.scss";
@@ -18,7 +17,7 @@ const { author, isIndex } = Astro.props;
 
 <div class={styles.author}>
   <a href="/">
-    <Image alt={author.name} path={author.photo} class={styles.photo} />
+    <img src={author.photo} alt={author.name} class={styles.photo} />
   </a>
 
   <div class={styles.titleContainer}>
