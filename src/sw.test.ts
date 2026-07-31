@@ -6,8 +6,8 @@ import { expect, test } from "vitest";
 // /sw.js. Returning browsers are served the stale cached app shell, which
 // fails to boot against the Astro site and renders a blank page. A
 // self-destroying worker at the same path must replace it, clear its caches,
-// and reload open tabs. The source lives in src/ and is copied into the
-// gitignored public/ by scripts/generate-icons.mjs (prebuild/prestart).
+// and reload open tabs. The source lives in src/ and is served at /sw.js by
+// the src/pages/sw.js.ts endpoint.
 test("src/sw.js self-destroys the stale gatsby service worker", () => {
   const sw = readFileSync("src/sw.js", "utf-8");
   expect(sw).toContain("skipWaiting()");

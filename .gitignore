@@ -42,7 +42,3 @@ yarn.lock
 
 # workspace-flow spec/plan (local only)
 docs/superpowers/
-
-# fully generated at build time (scripts/generate-icons.mjs + prebuild hook);
-# static sources such as src/sw.js are copied in by the same script
-public/
