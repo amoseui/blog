@@ -1,10 +1,6 @@
 @import "../variables";
 @import "../mixins";
 
-html {
-  font-size: $typographic-root-font-size;
-}
-
 body {
   background: var(--color-page-background);
   color: var(--color-typographic-base-font);

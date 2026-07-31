@@ -2,5 +2,20 @@
 @import "../../assets/scss/mixins";
 
 .layout {
-  lost-center: $layout-width;
+  // Centered clearfix container, inlined from the css the retired lost
+  // plugin generated for `lost-center` so the rendered layout is unchanged.
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $layout-width;
+
+  &::before {
+    content: "";
+    display: table;
+  }
+
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
 }

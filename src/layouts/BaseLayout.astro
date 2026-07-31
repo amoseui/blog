@@ -21,7 +21,7 @@ const { title, description = site.subtitle, image } = Astro.props;
 // 301s), so the slash form is the canonical one search engines should index.
 const canonicalPath = Astro.url.pathname.endsWith("/")
   ? Astro.url.pathname
-  : `${Astro.url.pathname.replace(/\.html$/, "")}/`;
+  : `${Astro.url.pathname}/`;
 const canonicalUrl = new URL(canonicalPath, site.url).toString();
 
 // Favicons are rendered from content/photo.jpg by the file endpoints in

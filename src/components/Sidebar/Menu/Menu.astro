@@ -12,9 +12,9 @@ interface Props {
 
 const { menu } = Astro.props;
 
-// Gatsby Link's activeClassName equivalent: exact match against the page
-// path, normalized to the trailing-slash link form.
-const currentPath = href(Astro.url.pathname.replace(/\.html$/, ""));
+// Marks the menu item whose link exactly matches the current page path,
+// normalized to the trailing-slash link form.
+const currentPath = href(Astro.url.pathname);
 ---
 
 <nav class={styles.menu}>
