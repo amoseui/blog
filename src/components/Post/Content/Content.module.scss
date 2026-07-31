@@ -1,39 +1,43 @@
-@import "../../../assets/scss/variables";
-@import "../../../assets/scss/mixins";
+@use "../../../assets/scss/variables";
+@use "../../../assets/scss/mixins";
+@use "src/assets/scss/mixins/breakpoints";
+@use "src/assets/scss/mixins/line-height";
+@use "src/assets/scss/mixins/margin";
+@use "src/assets/scss/mixins/padding";
 
 .content {
-  @include margin-auto();
-  max-width: $layout-post-single-width;
-  @include padding(0, 0.5);
+  @include margin.margin-auto();
+  max-width: variables.$layout-post-single-width;
+  @include padding.padding(0, 0.5);
 
   .title {
-    font-size: $typographic-base-font-size * 2;
+    font-size: variables.$typographic-base-font-size * 2;
     font-weight: 600;
     margin-left: auto;
     margin-right: auto;
-    max-width: $layout-post-width;
+    max-width: variables.$layout-post-width;
     text-align: center;
-    @include line-height(1.65);
-    @include margin-top(1);
-    @include margin-bottom(0);
+    @include line-height.line-height(1.65);
+    @include margin.margin-top(1);
+    @include margin.margin-bottom(0);
   }
 
   .body {
     figure {
-      @include margin-bottom(1);
+      @include margin.margin-bottom(1);
 
       blockquote {
         font-style: italic;
         text-align: center;
-        @include margin-top(0);
-        @include padding(1, 0);
+        @include margin.margin-top(0);
+        @include padding.padding(1, 0);
 
         p {
-          font-size: $typographic-base-font-size * 1.6817;
-          max-width: $layout-post-width;
-          @include margin-top(0);
-          @include margin-bottom(1);
-          @include line-height(1.5);
+          font-size: variables.$typographic-base-font-size * 1.6817;
+          max-width: variables.$layout-post-width;
+          @include margin.margin-top(0);
+          @include margin.margin-bottom(1);
+          @include line-height.line-height(1.5);
         }
       }
     }
@@ -45,7 +49,7 @@
     * {
       margin-left: auto;
       margin-right: auto;
-      max-width: $layout-post-width;
+      max-width: variables.$layout-post-width;
     }
 
     h2 > a {
@@ -62,31 +66,31 @@
   }
 }
 
-@include breakpoint-md {
+@include breakpoints.breakpoint-md {
   .content {
-    @include padding-equal(0);
+    @include padding.padding-equal(0);
 
     .title {
-      font-size: $typographic-base-font-size * 3;
-      @include line-height(2.25);
-      @include margin-top(2.25);
-      @include margin-bottom(1.5);
+      font-size: variables.$typographic-base-font-size * 3;
+      @include line-height.line-height(2.25);
+      @include margin.margin-top(2.25);
+      @include margin.margin-bottom(1.5);
     }
 
     .body {
-      font-size: $typographic-base-font-size * 1.125;
-      @include line-height(1.125);
-      @include margin-bottom(1.125);
+      font-size: variables.$typographic-base-font-size * 1.125;
+      @include line-height.line-height(1.125);
+      @include margin.margin-bottom(1.125);
 
       p {
-        font-size: $typographic-base-font-size * 1.125;
-        @include line-height(1.125);
-        @include margin-bottom(1.125);
+        font-size: variables.$typographic-base-font-size * 1.125;
+        @include line-height.line-height(1.125);
+        @include margin.margin-bottom(1.125);
       }
 
       h2 > a {
         visibility: unset;
-        @include padding-right(0.5);
+        @include padding.padding-right(0.5);
       }
     }
   }

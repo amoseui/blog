@@ -1,9 +1,9 @@
 @use "sass:color";
 
-@import "../../../assets/scss/variables";
-@import "../../../assets/scss/mixins";
+@use "../../../assets/scss/variables";
+@use "../../../assets/scss/mixins";
 
 .copyright {
-  color: $color-gray;
-  font-size: $typographic-small-font-size;
+  color: variables.$color-gray;
+  font-size: variables.$typographic-small-font-size;
 }

@@ -1,7 +1,9 @@
 @charset "UTF-8";
 
-@import "mixins/breakpoints";
-@import "mixins/line-height";
-@import "mixins/keyframes";
-@import "mixins/padding";
-@import "mixins/margin";
+// Barrel module: re-export every mixin so consumers can `@use "…/mixins"` and
+// call them under the single `mixins.` namespace.
+@forward "mixins/breakpoints";
+@forward "mixins/line-height";
+@forward "mixins/keyframes";
+@forward "mixins/padding";
+@forward "mixins/margin";
