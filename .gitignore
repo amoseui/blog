@@ -43,5 +43,8 @@ yarn.lock
 # workspace-flow spec/plan (local only)
 docs/superpowers/
 
-# fully generated at build time (scripts/generate-icons.mjs + prebuild hook)
-public/
+# fully generated at build time (scripts/generate-icons.mjs + prebuild hook);
+# other files in public/ are real sources and stay tracked
+public/favicon-32x32.png
+public/icons/
+public/photo.jpg
