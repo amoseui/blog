@@ -1,18 +1,17 @@
 import { expect, test } from "vitest";
 import sharp from "sharp";
 
-import { ICON_SIZES } from "@/lib/icons";
 import { GET as getSw } from "./pages/sw.js.ts";
 import { GET as getPhoto } from "./pages/photo.jpg.ts";
 import { GET as getFavicon } from "./pages/favicon-32x32.png.ts";
-import { GET as getIcon, getStaticPaths } from "./pages/icons/[icon].png.ts";
+import { GET as getAppleTouchIcon } from "./pages/apple-touch-icon.png.ts";
 
 // These file endpoints replace the old prebuild step that copied generated
 // assets into public/: everything is produced straight into dist/ at build
 // time and served the same way by the dev server.
 
 const asContext = (params: Record<string, string> = {}) =>
-  ({ params }) as Parameters<typeof getIcon>[0];
+  ({ params }) as Parameters<typeof getFavicon>[0];
 
 test("/sw.js serves the self-destroying service worker", async () => {
   const res = getSw(asContext());
@@ -39,15 +38,10 @@ test("/favicon-32x32.png serves a 32px png", async () => {
   expect(meta.height).toBe(32);
 });
 
-test("icon endpoint enumerates every manifest size", () => {
-  const params = getStaticPaths().map((p) => p.params.icon);
-  expect(params).toEqual(ICON_SIZES.map((s) => `icon-${s}x${s}`));
-});
-
-test("icon endpoint renders the requested size", async () => {
-  const res = await getIcon(asContext({ icon: "icon-96x96" }));
+test("/apple-touch-icon.png serves the standard 180px icon", async () => {
+  const res = await getAppleTouchIcon(asContext());
   expect(res.headers.get("Content-Type")).toBe("image/png");
   const meta = await sharp(Buffer.from(await res.arrayBuffer())).metadata();
-  expect(meta.width).toBe(96);
-  expect(meta.height).toBe(96);
+  expect(meta.width).toBe(180);
+  expect(meta.height).toBe(180);
 });

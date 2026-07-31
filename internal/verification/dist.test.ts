@@ -148,15 +148,13 @@ describe("dist keeps the gatsby baseline contract", () => {
     }
   });
 
-  test("generated favicon set and profile photo exist", () => {
-    // These are built from content/photo.jpg by scripts/generate-icons.mjs
-    // (prebuild hook) and are not tracked in git.
-    for (const size of [48, 72, 96, 144, 192, 256, 384, 512]) {
-      expect(existsSync(`dist/icons/icon-${size}x${size}.png`), `${size}`).toBe(
-        true,
-      );
-    }
+  test("generated icons and profile photo exist", () => {
+    // Rendered from content/photo.jpg by the file endpoints in src/pages.
+    // The gatsby-era 48-512px manifest icon set was dropped: without a web
+    // manifest only the favicon and one 180px apple-touch-icon are used.
     expect(existsSync("dist/favicon-32x32.png")).toBe(true);
+    expect(existsSync("dist/apple-touch-icon.png")).toBe(true);
     expect(existsSync("dist/photo.jpg")).toBe(true);
+    expect(existsSync("dist/icons")).toBe(false);
   });
 });
