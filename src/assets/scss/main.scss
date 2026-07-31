@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
-@import "variables";
-@import "themes";
-@import "mixins";
-@import "base";
-@import "base/anchor";
-@import "base/images";
+@use "variables";
+@use "themes";
+@use "mixins";
+@use "base";
+@use "base/anchor";
+@use "base/images";

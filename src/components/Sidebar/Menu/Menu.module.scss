@@ -1,28 +1,30 @@
-@import "../../../assets/scss/variables";
-@import "../../../assets/scss/mixins";
+@use "../../../assets/scss/variables";
+@use "../../../assets/scss/mixins";
+@use "src/assets/scss/mixins/margin";
+@use "src/assets/scss/mixins/padding";
 
 .menu {
-  @include margin-bottom(1);
+  @include margin.margin-bottom(1);
 
   .list {
     list-style: none;
-    @include margin-equal(0);
-    @include padding-equal(0);
+    @include margin.margin-equal(0);
+    @include padding.padding-equal(0);
 
     .item {
-      @include margin(0.5, 0);
-      @include padding-equal(0);
+      @include margin.margin(0.5, 0);
+      @include padding.padding-equal(0);
 
       .link {
         border: 0;
         color: var(--color-typographic-base-font);
-        font-size: $typographic-base-font-size;
+        font-size: variables.$typographic-base-font-size;
         font-weight: normal;
 
         &:hover,
         &:focus {
-          border-bottom: 1px solid $color-blue;
-          color: $color-blue;
+          border-bottom: 1px solid variables.$color-blue;
+          color: variables.$color-blue;
         }
 
         &.active {

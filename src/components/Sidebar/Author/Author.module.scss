@@ -1,5 +1,7 @@
-@import "../../../assets/scss/variables";
-@import "../../../assets/scss/mixins";
+@use "../../../assets/scss/variables";
+@use "../../../assets/scss/mixins";
+@use "src/assets/scss/mixins/line-height";
+@use "src/assets/scss/mixins/margin";
 
 .author {
   .photo {
@@ -8,7 +10,7 @@
     display: inline-block;
     height: 75px;
     width: 75px;
-    @include margin-bottom(0);
+    @include margin.margin-bottom(0);
 
     img {
       border-radius: 50%;
@@ -16,10 +18,10 @@
   }
 
   .title {
-    font-size: $typographic-base-font-size * 1.125;
+    font-size: variables.$typographic-base-font-size * 1.125;
     font-weight: 600;
     margin: 0;
-    @include line-height(1.125);
+    @include line-height.line-height(1.125);
 
     .link {
       color: var(--color-typographic-base-font);
@@ -32,15 +34,15 @@
   }
 
   .subtitle {
-    color: $color-gray;
-    @include line-height(1);
-    @include margin-bottom(1);
+    color: variables.$color-gray;
+    @include line-height.line-height(1);
+    @include margin.margin-bottom(1);
   }
 
   .titleContainer {
     align-items: center;
     display: flex;
     justify-content: space-between;
-    @include margin(0.5, 0, 0.5, 0);
+    @include margin.margin(0.5, 0, 0.5, 0);
   }
 }
