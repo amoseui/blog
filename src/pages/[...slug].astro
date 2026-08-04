@@ -35,6 +35,7 @@ const image = entry.data.socialImage
   title={`${entry.data.title} - ${site.title}`}
   description={entry.data.description || site.subtitle}
   image={image}
+  type={entry.data.template === "post" ? "article" : "website"}
 >
   {
     entry.data.template === "post" ? (

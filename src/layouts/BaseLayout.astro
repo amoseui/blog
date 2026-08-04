@@ -13,9 +13,10 @@ interface Props {
   title: string;
   description?: string;
   image?: string;
+  type?: "website" | "article";
 }
 
-const { title, description = site.subtitle, image } = Astro.props;
+const { title, description = site.subtitle, image, type } = Astro.props;
 
 // Github pages serves directory output at the trailing-slash url (bare form
 // 301s), so the slash form is the canonical one search engines should index.
@@ -37,7 +38,7 @@ const iconVersion = createHash("md5")
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <Meta title={title} description={description} image={image} />
+    <Meta title={title} description={description} image={image} type={type} />
     <link rel="canonical" href={canonicalUrl} />
     <link
       rel="icon"
