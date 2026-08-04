@@ -3,10 +3,11 @@ interface Props {
   description: string;
   image?: string;
   title: string;
+  type?: "website" | "article";
 }
 
 const naverMeta = "b14b409f559df7b1c4219c72067097d7cd45ce9c";
-const { description, title, image } = Astro.props;
+const { description, title, image, type = "website" } = Astro.props;
 ---
 
 <title>{title}</title>
@@ -16,15 +17,15 @@ const { description, title, image } = Astro.props;
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
-<meta name="og:title" content={title} />
-<meta name="og:type" content="website" />
-<meta name="og:description" content={description} />
+<meta property="og:title" content={title} />
+<meta property="og:type" content={type} />
+<meta property="og:description" content={description} />
 
 {
   image ? (
     <>
       <meta name="image" content={image} />
-      <meta name="og:image" content={image} />
+      <meta property="og:image" content={image} />
       <meta name="twitter:image" content={image} />
     </>
   ) : null
