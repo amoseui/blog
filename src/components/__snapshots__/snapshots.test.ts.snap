@@ -15,15 +15,14 @@ exports[`BaseLayout snapshot 1`] = `
         }
         document.documentElement.className = mode;
       })();
-    </script><script async src="https://www.googletagmanager.com/gtag/js?id=G-7DNZ80VV7M"></script><script>(function(){const gaId = "G-7DNZ80VV7M";
-
+    </script><script async src="https://www.googletagmanager.com/gtag/js?id=G-7DNZ80VV7M"></script><script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-      gtag("config", gaId);
-    })();</script></head><body><div class="_layout_2c063b"><main>content</main></div></body></html>"
+      gtag("config", "G-7DNZ80VV7M");
+    </script></head><body><div class="_layout_2c063b"><main>content</main></div></body></html>"
 `;
 
 exports[`Feed snapshot 1`] = `"<div class="_feed_96d317"><div class="_item_96d317"><div class="_meta_96d317"><time class="_time_96d317" datetime="January 2, 2016">January 2016</time><span class="_divider_96d317"></span><span class="_category_96d317"><a href="/category/retrospective/" class="_link_96d317">retrospective</a></span></div><h2 class="_title_96d317"><a class="_link_96d317" href="/2015-retrospective/">2015년과 2016년</a></h2><p class="_description_96d317">2015년, 여러모로 아쉬운 한 해였다.</p><a class="_more_96d317" href="/2015-retrospective/">Read</a></div></div>"`;

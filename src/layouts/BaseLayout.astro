@@ -32,6 +32,17 @@ const canonicalUrl = new URL(canonicalPath, site.url).toString();
 const iconVersion = createHash("md5")
   .update(readFileSync(ICON_SOURCE))
   .digest("hex");
+
+// Keep Google's snippet shape for Search Console verification. Avoid
+// define:vars so gtag stays global and its config ID is a literal.
+const googleAnalyticsScript = `
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", ${JSON.stringify(site.googleAnalyticsId).replaceAll("<", "\\u003c")});
+    `;
 ---
 
 <html lang="en">
@@ -70,14 +81,7 @@ const iconVersion = createHash("md5")
       async
       src={`https://www.googletagmanager.com/gtag/js?id=${site.googleAnalyticsId}`}
     ></script>
-    <script is:inline define:vars={{ gaId: site.googleAnalyticsId }}>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", gaId);
-    </script>
+    <script is:inline set:html={googleAnalyticsScript} />
   </head>
   <body>
     <div class={styles.layout}><slot /></div>
