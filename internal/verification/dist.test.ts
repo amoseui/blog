@@ -7,6 +7,14 @@ import { describe, expect, test } from "vitest";
 const fixtures = (name: string) =>
   JSON.parse(readFileSync(`internal/verification/fixtures/${name}`, "utf8"));
 
+const decodeEntities = (s: string) =>
+  s
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&amp;/g, "&");
+
 // The fixtures are a frozen snapshot of the last gatsby build (2026-07-30) and
 // are never regenerated (gatsby is gone). The contract is monotonic: every
 // baseline url, anchor and rss item must keep existing so old links never
@@ -56,34 +64,38 @@ describe("dist keeps the gatsby baseline contract", () => {
     }
   });
 
-  test("every baseline rss item still exists", () => {
+  test("baseline rss items keep their guids with canonical links", () => {
     const expected = fixtures("rss-items.json") as {
       title: string;
       link: string;
       guid: string;
     }[];
-    const decodeEntities = (s: string) =>
-      s
-        .replace(/&lt;/g, "<")
-        .replace(/&gt;/g, ">")
-        .replace(/&quot;/g, '"')
-        .replace(/&#39;/g, "'")
-        .replace(/&amp;/g, "&");
     const rssContent = readFileSync("dist/rss.xml", "utf8");
     const items = [...rssContent.matchAll(/<item>[\s\S]*?<\/item>/g)];
     expect(items.length).toBeGreaterThanOrEqual(expected.length);
-    const actualTitles = new Set(
-      items.map(([item]) =>
-        decodeEntities(
-          (item.match(/<title>(?:<!\[CDATA\[)?([\s\S]*?)(?:\]\]>)?<\/title>/) ??
-            [])[1] ?? "",
-        ),
-      ),
-    );
     for (const { title, link, guid } of expected) {
-      expect(actualTitles.has(title), title).toBe(true);
-      expect(rssContent).toContain(`<link>${link}</link>`);
-      expect(rssContent).toContain(`<guid isPermaLink="false">${guid}</guid>`);
+      const item = items.find(([xml]) =>
+        xml.includes(`<guid isPermaLink="false">${guid}</guid>`),
+      )?.[0];
+      expect(item, title).toBeDefined();
+      const actualTitle = decodeEntities(
+        item?.match(
+          /<title>(?:<!\[CDATA\[)?([\s\S]*?)(?:\]\]>)?<\/title>/,
+        )?.[1] ?? "",
+      );
+      expect(actualTitle).toBe(title);
+      expect(item).toContain(`<link>${link}/</link>`);
+      expect(item?.match(/<guid\b/g)).toHaveLength(1);
+    }
+  });
+
+  test("all rss item links use the canonical trailing-slash form", () => {
+    const rssContent = readFileSync("dist/rss.xml", "utf8");
+    const items = [...rssContent.matchAll(/<item>[\s\S]*?<\/item>/g)];
+    expect(items.length).toBeGreaterThan(0);
+    for (const [item] of items) {
+      const link = item.match(/<link>([^<]+)<\/link>/)?.[1];
+      expect(link).toMatch(/^https:\/\/blog\.amoseui\.com\/.+\/$/);
     }
   });
 
@@ -130,21 +142,27 @@ describe("dist keeps the gatsby baseline contract", () => {
     expect(bare).toEqual([]);
   });
 
-  test("internal links use the canonical trailing-slash form", () => {
+  test("internal page links in html and rss content use the canonical form", () => {
     // Crawlers walking bare-form links hit a 301 on every hop, which search
     // console reports as "page with redirect". All internal hrefs must use
     // the slash form.
-    const pages = ["index.html", "2015-retrospective/index.html"];
-    for (const page of pages) {
-      const html = readFileSync(path.join("dist", page), "utf8");
-      const hrefs = [...html.matchAll(/href="(\/[^"]*)"/g)].map((m) => m[1]);
-      const bare = hrefs.filter(
-        (h) =>
-          !h.endsWith("/") &&
-          !h.includes("#") &&
-          !/\.(png|jpg|jpeg|webp|svg|css|js|xml|ico)(\?|$)/.test(h),
+    const origin = "https://blog.amoseui.com";
+    const documents = [...globSync("dist/**/*.html"), "dist/rss.xml"];
+    for (const document of documents) {
+      const html = decodeEntities(readFileSync(document, "utf8"));
+      const base = new URL(path.relative("dist", document), `${origin}/`);
+      const links = [...html.matchAll(/href="([^"]+)"/g)].map(
+        (m) => new URL(m[1], base),
       );
-      expect(bare, page).toEqual([]);
+      const bare = links
+        .filter(
+          (url) =>
+            url.origin === origin &&
+            !url.pathname.endsWith("/") &&
+            !path.posix.extname(url.pathname),
+        )
+        .map((url) => url.href);
+      expect(bare, document).toEqual([]);
     }
   });
 
