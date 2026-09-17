@@ -16,7 +16,7 @@ aliases:
 
 조금 늦게 남겨 보는 2025년 회고와 2026년.
 
-[2024년 회고](https://blog.amoseui.com/2024-retrospective)와 동일하게 오픈소스, 컨퍼런스/세미나/멘토링, 블로그, 회사에 대한 회고를 작성했고, 이번에는 개인 항목까지 추가했다.
+[2024년 회고](https://blog.amoseui.com/2024-retrospective/)와 동일하게 오픈소스, 컨퍼런스/세미나/멘토링, 블로그, 회사에 대한 회고를 작성했고, 이번에는 개인 항목까지 추가했다.
 
 ## 오픈소스
 
@@ -46,14 +46,14 @@ aliases:
 
 ### 멘토링
 
-위에서 여러번 언급했듯이 지난 4월부터 6주 동안 2025 오픈소스 컨트리뷰션 아카데미(OSSCA) 체험형 프로그램 멘토를 했다. 개인적으로 2025년의 가장 큰 이벤트였다. 자세한 후기는 [블로그 글](https://blog.amoseui.com/ossca-2025-chromium)로 따로 남겼다.
+위에서 여러번 언급했듯이 지난 4월부터 6주 동안 2025 오픈소스 컨트리뷰션 아카데미(OSSCA) 체험형 프로그램 멘토를 했다. 개인적으로 2025년의 가장 큰 이벤트였다. 자세한 후기는 [블로그 글](https://blog.amoseui.com/ossca-2025-chromium/)로 따로 남겼다.
 
 봄에는 모교에서 교수님 요청으로 재학생 대상으로 오픈소스 기여와 커리어 성장이라는 주제로 간단히 발표를 했다. 재학생 졸업 프로젝트 멘토링도 작년에 이어서 하나 했다. 요즘에는 오픈소스를 통해 내가 성장했다는 말과 오픈소스 기여를 추천하는 것이 학생들에게는 별로 공감이 되지 않겠다는 생각도 든다. AI 시대가 되면서, 무엇을 어떻게 조언해야 할지 이전보다 더 고민이 많아졌다.
 
 ## 블로그
 
-- 2025-01-04 [2024년 회고](https://blog.amoseui.com/2024-retrospective)
-- 2025-12-31 [2025 오픈소스 컨트리뷰션 아카데미 체험형 멘토 후기](https://blog.amoseui.com/ossca-2025-chromium)
+- 2025-01-04 [2024년 회고](https://blog.amoseui.com/2024-retrospective/)
+- 2025-12-31 [2025 오픈소스 컨트리뷰션 아카데미 체험형 멘토 후기](https://blog.amoseui.com/ossca-2025-chromium/)
 
 2024년 회고 글과 멘토링 후기 글 하나를 남겼다. 회고를 제외하면 블로그에 남긴 글은 하나 뿐이었다. OSSCA 멘토 후기는 5월 말에 프로그램이 끝나자마자 썼었는데 이후에 마무리를 못하다가 2025년 마지막 날에서야 올렸다.
 
@@ -62,11 +62,11 @@ aliases:
 
 ### 조회수 순위
 
-1. [Android 13 AOSP 빌드 및 cuttlefish 실행](https://blog.amoseui.com/android-13-aosp-cuttlefish)
-2. [Chromium Faster Build 방법](https://blog.amoseui.com/chromium-faster-build)
-3. [Chromium Committer 가 되었다](https://blog.amoseui.com/became-chromium-committer)
-4. [cpp-mini-chromium-template 프로젝트 소개](https://blog.amoseui.com/cpp-mini-chromium-template)
-5. [2024 GDG Google I/O Extended 간단 후기](https://blog.amoseui.com/2024-gdg-google-io-extended)
+1. [Android 13 AOSP 빌드 및 cuttlefish 실행](https://blog.amoseui.com/android-13-aosp-cuttlefish/)
+2. [Chromium Faster Build 방법](https://blog.amoseui.com/chromium-faster-build/)
+3. [Chromium Committer 가 되었다](https://blog.amoseui.com/became-chromium-committer/)
+4. [cpp-mini-chromium-template 프로젝트 소개](https://blog.amoseui.com/cpp-mini-chromium-template/)
+5. [2024 GDG Google I/O Extended 간단 후기](https://blog.amoseui.com/2024-gdg-google-io-extended/)
 
 ![search](media/2025-search.png)
 조회수와 검색어 순위는 작년과 큰 차이는 없다. 1년동안 정보성 글을 쓰지 않았다.

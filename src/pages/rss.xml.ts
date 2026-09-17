@@ -2,7 +2,7 @@ import rss from "@astrojs/rss";
 import { render } from "astro:content";
 import { experimental_AstroContainer as AstroContainer } from "astro/container";
 import { allPosts } from "@/lib/posts";
-import { entryUrl } from "@/lib/urls";
+import { entryUrl, href } from "@/lib/urls";
 import { site } from "@/lib/site";
 
 // Strip invalid XML control characters (ported from gatsby-config feed serialize)
@@ -17,29 +17,23 @@ export async function GET(context: { site: URL }) {
   for (const post of posts) {
     const { Content } = await render(post);
     const html = await container.renderToString(Content);
+    // Keep the published identifier stable even though the link now uses
+    // the canonical trailing slash. Feed readers use it to recognize items.
+    const guid = new URL(entryUrl(post), context.site).href.replace(/\/+$/, "");
     items.push({
       title: post.data.title,
       pubDate: post.data.date,
       description: sanitizeXml(post.data.description ?? ""),
-      link: entryUrl(post),
+      link: href(entryUrl(post)),
+      customData: `<guid isPermaLink="false">${guid.replaceAll("&", "&amp;")}</guid>`,
       content: sanitizeXml(html),
     });
   }
-  const response = await rss({
+  return rss({
     title: site.title,
     description: site.subtitle,
     site: context.site,
-    // Baseline gatsby feed links have no trailing slash; guid defaults to the
-    // link-based absolute URL, matching the baseline fixture.
-    trailingSlash: false,
+    trailingSlash: true,
     items,
   });
-  // @astrojs/rss hardcodes isPermaLink="true"; the published gatsby feed used
-  // "false", and keeping every guid byte identical avoids any chance of feed
-  // readers re-surfacing old items.
-  const xml = (await response.text()).replaceAll(
-    'isPermaLink="true"',
-    'isPermaLink="false"',
-  );
-  return new Response(xml, { headers: response.headers });
 }

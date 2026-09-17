@@ -22,7 +22,7 @@ aliases:
 2. Chromium 외 다른 오픈소스 프로젝트에 꾸준히 기여하는 것
 3. 내 프로젝트를 오픈소스 프로젝트 형식으로 개발하여 구글 플레이스토어에 출시하는 것
 
-3월에 Chromium Committer 로 선정되면서 1번 목표를 달성했다. 자세한 후기는 [블로그 글](https://blog.amoseui.com/became-chromium-committer) 로 남겼다. 커미터가 된 후에는 컨트리뷰션을 거의 하지 않았다. 내가 앞으로도 열심히 할 것 같다고 리뷰어가 커미터로 추천을 해줬는데 미안하게 됐다. (올해는 제대로 해볼게...) 한 해동안 반영한 패치는 달랑 두 개. 그 중 하나는 1년 전에 작업이 다 끝났는데 스펙이 정리가 안 돼서 반영을 못했던 것이었다. 1년이 지나서야 정리가 돼서 rebase 를 하고 반영했다. 그 사이에 내가 만들어 놓은 WPT 테스트를 파이어폭스 쪽에서 먼저 그대로 반영해버렸다. 괜히 아쉽다.
+3월에 Chromium Committer 로 선정되면서 1번 목표를 달성했다. 자세한 후기는 [블로그 글](https://blog.amoseui.com/became-chromium-committer/) 로 남겼다. 커미터가 된 후에는 컨트리뷰션을 거의 하지 않았다. 내가 앞으로도 열심히 할 것 같다고 리뷰어가 커미터로 추천을 해줬는데 미안하게 됐다. (올해는 제대로 해볼게...) 한 해동안 반영한 패치는 달랑 두 개. 그 중 하나는 1년 전에 작업이 다 끝났는데 스펙이 정리가 안 돼서 반영을 못했던 것이었다. 1년이 지나서야 정리가 돼서 rebase 를 하고 반영했다. 그 사이에 내가 만들어 놓은 WPT 테스트를 파이어폭스 쪽에서 먼저 그대로 반영해버렸다. 괜히 아쉽다.
 
 2, 3번은 역시나 실패했다. 플레이스토어에 앱을 올려보려고 연초에 조금 끄적거리다가 말았다. 10년 넘게 매번 시작만 하고 완성을 못하고 있다. 작게라도 완성하는 습관을 들이는게 목표이다.
 
@@ -44,10 +44,10 @@ _<center>항상 연초에만 매일 하다가... 흐지부지</center>_
 
 #### 참석한 컨퍼런스/세미나
 
-- 2024-07-20 I/O Extended Android in Korea 2024 [후기](https://blog.amoseui.com/2024-gdg-google-io-extended)
-- 2024-07-27 I/O Extended 2024 Incheon [후기](https://blog.amoseui.com/2024-gdg-google-io-extended)
+- 2024-07-20 I/O Extended Android in Korea 2024 [후기](https://blog.amoseui.com/2024-gdg-google-io-extended/)
+- 2024-07-27 I/O Extended 2024 Incheon [후기](https://blog.amoseui.com/2024-gdg-google-io-extended/)
 - 2024-10-12 DEVCON 2024
-- 2024-11-16 Open Source Conference (오쏘콘) [발표 후기](https://blog.amoseui.com/opensourceconference)
+- 2024-11-16 Open Source Conference (오쏘콘) [발표 후기](https://blog.amoseui.com/opensourceconference/)
 - 2024-12-11 솔로프리너 컨퍼런스: 1인 개발자, 인디해커의 삶
 - 2024-12-21 au VimEnter \* call Bye2024()
 
@@ -61,11 +61,11 @@ _<center>항상 연초에만 매일 하다가... 흐지부지</center>_
 
 ### 블로그
 
-- 2024-01-02 [2023년 회고 그리고 2024년](https://blog.amoseui.com/2023-retrospective)
-- 2024-05-26 [Chromium Committer 가 되었다](https://blog.amoseui.com/became-chromium-committer)
-- 2024-10-06 [2024 GDG Google I/O Extended 간단 후기](https://blog.amoseui.com/2024-gdg-google-io-extended)
-- 2024-11-25 [오쏘콘(Open Source Conference) 발표 후기](https://blog.amoseui.com/opensourceconference)
-- 2024-11-30 [Chromium Faster Build 방법](https://blog.amoseui.com/chromium-faster-build)
+- 2024-01-02 [2023년 회고 그리고 2024년](https://blog.amoseui.com/2023-retrospective/)
+- 2024-05-26 [Chromium Committer 가 되었다](https://blog.amoseui.com/became-chromium-committer/)
+- 2024-10-06 [2024 GDG Google I/O Extended 간단 후기](https://blog.amoseui.com/2024-gdg-google-io-extended/)
+- 2024-11-25 [오쏘콘(Open Source Conference) 발표 후기](https://blog.amoseui.com/opensourceconference/)
+- 2024-11-30 [Chromium Faster Build 방법](https://blog.amoseui.com/chromium-faster-build/)
 
 2024년에는 5개의 글을 올렸다. Chromium Committer 가 된 과정과 오쏘콘 발표 후기를 꽤 공을 들여서 썼다. 꽤 오랫동안 오픈소스 활동을 해서 결국 하나의 마일스톤을 찍고, 발표까지 한 건 나름대로 큰 성과였다. 그리고 블로그에 글까지 남기다니... 내 자신 많이 발전했다.
 
@@ -74,11 +74,11 @@ _<center>항상 연초에만 매일 하다가... 흐지부지</center>_
 
 #### 조회수 순위
 
-1. [Android 13 AOSP 빌드 및 cuttlefish 실행](https://blog.amoseui.com/android-13-aosp-cuttlefish)
-2. [Chromium Committer 가 되었다](https://blog.amoseui.com/became-chromium-committer)
-3. [2023년 회고 그리고 2024년](https://blog.amoseui.com/2023-retrospective)
-4. [오쏘콘(Open Source Conference) 발표 후기](https://blog.amoseui.com/opensourceconference)
-5. [cpp-mini-chromium-template 프로젝트 소개](https://blog.amoseui.com/cpp-mini-chromium-template)
+1. [Android 13 AOSP 빌드 및 cuttlefish 실행](https://blog.amoseui.com/android-13-aosp-cuttlefish/)
+2. [Chromium Committer 가 되었다](https://blog.amoseui.com/became-chromium-committer/)
+3. [2023년 회고 그리고 2024년](https://blog.amoseui.com/2023-retrospective/)
+4. [오쏘콘(Open Source Conference) 발표 후기](https://blog.amoseui.com/opensourceconference/)
+5. [cpp-mini-chromium-template 프로젝트 소개](https://blog.amoseui.com/cpp-mini-chromium-template/)
 
 ![search](media/2024-search.png)
 검색어 유입은 여전히 aosp 빌드와 cuttlefish 가 대부분이다. 검색이 잘 될 만한 글을 올려서 테스트해보고 싶은데 어떤 글을 올려야 될지 모르겠다. 검색어나 유입 경로에 대한 데이터는 궁금해서 한 번씩 보게 된다. 한 달 전에 [awesome-devlog](https://github.com/awesome-devblog/awesome-devblog) 에 블로그를 등록해 놓았는데 이를 통한 유입이 어느 정도 있을지도 궁금하다. (등록 후 이 글이 첫 번째) 조회수는 높으면 좋겠는데 지인은 딱히 안 봤으면 좋겠다. ㅎㅎ

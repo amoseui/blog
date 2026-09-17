@@ -24,7 +24,7 @@
     "photo": "/photo.jpg",
     "bio": "Everything in its Right Place",
     "contacts": {
-      "rss": "rss.xml",
+      "rss": "/rss.xml",
       "email": "amoseui@gmail.com",
       "github": "amoseui",
       "facebook": "",
