@@ -16,7 +16,7 @@ aliases:
   - "Chromium Contribution: CSS GroupingRule insertRule 함수의 index 파라미터를 optional 로 변경"
 ---
 
-### 관련 링크
+## 관련 링크
 
 - 제목: css: Make index optional in insertRule of CSSGroupingRule
 - 패치: https://chromium-review.googlesource.com/c/chromium/src/+/5066757
@@ -24,7 +24,7 @@ aliases:
   - https://bugs.chromium.org/p/chromium/issues/detail?id=689684
 - w3c spec: https://drafts.csswg.org/cssom/#the-cssgroupingrule-interface
 
-### 개요
+## 개요
 
 `CSSGroupingRule` 은 CSS에서 다른 CSS 규칙들을 그룹화하는 데 사용되는 추상 기본 인터페이스이다. `@media` 또는 `@supports` 규칙과 같은 `at-rule` 그룹을 형성하는 데 사용된다.
 
@@ -53,13 +53,13 @@ var newRule = "body { background-color: white; }";
 stylesheet.insertRule(newRule);
 ```
 
-### 내용
+## 내용
 
 `CSSGroupingRule` `insertRule` 함수의 `index` 파라미터를 `optional` 로 변경하고 값이 없는 경우 0 을 사용하도록 변경했다. 추가로 rule 파라미터의 타입도 `DOMString` 에서 `CSSOMString` 으로 변경했다.
 
 IDL 인터페이스만 변경하고 별도 구현 부분을 수정할 필요는 없었다.
 
-### 테스트
+## 테스트
 
 WPT 에서 스펙과 맞지 않는 부분과 `insertRule` 의 `index` 를 특정하지 않는 케이스에 대한 테스트가 실패하고 있었다.
 
@@ -82,6 +82,6 @@ test(function (t) {
 
 코드 수정과 함께 테스트 결과가 성공으로 바뀌었다.
 
-### 후기
+## 후기
 
 간단한 수정이었지만 스펙과 다른 부분을 고치는 건 뿌듯한 일이다. WPT 테스트 결과도 수정할 수 있었고 스펙과 일치하지 않는 blink 의 오래된 테스트도 고칠 수 있었다.

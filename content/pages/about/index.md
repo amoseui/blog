@@ -3,4 +3,4 @@ title: "About me"
 template: "page"
 ---
 
-Everything in its Right Place.
+Everything in Its Right Place.
