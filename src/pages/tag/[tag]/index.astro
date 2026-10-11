@@ -6,7 +6,7 @@ import Sidebar from "@/components/Sidebar/Sidebar.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { byTag, paginate } from "@/lib/posts";
 import { site } from "@/lib/site";
-import { paginationUrl, tagUrl } from "@/lib/urls";
+import { tagUrl } from "@/lib/urls";
 
 export async function getStaticPaths() {
   const groups = await byTag();
@@ -24,14 +24,14 @@ const base = tagUrl(group);
 ---
 
 <BaseLayout title={`${group} - ${site.title}`} description={site.subtitle}>
-  <Sidebar />
+  <Sidebar pagination={{ basePath: base, currentPage: 0, totalPages: total }} />
   <Page title={group}>
     <Feed entries={entries} />
     <Pagination
-      prevPagePath={base}
-      nextPagePath={paginationUrl(base, 1)}
-      hasPrevPage={false}
-      hasNextPage={total > 1}
+      basePath={base}
+      currentPage={0}
+      totalPages={total}
+      placement="footer"
     />
   </Page>
 </BaseLayout>

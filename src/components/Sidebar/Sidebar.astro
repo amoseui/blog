@@ -1,6 +1,8 @@
 ---
 import { byTag } from "@/lib/posts";
+import type { PaginationState } from "@/lib/pagination";
 import { site } from "@/lib/site";
+import Pagination from "@/components/Pagination/Pagination.astro";
 
 import Author from "./Author/Author.astro";
 import Contacts from "./Contacts/Contacts.astro";
@@ -11,9 +13,10 @@ import styles from "./Sidebar.module.scss";
 
 interface Props {
   isIndex?: boolean;
+  pagination?: PaginationState;
 }
 
-const { isIndex } = Astro.props;
+const { isIndex, pagination } = Astro.props;
 const { author, copyright } = site;
 const tags = [...(await byTag())]
   .sort(
@@ -28,6 +31,7 @@ const tags = [...(await byTag())]
     <Author author={author} isIndex={isIndex} />
     <Contacts contacts={author.contacts} />
     <TagNavigation tags={tags} />
-    <Copyright copyright={copyright} />
+    {pagination && <Pagination {...pagination} placement="sidebar" />}
+    <Copyright copyright={copyright} placement="sidebar" />
   </div>
 </div>

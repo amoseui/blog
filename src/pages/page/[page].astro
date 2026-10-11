@@ -6,7 +6,6 @@ import Sidebar from "@/components/Sidebar/Sidebar.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { allPosts, paginate } from "@/lib/posts";
 import { site } from "@/lib/site";
-import { paginationUrl } from "@/lib/urls";
 
 export async function getStaticPaths() {
   const pages = paginate(await allPosts(), site.postsLimit);
@@ -20,17 +19,20 @@ const { entries, page, total } = Astro.props;
 ---
 
 <BaseLayout
-  title={`Posts - Page ${page} - ${site.title}`}
+  title={`Posts - Page ${page + 1} - ${site.title}`}
   description={site.subtitle}
 >
-  <Sidebar isIndex />
+  <Sidebar
+    isIndex
+    pagination={{ basePath: "/", currentPage: page, totalPages: total }}
+  />
   <Page>
     <Feed entries={entries} />
     <Pagination
-      prevPagePath={page <= 1 ? "/" : paginationUrl("/", page - 1)}
-      nextPagePath={paginationUrl("/", page + 1)}
-      hasPrevPage={page !== 0}
-      hasNextPage={page !== total - 1}
+      basePath="/"
+      currentPage={page}
+      totalPages={total}
+      placement="footer"
     />
   </Page>
 </BaseLayout>

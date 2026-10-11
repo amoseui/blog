@@ -1,52 +1,110 @@
-@use "sass:color";
-
 @use "../../assets/scss/variables";
-@use "../../assets/scss/mixins";
 @use "../../assets/scss/mixins/margin";
+@use "../../assets/scss/mixins/breakpoints";
 
 .pagination {
-  display: flex;
-  @include margin.margin-top(2);
+  @include margin.margin-top(1.5);
 
-  .previous {
-    text-align: left;
-    width: 50%;
+  .list {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 
-    .previousLink {
-      color: var(--color-secondary);
-      font-size: 26px;
-      font-weight: bold;
-
-      &:hover,
-      &:focus {
-        color: var(--color-primary);
-      }
-
-      &.disable {
-        color: variables.$color-dark-cloud;
-        pointer-events: none;
-      }
+    li {
+      margin: 0;
+      padding: 0;
     }
   }
 
-  .next {
-    text-align: right;
-    width: 50%;
+  .control {
+    align-items: center;
+    appearance: none;
+    background: none;
+    border: 0;
+    border-bottom: 2px solid transparent;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--color-secondary);
+    display: inline-flex;
+    font-family: inherit;
+    font-size: variables.$typographic-small-font-size;
+    font-variant-numeric: tabular-nums;
+    justify-content: center;
+    line-height: 1;
+    min-height: 44px;
+    padding: 4px 2px;
+    width: 28px;
 
-    .nextLink {
-      color: var(--color-secondary);
-      font-size: 26px;
-      font-weight: bold;
+    /* stylelint-disable-next-line selector-pseudo-class-no-unknown -- CSS Modules uses the existing global theme class. */
+    :global(.dark) & {
+      color: var(--color-primary);
+    }
 
-      &:hover,
-      &:focus {
-        color: var(--color-primary);
-      }
+    &:hover,
+    &:focus-visible {
+      color: var(--color-typographic-base-font);
+    }
 
-      &.disable {
-        color: variables.$color-dark-cloud;
-        pointer-events: none;
-      }
+    &:focus-visible {
+      outline: 2px solid var(--color-typographic-base-font);
+      outline-offset: 2px;
+    }
+
+    &[aria-current="page"] {
+      border-bottom-color: var(--color-secondary);
+      color: var(--color-typographic-base-font);
+      font-weight: 600;
+    }
+
+    &:disabled {
+      color: var(--color-typographic-base-font);
+      opacity: 0.3;
+    }
+
+    [aria-hidden="true"] {
+      font-size: 22px;
+      line-height: 1;
+    }
+  }
+}
+
+.pagination.sidebar {
+  display: none;
+}
+
+@include breakpoints.breakpoint-md {
+  .pagination {
+    .list {
+      gap: 4px;
+    }
+
+    .control {
+      width: 36px;
+    }
+  }
+
+  .pagination.footer {
+    display: none;
+  }
+
+  .pagination.sidebar {
+    border-top: 1px solid var(--color-sidebar-border);
+    display: block;
+    margin: 0 0 12px;
+    padding-top: 12px;
+
+    .list {
+      gap: 1px;
+    }
+
+    .control {
+      font-size: variables.$typographic-small-font-size - 1px;
+      width: 26px;
     }
   }
 }

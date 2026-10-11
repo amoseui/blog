@@ -14,7 +14,7 @@ const asContext = (params: Record<string, string> = {}) =>
   ({ params }) as Parameters<typeof getFavicon>[0];
 
 test("/sw.js serves the self-destroying service worker", async () => {
-  const res = getSw(asContext());
+  const res = await getSw(asContext());
   expect(res.headers.get("Content-Type")).toContain("javascript");
   const body = await res.text();
   expect(body).toContain("skipWaiting()");
@@ -22,7 +22,7 @@ test("/sw.js serves the self-destroying service worker", async () => {
 });
 
 test("/photo.jpg serves the profile image", async () => {
-  const res = getPhoto(asContext());
+  const res = await getPhoto(asContext());
   expect(res.headers.get("Content-Type")).toBe("image/jpeg");
   const bytes = new Uint8Array(await res.arrayBuffer());
   // JPEG SOI marker

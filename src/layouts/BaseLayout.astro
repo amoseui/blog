@@ -5,6 +5,7 @@ import { readFileSync } from "node:fs";
 import "@/assets/scss/main.scss";
 
 import Meta from "@/components/Meta/Meta.astro";
+import Copyright from "@/components/Sidebar/Copyright/Copyright.astro";
 import styles from "@/components/Layout/Layout.module.scss";
 import { FAVICON_MASK, ICON_SOURCE } from "@/lib/icons";
 import { site } from "@/lib/site";
@@ -86,5 +87,6 @@ const googleAnalyticsScript = `
   </head>
   <body>
     <div class={styles.layout}><slot /></div>
+    <Copyright copyright={site.copyright} placement="footer" />
   </body>
 </html>

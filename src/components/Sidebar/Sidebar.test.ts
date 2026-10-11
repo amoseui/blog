@@ -66,6 +66,26 @@ test("keeps the current tag selected on paginated lists", async () => {
   expect(currentLinks(html)).toEqual(["/tag/chromium/"]);
 });
 
+test("places archive pagination between Topics and copyright", async () => {
+  const container = await AstroContainer.create();
+  const html = await container.renderToString(Sidebar, {
+    request: new Request("https://blog.amoseui.com/tag/chromium/page/1/"),
+    props: {
+      pagination: { basePath: "/tag/chromium", currentPage: 1, totalPages: 3 },
+    },
+  });
+  const start = html.indexOf('aria-label="글 목록 페이지"');
+  expect(start).toBeGreaterThan(html.indexOf('aria-label="Topics"'));
+  expect(start).toBeLessThan(html.indexOf("All rights reserved."));
+  const navigation = html.match(
+    /<nav\b[^>]*aria-label="글 목록 페이지"[\s\S]*?<\/nav>/,
+  )?.[0];
+  expect(navigation).toBeDefined();
+  expect(navigation).toContain('href="/tag/chromium/"');
+  expect(navigation).toContain('href="/tag/chromium/page/2/"');
+  expect(navigation).toMatch(/aria-current="page"[^>]*>\s*2\s*</);
+});
+
 test("keeps All selected on paginated full lists", async () => {
   const html = await renderSidebar("/page/1/");
   expect(currentLinks(html)).toEqual(["/"]);

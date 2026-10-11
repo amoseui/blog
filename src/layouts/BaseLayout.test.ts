@@ -17,6 +17,17 @@ test("renders title, meta and theme bootstrap", async () => {
   expect(html).toContain("diesel:theme-atom");
 });
 
+test("places the mobile copyright after page content and navigation", async () => {
+  const container = await AstroContainer.create();
+  const html = await container.renderToString(BaseLayout, {
+    props: { title: "T" },
+    slots: { default: "<main>Page content</main><nav>Page navigation</nav>" },
+  });
+  const body = html.match(/<body>([\s\S]*?)<\/body>/)?.[1] ?? "";
+  expect(body).toContain(site.copyright);
+  expect(body.indexOf(site.copyright)).toBeGreaterThan(body.indexOf("</nav>"));
+});
+
 test("renders the standard Analytics snippet in head for ownership verification", async () => {
   const container = await AstroContainer.create();
   const html = await container.renderToString(BaseLayout, {

@@ -1,36 +1,91 @@
 ---
-import { PAGINATION } from "@/constants";
-import { href } from "@/lib/urls";
+import { href, paginationUrl } from "@/lib/urls";
+import { paginationPages, type PaginationState } from "@/lib/pagination";
 
 import styles from "./Pagination.module.scss";
 
-interface Props {
-  prevPagePath: string;
-  nextPagePath: string;
-  hasNextPage: boolean;
-  hasPrevPage: boolean;
+interface Props extends PaginationState {
+  placement?: "sidebar" | "footer";
 }
 
-const { prevPagePath, nextPagePath, hasNextPage, hasPrevPage } = Astro.props;
+const { basePath, currentPage, totalPages, placement } = Astro.props;
+const pages = paginationPages(currentPage, totalPages);
 ---
 
-<div class={styles.pagination}>
-  <div class={styles.previous}>
-    <a
-      rel="prev"
-      href={hasPrevPage ? href(prevPagePath) : "/"}
-      class:list={[styles.previousLink, { [styles.disable]: !hasPrevPage }]}
+{
+  totalPages > 1 && (
+    <nav
+      class:list={[styles.pagination, placement && styles[placement]]}
+      aria-label="글 목록 페이지"
+      data-pagination-placement={placement}
     >
-      {PAGINATION.PREV_PAGE}
-    </a>
-  </div>
-  <div class={styles.next}>
-    <a
-      rel="next"
-      href={hasNextPage ? href(nextPagePath) : "/"}
-      class:list={[styles.nextLink, { [styles.disable]: !hasNextPage }]}
-    >
-      {PAGINATION.NEXT_PAGE}
-    </a>
-  </div>
-</div>
+      <ul class={styles.list}>
+        <li>
+          {currentPage > 0 ? (
+            <a
+              class={styles.control}
+              href={href(paginationUrl(basePath, currentPage - 1))}
+              rel="prev"
+              aria-label="이전 페이지"
+            >
+              <span aria-hidden="true">‹</span>
+            </a>
+          ) : (
+            <button
+              class={styles.control}
+              type="button"
+              disabled
+              aria-label="이전 페이지"
+            >
+              <span aria-hidden="true">‹</span>
+            </button>
+          )}
+        </li>
+        {pages.map((page) => (
+          <li aria-hidden={page === "ellipsis" ? "true" : undefined}>
+            {page === "ellipsis" ? (
+              <span class={styles.control}>…</span>
+            ) : page === currentPage ? (
+              <span
+                class={styles.control}
+                aria-current="page"
+                aria-label={`${page + 1}페이지`}
+              >
+                {page + 1}
+              </span>
+            ) : (
+              <a
+                class={styles.control}
+                href={href(paginationUrl(basePath, page))}
+                aria-label={`${page + 1}페이지`}
+              >
+                {page + 1}
+              </a>
+            )}
+          </li>
+        ))}
+        <li>
+          {currentPage < totalPages - 1 ? (
+            <a
+              class={styles.control}
+              href={href(paginationUrl(basePath, currentPage + 1))}
+              rel="next"
+              aria-label="다음 페이지"
+            >
+              <span aria-hidden="true">›</span>
+            </a>
+          ) : (
+            <button
+              class={styles.control}
+              type="button"
+              disabled
+              aria-label="다음 페이지"
+            >
+              <span aria-hidden="true">›</span>
+            </button>
+          )}
+        </li>
+      </ul>
+    </nav>
+  )
+}

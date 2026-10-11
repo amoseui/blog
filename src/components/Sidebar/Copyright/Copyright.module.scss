@@ -2,8 +2,31 @@
 
 @use "../../../assets/scss/variables";
 @use "../../../assets/scss/mixins";
+@use "../../../assets/scss/mixins/breakpoints";
 
 .copyright {
   color: variables.$color-gray;
   font-size: variables.$typographic-small-font-size - 1px;
+  text-align: center;
+}
+
+.copyright.sidebar {
+  display: none;
+}
+
+.copyright.footer {
+  box-sizing: border-box;
+  margin: 0 auto 25px;
+  max-width: variables.$layout-width;
+  padding: 0 18.75px;
+}
+
+@include breakpoints.breakpoint-md {
+  .copyright.sidebar {
+    display: block;
+  }
+
+  .copyright.footer {
+    display: none;
+  }
 }
