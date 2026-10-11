@@ -5,41 +5,19 @@
   "copyright": "© 2016-2026 All rights reserved.",
   "googleAnalyticsId": "G-7DNZ80VV7M",
   "postsLimit": 5,
-  "menu": [
-    {
-      "label": "Home",
-      "path": "/"
-    },
-    {
-      "label": "Categories",
-      "path": "/categories"
-    },
-    {
-      "label": "Tags",
-      "path": "/tags"
-    }
-  ],
   "author": {
     "name": "amoseui",
     "photo": "/photo.jpg",
     "bio": "Everything in its Right Place",
     "contacts": {
       "rss": "/rss.xml",
-      "email": "amoseui@gmail.com",
       "github": "amoseui",
-      "facebook": "",
-      "telegram": "",
-      "twitter": "amoseui",
       "linkedin": "amoseui",
-      "instagram": "",
-      "mastodon": "",
-      "line": "",
-      "weibo": "",
-      "gitlab": "",
+      "instagram": "amoseui",
+      "x": "amoseui",
       "medium": "@amoseui",
-      "youtube": "@amoseui",
-      "codepen": "",
-      "soundcloud": "amoseui"
+      "soundcloud": "amoseui",
+      "youtube": "@amoseui"
     }
   }
 }

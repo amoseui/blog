@@ -6,7 +6,6 @@ draft: false
 slug: /2016-retrospective
 category: retrospective
 tags:
-  - "2016"
   - retrospective
 description: 다사다난했던 2016년이 지나고 2017년이 시작됐다.
 aliases:

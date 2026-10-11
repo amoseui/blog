@@ -29,13 +29,29 @@ test("/photo.jpg serves the profile image", async () => {
   expect([bytes[0], bytes[1]]).toEqual([0xff, 0xd8]);
 });
 
-test("/favicon-32x32.png serves a 32px png", async () => {
+test("/favicon-32x32.png serves a circular 32px png", async () => {
   const res = await getFavicon(asContext());
   expect(res.headers.get("Content-Type")).toBe("image/png");
-  const meta = await sharp(Buffer.from(await res.arrayBuffer())).metadata();
+  const bytes = Buffer.from(await res.arrayBuffer());
+  const meta = await sharp(bytes).metadata();
   expect(meta.format).toBe("png");
   expect(meta.width).toBe(32);
   expect(meta.height).toBe(32);
+  expect(meta.hasAlpha).toBe(true);
+  const { data, info } = await sharp(bytes)
+    .raw()
+    .toBuffer({ resolveWithObject: true });
+  const alpha = (x: number, y: number) =>
+    data[(y * info.width + x) * info.channels + 3];
+  for (const [x, y] of [
+    [0, 0],
+    [31, 0],
+    [0, 31],
+    [31, 31],
+  ]) {
+    expect(alpha(x, y)).toBe(0);
+  }
+  expect(alpha(16, 16)).toBe(255);
 });
 
 test("/apple-touch-icon.png serves the standard 180px icon", async () => {

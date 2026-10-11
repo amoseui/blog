@@ -1,7 +1,7 @@
 ---
 import type { CollectionEntry } from "astro:content";
 
-import { categoryUrl, entryUrl, href } from "@/lib/urls";
+import { entryUrl, href, tagUrl } from "@/lib/urls";
 
 import styles from "./Feed.module.scss";
 
@@ -35,15 +35,11 @@ const { entries } = Astro.props;
               timeZone: "Asia/Seoul",
             })}
           </time>
-          <span class={styles.divider} />
-          <span class={styles.category}>
-            <a
-              href={href(categoryUrl(entry.data.category ?? ""))}
-              class={styles.link}
-            >
-              {entry.data.category}
+          {entry.data.tags?.map((tag) => (
+            <a href={href(tagUrl(tag))} class={styles.tag}>
+              {tag}
             </a>
-          </span>
+          ))}
         </div>
         <h2 class={styles.title}>
           <a class={styles.link} href={href(entryUrl(entry))}>

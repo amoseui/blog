@@ -6,7 +6,6 @@ draft: false
 slug: /2025-retrospective
 category: retrospective
 tags:
-  - "2025"
   - retrospective
 description: 조금 늦게 남겨 보는 2025년 회고와 2026년.
 socialImage: ./media/2025-github.png
