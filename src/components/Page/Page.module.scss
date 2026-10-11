@@ -20,6 +20,23 @@
     @include margin.margin-bottom(1.45);
   }
 
+  .tagTitle {
+    color: var(--color-secondary);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.5;
+    margin: 0 0 24px;
+
+    /* stylelint-disable-next-line selector-pseudo-class-no-unknown -- CSS Modules uses the existing global theme class. */
+    :global(.dark) & {
+      color: var(--color-primary);
+    }
+
+    .tagLabel {
+      color: var(--color-post-date);
+    }
+  }
+
   .body {
     font-size: variables.$typographic-base-font-size;
     @include line-height.line-height(1);

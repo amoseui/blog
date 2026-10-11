@@ -6,6 +6,12 @@
   @include margin.margin-bottom(1);
 }
 
+@media screen and (max-width: variables.$layout-breakpoint-sm - 1px) {
+  .navigation.compact {
+    margin-bottom: 0;
+  }
+}
+
 .list {
   display: flex;
   flex-wrap: wrap;

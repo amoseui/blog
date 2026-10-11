@@ -1,0 +1,74 @@
+---
+import type { MarkdownHeading } from "astro";
+
+import styles from "./TableOfContents.module.scss";
+
+interface Props {
+  headings: MarkdownHeading[];
+}
+
+const headings = Astro.props.headings.filter(
+  ({ depth }) => depth === 2 || depth === 3,
+);
+---
+
+{
+  headings.length > 0 && (
+    <div class={styles.outline} data-table-of-contents>
+      <h2 class={styles.title}>
+        <span data-contents-title>Contents</span>
+        <button
+          class={styles.toggle}
+          type="button"
+          aria-label="Contents"
+          aria-expanded="true"
+          aria-controls="post-contents"
+          data-contents-toggle
+          hidden
+        >
+          Contents
+        </button>
+      </h2>
+      <nav id="post-contents" aria-label="목차">
+        <ol class={styles.list}>
+          {headings.map(({ depth, slug, text }) => (
+            <li class:list={[styles.item, depth === 3 && styles.nested]}>
+              <a class={styles.link} href={`#${encodeURIComponent(slug)}`}>
+                {text}
+              </a>
+            </li>
+          ))}
+        </ol>
+      </nav>
+    </div>
+  )
+}
+
+<script>
+  const outline = document.querySelector<HTMLElement>(
+    "[data-table-of-contents]",
+  );
+  const title = outline?.querySelector<HTMLElement>("[data-contents-title]");
+  const toggle = outline?.querySelector<HTMLButtonElement>(
+    "[data-contents-toggle]",
+  );
+  const navigation = outline?.querySelector<HTMLElement>("#post-contents");
+
+  if (title && toggle && navigation) {
+    const desktop = matchMedia("(min-width: 960px)");
+    const syncOutline = () => {
+      title.hidden = !desktop.matches;
+      toggle.hidden = desktop.matches;
+      navigation.hidden = !desktop.matches;
+      toggle.setAttribute("aria-expanded", String(desktop.matches));
+    };
+
+    syncOutline();
+    desktop.addEventListener("change", syncOutline);
+    toggle.addEventListener("click", () => {
+      const expanded = toggle.getAttribute("aria-expanded") === "true";
+      navigation.hidden = expanded;
+      toggle.setAttribute("aria-expanded", String(!expanded));
+    });
+  }
+</script>

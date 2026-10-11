@@ -1,14 +1,21 @@
 ---
+import Meta from "../Meta/Meta.astro";
+
 import styles from "./Content.module.scss";
 
 interface Props {
   title: string;
+  date?: Date;
+  tags?: string[];
 }
 
-const { title } = Astro.props;
+const { title, date, tags } = Astro.props;
 ---
 
 <div class={styles.content}>
-  <h1 class={styles.title}>{title}</h1>
+  <header class={styles.header}>
+    <Meta date={date} tags={tags} />
+    <h1 class={styles.title}>{title}</h1>
+  </header>
   <div class={styles.body}><slot /></div>
 </div>

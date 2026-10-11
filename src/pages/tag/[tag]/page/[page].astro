@@ -33,7 +33,7 @@ const base = tagUrl(group);
   <Sidebar
     pagination={{ basePath: base, currentPage: page, totalPages: total }}
   />
-  <Page title={group}>
+  <Page title={group} titleType="tag">
     <Feed entries={entries} />
     <Pagination
       basePath={base}

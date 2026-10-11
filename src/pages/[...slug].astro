@@ -11,7 +11,7 @@ import { entryPaths } from "@/lib/entry-paths";
 export const getStaticPaths = entryPaths;
 
 const { entry } = Astro.props;
-const { Content } = await render(entry);
+const { Content, headings } = await render(entry);
 const image = entry.data.socialImage
   ? new URL(entry.data.socialImage.src, site.url).toString()
   : undefined;
@@ -22,10 +22,11 @@ const image = entry.data.socialImage
   description={entry.data.description || site.subtitle}
   image={image}
   type={entry.data.template === "post" ? "article" : "website"}
+  showCopyright={entry.data.template !== "post"}
 >
   {
     entry.data.template === "post" ? (
-      <PostView entry={entry}>
+      <PostView entry={entry} headings={headings}>
         <Content />
       </PostView>
     ) : (

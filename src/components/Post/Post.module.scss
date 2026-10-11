@@ -2,51 +2,26 @@
 @use "../../assets/scss/mixins";
 
 .post {
-  .content {
-    @include mixins.margin-auto();
-  }
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
 
-  .footer {
-    max-width: variables.$layout-post-width;
-    @include mixins.padding(0, 0.75);
-    @include mixins.margin-auto();
+  .main {
+    min-width: 0;
+    @include mixins.padding(0.5, 0.75, 2);
   }
 
   .comments {
-    max-width: variables.$layout-post-width;
-    @include mixins.padding(0, 0.75);
-    @include mixins.margin-auto();
-  }
-
-  .buttons {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    @include mixins.margin(1, 0, 0, 0);
-
-    .buttonArticles {
-      @include mixins.margin(0, 0.5, 0, 0);
-    }
+    @include mixins.margin-top(2);
   }
 }
 
 @include mixins.breakpoint-md {
   .post {
-    .footer {
-      @include mixins.padding-equal(0);
-    }
+    column-gap: 30px;
+    grid-template-columns: variables.$layout-sidebar-width minmax(0, 1fr);
 
-    .comments {
-      @include mixins.padding-equal(0);
-    }
-
-    .buttons {
-      left: 30px;
-      max-width: none;
-      position: fixed;
-      top: 30px;
-      @include mixins.margin(0, 0.5, 0, 0);
+    .main {
+      @include mixins.padding(1.5, 1, 2);
     }
   }
 }
