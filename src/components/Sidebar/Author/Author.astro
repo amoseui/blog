@@ -16,27 +16,29 @@ const { author, isIndex } = Astro.props;
 ---
 
 <div class={styles.author}>
-  <a href="/">
+  <a href="/" class={styles.photoLink}>
     <img src={author.photo} alt={author.name} class={styles.photo} />
   </a>
 
-  <div class={styles.titleContainer}>
-    {
-      isIndex ? (
-        <h1 class={styles.title}>
-          <a class={styles.link} href="/">
-            {author.name}
-          </a>
-        </h1>
-      ) : (
-        <h2 class={styles.title}>
-          <a class={styles.link} href="/">
-            {author.name}
-          </a>
-        </h2>
-      )
-    }
-    <ThemeSwitcher />
+  <div class={styles.details}>
+    <div class={styles.titleContainer}>
+      {
+        isIndex ? (
+          <h1 class={styles.title}>
+            <a class={styles.link} href="/">
+              {author.name}
+            </a>
+          </h1>
+        ) : (
+          <h2 class={styles.title}>
+            <a class={styles.link} href="/">
+              {author.name}
+            </a>
+          </h2>
+        )
+      }
+      <ThemeSwitcher />
+    </div>
+    <p class={styles.subtitle}>{author.bio}</p>
   </div>
-  <p class={styles.subtitle}>{author.bio}</p>
 </div>

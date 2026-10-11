@@ -5,5 +5,5 @@
 
 .copyright {
   color: variables.$color-gray;
-  font-size: variables.$typographic-small-font-size;
+  font-size: variables.$typographic-small-font-size - 1px;
 }

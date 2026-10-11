@@ -35,28 +35,28 @@
     }
 
     .meta {
+      align-items: baseline;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0 0.75rem;
+
       .time {
         color: var(--color-typographic-base-font);
         font-size: variables.$typographic-small-font-size;
         font-weight: 600;
         text-transform: uppercase;
+        white-space: nowrap;
       }
 
-      .divider {
-        @include margin.margin(0, 0.5);
-      }
+      .tag {
+        color: var(--color-secondary);
+        font-size: variables.$typographic-small-font-size;
+        font-weight: 600;
+        white-space: nowrap;
 
-      .category {
-        .link {
-          color: var(--color-secondary);
-          font-size: variables.$typographic-small-font-size;
-          font-weight: 600;
-          text-transform: uppercase;
-
-          &:hover,
-          &:focus {
-            color: variables.$color-blue;
-          }
+        &:hover,
+        &:focus {
+          color: variables.$color-blue;
         }
       }
     }

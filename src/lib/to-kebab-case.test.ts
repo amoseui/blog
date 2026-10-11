@@ -27,7 +27,7 @@ test("handles numeric-like tags", () => {
 
 test("strips non-ascii characters like the original gatsby util", () => {
   // Parity lock: the legacy implementation removes non-\w characters,
-  // so Korean text is dropped. No real tag/category relies on this.
+  // so Korean text is dropped. No real tag relies on this.
   expect(toKebabCase("2015년 회고")).toBe("2015-");
 });
 

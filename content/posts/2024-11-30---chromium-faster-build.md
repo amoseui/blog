@@ -4,7 +4,6 @@ date: 2024-11-30 21:00:00
 template: post
 draft: false
 slug: /chromium-faster-build
-category: chromium
 tags:
   - chromium
 description: Chromium 의 빠른 빌드를 위한 환경 셋업 방법을 정리해 보았다.

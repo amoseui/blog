@@ -4,7 +4,6 @@ date: 2020-12-10 07:00:00
 template: post
 draft: false
 slug: /code-coverage
-category: review
 tags:
   - testing
   - codecoverage

@@ -20,37 +20,17 @@ const names = Object.keys(contacts) as Array<keyof typeof ICONS>;
       names.map((name) =>
         contacts[name] ? (
           <li class={styles.item}>
-            {name === "email" ? (
-              <span
-                class={styles.link}
-                data-contact-email={getContactHref(name, contacts[name])}
-              >
-                <Icon name={name} icon={getIcon(name)} />
-              </span>
-            ) : (
-              <a
-                class={styles.link}
-                href={getContactHref(name, contacts[name])}
-                target="_blank"
-                rel={`noopener noreferrer${name === "mastodon" ? " me" : ""}`}
-              >
-                <Icon name={name} icon={getIcon(name)} />
-              </a>
-            )}
+            <a
+              class={styles.link}
+              href={getContactHref(name, contacts[name])}
+              target="_blank"
+              rel={`noopener noreferrer${name === "mastodon" ? " me" : ""}`}
+            >
+              <Icon name={name} icon={getIcon(name)} />
+            </a>
           </li>
         ) : null,
       )
     }
   </ul>
 </div>
-
-<script>
-  // Decode the base64-obfuscated email address on click (ported from Contacts.tsx)
-  document
-    .querySelectorAll<HTMLElement>("[data-contact-email]")
-    .forEach((element) => {
-      element.addEventListener("click", () => {
-        window.location.href = `mailto:${atob(element.dataset.contactEmail ?? "")}`;
-      });
-    });
-</script>

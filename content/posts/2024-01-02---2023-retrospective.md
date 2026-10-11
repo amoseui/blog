@@ -4,9 +4,7 @@ date: 2024-01-02 23:45:00
 template: post
 draft: false
 slug: /2023-retrospective
-category: retrospective
 tags:
-  - "2023"
   - retrospective
 description: 살짝 늦은 2023년 회고
 socialImage: ./media/screenshot_github.png

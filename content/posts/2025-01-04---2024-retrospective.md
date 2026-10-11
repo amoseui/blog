@@ -4,9 +4,7 @@ date: 2025-01-04 14:40:00
 template: post
 draft: false
 slug: /2024-retrospective
-category: retrospective
 tags:
-  - "2024"
   - retrospective
 description: 2024년 회고 그리고 2025년
 socialImage: ./media/2024-github.png

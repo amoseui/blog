@@ -33,6 +33,36 @@ describe("dist keeps the gatsby baseline contract", () => {
     expect(missing).toEqual([]);
   });
 
+  test("retired category urls resolve to tag archives without being indexed", () => {
+    const redirects = [
+      ["/category/aosp/", "/tag/aosp/"],
+      ["/category/chromium/", "/tag/contribution/"],
+      ["/category/chromium/page/1/", "/tag/contribution/page/1/"],
+      ["/category/conference/", "/tag/conference/"],
+      ["/category/opensource/", "/tag/opensource/"],
+      ["/category/retrospective/", "/tag/retrospective/"],
+      ["/category/retrospective/page/1/", "/tag/retrospective/page/1/"],
+      ["/category/review/", "/tag/codecoverage/"],
+    ];
+    const sitemap = readFileSync("dist/sitemap-0.xml", "utf8");
+    for (const [oldPath, target] of redirects) {
+      const html = readFileSync(
+        path.join("dist", oldPath, "index.html"),
+        "utf8",
+      );
+      const redirect = html.match(
+        /http-equiv="refresh" content="0;url=([^"]+)"/,
+      );
+      const canonical = html.match(/rel="canonical" href="([^"]+)"/);
+      const robots = html.match(/name="robots" content="([^"]+)"/);
+      expect(redirect?.[1], oldPath).toBe(target);
+      expect(robots?.[1], oldPath).toBe("noindex");
+      expect(canonical?.[1], oldPath).toBe(`https://blog.amoseui.com${target}`);
+      expect(existsSync(path.join("dist", target, "index.html"))).toBe(true);
+      expect(sitemap).not.toContain(`https://blog.amoseui.com${oldPath}`);
+    }
+  });
+
   test("heading anchors are identical per page", () => {
     const expected = fixtures("anchors.json") as Record<string, string[]>;
     for (const [page, ids] of Object.entries(expected)) {

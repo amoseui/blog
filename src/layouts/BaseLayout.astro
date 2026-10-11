@@ -6,7 +6,7 @@ import "@/assets/scss/main.scss";
 
 import Meta from "@/components/Meta/Meta.astro";
 import styles from "@/components/Layout/Layout.module.scss";
-import { ICON_SOURCE } from "@/lib/icons";
+import { FAVICON_MASK, ICON_SOURCE } from "@/lib/icons";
 import { site } from "@/lib/site";
 
 interface Props {
@@ -27,10 +27,11 @@ const canonicalUrl = new URL(canonicalPath, site.url).toString();
 
 // Favicons are rendered from content/photo.jpg by the file endpoints in
 // src/pages (favicon-32x32.png.ts, apple-touch-icon.png.ts). The cache-buster
-// is derived from the source image content so swapping the photo invalidates
-// cached icons automatically.
+// includes the source image and favicon mask so changing the photo or shape
+// invalidates cached icons automatically.
 const iconVersion = createHash("md5")
   .update(readFileSync(ICON_SOURCE))
+  .update(FAVICON_MASK)
   .digest("hex");
 
 // Keep Google's snippet shape for Search Console verification. Avoid

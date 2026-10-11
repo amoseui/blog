@@ -15,6 +15,6 @@ const { name, icon } = Astro.props;
 ---
 
 <svg class={styles.icon} viewBox={icon.viewBox}>
-  <title>{name}</title>
+  <title>{name === "x" ? "X" : name}</title>
   <path d={icon.path}></path>
 </svg>

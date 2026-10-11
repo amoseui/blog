@@ -4,10 +4,10 @@ date: 2023-06-22 06:10:00
 template: post
 draft: false
 slug: /chromium-remove-css-wpt-ini-file
-category: chromium
 tags:
   - opensource
   - chromium
+  - contribution
   - css
   - w3c
   - wpt

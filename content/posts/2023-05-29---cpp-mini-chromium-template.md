@@ -4,7 +4,6 @@ date: 2023-05-30 06:00:00
 template: post
 draft: false
 slug: /cpp-mini-chromium-template
-category: opensource
 tags:
   - opensource
   - chromium

@@ -25,7 +25,6 @@ const shared = {
   title: z.string(),
   draft: z.boolean().default(false),
   slug: z.string().optional(),
-  category: z.string().optional(),
   tags: z.array(z.string()).optional(),
   description: z.string().optional(),
 };

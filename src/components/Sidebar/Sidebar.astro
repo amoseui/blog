@@ -1,10 +1,11 @@
 ---
+import { byTag } from "@/lib/posts";
 import { site } from "@/lib/site";
 
 import Author from "./Author/Author.astro";
 import Contacts from "./Contacts/Contacts.astro";
 import Copyright from "./Copyright/Copyright.astro";
-import Menu from "./Menu/Menu.astro";
+import TagNavigation from "./TagNavigation/TagNavigation.astro";
 
 import styles from "./Sidebar.module.scss";
 
@@ -13,14 +14,20 @@ interface Props {
 }
 
 const { isIndex } = Astro.props;
-const { author, copyright, menu } = site;
+const { author, copyright } = site;
+const tags = [...(await byTag())]
+  .sort(
+    ([tagA, postsA], [tagB, postsB]) =>
+      postsB.length - postsA.length || tagA.localeCompare(tagB),
+  )
+  .map(([tag]) => tag);
 ---
 
 <div class={styles.sidebar}>
   <div class={styles.inner}>
     <Author author={author} isIndex={isIndex} />
-    <Menu menu={menu} />
     <Contacts contacts={author.contacts} />
+    <TagNavigation tags={tags} />
     <Copyright copyright={copyright} />
   </div>
 </div>

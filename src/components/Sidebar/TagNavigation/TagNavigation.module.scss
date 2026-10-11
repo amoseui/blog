@@ -1,0 +1,50 @@
+@use "../../../assets/scss/variables";
+@use "../../../assets/scss/mixins/margin";
+@use "../../../assets/scss/mixins/padding";
+
+.navigation {
+  @include margin.margin-bottom(1);
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+  list-style: none;
+  @include margin.margin-equal(0);
+  @include padding.padding-equal(0);
+}
+
+.item {
+  @include margin.margin-equal(0);
+  @include padding.padding-equal(0);
+}
+
+.chip {
+  background: var(--color-page-background);
+  border: 1px solid var(--color-button-border);
+  border-radius: 999px;
+  color: var(--color-typographic-base-font);
+  display: block;
+  font-size: variables.$typographic-small-font-size - 2px;
+  line-height: 1.4;
+  padding: 0.25rem 0.5rem;
+  text-decoration: none;
+  white-space: nowrap;
+
+  &:hover {
+    border-color: var(--color-secondary);
+    color: var(--color-secondary);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-secondary);
+    outline-offset: 3px;
+  }
+
+  &[aria-current="page"] {
+    background: var(--color-secondary);
+    border-color: var(--color-secondary);
+    color: var(--color-white);
+  }
+}

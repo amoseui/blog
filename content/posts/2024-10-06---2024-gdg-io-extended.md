@@ -4,7 +4,6 @@ date: 2024-10-06 14:00:00
 template: post
 draft: false
 slug: /2024-gdg-google-io-extended
-category: conference
 tags:
   - gdg
   - conference

@@ -16,6 +16,24 @@ export default defineConfig({
   // The gatsby baseline emits directory-style output (foo/index.html, verified
   // by the extracted url fixtures), so match it exactly for the parity gate.
   build: { format: "directory" },
+  redirects: {
+    "/categories": "/",
+    "/tags": "/",
+    "/category/aosp": "/tag/aosp/",
+    "/category/chromium": "/tag/contribution/",
+    "/category/chromium/page/1": "/tag/contribution/page/1/",
+    "/category/conference": "/tag/conference/",
+    "/category/opensource": "/tag/opensource/",
+    "/category/retrospective": "/tag/retrospective/",
+    "/category/retrospective/page/1": "/tag/retrospective/page/1/",
+    "/category/review": "/tag/codecoverage/",
+    "/tag/2015": "/",
+    "/tag/2016": "/",
+    "/tag/2022": "/",
+    "/tag/2023": "/",
+    "/tag/2024": "/",
+    "/tag/2025": "/",
+  },
   // Sitemap urls use the canonical trailing-slash form github pages serves
   // with 200 (the gatsby sitemap pointed at the 301-redirecting bare form,
   // which search console reported as "page with redirect").

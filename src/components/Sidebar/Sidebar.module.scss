@@ -88,7 +88,7 @@
     }
 
     .inner {
-      @include padding.padding-equal(1.5);
+      @include padding.padding(1.5, 1.25);
     }
   }
 }

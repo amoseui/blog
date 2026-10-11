@@ -4,12 +4,27 @@
 @use "../../../assets/scss/mixins/margin";
 
 .author {
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+  @include margin.margin-bottom(1);
+
+  .photoLink {
+    flex: 0 0 56px;
+    line-height: 0;
+  }
+
+  .details {
+    flex: 1;
+    min-width: 0;
+  }
+
   .photo {
     background-clip: padding-box;
     border-radius: 50%;
     display: inline-block;
-    height: 75px;
-    width: 75px;
+    height: 56px;
+    width: 56px;
     @include margin.margin-bottom(0);
 
     img {
@@ -35,14 +50,17 @@
 
   .subtitle {
     color: variables.$color-gray;
-    @include line-height.line-height(1);
-    @include margin.margin-bottom(1);
+    font-size: variables.$typographic-small-font-size - 1px;
+    line-height: 1.5;
+    white-space: nowrap;
+    @include margin.margin-equal(0);
   }
 
   .titleContainer {
     align-items: center;
     display: flex;
-    justify-content: space-between;
-    @include margin.margin(0.5, 0, 0.5, 0);
+    gap: 0.5rem;
+    justify-content: flex-start;
+    @include margin.margin(0, 0, 0.25, 0);
   }
 }
