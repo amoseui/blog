@@ -8,13 +8,13 @@
 
   .footer {
     max-width: variables.$layout-post-width;
-    @include mixins.padding(0, 0.5);
+    @include mixins.padding(0, 0.75);
     @include mixins.margin-auto();
   }
 
   .comments {
     max-width: variables.$layout-post-width;
-    @include mixins.padding(0, 0.5);
+    @include mixins.padding(0, 0.75);
     @include mixins.margin-auto();
   }
 
