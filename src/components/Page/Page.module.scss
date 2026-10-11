@@ -27,6 +27,16 @@
   }
 }
 
+@media screen and (max-width: variables.$layout-breakpoint-md - 1px) {
+  .page:has([data-pagination-placement="footer"]) {
+    @include margin.margin-bottom(1);
+
+    .body {
+      @include margin.margin-bottom(0.5);
+    }
+  }
+}
+
 @include breakpoints.breakpoint-sm {
   .page {
     // Float-grid column, inlined from the css the retired lost plugin
@@ -61,8 +71,8 @@
 
 @include breakpoints.breakpoint-md {
   .page {
-    // lost-column: 2/3 equivalent (gutter 30px, cycle 3).
-    width: calc(66.6% - 10px);
+    // Fill the space next to the sidebar and its 30px gutter.
+    width: calc(100% - variables.$layout-sidebar-width - 30px);
 
     &:nth-child(n) {
       clear: none;

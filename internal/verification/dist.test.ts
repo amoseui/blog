@@ -15,6 +15,53 @@ const decodeEntities = (s: string) =>
     .replace(/&#39;/g, "'")
     .replace(/&amp;/g, "&");
 
+describe("post-list navigation", () => {
+  test.each([
+    ["/", 1],
+    ["/page/1/", 2],
+    ["/page/2/", 3],
+    ["/page/4/", 5],
+    ["/tag/chromium/", 1],
+    ["/tag/chromium/page/1/", 2],
+    ["/tag/chromium/page/2/", 3],
+  ])("marks the displayed page on %s", (pathname, currentPage) => {
+    const html = readFileSync(
+      path.join("dist", pathname, "index.html"),
+      "utf8",
+    );
+    const navigations = [
+      ...html.matchAll(
+        /<nav\b[^>]*aria-label="글 목록 페이지"[\s\S]*?<\/nav>/g,
+      ),
+    ];
+    expect(navigations, pathname).toHaveLength(2);
+    for (const [navigation] of navigations) {
+      const current = navigation.match(
+        /aria-current="page"[^>]*>\s*(\d+)\s*</,
+      )?.[1];
+      expect(Number(current), pathname).toBe(currentPage);
+      for (const [, href] of navigation.matchAll(/href="([^"]+)"/g)) {
+        expect(existsSync(path.join("dist", href, "index.html")), href).toBe(
+          true,
+        );
+        if (pathname.startsWith("/tag/chromium/")) {
+          expect(href).toMatch(/^\/tag\/chromium\//);
+        }
+      }
+    }
+    if (currentPage > 1) {
+      expect(html).toContain(`- Page ${currentPage} -`);
+    }
+  });
+
+  test("omits pagination from a one-page tag archive", () => {
+    const html = readFileSync("dist/tag/testing/index.html", "utf8");
+    expect(html).not.toContain('aria-label="글 목록 페이지"');
+    expect(html).not.toContain('rel="prev"');
+    expect(html).not.toContain('rel="next"');
+  });
+});
+
 // The fixtures are a frozen snapshot of the last gatsby build (2026-07-30) and
 // are never regenerated (gatsby is gone). The contract is monotonic: every
 // baseline url, anchor and rss item must keep existing so old links never

@@ -1,75 +1,84 @@
 @use "../../assets/scss/variables";
-@use "../../assets/scss/mixins";
-@use "../../assets/scss/mixins/line-height";
-@use "../../assets/scss/mixins/margin";
 
 .feed {
   .item {
-    @include margin.margin-bottom(1.25);
+    border-bottom: 1px solid var(--color-page-border);
+    margin-bottom: 28px;
+    padding-bottom: 28px;
 
     &:last-child {
-      @include margin.margin-bottom(0.5);
+      border-bottom: 0;
+      margin-bottom: 0;
+      padding-bottom: 0;
     }
 
     .title {
       font-size: variables.$typographic-base-font-size * 1.6875;
-      @include line-height.line-height(1.5);
-      @include margin.margin-top(0);
-      @include margin.margin-bottom(0.5);
+      line-height: 1.45;
+      margin: 0;
+      overflow-wrap: anywhere;
 
       .link {
         color: var(--color-typographic-base-font);
 
         &:hover,
         &:focus {
-          border-bottom: 1px solid variables.$color-dark;
+          border-bottom: 1px solid var(--color-typographic-base-font);
           color: var(--color-typographic-base-font);
         }
       }
     }
 
     .description {
+      -webkit-box-orient: vertical;
+      display: -webkit-box;
       font-size: variables.$typographic-base-font-size;
-      @include line-height.line-height(1);
-      @include margin.margin-bottom(0.75);
+      -webkit-line-clamp: 2;
+      line-height: variables.$typographic-base-line-height;
+      margin: 12px 0 0;
+      overflow: hidden;
+      overflow-wrap: anywhere;
     }
 
     .meta {
       align-items: baseline;
       display: flex;
       flex-wrap: wrap;
+      font-size: variables.$typographic-small-font-size;
       gap: 0 0.75rem;
+      line-height: variables.$typographic-leading * 1px;
+      margin-bottom: 2px;
 
       .time {
-        color: var(--color-typographic-base-font);
-        font-size: variables.$typographic-small-font-size;
+        color: var(--color-post-date);
+        font-variant-numeric: tabular-nums;
         font-weight: 600;
-        text-transform: uppercase;
         white-space: nowrap;
       }
 
       .tag {
         color: var(--color-secondary);
-        font-size: variables.$typographic-small-font-size;
         font-weight: 600;
         white-space: nowrap;
 
+        /* stylelint-disable-next-line selector-pseudo-class-no-unknown -- CSS Modules uses the existing global theme class. */
+        :global(.dark) & {
+          color: var(--color-primary);
+        }
+
         &:hover,
         &:focus {
-          color: variables.$color-blue;
+          color: var(--color-typographic-base-font);
+          text-decoration: underline;
+          text-underline-offset: 3px;
         }
       }
+
     }
 
-    .more {
-      color: var(--color-primary);
-      font-size: variables.$typographic-base-font-size;
-
-      &:hover,
-      &:focus {
-        border-bottom: 1px solid variables.$color-blue;
-        color: var(--color-primary);
-      }
+    a:focus-visible {
+      outline: 2px solid var(--color-typographic-base-font);
+      outline-offset: 4px;
     }
   }
 }

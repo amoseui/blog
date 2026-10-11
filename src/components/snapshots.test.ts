@@ -59,10 +59,9 @@ test("Pagination snapshot", async () => {
   const container = await AstroContainer.create();
   const html = await container.renderToString(Pagination, {
     props: {
-      prevPagePath: "/",
-      nextPagePath: "/page/1",
-      hasPrevPage: false,
-      hasNextPage: true,
+      basePath: "/",
+      currentPage: 0,
+      totalPages: 5,
     },
   });
   expect(normalize(html)).toMatchSnapshot();

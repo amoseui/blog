@@ -3,9 +3,12 @@ import styles from "./Copyright.module.scss";
 
 interface Props {
   copyright: string;
+  placement?: "sidebar" | "footer";
 }
 
-const { copyright } = Astro.props;
+const { copyright, placement } = Astro.props;
 ---
 
-<div class={styles.copyright}>{copyright}</div>
+<div class:list={[styles.copyright, placement && styles[placement]]}>
+  {copyright}
+</div>

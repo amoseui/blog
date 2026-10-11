@@ -14,43 +14,42 @@ const { entries } = Astro.props;
 
 <div class={styles.feed}>
   {
-    entries.map((entry) => (
-      <div class={styles.item}>
-        <div class={styles.meta}>
-          <time
-            class={styles.time}
-            datetime={new Date(entry.data.date ?? 0).toLocaleDateString(
-              "en-US",
-              {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-                timeZone: "Asia/Seoul",
-              },
-            )}
-          >
-            {new Date(entry.data.date ?? 0).toLocaleDateString("en-US", {
-              year: "numeric",
-              month: "long",
-              timeZone: "Asia/Seoul",
-            })}
-          </time>
-          {entry.data.tags?.map((tag) => (
-            <a href={href(tagUrl(tag))} class={styles.tag}>
-              {tag}
-            </a>
-          ))}
-        </div>
-        <h2 class={styles.title}>
-          <a class={styles.link} href={href(entryUrl(entry))}>
-            {entry.data.title}
-          </a>
-        </h2>
-        <p class={styles.description}>{entry.data.description}</p>
-        <a class={styles.more} href={href(entryUrl(entry))}>
-          Read
-        </a>
-      </div>
-    ))
+    entries.map((entry) => {
+      const date = new Date(entry.data.date ?? 0);
+      const year = date.toLocaleDateString("en-US", {
+        year: "numeric",
+        timeZone: "Asia/Seoul",
+      });
+      const month = date.toLocaleDateString("en-US", {
+        month: "2-digit",
+        timeZone: "Asia/Seoul",
+      });
+      const day = date.toLocaleDateString("en-US", {
+        day: "2-digit",
+        timeZone: "Asia/Seoul",
+      });
+      return (
+        <article class={styles.item}>
+          <header>
+            <div class={styles.meta}>
+              <time class={styles.time} datetime={date.toISOString()}>
+                {year}.{month}.{day}
+              </time>
+              {entry.data.tags?.map((tag) => (
+                <a href={href(tagUrl(tag))} class={styles.tag}>
+                  {tag}
+                </a>
+              ))}
+            </div>
+            <h2 class={styles.title}>
+              <a class={styles.link} href={href(entryUrl(entry))}>
+                {entry.data.title}
+              </a>
+            </h2>
+          </header>
+          <p class={styles.description}>{entry.data.description}</p>
+        </article>
+      );
+    })
   }
 </div>
