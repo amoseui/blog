@@ -15,9 +15,16 @@ interface Props {
   description?: string;
   image?: string;
   type?: "website" | "article";
+  showCopyright?: boolean;
 }
 
-const { title, description = site.subtitle, image, type } = Astro.props;
+const {
+  title,
+  description = site.subtitle,
+  image,
+  type,
+  showCopyright = true,
+} = Astro.props;
 
 // Github pages serves directory output at the trailing-slash url (bare form
 // 301s), so the slash form is the canonical one search engines should index.
@@ -87,6 +94,10 @@ const googleAnalyticsScript = `
   </head>
   <body>
     <div class={styles.layout}><slot /></div>
-    <Copyright copyright={site.copyright} placement="footer" />
+    {
+      showCopyright && (
+        <Copyright copyright={site.copyright} placement="footer" />
+      )
+    }
   </body>
 </html>

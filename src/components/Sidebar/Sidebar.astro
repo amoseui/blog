@@ -1,4 +1,6 @@
 ---
+import type { MarkdownHeading } from "astro";
+
 import { byTag } from "@/lib/posts";
 import type { PaginationState } from "@/lib/pagination";
 import { site } from "@/lib/site";
@@ -8,15 +10,17 @@ import Author from "./Author/Author.astro";
 import Contacts from "./Contacts/Contacts.astro";
 import Copyright from "./Copyright/Copyright.astro";
 import TagNavigation from "./TagNavigation/TagNavigation.astro";
+import TableOfContents from "./TableOfContents/TableOfContents.astro";
 
 import styles from "./Sidebar.module.scss";
 
 interface Props {
   isIndex?: boolean;
   pagination?: PaginationState;
+  headings?: MarkdownHeading[];
 }
 
-const { isIndex, pagination } = Astro.props;
+const { isIndex, pagination, headings } = Astro.props;
 const { author, copyright } = site;
 const tags = [...(await byTag())]
   .sort(
@@ -26,12 +30,20 @@ const tags = [...(await byTag())]
   .map(([tag]) => tag);
 ---
 
-<div class={styles.sidebar}>
+<div class:list={[styles.sidebar, headings && styles.postSidebar]}>
   <div class={styles.inner}>
     <Author author={author} isIndex={isIndex} />
-    <Contacts contacts={author.contacts} />
-    <TagNavigation tags={tags} />
-    {pagination && <Pagination {...pagination} placement="sidebar" />}
-    <Copyright copyright={copyright} placement="sidebar" />
+    {
+      headings ? (
+        <TableOfContents headings={headings} />
+      ) : (
+        <>
+          <Contacts contacts={author.contacts} />
+          <TagNavigation tags={tags} compact={isIndex} />
+          {pagination && <Pagination {...pagination} placement="sidebar" />}
+          <Copyright copyright={copyright} placement="sidebar" />
+        </>
+      )
+    }
   </div>
 </div>

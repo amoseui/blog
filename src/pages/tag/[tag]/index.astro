@@ -25,7 +25,7 @@ const base = tagUrl(group);
 
 <BaseLayout title={`${group} - ${site.title}`} description={site.subtitle}>
   <Sidebar pagination={{ basePath: base, currentPage: 0, totalPages: total }} />
-  <Page title={group}>
+  <Page title={group} titleType="tag">
     <Feed entries={entries} />
     <Pagination
       basePath={base}

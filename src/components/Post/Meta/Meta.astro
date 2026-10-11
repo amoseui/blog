@@ -1,22 +1,41 @@
 ---
+import { href, tagUrl } from "@/lib/urls";
+
 import styles from "./Meta.module.scss";
 
 interface Props {
   date?: Date;
+  tags?: string[];
 }
 
-const { date } = Astro.props;
+const { date, tags = [] } = Astro.props;
+const year = date?.toLocaleDateString("en-US", {
+  year: "numeric",
+  timeZone: "Asia/Seoul",
+});
+const month = date?.toLocaleDateString("en-US", {
+  month: "2-digit",
+  timeZone: "Asia/Seoul",
+});
+const day = date?.toLocaleDateString("en-US", {
+  day: "2-digit",
+  timeZone: "Asia/Seoul",
+});
 ---
 
 <div class={styles.meta}>
-  <p class={styles.date}>
-    Published {
-      date?.toLocaleDateString("en-US", {
-        year: "numeric",
-        month: "short",
-        day: "numeric",
-        timeZone: "Asia/Seoul",
-      })
-    }
-  </p>
+  {
+    date && (
+      <time class={styles.date} datetime={date.toISOString()}>
+        {year}.{month}.{day}
+      </time>
+    )
+  }
+  {
+    tags.map((tag) => (
+      <a class={styles.tag} href={href(tagUrl(tag))}>
+        {tag}
+      </a>
+    ))
+  }
 </div>

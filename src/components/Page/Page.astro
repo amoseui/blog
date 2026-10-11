@@ -3,14 +3,24 @@ import styles from "./Page.module.scss";
 
 interface Props {
   title?: string;
+  titleType?: "page" | "tag";
 }
 
-const { title } = Astro.props;
+const { title, titleType = "page" } = Astro.props;
 ---
 
 <div class={styles.page}>
   <div class={styles.inner}>
-    {title && <h1 class={styles.title}>{title}</h1>}
+    {
+      title &&
+        (titleType === "tag" ? (
+          <h1 class={styles.tagTitle}>
+            <span class={styles.tagLabel}>tag:</span> {title}
+          </h1>
+        ) : (
+          <h1 class={styles.title}>{title}</h1>
+        ))
+    }
     <div class={styles.body}><slot /></div>
   </div>
 </div>

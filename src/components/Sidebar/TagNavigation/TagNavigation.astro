@@ -5,15 +5,19 @@ import styles from "./TagNavigation.module.scss";
 
 interface Props {
   tags: string[];
+  compact?: boolean;
 }
 
-const { tags } = Astro.props;
+const { tags, compact } = Astro.props;
 const currentPath = href(Astro.url.pathname);
 const isCurrentTag = (tag: string) => currentPath.startsWith(href(tagUrl(tag)));
 const isAll = currentPath === "/" || /^\/page\/\d+\/$/.test(currentPath);
 ---
 
-<nav class={styles.navigation} aria-label="Topics">
+<nav
+  class:list={[styles.navigation, compact && styles.compact]}
+  aria-label="Topics"
+>
   <ul class={styles.list}>
     <li class={styles.item}>
       <a class={styles.chip} href="/" aria-current={isAll ? "page" : undefined}>

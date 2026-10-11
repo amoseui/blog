@@ -1,8 +1,47 @@
 @use "../../../assets/scss/variables";
-@use "../../../assets/scss/mixins";
+@use "../../../assets/scss/mixins/breakpoints";
 
 .meta {
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 15px;
+  font-weight: 600;
+  gap: 0 0.75rem;
+  line-height: variables.$typographic-leading * 1px;
+  margin-bottom: 2px;
+
   .date {
-    font-style: italic;
+    color: var(--color-post-date);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+
+  .tag {
+    color: var(--color-secondary);
+    white-space: nowrap;
+
+    /* stylelint-disable-next-line selector-pseudo-class-no-unknown -- CSS Modules uses the existing global theme class. */
+    :global(.dark) & {
+      color: var(--color-primary);
+    }
+
+    &:hover,
+    &:focus {
+      color: var(--color-typographic-base-font);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--color-typographic-base-font);
+      outline-offset: 4px;
+    }
+  }
+}
+
+@include breakpoints.breakpoint-md {
+  .meta {
+    font-size: 16px;
   }
 }
