@@ -8,6 +8,7 @@ category: chromium
 tags:
   - opensource
   - chromium
+  - contribution2023
   - css
   - w3c
 description: 2023년 Chromium 에 반영한 첫 번째 패치 내용 정리

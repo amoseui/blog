@@ -8,6 +8,7 @@ category: chromium
 tags:
   - opensource
   - chromium
+  - contribution2023
   - css
   - w3c
   - wpt

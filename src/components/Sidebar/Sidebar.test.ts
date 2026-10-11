@@ -34,10 +34,11 @@ test("renders author and tag navigation", async () => {
   expect(currentLinks(html)).toEqual(["/"]);
   expect(html).not.toContain("<details");
   expect(html).not.toMatch(/href="\/tag\/\d{4}\//);
-  expect(topicLinks(html).slice(0, 9)).toEqual([
+  expect(topicLinks(html).slice(0, 10)).toEqual([
     "/",
     "/tag/chromium/",
     "/tag/opensource/",
+    "/tag/contribution2023/",
     "/tag/retrospective/",
     "/tag/conference/",
     "/tag/css/",
@@ -72,7 +73,7 @@ test("keeps All selected on paginated full lists", async () => {
 
 test("shows every tag without expanding a menu", async () => {
   const html = await renderSidebar("/tag/wpt/");
-  expect(topicLinks(html)).toHaveLength(22);
+  expect(topicLinks(html)).toHaveLength(23);
   expect(html).not.toContain("<details");
   expect(currentLinks(html)).toEqual(["/tag/wpt/"]);
 });
