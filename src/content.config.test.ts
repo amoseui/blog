@@ -1,4 +1,4 @@
-import { z } from "astro:content";
+import { z } from "astro/zod";
 import { describe, expect, test } from "vitest";
 
 import { blogSchema } from "./content.config";
@@ -39,7 +39,7 @@ test("parses naive frontmatter datetimes as kst", () => {
   });
   expect(result.success).toBe(true);
   if (result.success) {
-    expect(result.data.date.toISOString()).toBe("2016-01-01T18:20:22.000Z");
+    expect(result.data.date?.toISOString()).toBe("2016-01-01T18:20:22.000Z");
   }
 });
 
@@ -51,7 +51,7 @@ test("parses minute-precision naive datetimes as kst", () => {
   });
   expect(result.success).toBe(true);
   if (result.success) {
-    expect(result.data.date.toISOString()).toBe("2026-01-20T12:00:00.000Z");
+    expect(result.data.date?.toISOString()).toBe("2026-01-20T12:00:00.000Z");
   }
 });
 
@@ -63,6 +63,6 @@ test("reinterprets yaml-parsed utc dates as kst digits", () => {
   });
   expect(result.success).toBe(true);
   if (result.success) {
-    expect(result.data.date.toISOString()).toBe("2016-01-01T18:20:22.000Z");
+    expect(result.data.date?.toISOString()).toBe("2016-01-01T18:20:22.000Z");
   }
 });

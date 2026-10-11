@@ -1,1 +1,1 @@
-export { default as Contacts } from "./Contacts";
+export { default as Contacts } from "./Contacts.astro";

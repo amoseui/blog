@@ -1,5 +1,6 @@
-import { defineCollection, z } from "astro:content";
+import { defineCollection } from "astro:content";
 import { glob } from "astro/loaders";
+import { z } from "astro/zod";
 
 // Naive frontmatter datetimes are authored in kst ("2026-01-20 21:00" means
 // 21:00 in Seoul). Pinning the offset keeps output identical on any build
@@ -32,24 +33,20 @@ const shared = {
 // Posts must carry a date: listing order and the rss pubDate break silently
 // without one. Pages (e.g. about) have no date. Exported as a factory so
 // tests can validate the contract with a stub image schema.
-export const blogSchema = (image: () => z.ZodTypeAny) =>
+export const blogSchema = <T extends z.ZodType>(image: () => T) =>
   z.discriminatedUnion("template", [
-    z
-      .object({
-        ...shared,
-        template: z.literal("post"),
-        date: kstDate,
-        socialImage: image().optional(),
-      })
-      .passthrough(),
-    z
-      .object({
-        ...shared,
-        template: z.literal("page"),
-        date: kstDate.optional(),
-        socialImage: image().optional(),
-      })
-      .passthrough(),
+    z.looseObject({
+      ...shared,
+      template: z.literal("post"),
+      date: kstDate,
+      socialImage: image().optional(),
+    }),
+    z.looseObject({
+      ...shared,
+      template: z.literal("page"),
+      date: kstDate.optional(),
+      socialImage: image().optional(),
+    }),
   ]);
 
 const blog = defineCollection({
