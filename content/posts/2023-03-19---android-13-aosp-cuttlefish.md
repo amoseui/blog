@@ -22,9 +22,9 @@ Ubuntu 20.04 환경에서 Android 13 버전 기준으로 AOSP 빌드를 하고 C
 
 보통 Android Open Source Project 를 줄여서 AOSP 라고 부른다. 모바일 기기에 탑재되는 Android OS 는 보통 AOSP에 비공개 코드로 빌드된 여러 모듈과 레이어 + 구글 서비스 + 단말 업체의 수정, 앱, 서비스 등이 포함되어있다고 보면 된다.
 
-AOSP는 오픈소스 프로젝트지만 개발 프로세스, 문서, 코드가 투명하게 모두 공개되어있는 커뮤니티 기반의 일반적인 오픈소스 프로젝트라고 보기는 어렵다. 공개된 repository 에 코드 반영이 가능하긴 하지만 대부분 보수적으로 운영되기 때문에 적극적인 contribution 이 쉽지 않다. AOSP gerrit 에 코드를 올릴 때  CI 빌드가 돌기는 하지만 결과 링크는 구글 내부 URL 이라서 접속을 할 수 없다. 구글이 내부적으로 신규 OS 개발을 1년동안 진행하고 정식 릴리즈 때에 AOSP 브랜치로 전체 merge 를 하는 방식으로 코드를 공개한다.
+AOSP는 오픈소스 프로젝트지만 개발 프로세스, 문서, 코드가 투명하게 모두 공개되어있는 커뮤니티 기반의 일반적인 오픈소스 프로젝트라고 보기는 어렵다. 공개된 repository 에 코드 반영이 가능하긴 하지만 대부분 보수적으로 운영되기 때문에 적극적인 contribution 이 쉽지 않다. AOSP gerrit 에 코드를 올릴 때  CI 빌드가 돌기는 하지만 결과 링크는 구글 내부 URL 이라서 접속을 할 수 없다. 구글이 내부적으로 신규 OS 개발을 1년 동안 진행하고 정식 릴리즈 때에 AOSP 브랜치로 전체 merge 를 하는 방식으로 코드를 공개한다.
 
-안드로이드 앱 개발자는 [developer.android.com](https://developer.android.com/) 웹사이트가 익숙한데 AOSP는 이 곳이 아닌 별도의 [source.android.com](https://source.android.com) 사이트에 플랫폼 개발자를 위한 문서를 제공한다. developer 사이트에 비해 내용이 많이 부족했지만 몇 년 사이에 리뉴얼도 하고 최신 내용도 많이 보충되었다.
+안드로이드 앱 개발자는 [developer.android.com](https://developer.android.com/) 웹사이트가 익숙한데 AOSP는 이곳이 아닌 별도의 [source.android.com](https://source.android.com) 사이트에 플랫폼 개발자를 위한 문서를 제공한다. developer 사이트에 비해 내용이 많이 부족했지만 몇 년 사이에 리뉴얼도 하고 최신 내용도 많이 보충되었다.
 
 ## Cuttlefish?
 
@@ -38,7 +38,7 @@ Cuttlefish 는 기본적으로 웹 환경으로 제공된다. 웹페이지에 �
 
 ### 빌드 환경
 
-빌드 환경 셋업은 아래 링크에 나와있는 그대로 따라했다. Ubuntu 20.04 를 사용하고 있는데 아래 링크에서 Ubuntu 18.04 와 동일하게 패키지를 설치하였는데 별 다른 문제는 없었다.
+빌드 환경 셋업은 아래 링크에 나와있는 그대로 따라했다. Ubuntu 20.04 를 사용하고 있는데 아래 링크에서 Ubuntu 18.04 와 동일하게 패키지를 설치하였는데 별다른 문제는 없었다.
 
 [https://source.android.com/docs/setup/start/initializing](https://source.android.com/docs/setup/start/initializing)
 
@@ -54,7 +54,7 @@ $ lunch aosp_cf_arm64_phone
 $ m
 ```
 
-repo 는 빌드 환경을 위한 도구이다. AOSP 는 수십개의 repository 로 구성되어있으며 manifest 로 이를 관리한다. master 브랜치는 개발 중인 브랜치로 빌드나 디바이스 실행 등이 잘 안 될 수 있기 때문에 Android 13 의 안정화 버전이라고 할 수 있는 Generic System Image 를 위한 android13-gsi 태그로 코드를 받았다. 소스 싱크는 1~2시간 가량 걸렸다.
+repo 는 빌드 환경을 위한 도구이다. AOSP 는 수십 개의 repository 로 구성되어있으며 manifest 로 이를 관리한다. master 브랜치는 개발 중인 브랜치로 빌드나 디바이스 실행 등이 잘 안 될 수 있기 때문에 Android 13 의 안정화 버전이라고 할 수 있는 Generic System Image 를 위한 android13-gsi 태그로 코드를 받았다. 소스 싱크는 1~2시간 가량 걸렸다.
 
 프로젝트가 워낙 크기 때문에 전체 git history 를 포함한 코드를 모두 받으면 디스크 용량이 부족할 수 있다. 다운받을 소스 코드를 최소화하기 위해 repo init, sync 시에 --depth=1, -c, --no-clone-bundle, --no-tags 옵션 등을 추가했다. 코드는 빌드로만 사용하고 히스토리 트래킹은 [https://cs.android.com](https://cs.android.com) 이나 [https://android.googlesource.com/](https://android.googlesource.com/) 를 참고하는 것이 낫다. 만약 contribution 이 필요한 경우 관련 project 만 따로 코드를 받는 것이 좋다.
 
@@ -94,7 +94,7 @@ PRODUCT_SOONG_NAMESPACES=device/generic/goldfish-opengl device/generic/goldfish 
 
 ### 빌드 에러
 
-빌드 에러가 간간히 발생했는데 무시하고 다시 m 명령어로 빌드를 몇 번 재시도했더니 결국 전체 소스 빌드에 성공했다. 빌드는 3~4시간은 걸린 걸로 기억한다.
+빌드 에러가 간간이 발생했는데 무시하고 다시 m 명령어로 빌드를 몇 번 재시도했더니 결국 전체 소스 빌드에 성공했다. 빌드는 3~4시간은 걸린 걸로 기억한다.
 
 1. rust 에서 빌드 중 segmentation fault 발생
 
@@ -149,7 +149,7 @@ $ stop_cvd
 ![cuttlefish](media/screenshot_cuttlefish.png)
 _<center>부팅된 Cuttlefish 화면</center>_
 
-`launch_cvd` 를 실행했을 때 정상적인 경우 아래처럼 로그가 나오고
+`launch_cvd` 를 실행했을 때 정상적인 경우 아래처럼 로그가 나오고,
 
 ```
 $ launch_cvd --daemon
@@ -208,7 +208,7 @@ run_cvd I 03-14 21:12:36 3458590 3458590 process_monitor.cc:118] Detected unexpe
 run_cvd I 03-14 21:12:36 3458590 3458590 process_monitor.cc:120] Subprocess /home/amoseui/Workspace/AOSP/out/host/linux-x86/bin/crosvm (3458640) has exited with exit code 1
 ```
 
-`sudo kvm-ok` 로 kvm 을 확인해보았더니 BIOS 에서 disable 되어있어서 안된다는 메시지를 나왔다.
+`sudo kvm-ok` 로 kvm 을 확인해보았더니 BIOS 에서 disable 되어있어서 안 된다는 메시지가 나왔다.
 
 ```bash
 $ sudo kvm-ok
@@ -223,7 +223,7 @@ KVM acceleration can NOT be used
 
 AMD 라이젠 GIGABYTE 기준, 부팅 화면에서 BIOS 설정으로 들어가서
 M.I.T > Advanced Frequency Settings > Advanced CPU Core Settings > SVM Mode 을 enable 한 뒤,
-아래 명령어를 실행하다보니 부팅이 됐다. (바로 기록한 것이 아니라 순서나 내용이 정확하지 않을 수 있음)
+아래 명령어를 실행하다 보니 부팅이 됐다. (바로 기록한 것이 아니라 순서나 내용이 정확하지 않을 수 있음)
 
 ```bash
 $ sudo modprobe kvm_amd
