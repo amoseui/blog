@@ -4,7 +4,6 @@ date: 2017-10-03 22:08:05
 template: post
 draft: false
 slug: /droidknights-2017
-category: conference
 tags:
   - conference
   - android

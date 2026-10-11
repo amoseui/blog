@@ -38,7 +38,7 @@ test("renders author and tag navigation", async () => {
     "/",
     "/tag/chromium/",
     "/tag/opensource/",
-    "/tag/contribution2023/",
+    "/tag/contribution/",
     "/tag/retrospective/",
     "/tag/conference/",
     "/tag/css/",
@@ -106,7 +106,7 @@ test("rss link resolves to the site feed from nested pages", async () => {
   const html = await container.renderToString(Sidebar);
   const rssHref = html.match(/href="([^"]*rss\.xml)"/)?.[1];
   expect(rssHref).toBeDefined();
-  for (const pathname of ["/tag/testing/", "/category/chromium/"]) {
+  for (const pathname of ["/tag/testing/", "/tag/contribution/page/1/"]) {
     const resolved = new URL(
       rssHref ?? "",
       `https://blog.amoseui.com${pathname}`,

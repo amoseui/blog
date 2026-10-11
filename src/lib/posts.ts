@@ -35,10 +35,5 @@ const groupBy = (
   return new Map([...groups.entries()].sort(([a], [b]) => a.localeCompare(b)));
 };
 
-export const byCategory = async (): Promise<Map<string, Entry[]>> =>
-  groupBy(await allPosts(), (post) =>
-    post.data.category ? [post.data.category] : [],
-  );
-
 export const byTag = async (): Promise<Map<string, Entry[]>> =>
   groupBy(await allPosts(), (post) => post.data.tags ?? []);

@@ -4,7 +4,6 @@ date: 2024-11-25 00:00:00
 template: post
 draft: false
 slug: /opensourceconference
-category: conference
 tags:
   - gdg
   - opensource

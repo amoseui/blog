@@ -4,11 +4,10 @@ date: 2023-11-30 18:30:00
 template: post
 draft: false
 slug: /chromium-css-keyframesrule-length-attribute
-category: chromium
 tags:
   - opensource
   - chromium
-  - contribution2023
+  - contribution
   - css
   - w3c
   - wpt

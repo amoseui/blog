@@ -4,7 +4,6 @@ date: 2016-01-02 03:20:22
 template: post
 draft: false
 slug: /2015-retrospective
-category: retrospective
 tags:
   - retrospective
 description: 2015년, 여러모로 아쉬운 한 해였다.

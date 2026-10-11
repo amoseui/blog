@@ -4,7 +4,6 @@ date: 2022-12-31 18:00:00
 template: post
 draft: false
 slug: /2022-retrospective
-category: retrospective
 tags:
   - retrospective
 description: 오랜만에 한 해 회고를 남긴다.

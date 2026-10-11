@@ -4,7 +4,6 @@ date: 2025-12-31 23:30
 template: post
 draft: false
 slug: /ossca-2025-chromium
-category: opensource
 tags:
   - chromium
   - opensource

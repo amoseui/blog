@@ -1,6 +1,6 @@
 import { expect, test } from "vitest";
 
-import { categoryUrl, entryUrl, href, paginationUrl, tagUrl } from "./urls";
+import { entryUrl, href, paginationUrl, tagUrl } from "./urls";
 
 test("uses frontmatter slug verbatim", () => {
   expect(
@@ -21,10 +21,6 @@ test("strips md extension in file path fallback", () => {
   );
 });
 
-test("categoryUrl kebab-cases the category", () => {
-  expect(categoryUrl("Chromium")).toBe("/category/chromium");
-});
-
 test("tagUrl kebab-cases the tag", () => {
   expect(tagUrl("Code Coverage Best Practices")).toBe(
     "/tag/code-coverage-best-practices",
@@ -33,23 +29,21 @@ test("tagUrl kebab-cases the tag", () => {
 
 test("paginationUrl returns base for page 0", () => {
   expect(paginationUrl("/", 0)).toBe("/");
-  expect(paginationUrl("/category/chromium", 0)).toBe("/category/chromium");
+  expect(paginationUrl("/tag/chromium", 0)).toBe("/tag/chromium");
 });
 
 test("paginationUrl appends page segment for later pages", () => {
   expect(paginationUrl("/", 1)).toBe("/page/1");
-  expect(paginationUrl("/category/chromium", 2)).toBe(
-    "/category/chromium/page/2",
-  );
+  expect(paginationUrl("/tag/chromium", 2)).toBe("/tag/chromium/page/2");
 });
 
 test("href appends a trailing slash for internal page urls", () => {
   expect(href("/2015-retrospective")).toBe("/2015-retrospective/");
-  expect(href("/category/aosp")).toBe("/category/aosp/");
+  expect(href("/tag/aosp")).toBe("/tag/aosp/");
   expect(href("/page/1")).toBe("/page/1/");
 });
 
 test("href keeps root and already-slashed urls unchanged", () => {
   expect(href("/")).toBe("/");
-  expect(href("/categories/")).toBe("/categories/");
+  expect(href("/tag/chromium/")).toBe("/tag/chromium/");
 });

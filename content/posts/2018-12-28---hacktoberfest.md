@@ -4,7 +4,6 @@ date: 2018-12-29 07:00:00
 template: post
 draft: false
 slug: /hacktoberfest-2018
-category: opensource
 tags:
   - hacktoberfest
   - opensource

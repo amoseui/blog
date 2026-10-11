@@ -4,11 +4,10 @@ date: 2023-06-23 05:30:00
 template: post
 draft: false
 slug: /chromium-css-supports-allow-empty-parentheses
-category: chromium
 tags:
   - opensource
   - chromium
-  - contribution2023
+  - contribution
   - css
   - w3c
   - wpt

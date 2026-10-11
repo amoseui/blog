@@ -4,11 +4,10 @@ date: 2023-11-30 17:00:00
 template: post
 draft: false
 slug: /chromium-css-groupingrule-index-optional
-category: chromium
 tags:
   - opensource
   - chromium
-  - contribution2023
+  - contribution
   - css
   - w3c
   - wpt

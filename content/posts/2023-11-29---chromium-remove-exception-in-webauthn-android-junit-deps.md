@@ -4,11 +4,10 @@ date: 2023-11-29 16:00:00
 template: post
 draft: false
 slug: /chromium-remove-exception-in-webauthn-android-junit-deps
-category: chromium
 tags:
   - opensource
   - chromium
-  - contribution2023
+  - contribution
   - webauthn
 description: 2023년 Chromium 에 반영한 네 번째 패치 내용 정리
 socialImage: ./media/content-layer-diagram.png

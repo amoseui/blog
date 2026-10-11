@@ -4,7 +4,6 @@ date: 2023-03-19 09:50:00
 template: post
 draft: false
 slug: /android-13-aosp-cuttlefish
-category: aosp
 tags:
   - aosp
   - android

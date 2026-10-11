@@ -4,7 +4,6 @@ date: 2017-01-02 03:20:22
 template: post
 draft: false
 slug: /2016-retrospective
-category: retrospective
 tags:
   - retrospective
 description: 다사다난했던 2016년이 지나고 2017년이 시작됐다.

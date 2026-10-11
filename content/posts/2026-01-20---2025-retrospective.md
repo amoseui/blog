@@ -4,7 +4,6 @@ date: 2026-01-20 21:00
 template: post
 draft: false
 slug: /2025-retrospective
-category: retrospective
 tags:
   - retrospective
 description: 조금 늦게 남겨 보는 2025년 회고와 2026년.
