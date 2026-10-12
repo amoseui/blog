@@ -105,6 +105,13 @@
   }
 }
 
+@media screen and (max-width: variables.$layout-breakpoint-sm - 1px) {
+  // Compact the author spacing only on pages that show contact links.
+  .sidebar:not(.postSidebar) .inner > :first-child {
+    @include mixins.margin-bottom(0.5);
+  }
+}
+
 @media screen and (max-width: variables.$layout-breakpoint-md - 1px) {
   .postSidebar .inner:after {
     content: none;

@@ -98,26 +98,46 @@ test("shows every tag without expanding a menu", async () => {
   expect(currentLinks(html)).toEqual(["/tag/wpt/"]);
 });
 
-test("renders social profiles in the requested order without email", async () => {
+test("renders contact links in the requested order", async () => {
   const html = await renderSidebar();
   const icons = [...html.matchAll(/<title>([^<]+)<\/title>/g)].map(
     ([, name]) => name,
   );
   expect(icons.filter((name) => name !== "light")).toEqual([
     "rss",
+    "email",
     "github",
     "linkedin",
-    "instagram",
-    "X",
+    "Speaker Deck",
     "medium",
-    "soundcloud",
+    "X",
+    "instagram",
     "youtube",
+    "soundcloud",
   ]);
   expect(html).toContain('href="https://www.instagram.com/amoseui"');
   expect(html).toContain('href="https://x.com/amoseui"');
+  expect(html).toContain('href="https://speakerdeck.com/amoseui"');
+  const emailLink = html.match(
+    /<a\b[^>]*href="mailto:amoseui@gmail\.com"[^>]*>/,
+  )?.[0];
+  expect(emailLink).toBeDefined();
+  expect(emailLink).not.toContain("target=");
   expect(html).not.toContain("data-contact-email");
   expect(html.indexOf('href="https://www.youtube.com/@amoseui"')).toBeLessThan(
     html.indexOf("<nav"),
+  );
+});
+
+test("preserves Speaker Deck attribution in the rendered SVG", async () => {
+  const html = await renderSidebar();
+  const speakerDeckSvg = [...html.matchAll(/<svg\b[^>]*>[\s\S]*?<\/svg>/g)]
+    .map(([svg]) => svg)
+    .find((svg) => svg.includes("<title>Speaker Deck</title>"));
+  expect(speakerDeckSvg).toContain("Font Awesome Free 6.7.2 by @fontawesome");
+  expect(speakerDeckSvg).toContain("Copyright 2024 Fonticons, Inc.");
+  expect(speakerDeckSvg).toContain(
+    "https://creativecommons.org/licenses/by/4.0/",
   );
 });
 

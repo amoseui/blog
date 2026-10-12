@@ -23,8 +23,12 @@ const names = Object.keys(contacts) as Array<keyof typeof ICONS>;
             <a
               class={styles.link}
               href={getContactHref(name, contacts[name])}
-              target="_blank"
-              rel={`noopener noreferrer${name === "mastodon" ? " me" : ""}`}
+              target={name === "email" ? undefined : "_blank"}
+              rel={
+                name === "email"
+                  ? undefined
+                  : `noopener noreferrer${name === "mastodon" ? " me" : ""}`
+              }
             >
               <Icon name={name} icon={getIcon(name)} />
             </a>

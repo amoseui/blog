@@ -11,13 +11,15 @@
     "bio": "Everything in Its Right Place",
     "contacts": {
       "rss": "/rss.xml",
+      "email": "amoseui@gmail.com",
       "github": "amoseui",
       "linkedin": "amoseui",
-      "instagram": "amoseui",
-      "x": "amoseui",
+      "speakerdeck": "amoseui",
       "medium": "@amoseui",
-      "soundcloud": "amoseui",
-      "youtube": "@amoseui"
+      "x": "amoseui",
+      "instagram": "amoseui",
+      "youtube": "@amoseui",
+      "soundcloud": "amoseui"
     }
   }
 }
