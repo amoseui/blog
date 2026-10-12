@@ -2,30 +2,29 @@
 @use "../../../assets/scss/mixins";
 
 .contacts {
-  @include mixins.margin-bottom(1);
+  @include mixins.margin-bottom(0.5);
 
   .list {
-    display: flex;
-    flex-flow: row wrap;
+    display: grid;
     gap: 0.375rem;
+    grid-template-columns: repeat(10, minmax(0, 1fr));
     list-style: none;
+    max-width: calc(10 * (variables.$button-height - 4px) + 9 * 0.375rem);
     @include mixins.padding-equal(0);
     @include mixins.margin(0.5, 0);
 
     .item {
       align-content: center;
       align-items: center;
+      aspect-ratio: 1;
       border: 1px solid var(--color-contacts-border);
       border-radius: 50%;
       box-sizing: border-box;
       display: flex;
-      flex: 0 0 (variables.$button-height - 4px);
-      font-size: variables.$typographic-small-font-size;
-      height: variables.$button-height - 4px;
+      font-size: variables.$typographic-small-font-size + 2px;
       justify-content: center;
-      line-height: variables.$button-height - 4px;
       text-align: center;
-      width: variables.$button-height - 4px;
+      width: 100%;
       @include mixins.padding-equal(0);
       @include mixins.margin-equal(0);
 
@@ -39,11 +38,29 @@
         justify-content: center;
         width: 100%;
 
+        // Keep rectangular marks inside the circle on narrow screens.
+        > svg {
+          max-height: 70%;
+          max-width: 70%;
+        }
+
         &:hover,
         &:focus {
           color: var(--color-typographic-link-p-font);
         }
       }
+    }
+  }
+}
+
+@media screen and (min-width: variables.$layout-breakpoint-sm) {
+  .contacts {
+    @include mixins.margin-bottom(1);
+
+    .list {
+      gap: 0.625rem;
+      grid-template-columns: repeat(5, variables.$button-height - 4px);
+      justify-content: space-between;
     }
   }
 }

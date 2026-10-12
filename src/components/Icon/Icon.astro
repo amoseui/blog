@@ -8,13 +8,17 @@ interface Props {
   icon: {
     viewBox?: string;
     path?: string;
+    attribution?: string;
   };
 }
 
 const { name, icon } = Astro.props;
+const title =
+  name === "x" ? "X" : name === "speakerdeck" ? "Speaker Deck" : name;
 ---
 
 <svg class={styles.icon} viewBox={icon.viewBox}>
-  <title>{name === "x" ? "X" : name}</title>
+  <title>{title}</title>
+  {icon.attribution && <metadata>{icon.attribution}</metadata>}
   <path d={icon.path}></path>
 </svg>
