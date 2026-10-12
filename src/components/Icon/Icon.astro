@@ -15,9 +15,19 @@ interface Props {
 const { name, icon } = Astro.props;
 const title =
   name === "x" ? "X" : name === "speakerdeck" ? "Speaker Deck" : name;
+const smaller = ["rss", "email", "linkedin", "medium", "x", "youtube"].includes(
+  name,
+);
 ---
 
-<svg class={styles.icon} viewBox={icon.viewBox}>
+<svg
+  class:list={[
+    styles.icon,
+    smaller && styles.smaller,
+    name === "github" && styles.larger,
+  ]}
+  viewBox={icon.viewBox}
+>
   <title>{title}</title>
   {icon.attribution && <metadata>{icon.attribution}</metadata>}
   <path d={icon.path}></path>

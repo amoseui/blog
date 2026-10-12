@@ -13,5 +13,14 @@
   stroke-width: 0;
   text-align: center;
   text-transform: none;
+  transform-origin: center;
   width: 1.25em;
+
+  &.smaller {
+    transform: scale(0.9);
+  }
+
+  &.larger {
+    transform: scale(1.1);
+  }
 }
