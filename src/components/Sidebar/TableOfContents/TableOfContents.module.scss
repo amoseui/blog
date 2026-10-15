@@ -18,6 +18,7 @@
   border: 0;
   color: inherit;
   cursor: pointer;
+  display: none;
   font: inherit;
   padding: 0;
   text-align: left;
@@ -78,5 +79,24 @@
   .link {
     color: var(--color-post-date);
     font-size: variables.$typographic-small-font-size - 1px;
+  }
+}
+
+@supports selector(:has(*)) {
+  @media screen and (width < variables.$layout-breakpoint-md) {
+    // Keep links available without JavaScript; enhancement is marked inline.
+    .outline[data-enhanced] {
+      [data-contents-title] {
+        display: none;
+      }
+
+      .toggle {
+        display: inline-block;
+      }
+
+      &:not(:has(.toggle[aria-expanded="true"])) .navigation {
+        display: none;
+      }
+    }
   }
 }

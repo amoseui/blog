@@ -1,3 +1,5 @@
+import { runInNewContext } from "node:vm";
+
 import { experimental_AstroContainer as AstroContainer } from "astro/container";
 import { getCollection } from "astro:content";
 import { expect, test } from "vitest";
@@ -54,4 +56,35 @@ test("omits an empty outline when the article has no h2 or h3 headings", async (
     slots: { default: '<h4 id="detail">Detail</h4>' },
   });
   expect(html).not.toContain('aria-label="목차"');
+});
+
+test("renders the mobile outline toggle collapsed before its module runs", async () => {
+  const container = await AstroContainer.create();
+  const html = await container.renderToString(Post, {
+    props: {
+      entry: await fixture(),
+      headings: [{ depth: 2, slug: "section", text: "Section" }],
+    },
+    slots: { default: '<h2 id="section">Section</h2>' },
+  });
+  const toggle = html.match(/<button\b[^>]*data-contents-toggle[^>]*>/)?.[0];
+  expect(toggle).toBeDefined();
+  expect(toggle).toContain('aria-expanded="false"');
+  expect(toggle).not.toMatch(/\bhidden\b/);
+  expect(html).toContain('href="#section"');
+
+  const bootstrap = [...html.matchAll(/<script\b[^>]*>([\s\S]*?)<\/script>/g)]
+    .map(([, script]) => script)
+    .find((script) => script.includes("document.currentScript"));
+  expect(bootstrap).toBeDefined();
+  const attributes = new Map<string, string>();
+  const outline = {
+    setAttribute: (name: string, value: string) => attributes.set(name, value),
+  };
+  expect(() =>
+    runInNewContext(bootstrap ?? "", {
+      document: { currentScript: { parentElement: outline } },
+    }),
+  ).not.toThrow();
+  expect(attributes.has("data-enhanced")).toBe(true);
 });
