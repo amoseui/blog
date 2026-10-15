@@ -49,7 +49,7 @@
   }
 
   .subtitle {
-    color: variables.$color-gray;
+    color: var(--color-typographic-muted-font);
     font-size: variables.$typographic-small-font-size - 1px;
     line-height: 1.5;
     white-space: nowrap;

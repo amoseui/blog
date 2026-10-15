@@ -7,6 +7,42 @@ import { site } from "@/lib/site";
 
 import BaseLayout from "./BaseLayout.astro";
 
+const analyticsPage = async (readyState = "loading") => {
+  const container = await AstroContainer.create();
+  const html = await container.renderToString(BaseLayout, {
+    props: { title: "T" },
+  });
+  const source = [...html.matchAll(/<script\b[^>]*>([\s\S]*?)<\/script>/g)]
+    .map(([, script]) => script)
+    .find((script) => script.includes("gtag("));
+  if (!source) throw new Error("Analytics initializer not found");
+
+  const events = new EventTarget();
+  const documentEvents = new EventTarget();
+  const frames: (() => void)[] = [];
+  const tasks: (() => void)[] = [];
+  const context = createContext({
+    document: {
+      readyState,
+      visibilityState: "visible",
+      addEventListener: documentEvents.addEventListener.bind(documentEvents),
+      removeEventListener:
+        documentEvents.removeEventListener.bind(documentEvents),
+    },
+    addEventListener: events.addEventListener.bind(events),
+    removeEventListener: events.removeEventListener.bind(events),
+    requestAnimationFrame: (callback: () => void) => frames.push(callback),
+    setTimeout: (callback: () => void) => tasks.push(callback),
+  });
+  context.window = context;
+  runInContext(source, context);
+  const paint = () => {
+    frames.splice(0).forEach((callback) => callback());
+    tasks.splice(0).forEach((callback) => callback());
+  };
+  return { context, events, documentEvents, frames, tasks, paint };
+};
+
 test("renders title, meta and theme bootstrap", async () => {
   const container = await AstroContainer.create();
   const html = await container.renderToString(BaseLayout, {
@@ -53,14 +89,56 @@ test("renders the standard Analytics snippet in head for ownership verification"
   );
   expect(config?.[1]).toBe(site.googleAnalyticsId);
 
-  const context = createContext({});
-  context.window = context;
-  runInContext(source, context);
+  const { context, events, paint } = await analyticsPage();
   expect(typeof context.gtag).toBe("function");
+  expect(context.dataLayer).toHaveLength(0);
+  events.dispatchEvent(new Event("load"));
+  paint();
   expect(context.dataLayer).toHaveLength(2);
   expect(context.dataLayer[0][0]).toBe("js");
   expect(Array.from(context.dataLayer[1])).toEqual([
     "config",
     site.googleAnalyticsId,
   ]);
+});
+
+test("waits for a rendering opportunity before initializing Analytics", async () => {
+  const { context, events, frames, tasks } = await analyticsPage();
+  expect(context.dataLayer).toHaveLength(0);
+  events.dispatchEvent(new Event("load"));
+  expect(context.dataLayer).toHaveLength(0);
+  expect(frames).toHaveLength(1);
+  frames.shift()?.();
+  expect(context.dataLayer).toHaveLength(0);
+  expect(tasks).toHaveLength(1);
+  tasks.shift()?.();
+  expect(context.dataLayer).toHaveLength(2);
+});
+
+test("queues a single pageview when the visitor leaves before rendering", async () => {
+  const { context, events, paint } = await analyticsPage();
+  events.dispatchEvent(new Event("pagehide"));
+  expect(context.dataLayer).toHaveLength(2);
+  events.dispatchEvent(new Event("load"));
+  paint();
+  expect(context.dataLayer).toHaveLength(2);
+});
+
+test("initializes when a tab is hidden even if animation frames are paused", async () => {
+  const { context, events, documentEvents, paint } = await analyticsPage();
+  context.document.visibilityState = "hidden";
+  documentEvents.dispatchEvent(new Event("visibilitychange"));
+  expect(context.dataLayer).toHaveLength(2);
+  events.dispatchEvent(new Event("load"));
+  paint();
+  events.dispatchEvent(new Event("pagehide"));
+  expect(context.dataLayer).toHaveLength(2);
+});
+
+test("schedules Analytics when the document has already loaded", async () => {
+  const { context, frames, paint } = await analyticsPage("complete");
+  expect(context.dataLayer).toHaveLength(0);
+  expect(frames).toHaveLength(1);
+  paint();
+  expect(context.dataLayer).toHaveLength(2);
 });

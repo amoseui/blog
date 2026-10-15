@@ -11,9 +11,11 @@ import Sidebar from "@/components/Sidebar/Sidebar.astro";
 import ThemeSwitcher from "@/components/ThemeSwitcher/ThemeSwitcher.astro";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 
-// Container output embeds dev-mode script urls containing the absolute repo
-// path, which differs per machine (local vs ci); strip it for portability.
-const normalize = (html: string): string => html.replaceAll(process.cwd(), "");
+// Dev script URLs and image query strings contain machine-specific paths.
+const normalize = (html: string): string =>
+  html
+    .replaceAll(process.cwd(), "")
+    .replaceAll(encodeURIComponent(process.cwd()), "");
 
 // Deterministic fixture: the oldest post of the collection, which never
 // changes as new posts are added.

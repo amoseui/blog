@@ -42,15 +42,36 @@ const iconVersion = createHash("md5")
   .update(FAVICON_MASK)
   .digest("hex");
 
-// Keep Google's snippet shape for Search Console verification. Avoid
-// define:vars so gtag stays global and its config ID is a literal.
+// Keep the head loader and literal config ID for Search Console verification.
+// Delay config work until after rendering, with an early-exit fallback.
 const googleAnalyticsScript = `
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
       }
-      gtag("js", new Date());
-      gtag("config", ${JSON.stringify(site.googleAnalyticsId).replaceAll("<", "\\u003c")});
+      (() => {
+        const startedAt = new Date();
+        let initialized = false;
+        const initialize = () => {
+          if (initialized) return;
+          initialized = true;
+          gtag("js", startedAt);
+          gtag("config", ${JSON.stringify(site.googleAnalyticsId).replaceAll("<", "\\u003c")});
+          window.removeEventListener("pagehide", initialize);
+          document.removeEventListener("visibilitychange", onVisibilityChange);
+        };
+        const onVisibilityChange = () => {
+          if (document.visibilityState === "hidden") initialize();
+        };
+        const schedule = () => {
+          requestAnimationFrame(() => setTimeout(initialize, 0));
+        };
+        window.addEventListener("pagehide", initialize, { once: true });
+        document.addEventListener("visibilitychange", onVisibilityChange);
+        if (document.visibilityState === "hidden") initialize();
+        else if (document.readyState === "complete") schedule();
+        else window.addEventListener("load", schedule, { once: true });
+      })();
     `;
 ---
 
@@ -88,6 +109,7 @@ const googleAnalyticsScript = `
     <script
       is:inline
       async
+      fetchpriority="low"
       src={`https://www.googletagmanager.com/gtag/js?id=${site.googleAnalyticsId}`}
     ></script>
     <script is:inline set:html={googleAnalyticsScript} />

@@ -7,6 +7,7 @@ import rehypeExternalLinks from "rehype-external-links";
 
 import rehypeAutolinkGatsby from "./src/lib/rehype-autolink-gatsby.mjs";
 import rehypeInlineCode from "./src/lib/rehype-inline-code.mjs";
+import rehypeImageSizes from "./src/lib/rehype-image-sizes.mjs";
 
 export default defineConfig({
   site: "https://blog.amoseui.com",
@@ -38,6 +39,10 @@ export default defineConfig({
   // with 200 (the gatsby sitemap pointed at the 301-redirecting bare form,
   // which search console reported as "page with redirect").
   integrations: [sitemap()],
+  image: {
+    layout: "constrained",
+    breakpoints: [320, 480, 640, 750, 960, 1280, 1440],
+  },
   markdown: {
     syntaxHighlight: "prism",
     // The top-level markdown.rehypePlugins option is deprecated since Astro 7
@@ -48,6 +53,7 @@ export default defineConfig({
         rehypeSlug,
         rehypeAutolinkGatsby,
         rehypeInlineCode,
+        rehypeImageSizes,
         [
           rehypeExternalLinks,
           { target: "_blank", rel: ["nofollow", "noopener", "noreferrer"] },

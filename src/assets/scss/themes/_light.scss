@@ -9,8 +9,9 @@
   --color-secondary: #{variables.$color-blue};
   --color-prism-background: #{variables.$color-white-cloud};
   --color-typographic-base-font: #{variables.$color-dark};
-  --color-typographic-link-p-font: #{variables.$color-sky-blue};
-  --color-typographic-link-s-font: #{variables.$color-blue};
+  --color-typographic-muted-font: #6b7280;
+  --color-typographic-link-p-font: #{variables.$color-blue};
+  --color-typographic-link-s-font: #{color.adjust(variables.$color-blue, $lightness: -8%)};
   --color-page-border: #{variables.$color-white-cloud};
   --color-page-background: #{variables.$color-white};
   --color-post-date: #6b7280;
