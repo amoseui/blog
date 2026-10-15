@@ -23,11 +23,13 @@ const { author, isIndex } = Astro.props;
       src={photo}
       alt={author.name}
       class={styles.photo}
-      width={56}
-      height={56}
-      widths={[56, 112, 168]}
+      width={168}
+      height={168}
+      widths={[168, 224]}
+      sizes="56px"
       layout="fixed"
       format="webp"
+      quality={90}
       loading="eager"
     />
   </a>

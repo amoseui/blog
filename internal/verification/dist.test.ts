@@ -17,12 +17,11 @@ const decodeEntities = (s: string) =>
     .replace(/&amp;/g, "&");
 
 describe("image delivery", () => {
-  test("the sidebar downloads small high-density profile images", async () => {
+  test("the sidebar serves crisp profile images without the full original", async () => {
     const html = readFileSync("dist/index.html", "utf8");
     const image = html.match(/<img\b[^>]*alt="amoseui"[^>]*>/)?.[0] ?? "";
-    expect(image).toContain('width="56"');
-    expect(image).toContain('height="56"');
     expect(image).toContain('loading="eager"');
+    expect(image).toContain('sizes="56px"');
     const sources = [
       image.match(/\bsrc="([^"]+)"/)?.[1],
       ...(image.match(/\bsrcset="([^"]+)"/)?.[1] ?? "")
@@ -34,8 +33,10 @@ describe("image delivery", () => {
       expect(src).toMatch(/\.webp$/);
       const bytes = readFileSync(path.join("dist", src ?? ""));
       const metadata = await sharp(bytes).metadata();
-      expect(metadata.width).toBeLessThanOrEqual(168);
-      expect(bytes.length).toBeLessThan(10_000);
+      expect(metadata.width).toBeGreaterThanOrEqual(168);
+      expect(metadata.width).toBeLessThanOrEqual(224);
+      expect(metadata.height).toBe(metadata.width);
+      expect(bytes.length).toBeLessThan(20_000);
     }
   });
 
