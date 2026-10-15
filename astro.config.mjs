@@ -16,7 +16,11 @@ export default defineConfig({
   trailingSlash: "ignore",
   // The gatsby baseline emits directory-style output (foo/index.html, verified
   // by the extracted url fixtures), so match it exactly for the parity gate.
-  build: { format: "directory" },
+  build: {
+    format: "directory",
+    // Avoid a render-blocking stylesheet round trip on cold page loads.
+    inlineStylesheets: "always",
+  },
   redirects: {
     "/categories": "/",
     "/tags": "/",
