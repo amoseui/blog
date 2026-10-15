@@ -16,6 +16,23 @@ const decodeEntities = (s: string) =>
     .replace(/&#39;/g, "'")
     .replace(/&amp;/g, "&");
 
+const inlineStyles = (html: string) =>
+  [...html.matchAll(/<style\b[^>]*>([\s\S]*?)<\/style>/g)]
+    .map(([, css]) => css)
+    .join("\n");
+
+test.each(["dist/index.html", "dist/2025-retrospective/index.html"])(
+  "the first render of %s needs no stylesheet round trip",
+  (file) => {
+    const html = readFileSync(file, "utf8");
+    const head = html.match(/<head>([\s\S]*?)<\/head>/)?.[1] ?? "";
+    expect(head).not.toMatch(/<link\b[^>]*\brel="stylesheet"/);
+    expect(inlineStyles(head)).toMatch(
+      /img\[width\]\[height\]\s*\{[^}]*height:\s*auto/,
+    );
+  },
+);
+
 describe("image delivery", () => {
   test("the sidebar serves crisp profile images without the full original", async () => {
     const html = readFileSync("dist/index.html", "utf8");
@@ -217,8 +234,10 @@ describe("dist keeps the gatsby baseline contract", () => {
     // rendered width via max-width, so the stylesheet must reset height to
     // auto or every image wider than the column renders distorted.
     const cssFiles = globSync("dist/_astro/*.css");
-    expect(cssFiles.length).toBeGreaterThan(0);
-    const css = cssFiles.map((f) => readFileSync(f, "utf8")).join("\n");
+    const css = [
+      inlineStyles(readFileSync("dist/2025-retrospective/index.html", "utf8")),
+      ...cssFiles.map((f) => readFileSync(f, "utf8")),
+    ].join("\n");
     expect(css).toMatch(/img\[width\]\[height\]\s*\{[^}]*height:\s*auto/);
   });
 
