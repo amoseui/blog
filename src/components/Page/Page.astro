@@ -9,7 +9,7 @@ interface Props {
 const { title, titleType = "page" } = Astro.props;
 ---
 
-<div class={styles.page}>
+<main class={styles.page}>
   <div class={styles.inner}>
     {
       title &&
@@ -23,4 +23,4 @@ const { title, titleType = "page" } = Astro.props;
     }
     <div class={styles.body}><slot /></div>
   </div>
-</div>
+</main>

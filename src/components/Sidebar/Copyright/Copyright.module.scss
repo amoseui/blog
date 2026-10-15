@@ -5,7 +5,7 @@
 @use "../../../assets/scss/mixins/breakpoints";
 
 .copyright {
-  color: variables.$color-gray;
+  color: var(--color-typographic-muted-font);
   font-size: variables.$typographic-small-font-size - 1px;
   text-align: center;
 }

@@ -2,6 +2,7 @@ import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 
 import { globSync } from "glob";
+import sharp from "sharp";
 import { describe, expect, test } from "vitest";
 
 const fixtures = (name: string) =>
@@ -14,6 +15,40 @@ const decodeEntities = (s: string) =>
     .replace(/&quot;/g, '"')
     .replace(/&#39;/g, "'")
     .replace(/&amp;/g, "&");
+
+describe("image delivery", () => {
+  test("the sidebar downloads small high-density profile images", async () => {
+    const html = readFileSync("dist/index.html", "utf8");
+    const image = html.match(/<img\b[^>]*alt="amoseui"[^>]*>/)?.[0] ?? "";
+    expect(image).toContain('width="56"');
+    expect(image).toContain('height="56"');
+    expect(image).toContain('loading="eager"');
+    const sources = [
+      image.match(/\bsrc="([^"]+)"/)?.[1],
+      ...(image.match(/\bsrcset="([^"]+)"/)?.[1] ?? "")
+        .split(",")
+        .map((candidate) => candidate.trim().split(/\s+/)[0]),
+    ];
+    expect(sources.length).toBeGreaterThan(2);
+    for (const src of sources) {
+      expect(src).toMatch(/\.webp$/);
+      const bytes = readFileSync(path.join("dist", src ?? ""));
+      const metadata = await sharp(bytes).metadata();
+      expect(metadata.width).toBeLessThanOrEqual(168);
+      expect(bytes.length).toBeLessThan(10_000);
+    }
+  });
+
+  test("article images offer smaller candidates for narrow content columns", () => {
+    const html = readFileSync("dist/2025-retrospective/index.html", "utf8");
+    const image = html.match(/<img\b[^>]*alt="github"[^>]*>/)?.[0] ?? "";
+    const srcset = image.match(/\bsrcset="([^"]+)"/)?.[1] ?? "";
+    expect(srcset.split(",").length).toBeGreaterThan(1);
+    expect(image).toContain("690px");
+    expect(image).toContain("calc(100vw - 37.5px)");
+    expect(image).toContain('loading="lazy"');
+  });
+});
 
 describe("post-list navigation", () => {
   test.each([

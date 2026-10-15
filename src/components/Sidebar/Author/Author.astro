@@ -1,4 +1,7 @@
 ---
+import { Image } from "astro:assets";
+
+import photo from "../../../../content/photo.jpg";
 import ThemeSwitcher from "@/components/ThemeSwitcher/ThemeSwitcher.astro";
 
 import styles from "./Author.module.scss";
@@ -7,7 +10,6 @@ interface Props {
   author: {
     name: string;
     bio: string;
-    photo: string;
   };
   isIndex?: boolean;
 }
@@ -17,7 +19,17 @@ const { author, isIndex } = Astro.props;
 
 <div class={styles.author}>
   <a href="/" class={styles.photoLink}>
-    <img src={author.photo} alt={author.name} class={styles.photo} />
+    <Image
+      src={photo}
+      alt={author.name}
+      class={styles.photo}
+      width={56}
+      height={56}
+      widths={[56, 112, 168]}
+      layout="fixed"
+      format="webp"
+      loading="eager"
+    />
   </a>
 
   <div class={styles.details}>
