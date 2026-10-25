@@ -48,7 +48,7 @@
     "stylelint-order": "^8.1.1",
     "typescript": "^5.9.3",
     "unist-util-visit": "^5.1.0",
-    "vitest": "^5.0.0"
+    "vitest": "^5.0.5"
   },
   "engines": {
     "node": ">=22.0.0"
